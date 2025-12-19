@@ -3466,7 +3466,7 @@
 	)
 	(text "C_caps = (CL - Cp/stray) * 2\nCp ~3pF"
 		(exclude_from_sim no)
-		(at -30.988 39.116 0)
+		(at 22.352 70.104 0)
 		(effects
 			(font
 				(size 1.27 1.27)

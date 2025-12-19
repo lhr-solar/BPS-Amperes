@@ -2506,9 +2506,9 @@
 		)
 		(uuid "55a3b89e-8cd4-4634-860d-91aa02e7988c")
 	)
-	(text "Vertical USB C Port"
+	(text "Horizontal USB C Port"
 		(exclude_from_sim no)
-		(at 20.32 25.4 0)
+		(at 20.574 25.4 0)
 		(effects
 			(font
 				(size 1.778 1.778)
@@ -5350,7 +5350,7 @@
 				)
 			)
 		)
-		(property "Value" "USB4120-03-C"
+		(property "Value" "USB4215-03-A"
 			(at 30.48 33.02 0)
 			(effects
 				(font
@@ -5358,7 +5358,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Parts:USB412003C"
+		(property "Footprint" "UTSVT_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 34.29 53.34 0)
 			(effects
 				(font
@@ -5367,7 +5367,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/GCT_USB4120.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/837/usb4215-3472997.pdf"
 			(at 34.29 53.34 0)
 			(effects
 				(font
@@ -5385,7 +5385,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "USB4120-03-C"
+		(property "P/N" "USB4215-03-A "
 			(at 30.48 53.34 0)
 			(effects
 				(font

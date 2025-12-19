@@ -7290,7 +7290,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e771b97f-dca7-4553-8f03-2edabba1398f")
 		(property "Reference" "R34"

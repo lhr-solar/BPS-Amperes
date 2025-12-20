@@ -958,8 +958,8 @@
 		(uuid cd5376ea-e636-464c-994b-fd94ba7e319f)
 	)
 	(rectangle
-		(start 10.16 152.4)
-		(end 101.6 172.72)
+		(start 104.394 82.55)
+		(end 195.834 102.87)
 		(stroke
 			(width 0)
 			(type default)
@@ -1006,9 +1006,9 @@
 		)
 		(uuid "7c37b236-3057-4032-9536-f30fce129b98")
 	)
-	(text "RevB Changes"
+	(text "RevB Changelog"
 		(exclude_from_sim no)
-		(at 12.7 157.48 0)
+		(at 106.934 87.63 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -1020,7 +1020,7 @@
 	)
 	(text "- INA: Fix common-mode issue by tying SCRUT- and SHUNT- to GND HV (INA GND)\n- AMC: convert differential output to single-ended instead of tying OUTN to GND\n- USB: Horizontal footprint\n- Power: Made SHDN resistor DNP\n- Debug: added VBUS LED"
 		(exclude_from_sim no)
-		(at 12.7 160.02 0)
+		(at 106.934 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2662,7 +2662,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_Current"
+		(property "Value" "I_OUT"
 			(at 62.738 40.64 90)
 			(effects
 				(font

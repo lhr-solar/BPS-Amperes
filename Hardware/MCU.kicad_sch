@@ -3531,7 +3531,7 @@
 		)
 		(uuid "b5a26840-7966-4ff7-8a46-d32aaa273589")
 	)
-	(text "TODO: tie Boot_GPIO to a pin"
+	(text "Boot_GPIO is tied to PA7"
 		(exclude_from_sim no)
 		(at 152.654 147.32 0)
 		(effects

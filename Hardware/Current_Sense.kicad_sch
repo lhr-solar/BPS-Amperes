@@ -2554,6 +2554,18 @@
 		)
 		(uuid "3a0098e4-b14e-48c4-bb60-82fa0ddcf09d")
 	)
+	(text "Make sure common-mode stuff is within range"
+		(exclude_from_sim no)
+		(at 81.28 160.274 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "41ee5822-ede3-42ff-956f-ddd43f325721")
+	)
 	(text "-->"
 		(exclude_from_sim no)
 		(at 85.598 129.54 0)
@@ -2566,6 +2578,18 @@
 			(justify left)
 		)
 		(uuid "443c9291-c5d6-4faf-b68d-3207aea4e3cc")
+	)
+	(text "Verify op-amp"
+		(exclude_from_sim no)
+		(at 240.284 159.512 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "4706f55d-1295-4155-ad16-75e5a1da5a74")
 	)
 	(text "Current = ( (ADC * (3.3 / 4096) - Vref) / (Shunt*gain) )\n\nVref = 1.25\nShunt * gain = 250u * 100 V/V = 0.025\n"
 		(exclude_from_sim no)
@@ -2598,6 +2622,18 @@
 			(justify left top)
 		)
 		(uuid "5767ac17-ea60-490f-9568-a249a324496b")
+	)
+	(text "Vref = GND?"
+		(exclude_from_sim no)
+		(at 221.996 138.938 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "5a91eddf-8d07-4331-8961-d7906a2b50b1")
 	)
 	(text "Low-side shunt, so current path is as follows:\n* Discharge: Output_GND -> Battery_GND\n* Charge: Battery_GND -> Output_GND"
 		(exclude_from_sim no)
@@ -2759,9 +2795,9 @@
 		)
 		(uuid "e8f93b56-aa63-4228-af9a-3236bc8a3cdf")
 	)
-	(text "Convert to SPST switch? (Scrut- = Shunt-) "
+	(text "Convert to SPST switch? (Scrut- = Shunt-) \nAlso, pass scrut thru INA or directly to ADC?"
 		(exclude_from_sim no)
-		(at 162.306 57.404 0)
+		(at 158.75 56.388 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2825,6 +2861,12 @@
 			(justify left top)
 		)
 		(uuid "f99b6dba-99a9-4f13-a1f4-8a065798eedf")
+	)
+	(junction
+		(at 115.57 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a016cb3-8fde-4217-85fe-3d19b3ffdc04")
 	)
 	(junction
 		(at 208.28 121.92)
@@ -2905,12 +2947,6 @@
 		(uuid "5df52974-eb4d-4051-b782-5c3cac056576")
 	)
 	(junction
-		(at 119.38 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "67e2a887-562d-466a-853c-8b9fb522e653")
-	)
-	(junction
 		(at 208.28 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2939,12 +2975,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87ac6581-f641-4dcf-80d8-1bcfc3389c54")
-	)
-	(junction
-		(at 121.92 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9163af82-8537-447b-939c-88d39e544f36")
 	)
 	(junction
 		(at 265.43 127)
@@ -2999,6 +3029,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6970159-e22c-4794-8145-ba5d0ce57f97")
+	)
+	(junction
+		(at 121.92 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e103f252-53c2-4535-bab9-2fff40efe388")
 	)
 	(junction
 		(at 57.15 128.27)
@@ -3221,6 +3257,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 130.81) (xy 121.92 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e88e45a-e7a6-429a-8a06-c9937f97ab53")
+	)
+	(wire
+		(pts
 			(xy 49.53 82.55) (xy 49.53 83.82)
 		)
 		(stroke
@@ -3321,6 +3367,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 138.43) (xy 119.38 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4407f127-dd5f-43e7-b51b-6834ed05d993")
+	)
+	(wire
+		(pts
 			(xy 168.91 50.8) (xy 176.53 50.8)
 		)
 		(stroke
@@ -3328,16 +3384,6 @@
 			(type default)
 		)
 		(uuid "475f09a9-33f5-433d-8688-6a054f228384")
-	)
-	(wire
-		(pts
-			(xy 119.38 138.43) (xy 121.92 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "477e4491-563a-4137-a3f3-9c085ea04e91")
 	)
 	(wire
 		(pts
@@ -3421,7 +3467,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 138.43) (xy 119.38 138.43)
+			(xy 110.49 138.43) (xy 115.57 138.43)
 		)
 		(stroke
 			(width 0)
@@ -4128,16 +4174,6 @@
 			(type default)
 		)
 		(uuid "dba22379-dabf-4cd1-be36-439b2482c49e")
-	)
-	(wire
-		(pts
-			(xy 121.92 132.08) (xy 121.92 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd4dca01-8a52-462d-ac2a-7f50a7de11a5")
 	)
 	(wire
 		(pts
@@ -11015,7 +11051,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 138.43 0)
+		(at 115.57 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11024,7 +11060,7 @@
 		(fields_autoplaced yes)
 		(uuid "d159ee08-53db-4c4b-b94d-c9dc196eebd2")
 		(property "Reference" "#PWR0111"
-			(at 121.92 144.78 0)
+			(at 115.57 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11033,7 +11069,7 @@
 			)
 		)
 		(property "Value" "GND HV"
-			(at 121.92 143.51 0)
+			(at 115.57 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11041,7 +11077,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 138.43 0)
+			(at 115.57 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11050,7 +11086,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 138.43 0)
+			(at 115.57 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11059,7 +11095,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 138.43 0)
+			(at 115.57 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)

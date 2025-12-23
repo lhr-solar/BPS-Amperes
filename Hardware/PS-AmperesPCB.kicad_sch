@@ -1018,7 +1018,7 @@
 		)
 		(uuid "81750bb4-e2a1-4302-8208-f31c0514a06b")
 	)
-	(text "- INA: Fix common-mode issue by tying SCRUT- and SHUNT- to GND HV (INA GND)\n- AMC: convert differential output to single-ended instead of tying OUTN to GND\n- USB: Horizontal footprint\n- Power: Made SHDN resistor DNP\n- Debug: added VBUS LED"
+	(text "- INA: Fix common-mode issue by tying SCRUT- and SHUNT- to GND HV (INA GND)\n- AMC / TLV: convert differential output to single-ended w/ differential amp / LPF\n- Scrutineering: SPDT switch\n- USB: Horizontal footprint\n- Power: Made SHDN resistor DNP\n- Debug: added VBUS LED"
 		(exclude_from_sim no)
 		(at 106.934 90.17 0)
 		(effects

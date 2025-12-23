@@ -5385,7 +5385,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "USB4215-03-A "
+		(property "P/N" "USB4215-03-A"
 			(at 30.48 53.34 0)
 			(effects
 				(font

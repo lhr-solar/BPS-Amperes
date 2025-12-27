@@ -112,6 +112,142 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Logo_Placeholder_1"
 			(pin_names
 				(offset 1.016)
@@ -946,7 +1082,7 @@
 		(uuid c4ae1630-3556-454c-b3c7-85b7fc7aa87d)
 	)
 	(rectangle
-		(start 116.84 55.88)
+		(start 116.84 58.42)
 		(end 162.56 78.74)
 		(stroke
 			(width 0)
@@ -971,7 +1107,7 @@
 	)
 	(rectangle
 		(start 116.84 20.32)
-		(end 187.96 53.34)
+		(end 195.58 55.88)
 		(stroke
 			(width 0)
 			(type default)
@@ -996,7 +1132,7 @@
 	)
 	(text "Graphics / Mounting"
 		(exclude_from_sim no)
-		(at 119.38 59.69 0)
+		(at 119.38 60.96 0)
 		(effects
 			(font
 				(size 1.778 1.778)
@@ -1018,9 +1154,9 @@
 		)
 		(uuid "81750bb4-e2a1-4302-8208-f31c0514a06b")
 	)
-	(text "- INA: Fix common-mode issue by tying SCRUT- and SHUNT- to GND HV (INA GND)\n- AMC / TLV: convert differential output to single-ended w/ differential amp / LPF\n- Scrutineering: SPDT switch\n- USB: Horizontal footprint\n- Power: Made SHDN resistor DNP\n- Debug: added VBUS LED"
+	(text "- INA: tie SHUNT-/Scrut- to GND HV (INA GND) for consistent common-mode voltage\n- AMC / TLV: convert differential output to single-ended with differential amp / LPF\n- Scrutineering: SPDT switch\n- USB: Horizontal footprint\n- Power: Made SHDN resistor DNP; fuse for input\n- Debug: added VBUS LED"
 		(exclude_from_sim no)
-		(at 106.934 90.17 0)
+		(at 106.68 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1052,7 +1188,7 @@
 		(uuid "e416e9d1-b044-43ce-a334-ebb2725eb5cb")
 	)
 	(junction
-		(at 147.32 34.29)
+		(at 146.05 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "00ef7dc9-b679-4d2d-86e7-a52f76e35e3d")
@@ -1064,7 +1200,7 @@
 		(uuid "02d9e79c-9e76-4cea-a1da-61c409e9ba27")
 	)
 	(junction
-		(at 147.32 44.45)
+		(at 146.05 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bef5970b-85e6-43f9-af5b-0ea1d1d1b148")
@@ -1074,6 +1210,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9cbeee8-c447-461a-905d-65c2902b938a")
+	)
+	(wire
+		(pts
+			(xy 187.96 34.29) (xy 187.96 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "103f8353-d6b0-496f-a4de-f291f1a1c466")
 	)
 	(wire
 		(pts
@@ -1087,7 +1233,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 43.18) (xy 181.61 43.18)
+			(xy 168.91 43.18) (xy 177.8 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1117,7 +1263,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 43.18) (xy 181.61 44.45)
+			(xy 177.8 43.18) (xy 177.8 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1127,7 +1273,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 34.29) (xy 147.32 35.56)
+			(xy 146.05 34.29) (xy 146.05 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1157,6 +1303,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 43.18) (xy 187.96 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8893328e-9a61-4211-82bb-8f5d1e64d69d")
+	)
+	(wire
+		(pts
 			(xy 66.04 22.86) (xy 71.12 22.86)
 		)
 		(stroke
@@ -1167,7 +1323,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 34.29) (xy 181.61 35.56)
+			(xy 177.8 34.29) (xy 177.8 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1207,7 +1363,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 43.18) (xy 147.32 43.18)
+			(xy 137.16 43.18) (xy 146.05 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1217,7 +1373,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 43.18) (xy 147.32 44.45)
+			(xy 146.05 43.18) (xy 146.05 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1237,7 +1393,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 38.1) (xy 180.34 38.1)
+			(xy 168.91 38.1) (xy 177.8 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1267,7 +1423,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 35.56) (xy 171.45 35.56)
+			(xy 177.8 35.56) (xy 168.91 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1277,7 +1433,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 40.64) (xy 180.34 40.64)
+			(xy 168.91 40.64) (xy 177.8 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1297,7 +1453,17 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 35.56) (xy 137.16 35.56)
+			(xy 57.15 87.63) (xy 71.12 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5ed1dde-7e2e-4d47-b96e-ec4577b94cd7")
+	)
+	(wire
+		(pts
+			(xy 146.05 35.56) (xy 137.16 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1700,7 +1866,7 @@
 		(uuid "86addb55-9733-4112-8b38-0a44a92279cf")
 	)
 	(label "CAN_HIGH"
-		(at 180.34 38.1 180)
+		(at 177.8 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1720,7 +1886,7 @@
 		(uuid "e64ad09a-fb3c-41e6-9901-f29a6613ec9e")
 	)
 	(label "CAN_LOW"
-		(at 180.34 40.64 180)
+		(at 177.8 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1813,8 +1979,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Fuse")
+		(at 187.96 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "150c4eeb-0371-4ef9-89a5-a3242d711147")
+		(property "Reference" "F2"
+			(at 190.5 38.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3568"
+			(at 190.5 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuseholder_Blade_Mini_Keystone_3568"
+			(at 186.182 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Keystone-Electronics/3568?qs=fP5bVVCrK%2Fd7nbA%2FPpwnKw%3D%3D"
+			(at 187.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 187.96 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0fcbcd8a-3c4d-47ab-9be7-a624b5400b14")
+		)
+		(pin "1"
+			(uuid "6e2294f0-dccb-432d-8aa6-bb29e9370b33")
+		)
+		(instances
+			(project ""
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a"
+					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 154.94 68.58 0)
+		(at 156.21 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -1823,7 +2059,7 @@
 		(fields_autoplaced yes)
 		(uuid "25b3d933-1f29-4ed4-83ec-40c31e26512a")
 		(property "Reference" "H2"
-			(at 157.48 67.3099 0)
+			(at 158.75 68.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1832,7 +2068,7 @@
 			)
 		)
 		(property "Value" "M3"
-			(at 157.48 69.8499 0)
+			(at 158.75 71.1199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1841,7 +2077,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 154.94 68.58 0)
+			(at 156.21 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1850,7 +2086,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 68.58 0)
+			(at 156.21 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1859,7 +2095,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 154.94 68.58 0)
+			(at 156.21 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1878,7 +2114,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 147.32 34.29 270)
+		(at 146.05 34.29 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1887,7 +2123,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cdd9f3d-b635-4d7c-9dcd-1b1e1d129ae6")
 		(property "Reference" "#FLG01"
-			(at 149.225 34.29 0)
+			(at 147.955 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1896,7 +2132,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 151.13 34.2899 90)
+			(at 149.86 34.2899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1906,7 +2142,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1915,7 +2151,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1924,7 +2160,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1946,7 +2182,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 44.45 0)
+		(at 177.8 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1954,7 +2190,7 @@
 		(dnp no)
 		(uuid "4401a5c1-c6e0-4b83-8a8b-614c7e72f86d")
 		(property "Reference" "#PWR05"
-			(at 181.61 50.8 0)
+			(at 177.8 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1963,7 +2199,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 49.53 0)
+			(at 177.8 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1971,7 +2207,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 44.45 0)
+			(at 177.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1980,7 +2216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 44.45 0)
+			(at 177.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1989,7 +2225,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 44.45 0)
+			(at 177.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2076,7 +2312,7 @@
 	)
 	(symbol
 		(lib_id "utsvt-connectors:PeripheralCANConnector")
-		(at 161.29 39.37 0)
+		(at 158.75 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2084,7 +2320,7 @@
 		(dnp no)
 		(uuid "454e289b-d905-442b-b120-8cf0754d4488")
 		(property "Reference" "J2"
-			(at 161.925 29.21 0)
+			(at 159.385 29.21 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2092,7 +2328,7 @@
 			)
 		)
 		(property "Value" "PeripheralCAN"
-			(at 161.925 31.75 0)
+			(at 159.385 31.75 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2100,7 +2336,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:Molex_Nano-Fit_105309-xx04_1x04_P2.50mm_Vertical"
-			(at 161.29 48.26 0)
+			(at 158.75 48.26 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2109,7 +2345,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.com/ProductDetail/Molex/105309-1204?qs=PqFvFmEiOr6mDAWV2BJKbg%3D%3D&srsltid=AfmBOopk7YsqdMLo2_DAHKaHKt3Hg126ooPXYWv5Q2Pfx6rW7DaYZCT2"
-			(at 166.37 31.75 0)
+			(at 163.83 31.75 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2118,7 +2354,7 @@
 			)
 		)
 		(property "Description" "Connection to the car's Peripheral CAN bus."
-			(at 161.29 39.37 0)
+			(at 158.75 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2127,7 +2363,7 @@
 			)
 		)
 		(property "P/N" "105309-1204 "
-			(at 161.29 39.37 0)
+			(at 158.75 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2158,7 +2394,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 144.78 73.66 0)
+		(at 146.05 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2167,7 +2403,7 @@
 		(fields_autoplaced yes)
 		(uuid "474be440-891d-49a2-bdc2-edafd75fae30")
 		(property "Reference" "H3"
-			(at 147.32 72.3899 0)
+			(at 148.59 73.6599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2176,7 +2412,7 @@
 			)
 		)
 		(property "Value" "M2"
-			(at 147.32 74.9299 0)
+			(at 148.59 76.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2185,7 +2421,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 144.78 73.66 0)
+			(at 146.05 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2194,7 +2430,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 73.66 0)
+			(at 146.05 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2203,7 +2439,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 144.78 73.66 0)
+			(at 146.05 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2222,7 +2458,7 @@
 	)
 	(symbol
 		(lib_id "power:+24V")
-		(at 181.61 34.29 0)
+		(at 177.8 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2230,7 +2466,7 @@
 		(dnp no)
 		(uuid "642704e0-7214-4861-8052-378716ac7d36")
 		(property "Reference" "#PWR03"
-			(at 181.61 38.1 0)
+			(at 177.8 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2238,8 +2474,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+24V_Ext"
-			(at 181.61 29.21 0)
+		(property "Value" "+24V_In"
+			(at 177.8 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2247,7 +2483,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 34.29 0)
+			(at 177.8 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2256,7 +2492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 34.29 0)
+			(at 177.8 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2265,7 +2501,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 181.61 34.29 0)
+			(at 177.8 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2287,7 +2523,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 44.45 0)
+		(at 146.05 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2295,7 +2531,7 @@
 		(dnp no)
 		(uuid "74938f84-cc58-4a84-b179-359fdf9e0763")
 		(property "Reference" "#PWR04"
-			(at 147.32 50.8 0)
+			(at 146.05 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2304,7 +2540,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 49.53 0)
+			(at 146.05 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2312,7 +2548,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2321,7 +2557,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2330,7 +2566,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2435,7 +2671,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 154.94 73.66 0)
+		(at 156.21 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2444,7 +2680,7 @@
 		(fields_autoplaced yes)
 		(uuid "774386df-58b9-4631-b289-d22f0c9305b5")
 		(property "Reference" "H4"
-			(at 157.48 72.3899 0)
+			(at 158.75 73.6599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2453,7 +2689,7 @@
 			)
 		)
 		(property "Value" "M4"
-			(at 157.48 74.9299 0)
+			(at 158.75 76.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2462,7 +2698,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 154.94 73.66 0)
+			(at 156.21 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2471,7 +2707,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 73.66 0)
+			(at 156.21 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2480,7 +2716,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 154.94 73.66 0)
+			(at 156.21 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2581,7 +2817,7 @@
 	)
 	(symbol
 		(lib_id "power:+24V")
-		(at 147.32 34.29 0)
+		(at 146.05 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2589,7 +2825,7 @@
 		(dnp no)
 		(uuid "90eefeec-01fd-4c44-8db4-74ba98e0dcdf")
 		(property "Reference" "#PWR02"
-			(at 147.32 38.1 0)
+			(at 146.05 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2597,8 +2833,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+24V_Ext"
-			(at 147.32 29.21 0)
+		(property "Value" "+24V_In"
+			(at 146.05 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2606,7 +2842,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2615,7 +2851,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2624,7 +2860,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 147.32 34.29 0)
+			(at 146.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2639,6 +2875,71 @@
 			(project "BPS-AmperesPCB"
 				(path "/a452d214-ea00-440d-a445-5d6103fda43a"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+24V")
+		(at 187.96 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "938a4137-6547-446f-ac4f-f870286ee57a")
+		(property "Reference" "#PWR0131"
+			(at 187.96 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V_In"
+			(at 187.96 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 187.96 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f9f090b-d9b1-46fb-9294-9dfa04439e92")
+		)
+		(instances
+			(project "PS-AmperesPCB"
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a"
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -2776,7 +3077,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 144.78 68.58 0)
+		(at 146.05 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2785,7 +3086,7 @@
 		(fields_autoplaced yes)
 		(uuid "e37c4405-0b8b-45fc-86b1-f6e7c9e56dd7")
 		(property "Reference" "H1"
-			(at 147.32 67.3099 0)
+			(at 148.59 68.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2794,7 +3095,7 @@
 			)
 		)
 		(property "Value" "M1"
-			(at 147.32 69.8499 0)
+			(at 148.59 71.1199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2803,7 +3104,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 144.78 68.58 0)
+			(at 146.05 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2812,7 +3113,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 68.58 0)
+			(at 146.05 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2821,7 +3122,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 144.78 68.58 0)
+			(at 146.05 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2839,8 +3140,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 187.96 44.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "edcdb70e-c889-49e5-b2b9-7d6adf848078")
+		(property "Reference" "#PWR0132"
+			(at 187.96 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V_Ext"
+			(at 187.96 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 187.96 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af6cb23c-ae0a-4819-9bbd-298637417517")
+		)
+		(instances
+			(project "PS-AmperesPCB"
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 147.32 44.45 270)
+		(at 146.05 44.45 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2849,7 +3215,7 @@
 		(fields_autoplaced yes)
 		(uuid "fc40a396-c964-4f5c-9f3f-af8d038b5a11")
 		(property "Reference" "#FLG02"
-			(at 149.225 44.45 0)
+			(at 147.955 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2858,7 +3224,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 151.13 44.4499 90)
+			(at 149.86 44.4499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2868,7 +3234,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2877,7 +3243,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2886,7 +3252,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 147.32 44.45 0)
+			(at 146.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3174,6 +3540,16 @@
 				(justify right)
 			)
 		)
+		(pin "Boot_GPIO" input
+			(at 57.15 87.63 0)
+			(uuid "63b8db77-320a-4cb7-92ee-16be816e74ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "PS-AmperesPCB"
 				(path "/a452d214-ea00-440d-a445-5d6103fda43a"
@@ -3221,6 +3597,16 @@
 		(pin "{USART1}" bidirectional
 			(at 71.12 83.82 180)
 			(uuid "8fc3ff06-9854-45bd-96d9-4efd9fda3d52")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Boot_GPIO" output
+			(at 71.12 87.63 180)
+			(uuid "fc9f1a67-89a7-44c2-a473-abf82cbca4d3")
 			(effects
 				(font
 					(size 1.27 1.27)

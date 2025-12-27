@@ -2578,6 +2578,12 @@
 		(uuid "48a691ac-3580-492e-b5b0-4507e14ada47")
 	)
 	(junction
+		(at 168.91 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61183155-5c2d-48c9-90b7-bb37f28fc4b2")
+	)
+	(junction
 		(at 153.67 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2684,10 +2690,6 @@
 		(uuid "8c24a6e8-894f-49d2-9c21-a09c433e2f43")
 	)
 	(no_connect
-		(at 163.83 67.31)
-		(uuid "9196f8c6-a2ad-441b-b592-4a500c6390ce")
-	)
-	(no_connect
 		(at 163.83 49.53)
 		(uuid "98979f28-b472-4607-8c1c-7e9e3e6f0c72")
 	)
@@ -2756,6 +2758,16 @@
 			(type default)
 		)
 		(uuid "12fce419-d1dc-4c9e-b284-09f8e85fc421")
+	)
+	(wire
+		(pts
+			(xy 163.83 67.31) (xy 168.91 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13b52f42-2c73-42d3-ab37-ddcde30fb337")
 	)
 	(wire
 		(pts
@@ -3139,6 +3151,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 68.58) (xy 168.91 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9327956f-00c6-4861-80d9-8ac9bbc31c17")
+	)
+	(wire
+		(pts
 			(xy 120.65 49.53) (xy 121.92 49.53)
 		)
 		(stroke
@@ -3327,6 +3349,16 @@
 		)
 		(uuid "e742845d-2bc1-42af-9127-298d14270dde")
 	)
+	(wire
+		(pts
+			(xy 168.91 77.47) (xy 168.91 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb48c75d-3c6a-4d71-bd14-ceea363277c2")
+	)
 	(bus
 		(pts
 			(xy 177.8 41.91) (xy 179.07 43.18)
@@ -3376,6 +3408,16 @@
 			(type default)
 		)
 		(uuid "f7070944-10a0-4ea1-91da-205d61823454")
+	)
+	(wire
+		(pts
+			(xy 168.91 67.31) (xy 171.45 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fda05191-c28c-4a10-a424-2946988232fa")
 	)
 	(wire
 		(pts
@@ -3547,6 +3589,17 @@
 			(justify left)
 		)
 		(uuid "8c8a9eec-b53b-4bb4-b912-5d8f97adab27")
+	)
+	(hierarchical_label "Boot_GPIO"
+		(shape output)
+		(at 171.45 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "98a1deb6-8048-4dd3-ad55-69a1d2cd88a3")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3799,6 +3852,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 168.91 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25273c10-0848-49b4-b644-659ae58cb10b")
+		(property "Reference" "R42"
+			(at 171.45 71.1199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 171.45 73.6599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.132 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 168.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 168.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e92e2a96-ea1d-4c81-9286-6aff66bc3a91")
+		)
+		(pin "2"
+			(uuid "64b7d8b1-cebb-4ba9-9018-dfd508060851")
+		)
+		(instances
+			(project ""
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a/c14a2c5c-255b-423f-b086-532f80606e87"
+					(reference "R42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+24V")
 		(at 69.85 35.56 0)
 		(unit 1)
@@ -3858,6 +3981,71 @@
 			(project "BPS-AmperesPCB"
 				(path "/a452d214-ea00-440d-a445-5d6103fda43a/c14a2c5c-255b-423f-b086-532f80606e87"
 					(reference "#PWR084")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 168.91 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "299826a1-7350-4c73-a7df-6a4a345651cc")
+		(property "Reference" "#PWR0113"
+			(at 168.91 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 81.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 168.91 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d1c7c90-4b50-4b26-806c-437caf79ffe6")
+		)
+		(instances
+			(project "PS-AmperesPCB"
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a/c14a2c5c-255b-423f-b086-532f80606e87"
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -5350,7 +5538,7 @@
 				)
 			)
 		)
-		(property "Value" "USB4215-03-A"
+		(property "Value" "USB4105-GF-A"
 			(at 30.48 33.02 0)
 			(effects
 				(font
@@ -5367,7 +5555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/datasheet/2/837/usb4215-3472997.pdf"
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D"
 			(at 34.29 53.34 0)
 			(effects
 				(font
@@ -5385,7 +5573,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "USB4215-03-A"
+		(property "P/N" "USB4105-GF-A"
 			(at 30.48 53.34 0)
 			(effects
 				(font

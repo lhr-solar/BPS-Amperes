@@ -44657,6 +44657,17 @@
 		)
 		(uuid "11872526-42e8-4923-b76b-3a6258c44298")
 	)
+	(text "Target Voltage Ranges:\n* Input: 0.04 - 1.28 V\n* Output: 0.01 - 3.19 V"
+		(exclude_from_sim no)
+		(at 236.22 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "189f8251-9987-4868-8f49-731acd651003")
+	)
 	(text "Input"
 		(exclude_from_sim no)
 		(at 15.24 17.78 0)
@@ -44706,7 +44717,7 @@
 	)
 	(text "Make sure common-mode stuff is within range"
 		(exclude_from_sim no)
-		(at 81.28 160.274 0)
+		(at 61.722 160.528 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44728,18 +44739,6 @@
 			(justify left)
 		)
 		(uuid "443c9291-c5d6-4faf-b68d-3207aea4e3cc")
-	)
-	(text "Verify op-amp"
-		(exclude_from_sim no)
-		(at 263.144 155.702 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 8 29 1)
-			)
-			(justify left top)
-		)
-		(uuid "4706f55d-1295-4155-ad16-75e5a1da5a74")
 	)
 	(text "Current = ( (ADC * (3.3 / 4096) - Vref) / (Shunt*gain) )\n\nVref = 1.25\nShunt * gain = 250u * 100 V/V = 0.025\n"
 		(exclude_from_sim no)
@@ -44773,6 +44772,18 @@
 		)
 		(uuid "5767ac17-ea60-490f-9568-a249a324496b")
 	)
+	(text "See LPF documentation in Amperes Design folder"
+		(exclude_from_sim no)
+		(at 180.34 160.782 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "5c845bf1-10bb-4056-80ec-1fd5b7f52d99")
+	)
 	(text "Low-side shunt, so current path is as follows:\n* Discharge: Output_GND -> Battery_GND\n* Charge: Battery_GND -> Output_GND"
 		(exclude_from_sim no)
 		(at 67.31 45.974 0)
@@ -44797,12 +44808,14 @@
 		)
 		(uuid "62c9a880-17fa-4e42-ac15-83b579544194")
 	)
-	(text "with R1 = R3, R2 = R4, C1 = C2"
+	(text "With R1 = R3, R2 = R4, C1 = C2:"
 		(exclude_from_sim no)
-		(at 246.126 103.632 0)
+		(at 245.872 76.962 0)
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
 			)
 			(justify left top)
 		)
@@ -44846,9 +44859,9 @@
 		)
 		(uuid "795f3aa6-29aa-45e9-99db-82edaede3e0f")
 	)
-	(text "OUTN should not be tied to GND"
+	(text "OUTN should NOT be tied to GND"
 		(exclude_from_sim no)
-		(at 139.7 160.274 0)
+		(at 138.938 160.782 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44882,7 +44895,7 @@
 		)
 		(uuid "85b38cef-64e3-4961-aaf3-7ae50598555e")
 	)
-	(text "Differential Amplifier + Active LPF\n* Vout = [(OUT+) - (OUT-)] * Gain\n* Gain = 2.49 V/V\n* Cutoff freq = ~94 Hz\n* 1st order lowpass: -20 db/dec rolloff"
+	(text "Differential Amplifier / Active LPF\n* Vout = [(OUT+) - (OUT-)] * Gain\n* Gain = 2.49 V/V\n* Cutoff freq = ~94 Hz\n* 1st order lowpass: -20 db/dec rolloff"
 		(exclude_from_sim no)
 		(at 180.34 149.86 0)
 		(effects
@@ -44934,7 +44947,7 @@
 	)
 	(text "Cutoff Frequency = 1/(2*pi*R2*C)"
 		(exclude_from_sim no)
-		(at 245.872 89.916 0)
+		(at 246.126 93.472 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44994,7 +45007,7 @@
 		)
 		(uuid "d15cb848-c8fd-4624-a7ed-462eb0e915bf")
 	)
-	(text "Vref = GND?"
+	(text "Vref = GND"
 		(exclude_from_sim no)
 		(at 203.708 142.494 0)
 		(effects
@@ -45042,7 +45055,7 @@
 	)
 	(text "Gain = R2 / R1"
 		(exclude_from_sim no)
-		(at 245.872 76.962 0)
+		(at 246.126 80.518 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -46306,7 +46319,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 134.62) (xy 251.46 134.62)
+			(xy 247.65 134.62) (xy 252.73 134.62)
 		)
 		(stroke
 			(width 0)
@@ -48032,7 +48045,7 @@
 		)
 	)
 	(image
-		(at 265.176 96.52)
+		(at 265.43 100.076)
 		(scale 0.860101)
 		(uuid "aa78eda6-70f8-432a-b566-7dc940a50e8a")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAhUAAACICAYAAABQgxnKAAAABHNCSVQICAgIfAhkiAAAIABJREFU"
@@ -48215,7 +48228,7 @@
 		)
 	)
 	(image
-		(at 264.16 83.312)
+		(at 264.414 86.868)
 		(scale 0.844108)
 		(uuid "b0477b27-22b8-45dc-ae2e-000da7544dd6")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAgMAAAB2CAYAAABVq5AMAAAABHNCSVQICAgIfAhkiAAAF/9JREFU"
@@ -49461,7 +49474,7 @@
 	)
 	(hierarchical_label "I_OUT"
 		(shape output)
-		(at 251.46 134.62 0)
+		(at 252.73 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)

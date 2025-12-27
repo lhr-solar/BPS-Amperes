@@ -44668,6 +44668,18 @@
 		)
 		(uuid "189f8251-9987-4868-8f49-731acd651003")
 	)
+	(text "maybe get cleaner divider numbers (more intutitive relationship, like 1:1000)"
+		(exclude_from_sim no)
+		(at 185.928 48.514 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "2a7d9351-b0fb-4033-af25-b8b80db99091")
+	)
 	(text "Input"
 		(exclude_from_sim no)
 		(at 15.24 17.78 0)

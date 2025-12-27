@@ -44564,7 +44564,7 @@
 	)
 	(rectangle
 		(start 93.98 165.1)
-		(end 156.21 183.896)
+		(end 160.02 195.834)
 		(stroke
 			(width 0)
 			(type dash)
@@ -44741,9 +44741,9 @@
 		)
 		(uuid "443c9291-c5d6-4faf-b68d-3207aea4e3cc")
 	)
-	(text "Current = ( (ADC * (3.3 / 4096) - Vref) / (Shunt*gain) )\n\nVref = 1.25\nShunt * gain = 250u * 100 V/V = 0.025\n"
+	(text "Current = ((ADC * (3.3 / 4096)) - Vref) / (Shunt*gain)  (A)\n"
 		(exclude_from_sim no)
-		(at 96.52 171.196 0)
+		(at 96.52 182.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44785,7 +44785,7 @@
 		)
 		(uuid "5c845bf1-10bb-4056-80ec-1fd5b7f52d99")
 	)
-	(text "Low-side shunt, so current path is as follows:\n* Discharge: Output_GND -> Battery_GND\n* Charge: Battery_GND -> Output_GND"
+	(text "Low-side shunt, so current path is as follows:\nDischarge: Output_GND -> Battery_GND\nCharge: Battery_GND -> Output_GND"
 		(exclude_from_sim no)
 		(at 67.31 45.974 0)
 		(effects
@@ -44798,7 +44798,7 @@
 	)
 	(text "ADC to Current Conversion"
 		(exclude_from_sim no)
-		(at 96.012 166.878 0)
+		(at 96.52 177.8 0)
 		(effects
 			(font
 				(size 1.905 1.905)
@@ -44808,6 +44808,19 @@
 			(justify left top)
 		)
 		(uuid "62c9a880-17fa-4e42-ac15-83b579544194")
+	)
+	(text "Current to I_OUT Conversion"
+		(exclude_from_sim no)
+		(at 96.52 167.64 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(thickness 0.508)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "66e43710-d00a-4110-87d4-4b453f101a99")
 	)
 	(text "With R1 = R3, R2 = R4, C1 = C2:"
 		(exclude_from_sim no)
@@ -44848,6 +44861,19 @@
 		)
 		(uuid "701cf73b-81fc-4030-b51e-07661512b334")
 	)
+	(text "Vref = 1.25 V | Shunt = 250 uOhm | Gain = 100 V/V\nShunt * gain = 250 uOhm * 100 V/V = 0.025"
+		(exclude_from_sim no)
+		(at 96.52 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "77f23de8-87d9-40bb-abae-fba95159c310")
+	)
 	(text "250 \nuOhm"
 		(exclude_from_sim no)
 		(at 27.178 40.132 0)
@@ -44859,6 +44885,17 @@
 			)
 		)
 		(uuid "795f3aa6-29aa-45e9-99db-82edaede3e0f")
+	)
+	(text "Example"
+		(exclude_from_sim no)
+		(at 203.2 46.228 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7ea69d81-b2f7-432f-8216-898e3365eab3")
 	)
 	(text "OUTN should NOT be tied to GND"
 		(exclude_from_sim no)
@@ -45022,16 +45059,16 @@
 	)
 	(text "caps from precision reference example in datasheet"
 		(exclude_from_sim no)
-		(at 64.516 89.662 0)
+		(at 61.722 85.09 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 0.889 0.889)
 			)
 			(justify left top)
 		)
 		(uuid "e8f93b56-aa63-4228-af9a-3236bc8a3cdf")
 	)
-	(text "Expected current range: -32A to +70A\n=> Voltage range: -8 to 17.5 mV"
+	(text "Expected current range: -32 to 70 A\nw/ corr. voltage range: -8  to 17.5 mV"
 		(exclude_from_sim no)
 		(at 67.31 40.64 0)
 		(effects
@@ -45041,6 +45078,17 @@
 			(justify left top)
 		)
 		(uuid "eb7e4036-dd8f-4c92-a38f-e22f3fb55537")
+	)
+	(text "I_OUT = (current * shunt * gain) + Vref (V)"
+		(exclude_from_sim no)
+		(at 96.52 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "efe24c45-0c54-4668-b981-09b4cb67c131")
 	)
 	(text "SHUNT- and Scrut- connected to GND HV to prevent common-mode voltage from being out of INA's range"
 		(exclude_from_sim no)

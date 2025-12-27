@@ -1070,7 +1070,7 @@
 		)
 	)
 	(rectangle
-		(start 15.24 99.06)
+		(start 15.24 96.52)
 		(end 86.36 134.62)
 		(stroke
 			(width 0)
@@ -1119,7 +1119,7 @@
 	)
 	(text "Board Notes"
 		(exclude_from_sim no)
-		(at 17.78 104.14 0)
+		(at 17.78 101.6 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -1129,6 +1129,19 @@
 			(justify left bottom)
 		)
 		(uuid "48a1e274-cf9f-4a8a-addb-5b22b8a4685c")
+	)
+	(text "I_OUT = (current * shunt * gain) + Vref (V) \n	  = (current * 0.025) + 1.25 (V)"
+		(exclude_from_sim no)
+		(at 17.78 107.696 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "776f76fc-5cc0-4bc8-a836-e21d15350980")
 	)
 	(text "Graphics / Mounting"
 		(exclude_from_sim no)
@@ -1167,7 +1180,7 @@
 	)
 	(text "Measures current from battery using low-side shunt resistor\n- Note for charging: max 32A thru Elcon, max 54A to cell\n"
 		(exclude_from_sim no)
-		(at 17.78 106.68 0)
+		(at 17.78 102.616 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1494,7 +1507,7 @@
 		(cells
 			(table_cell "Measurable Current Range"
 				(exclude_from_sim no)
-				(at 17.78 122.936 0)
+				(at 17.78 123.444 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1513,7 +1526,7 @@
 			)
 			(table_cell "Current (A)"
 				(exclude_from_sim no)
-				(at 45.72 122.936 0)
+				(at 45.72 123.444 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1532,7 +1545,7 @@
 			)
 			(table_cell "I_OUT Reading (V)"
 				(exclude_from_sim no)
-				(at 60.96 122.936 0)
+				(at 60.96 123.444 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1551,7 +1564,7 @@
 			)
 			(table_cell "Max Charge (-)"
 				(exclude_from_sim no)
-				(at 17.78 125.984 0)
+				(at 17.78 126.492 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1568,7 +1581,7 @@
 			)
 			(table_cell "-46 A"
 				(exclude_from_sim no)
-				(at 45.72 125.984 0)
+				(at 45.72 126.492 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1585,7 +1598,7 @@
 			)
 			(table_cell "0.1 V"
 				(exclude_from_sim no)
-				(at 60.96 125.984 0)
+				(at 60.96 126.492 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1602,7 +1615,7 @@
 			)
 			(table_cell "Max Discharge (+)"
 				(exclude_from_sim no)
-				(at 17.78 129.032 0)
+				(at 17.78 129.54 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1619,7 +1632,7 @@
 			)
 			(table_cell "+78 A"
 				(exclude_from_sim no)
-				(at 45.72 129.032 0)
+				(at 45.72 129.54 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1636,7 +1649,7 @@
 			)
 			(table_cell "3.2 V"
 				(exclude_from_sim no)
-				(at 60.96 129.032 0)
+				(at 60.96 129.54 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1676,7 +1689,7 @@
 		(cells
 			(table_cell "Battery Current Range"
 				(exclude_from_sim no)
-				(at 17.78 111.76 0)
+				(at 17.78 112.268 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1695,7 +1708,7 @@
 			)
 			(table_cell "Current (A)"
 				(exclude_from_sim no)
-				(at 45.72 111.76 0)
+				(at 45.72 112.268 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1714,7 +1727,7 @@
 			)
 			(table_cell "I_OUT Reading (V)"
 				(exclude_from_sim no)
-				(at 60.96 111.76 0)
+				(at 60.96 112.268 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1733,7 +1746,7 @@
 			)
 			(table_cell "Max Charge (-)"
 				(exclude_from_sim no)
-				(at 17.78 114.808 0)
+				(at 17.78 115.316 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1750,7 +1763,7 @@
 			)
 			(table_cell "-32 A"
 				(exclude_from_sim no)
-				(at 45.72 114.808 0)
+				(at 45.72 115.316 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1767,7 +1780,7 @@
 			)
 			(table_cell "0.45 V"
 				(exclude_from_sim no)
-				(at 60.96 114.808 0)
+				(at 60.96 115.316 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1784,7 +1797,7 @@
 			)
 			(table_cell "Max Discharge (+)"
 				(exclude_from_sim no)
-				(at 17.78 117.856 0)
+				(at 17.78 118.364 0)
 				(size 27.94 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1801,7 +1814,7 @@
 			)
 			(table_cell "+70 A"
 				(exclude_from_sim no)
-				(at 45.72 117.856 0)
+				(at 45.72 118.364 0)
 				(size 15.24 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -1818,7 +1831,7 @@
 			)
 			(table_cell "3.0 V"
 				(exclude_from_sim no)
-				(at 60.96 117.856 0)
+				(at 60.96 118.364 0)
 				(size 20.32 3.048)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2971,7 +2984,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Keystone_5005-5009_Compact"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 66.04 38.1 0)
 			(effects
 				(font

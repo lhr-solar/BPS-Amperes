@@ -4853,7 +4853,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
 			(at 182.88 138.43 0)
 			(effects
 				(font
@@ -6363,7 +6363,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
 			(at 198.12 138.43 0)
 			(effects
 				(font
@@ -10197,7 +10197,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
 			(at 212.09 138.43 0)
 			(effects
 				(font

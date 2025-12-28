@@ -44762,6 +44762,18 @@
 		)
 		(uuid "50fc72c0-5f2c-488d-8df0-c1f4117d132e")
 	)
+	(text "1% tolerance on resistors in voltage divider"
+		(exclude_from_sim no)
+		(at 203.454 60.198 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "535f143f-b454-44ff-b878-bf166d85675f")
+	)
 	(text "Gain: 100 V/V\nRsense = 250 uOhm\nPsense = Rsense * (70A)^2 = 1.225 W\n\nPicked shunt first, then adjusted gain to meet ADC range\nIf additional gain is needed, tweak filter circuit"
 		(exclude_from_sim no)
 		(at 16.256 183.134 0)

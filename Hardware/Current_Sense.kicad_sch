@@ -44564,7 +44564,7 @@
 	)
 	(rectangle
 		(start 93.98 165.1)
-		(end 160.02 195.834)
+		(end 175.26 195.834)
 		(stroke
 			(width 0)
 			(type dash)
@@ -44873,7 +44873,7 @@
 		)
 		(uuid "701cf73b-81fc-4030-b51e-07661512b334")
 	)
-	(text "Vref = 1.25 V | Shunt = 250 uOhm | Gain = 100 V/V\nShunt * gain = 250 uOhm * 100 V/V = 0.025"
+	(text "Vref = 1.25 V | Shunt = 250 uOhm | Gain = ~100 V/V (100 * 0.4 * 2.49)\nShunt * gain = 250 uOhm * 100 V/V = 0.025"
 		(exclude_from_sim no)
 		(at 96.52 190.5 0)
 		(effects

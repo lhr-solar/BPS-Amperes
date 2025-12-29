@@ -2732,7 +2732,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx05_1x05_P2.50mm_Vertical"
 			(at 165.1 39.37 0)
 			(effects
 				(font
@@ -2741,7 +2741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://tools.molex.com/pdm_docs/sd/1053091105_sd.pdf"
 			(at 165.1 39.37 0)
 			(effects
 				(font
@@ -2759,7 +2759,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "1053131105"
+		(property "P/N" "1053091105"
 			(at 165.1 39.37 0)
 			(effects
 				(font
@@ -2883,7 +2883,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx05_1x05_P2.50mm_Vertical"
 			(at 133.35 39.37 0)
 			(effects
 				(font
@@ -2892,7 +2892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://tools.molex.com/pdm_docs/sd/1053091105_sd.pdf"
 			(at 133.35 39.37 0)
 			(effects
 				(font
@@ -2910,7 +2910,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "1053131105"
+		(property "P/N" "1053091105"
 			(at 133.35 39.37 0)
 			(effects
 				(font

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1206L010_30WR
+D PTC 30V POLYFUSE SURF MOUNT 1206
+K
+F https://www.littelfuse.com/~/media/electronics/datasheets/resettable_ptcs/littelfuse_ptc_1206l_datasheet.pdf.pdf
+$ENDCMP
+#
+#End Doc Library

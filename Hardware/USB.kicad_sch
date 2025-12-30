@@ -3405,7 +3405,7 @@
 		(uuid "fe4ead53-8a3b-4c5e-b3fc-5d92d0844de3")
 	)
 	(label "D+"
-		(at 57.15 95.25 270)
+		(at 54.61 95.25 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3535,7 +3535,7 @@
 		(uuid "d8dc75d1-fd1a-4b5c-81be-2fe3b104f833")
 	)
 	(label "D-"
-		(at 54.61 95.25 270)
+		(at 57.15 95.25 270)
 		(effects
 			(font
 				(size 1.27 1.27)

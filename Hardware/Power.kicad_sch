@@ -3022,16 +3022,6 @@
 		)
 		(uuid "c56b27bd-8b24-43a3-8743-b880f8d3298a")
 	)
-	(text "5mA current"
-		(exclude_from_sim no)
-		(at 271.272 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "c7749960-b7aa-4072-9325-b33a8d2700f8")
-	)
 	(text "PTC fuse\n30 VDC, 250 mA trip"
 		(exclude_from_sim no)
 		(at 31.496 34.29 0)
@@ -4049,6 +4039,16 @@
 			(type default)
 		)
 		(uuid "8c549e1a-2811-4e0f-b51e-2f8c29022b4d")
+	)
+	(wire
+		(pts
+			(xy 25.4 40.64) (xy 29.21 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c88282e-618d-4f55-9b49-2b29d683cab9")
 	)
 	(wire
 		(pts
@@ -5078,7 +5078,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 208.28 139.7 0)
 			(effects
 				(font
@@ -6629,6 +6629,73 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
+		(at 25.4 40.64 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "44e152a4-0dca-49c6-b3c6-faf01db27d94")
+		(property "Reference" "TP22"
+			(at 22.86 42.6719 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "24V_HV"
+			(at 22.86 45.2119 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 30.48 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 30.48 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 25.4 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c263f98-ba0f-4c6a-a7c3-4146516930da")
+		)
+		(instances
+			(project "PS-AmperesPCB"
+				(path "/a452d214-ea00-440d-a445-5d6103fda43a/3b2a70f8-48f8-45b9-b0fe-085893d574c0"
+					(reference "TP22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
 		(at 231.14 139.7 0)
 		(mirror y)
 		(unit 1)
@@ -6655,7 +6722,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 226.06 139.7 0)
 			(effects
 				(font
@@ -10634,7 +10701,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 257.81 139.7 0)
 			(effects
 				(font

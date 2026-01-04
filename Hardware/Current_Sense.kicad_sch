@@ -44633,6 +44633,18 @@
 		)
 		(uuid "065d347c-3ce4-4f94-9aaf-b1be0e7fb758")
 	)
+	(text "1% tolerance on \nresistors, caps"
+		(exclude_from_sim no)
+		(at 218.186 118.872 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 8 29 1)
+			)
+			(justify left top)
+		)
+		(uuid "0aab3936-9949-4144-a201-32c4876641b0")
+	)
 	(text "-->"
 		(exclude_from_sim no)
 		(at 169.164 129.54 0)
@@ -44762,7 +44774,7 @@
 		)
 		(uuid "50fc72c0-5f2c-488d-8df0-c1f4117d132e")
 	)
-	(text "1% tolerance on resistors in voltage divider"
+	(text "1% tolerance on resistors"
 		(exclude_from_sim no)
 		(at 203.454 60.198 0)
 		(effects

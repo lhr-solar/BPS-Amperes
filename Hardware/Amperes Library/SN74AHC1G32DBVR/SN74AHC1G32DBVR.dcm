@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP SN74AHC1G32DBVR
-D Single 2-Input Positive-OR Gate
-K
-F http://www.ti.com/lit/gpn/sn74ahc1g32
-$ENDCMP
-#
-#End Doc Library

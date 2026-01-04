@@ -11,5 +11,4 @@
   (lib (name "TLV9002QDRQ1")(type "KiCad")(uri "${KIPRJMOD}/Amperes Library/TLV9002QDRQ1/TLV9002QDRQ1.kicad_sym")(options "")(descr ""))
   (lib (name "SN74AHC1G32DBVR")(type "KiCad")(uri "${KIPRJMOD}/Amperes Library/SN74AHC1G32DBVR/SN74AHC1G32DBVR.kicad_sym")(options "")(descr ""))
   (lib (name "WSBS8518L2500JKM4")(type "KiCad")(uri "${KIPRJMOD}/Amperes Library/WSBS8518L2500JKM4/WSBS8518L2500JKM4.kicad_sym")(options "")(descr ""))
-  (lib (name "CAS-220TB")(type "KiCad")(uri "${KIPRJMOD}/Amperes Library/CAS-220TB/CAS-220TB.kicad_sym")(options "")(descr ""))
 )

@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP CAS-220TB
-D Slide Switch DPDT 100 mA 6 VDC, 24 VDC Non-Illuminated SMD/SMT
-K
-F https://www.nidec-components.com/e/catalog/switch/cas.pdf
-$ENDCMP
-#
-#End Doc Library

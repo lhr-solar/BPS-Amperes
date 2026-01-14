@@ -2506,9 +2506,9 @@
 		)
 		(uuid "55a3b89e-8cd4-4634-860d-91aa02e7988c")
 	)
-	(text "Vertical USB C Port"
+	(text "Horizontal USB C Port"
 		(exclude_from_sim no)
-		(at 20.32 25.4 0)
+		(at 20.574 25.4 0)
 		(effects
 			(font
 				(size 1.778 1.778)
@@ -2516,6 +2516,17 @@
 			(justify left top)
 		)
 		(uuid "5eab73eb-6d1d-4f85-a60a-7c01ef1bb590")
+	)
+	(text "Enable bootloader \nusing CP2102N GPIO"
+		(exclude_from_sim no)
+		(at 169.164 61.722 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "70565e83-e0f5-44bb-899e-99697f93aa8a")
 	)
 	(text "VDD Bypass"
 		(exclude_from_sim no)
@@ -2684,10 +2695,6 @@
 		(uuid "8c24a6e8-894f-49d2-9c21-a09c433e2f43")
 	)
 	(no_connect
-		(at 163.83 67.31)
-		(uuid "9196f8c6-a2ad-441b-b592-4a500c6390ce")
-	)
-	(no_connect
 		(at 163.83 49.53)
 		(uuid "98979f28-b472-4607-8c1c-7e9e3e6f0c72")
 	)
@@ -2756,6 +2763,16 @@
 			(type default)
 		)
 		(uuid "12fce419-d1dc-4c9e-b284-09f8e85fc421")
+	)
+	(wire
+		(pts
+			(xy 163.83 67.31) (xy 171.45 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13b52f42-2c73-42d3-ab37-ddcde30fb337")
 	)
 	(wire
 		(pts
@@ -3547,6 +3564,17 @@
 			(justify left)
 		)
 		(uuid "8c8a9eec-b53b-4bb4-b912-5d8f97adab27")
+	)
+	(hierarchical_label "USB_Boot_GPIO"
+		(shape output)
+		(at 171.45 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "98a1deb6-8048-4dd3-ad55-69a1d2cd88a3")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5350,7 +5378,7 @@
 				)
 			)
 		)
-		(property "Value" "USB4120-03-C"
+		(property "Value" "USB4105-GF-A"
 			(at 30.48 33.02 0)
 			(effects
 				(font
@@ -5358,7 +5386,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Parts:USB412003C"
+		(property "Footprint" "UTSVT_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 34.29 53.34 0)
 			(effects
 				(font
@@ -5367,7 +5395,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/catalog/specsheets/GCT_USB4120.pdf"
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D"
 			(at 34.29 53.34 0)
 			(effects
 				(font
@@ -5385,7 +5413,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "USB4120-03-C"
+		(property "P/N" "USB4105-GF-A"
 			(at 30.48 53.34 0)
 			(effects
 				(font

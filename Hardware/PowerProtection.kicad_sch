@@ -705,131 +705,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -1536,6 +1411,17 @@
 		)
 		(uuid "2b73f2ea-dba7-4646-91bc-4c517396c58c")
 	)
+	(text "RIP shdn resistor"
+		(exclude_from_sim no)
+		(at 158.75 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "3155d9ee-d29c-42ad-98d4-fe00c5be3f2b")
+	)
 	(text "Under/Overvoltage Protection"
 		(exclude_from_sim no)
 		(at 36.322 84.328 0)
@@ -1567,16 +1453,6 @@
 			(justify left)
 		)
 		(uuid "71845e14-cb89-4c7f-af51-3369b8197736")
-	)
-	(text "SHDN has weak internal\npullup - pulled up to\nMCU voltage after initial\npower on"
-		(exclude_from_sim no)
-		(at 175.514 82.804 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7871c72b-7e0b-40b7-8563-e47b750e04da")
 	)
 	(text "20.88 ms ramp time"
 		(exclude_from_sim no)
@@ -1745,6 +1621,10 @@
 		(at 67.31 39.37)
 		(uuid "a7b783a7-f64a-4779-95e5-032743281957")
 	)
+	(no_connect
+		(at 67.31 46.99)
+		(uuid "d4e71915-610b-49f5-9931-7d8cfa67cd21")
+	)
 	(wire
 		(pts
 			(xy 106.68 41.91) (xy 97.79 41.91)
@@ -1824,16 +1704,6 @@
 			(type default)
 		)
 		(uuid "260c7535-2568-4c10-b084-7fed1057bf47")
-	)
-	(wire
-		(pts
-			(xy 160.02 96.52) (xy 160.02 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26c909ea-a43a-4ce5-a163-2ad0b5954b71")
 	)
 	(wire
 		(pts
@@ -2187,16 +2057,6 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 96.52) (xy 160.02 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af068d6f-3f02-4b47-8302-5952a7344488")
-	)
-	(wire
-		(pts
 			(xy 52.07 41.91) (xy 52.07 43.18)
 		)
 		(stroke
@@ -2234,16 +2094,6 @@
 			(type default)
 		)
 		(uuid "c0573006-1a77-4201-9bf7-2f07c00a0629")
-	)
-	(wire
-		(pts
-			(xy 160.02 82.55) (xy 160.02 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2423448-d8ab-4b6c-8c4d-8a9b3ddeb2ed")
 	)
 	(wire
 		(pts
@@ -2414,16 +2264,6 @@
 			(type default)
 		)
 		(uuid "e8e2b0ce-3730-48eb-a681-4939c2ae460b")
-	)
-	(wire
-		(pts
-			(xy 60.96 46.99) (xy 67.31 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9c9e20b-20fa-433c-99b1-a209d7f093dc")
 	)
 	(wire
 		(pts
@@ -5382,16 +5222,6 @@
 			)
 		)
 	)
-	(label "SHDN"
-		(at 166.37 96.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0ebe0d97-1234-43b3-b42f-148df1cdbd2d")
-	)
 	(label "IMON"
 		(at 102.87 46.99 180)
 		(effects
@@ -5561,16 +5391,6 @@
 			(justify right bottom)
 		)
 		(uuid "f77ef148-1ed3-47a0-8091-098fce8433d2")
-	)
-	(label "SHDN"
-		(at 60.96 46.99 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fd8a2cf0-b809-42a4-b6da-f94aa8d760bf")
 	)
 	(hierarchical_label "24V_Ext"
 		(shape input)
@@ -7074,72 +6894,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 160.02 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d43e9691-0cca-40ea-8e6c-db9b7bbe0318")
-		(property "Reference" "#PWR0124"
-			(at 160.02 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 160.02 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 160.02 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "deaa6799-0ff3-47fd-b896-8f01666aa21c")
-		)
-		(instances
-			(project "BPS-AmperesPCB"
-				(path "/a452d214-ea00-440d-a445-5d6103fda43a/3b2a70f8-48f8-45b9-b0fe-085893d574c0/bd9a5644-5430-4918-ab28-771dd7faeab6"
-					(reference "#PWR0124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 146.05 82.55 0)
 		(unit 1)
@@ -7278,94 +7032,6 @@
 			(project "BPS-AmperesPCB"
 				(path "/a452d214-ea00-440d-a445-5d6103fda43a/3b2a70f8-48f8-45b9-b0fe-085893d574c0/bd9a5644-5430-4918-ab28-771dd7faeab6"
 					(reference "D17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 160.02 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e771b97f-dca7-4553-8f03-2edabba1398f")
-		(property "Reference" "R34"
-			(at 162.56 88.265 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 162.56 90.805 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 158.242 88.9 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.02 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 160.02 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CRCW060310K0FKEI "
-			(at 160.02 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mfg" "CRCW060310K0FKEI "
-			(at 160.02 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d723f259-2105-447a-97e9-3b4ce248a6a4")
-		)
-		(pin "2"
-			(uuid "22f132fc-e51b-4be6-9eee-ddafc875fd0f")
-		)
-		(instances
-			(project "BPS-AmperesPCB"
-				(path "/a452d214-ea00-440d-a445-5d6103fda43a/3b2a70f8-48f8-45b9-b0fe-085893d574c0/bd9a5644-5430-4918-ab28-771dd7faeab6"
-					(reference "R34")
 					(unit 1)
 				)
 			)

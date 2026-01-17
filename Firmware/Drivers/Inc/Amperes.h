@@ -1,47 +1,51 @@
 #ifndef AMPERES_H
 #define AMPERES_H
 
-/** ==========================================================
- *  Driver for Amperes Board (STM32L431CBT6)
- *  ==========================================================
- *  - Receive data from ADC
- *  - Send data over CAN
- */
-
 #include "common.h"
 #include "ADC.h"
 #include "CAN.h"
+
+/** ==========================================================
+ *  Driver for Amperes Board
+ *  ==========================================================
+ *  MCU: STM32L431CBT6
+ *  ADC: PA0
+ *  Operation: Receive data from ADC, convert to 
+ *             current reading, and send over CAN.
+ * ========================================================== /
+
+ /* LED Pins*/
+#define AMPERES_LED_PORT        GPIOA
+#define AMPERES_HB_PIN          GPIO_PIN_3
+#define AMPERES_FAULT_PIN       GPIO_PIN_4
+#define AMPERES_CHARGE_PIN      GPIO_PIN_5
+#define AMPERES_DISCHARGE_PIN   GPIO_PIN_6
+
+/* GPIO Pins */
+#define AMPERES_BOOT_PIN        GPIO_PIN_7
 
 
 /** ================================================================
  *  ADC (12 bit)
  * ================================================================ */
-#ifdef STM32L4xx
-#define AMPERES_CHANNEL ADC_CHANNEL_6
+#define AMPERES_ADC_CHANNEL ADC_CHANNEL_5
 #define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_2CYCLES_5
-#define AMPERES_ADC_PIN 1
-#endif
-
-#ifdef STM32F4xx
-#define AMPERES_CHANNEL ADC_CHANNEL_1
-#define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_3CYCLES
-#endif
-
-#define ADC_PORT GPIOA
-#define ADC_PIN GPIO_PIN_1
+#define AMPERES_ADC_PORT    GPIOA
+#define AMPERES_ADC_PIN     GPIO_PIN_0
 
 // Reference voltage for bidirectional current reading (1.25V)
 #define AMPERES_VREF 1.25
+#define AMPERES_mVREF 1250
 
 /**
- * @brief Convert ADC reading to current reading.
+ * @brief Convert ADC reading to current (in milliamps).
  * @n 
- *  - ADC to voltage: ADC * (3.3V / 4096)
+ *  - ADC to mV: ADC * (3300 mV / 4096)
  * @n 
- *  - Voltage to current: (V - Vref) / ((250 E-6 ohm)(100 V/V))
+ *  - mV to mA: (mV - mVref) / ((250 E-6 ohm)(100 V/V))
  * @param reading ADC value to be converted
  */
-#define AMPERES_ADC_TO_CURRENT(reading) (((reading * (3.3 / 4096)) - AMPERES_VREF) / (0.025))
+#define AMPERES_ADC_TO_CURRENT(reading) (((reading * (3300 / 4096)) - AMPERES_mVREF) / (0.025))
 
 
 
@@ -71,8 +75,8 @@ typedef enum AmperesStatus {    // TODO: better states
 AmperesStatus_t Amperes_Init();
 
 /**
- * @brief Get current reading (in milliamps) from Amperes ADC;
- *        expected range is -50.000 to +80.00 amps.
+ * @brief Get current reading (in milliamps) from ADC;
+ *        expected range is -50.000 to +82.00 amps.
  * @param current_reading Variable to hold current reading 
  * @retval Status: AMPERES_ADC_FAIL, QUEUE_FULL, or OK
  */
@@ -80,7 +84,7 @@ AmperesStatus_t Amperes_GetReading(int32_t *current_reading);
 
 
 /**
- * @brief Send Amperes data over CAN
+ * @brief Send Amperes data over BPS_CAN
  * @param data Amperes current data to send over CAN
  * @retval Status: AMPERES_CAN_SEND_FAIL or OK
  */

@@ -16,7 +16,7 @@ NC=\033[0m # No Color
 
 # Project Configuration ----------
 TEST ?= main
-PROJECT_TARGET ?= stm32f446ret
+PROJECT_TARGET ?= stm32l431cbt
 # For testing: stm32f446ret
 # Amperes chip: stm32l431cbt
 

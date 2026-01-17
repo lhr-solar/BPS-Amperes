@@ -9,18 +9,18 @@
 //     #define TASK_
 */
 
-/* Amperes Task */
-extern StaticTask_t amperes_task_buffer;
-extern StackType_t  amperes_task_stack[configMINIMAL_STACK_SIZE];
-#define AMPERES_PRIO    1
-#define AMPERES_DELAY   pdMS_TO_TICKS(200)     // TODO
+/* Tasks */
+extern StaticTask_t ADC_task_buffer;
+extern StackType_t  ADC_task_stack[configMINIMAL_STACK_SIZE];
+#define ADC_PRIO    1
+#define ADC_DELAY   pdMS_TO_TICKS(200)     // TODO
 
 /**
- * @brief Amperes Task: TODO
+ * @brief ADC Task: TODO
  * @retval none
  */
-void Amperes_Task(void *pvParameters);
-
+void ADC_Task(void *pvParameters);
+void CAN_Task(void *pvParameters);
 
 /* Init Task */
 #define TASK_INIT_PRIO          tskIDLE_PRIORITY + 1

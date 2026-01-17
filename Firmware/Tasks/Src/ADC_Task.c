@@ -1,6 +1,6 @@
 #include "Tasks.h"
 
-void Amperes_Task(void *pvParameters) {
+void ADC_Task(void *pvParameters) {
     while (1) {
         // Get Amperes current reading
         int32_t current_value;
@@ -17,6 +17,6 @@ void Amperes_Task(void *pvParameters) {
         #endif
 
         // TODO: don't poll, block and wake up task instead
-        vTaskDelay(AMPERES_DELAY);
+        vTaskDelay(ADC_DELAY);
     }
 }

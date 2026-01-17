@@ -10,13 +10,13 @@ void Task_ReadADC(void *pvParameters) {
 
     while(1) {
         AmperesStatus_t stat = Amperes_GetReading(&reading);
-        if (stat != AMPERES_OK) error_handler();
+        while (stat != AMPERES_OK) error_handler();
         
-        // using current value: approx -50 to 82 A
-        if (reading < 0) reading *= -1; // abs
+        // // using current value: approx -50 to 82 A
+        if (reading < 0) reading *= -1;
         reading *= 10;
 
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_GPIO_TogglePin(AMPERES_LED_PORT, AMPERES_CHARGE_PIN);
         vTaskDelay(pdMS_TO_TICKS(reading));
     }
 }
@@ -28,11 +28,11 @@ int main() {
     GPIO_InitTypeDef led_config = {
         .Mode = GPIO_MODE_OUTPUT_PP,
         .Pull = GPIO_NOPULL,
-        .Pin = GPIO_PIN_5
+        .Pin = AMPERES_HB_PIN | AMPERES_FAULT_PIN | AMPERES_CHARGE_PIN | AMPERES_DISCHARGE_PIN
     };
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    HAL_GPIO_Init(GPIOA, &led_config);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
+    HAL_GPIO_Init(AMPERES_LED_PORT, &led_config);
+    HAL_GPIO_WritePin(AMPERES_LED_PORT, AMPERES_HB_PIN, 1);
 
     if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
 

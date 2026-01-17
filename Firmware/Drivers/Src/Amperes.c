@@ -21,21 +21,21 @@ static StaticQueue_t xStaticQueue;
  * @brief Override MSP GPIO init
  */
 void HAL_ADC_MspGPIOInit(ADC_HandleTypeDef* hadc) {
-    // Initialize PA1 for ADC
+    // Initialize PA0 for ADC
     GPIO_InitTypeDef input =  {
         .Mode = GPIO_MODE_ANALOG,
         .Pull = GPIO_NOPULL, 
-        .Pin = ADC_PIN
+        .Pin = AMPERES_ADC_PIN
     };
-    HAL_GPIO_Init(ADC_PORT, &input);
+    HAL_GPIO_Init(AMPERES_ADC_PORT, &input);
 
-    // Initialize PA5 for LED debug
+    // Initialize ports for LED debug
     GPIO_InitTypeDef led_config = {
         .Mode = GPIO_MODE_OUTPUT_PP,
         .Pull = GPIO_NOPULL,
-        .Pin = GPIO_PIN_5
+        .Pin = AMPERES_HB_PIN | AMPERES_FAULT_PIN | AMPERES_CHARGE_PIN | AMPERES_DISCHARGE_PIN
     };
-    HAL_GPIO_Init(GPIOA, &led_config);
+    HAL_GPIO_Init(AMPERES_LED_PORT, &led_config);
 
     __HAL_RCC_GPIOA_CLK_ENABLE();
 }
@@ -47,30 +47,6 @@ static bool Amperes_ADC_Init() {
     // ADC init structure
     ADC_InitTypeDef init = {0};
 
-    #ifdef STM32L4xx
-    // ADC Handle
-    // amperes_adc.Instance = ADC1;
-    // ADC Init
-    init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-    init.Resolution = ADC_RESOLUTION_12B;
-    init.DataAlign = ADC_DATAALIGN_RIGHT;
-    init.ScanConvMode = ADC_SCAN_DISABLE;
-    init.EOCSelection = ADC_EOC_SINGLE_CONV;
-    init.LowPowerAutoWait = DISABLE;
-    init.ContinuousConvMode = ENABLE;
-    init.NbrOfConversion = 1;
-    init.DiscontinuousConvMode = DISABLE;
-    init.ExternalTrigConv = ADC_SOFTWARE_START;
-    init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    init.DMAContinuousRequests = DISABLE;
-    init.Overrun = ADC_OVR_DATA_PRESERVED;
-    init.OversamplingMode = DISABLE;
-    #endif
-
-    #ifdef STM32F4xx
-    // ADC Handle
-    // amperes_adc.Instance = ADC1;
-    // ADC Init
     init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
     init.Resolution = ADC_RESOLUTION_12B;
     init.ScanConvMode = DISABLE;
@@ -82,61 +58,63 @@ static bool Amperes_ADC_Init() {
     init.NbrOfConversion = 1;
     init.DMAContinuousRequests = DISABLE;
     init.EOCSelection = ADC_EOC_SINGLE_CONV;
-    #endif
 
     // Initialize ADC
-    volatile adc_status_t s = adc_init(init, hadc1);
+    volatile adc_status_t s = adc_init(&init, hadc1);
     s+=0;
     if (s != ADC_OK) return false;
+    
+    // // Enable ADC clock
+    // __HAL_RCC_ADC_CLK_ENABLE();
 
-    // Debug
-    #ifdef DEBUG
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-    #endif
-
-    return true;
-}
-
-static bool Amperes_CAN_Init() {
-    // Create filter
-    CAN_FilterTypeDef  sFilterConfig;
-    sFilterConfig.FilterBank = 0;
-    sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-    sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-    sFilterConfig.FilterIdHigh = 0x0000;
-    sFilterConfig.FilterIdLow = 0x0000;
-    sFilterConfig.FilterMaskIdHigh = 0x0000;
-    sFilterConfig.FilterMaskIdLow = 0x0000;
-    sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-    sFilterConfig.FilterActivation = ENABLE;
-    sFilterConfig.SlaveStartFilterBank = 14;
-
-    // setup can1 init
-    hcan1->Init.Prescaler = 5;
-    hcan1->Init.Mode = CAN_MODE_LOOPBACK;
-    hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-    hcan1->Init.TimeSeg1 = CAN_BS1_6TQ;
-    hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-    hcan1->Init.TimeTriggeredMode = DISABLE;
-    hcan1->Init.AutoBusOff = DISABLE;
-    hcan1->Init.AutoWakeUp = DISABLE;
-    hcan1->Init.AutoRetransmission = ENABLE;
-    hcan1->Init.ReceiveFifoLocked = DISABLE;
-
-    // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
-    // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
-    hcan1->Init.TransmitFifoPriority = ENABLE;
-
-    // initialize CAN1
-    if (can_init(hcan1, &sFilterConfig) != CAN_OK) return false;    // or call error handler?
-
-    // Debug
-    #ifdef DEBUG
-
-    #endif
+    // RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+    // PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+    // PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_SYSCLK;
+    // HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit);
     
     return true;
 }
+
+// static bool Amperes_CAN_Init() {
+//     // Create filter
+//     CAN_FilterTypeDef  sFilterConfig;
+//     sFilterConfig.FilterBank = 0;
+//     sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+//     sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+//     sFilterConfig.FilterIdHigh = 0x0000;
+//     sFilterConfig.FilterIdLow = 0x0000;
+//     sFilterConfig.FilterMaskIdHigh = 0x0000;
+//     sFilterConfig.FilterMaskIdLow = 0x0000;
+//     sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+//     sFilterConfig.FilterActivation = ENABLE;
+//     sFilterConfig.SlaveStartFilterBank = 14;
+
+//     // setup can1 init
+//     hcan1->Init.Prescaler = 5;
+//     hcan1->Init.Mode = CAN_MODE_LOOPBACK;   // CHANGE LATER
+//     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
+//     hcan1->Init.TimeSeg1 = CAN_BS1_6TQ;
+//     hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
+//     hcan1->Init.TimeTriggeredMode = DISABLE;
+//     hcan1->Init.AutoBusOff = DISABLE;
+//     hcan1->Init.AutoWakeUp = DISABLE;
+//     hcan1->Init.AutoRetransmission = ENABLE;
+//     hcan1->Init.ReceiveFifoLocked = DISABLE;
+
+//     // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
+//     // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
+//     hcan1->Init.TransmitFifoPriority = ENABLE;
+
+//     // initialize CAN1
+//     if (can_init(hcan1, &sFilterConfig) != CAN_OK) return false;    // or call error handler?
+
+//     // Debug
+//     #ifdef DEBUG
+
+//     #endif
+    
+//     return true;
+// }
 
 
 /** ================================================================
@@ -151,10 +129,10 @@ AmperesStatus_t Amperes_Init() {
     if (!Amperes_ADC_Init()) return AMPERES_INIT_FAIL;
 
     // Init CAN
-    if (!Amperes_CAN_Init()) return AMPERES_INIT_FAIL;
+    // if (!Amperes_CAN_Init()) return AMPERES_INIT_FAIL;
 
     // Start CAN
-    if (can_start(hcan1) != CAN_OK) return AMPERES_INIT_FAIL;
+    // if (can_start(hcan1) != CAN_OK) return AMPERES_INIT_FAIL;
 
     return AMPERES_OK;
 }
@@ -162,7 +140,7 @@ AmperesStatus_t Amperes_Init() {
 
 AmperesStatus_t Amperes_GetReading(int32_t *current_reading) {
     // Read from ADC into queue
-    if (adc_read(AMPERES_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
+    if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
         return AMPERES_ADC_FAIL;
     }
 
@@ -186,14 +164,14 @@ AmperesStatus_t Amperes_SendCAN(int32_t data) {
     tx_header.DLC = 2;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Store 32b (signed) data into 4x8b (unsigned) blocks; LSB in element 0
+    // Split int32 data into 4 uint8 elements; LSB at index 0
     uint8_t tx_data[8] = {0};
     tx_data[0] = (uint8_t) (data & 0xFF);
     tx_data[1] = (uint8_t) ((data >> 8) & 0xFF);
     tx_data[2] = (uint8_t) ((data >> 16) & 0xFF);
-    tx_data[3] = (uint8_t) ((data >> 27) & 0xFF);
+    tx_data[3] = (uint8_t) ((data >> 24) & 0xFF);
 
-    // Send payload
+    // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) {
         return AMPERES_CAN_SEND_FAIL;
     }

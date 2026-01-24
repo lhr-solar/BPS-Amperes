@@ -4,6 +4,8 @@
 void error_handler() {
     // Turn on fault LED
     HAL_GPIO_WritePin(AMPERES_LED_PORT, AMPERES_FAULT_PIN, GPIO_PIN_SET);
+    // Disable interrupts ???
+    __disable_irq();
     while (1) {}
 }
 

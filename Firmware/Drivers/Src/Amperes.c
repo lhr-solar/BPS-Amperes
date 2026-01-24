@@ -3,14 +3,25 @@
 /** ================================================================
  *  Local Variables
  * ================================================================ */
-/* ADC Queue */
+/* ADC Queue (to store adc conversion)*/
+#define ITEM_SIZE sizeof(int32_t)
 #ifndef ADC_QUEUE_LENGTH
-    // TODO: why size
+    // TODO: PICK SIZE
     #define ADC_QUEUE_LENGTH 100    
 #endif
-#define ITEM_SIZE sizeof(uint32_t)
+
 QueueHandle_t adc_queue;
-uint8_t qStorage[ADC_QUEUE_LENGTH * ITEM_SIZE];
+uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ITEM_SIZE];
+static StaticQueue_t xStaticQueue;
+
+/* CAN Queue (to send to CAN)*/
+#ifndef CAN_QUEUE_LENGTH
+    // TODO: PICK SIZE
+    #define CAN_QUEUE_LENGTH 100    
+#endif
+
+QueueHandle_t can_queue;
+uint8_t can_qStorage[CAN_QUEUE_LENGTH * ITEM_SIZE];
 static StaticQueue_t xStaticQueue;
 
 /* ADC Timer */

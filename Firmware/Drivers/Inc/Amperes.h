@@ -48,13 +48,19 @@
  */
 #define AMPERES_ADC_TO_CURRENT(reading) (((reading * (3300 / 4096)) - AMPERES_mVREF) / (0.025))
 
+extern QueueHandle_t adc_queue;
 
 
 /** ================================================================
  *  CAN
  * ================================================================ */
 #define AMPERES_STD_ID 0x1
+extern QueueHandle_t can_queue;
 
+typedef struct {
+    int32_t current_data;
+    int32_t adc_voltage;
+} AmperesMsg_t;
 
 
 /** ================================================================

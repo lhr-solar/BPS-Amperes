@@ -12,7 +12,7 @@
 
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ITEM_SIZE];
-static StaticQueue_t xStaticQueue;
+static StaticQueue_t xStaticQueue_adc;
 
 /* CAN Queue (to send to CAN)*/
 #ifndef CAN_QUEUE_LENGTH
@@ -22,7 +22,7 @@ static StaticQueue_t xStaticQueue;
 
 QueueHandle_t can_queue;
 uint8_t can_qStorage[CAN_QUEUE_LENGTH * ITEM_SIZE];
-static StaticQueue_t xStaticQueue;
+// static StaticQueue_t xStaticQueue_can;
 
 /* ADC Timer */
 TIM_HandleTypeDef htim6;
@@ -81,7 +81,7 @@ static bool Amperes_ADC_Init() {
 
     /* ================ ADC Init ================ */
     /* Initialize queue */
-    adc_queue = xQueueCreateStatic(ADC_QUEUE_LENGTH, ITEM_SIZE, qStorage, &xStaticQueue);
+    adc_queue = xQueueCreateStatic(ADC_QUEUE_LENGTH, ITEM_SIZE, adc_qStorage, &xStaticQueue_adc);
 
     /* ADC Init struct*/
     ADC_InitTypeDef init = {0};
@@ -128,7 +128,10 @@ static bool Amperes_ADC_Init() {
 }
 
 // static bool Amperes_CAN_Init() {
-//     // Create filter
+    /* Initialize CAN queue */
+    // can_queue = xQueueCreateStatic(CAN_QUEUE_LENGTH, ITEM_SIZE, can_qStorage, &xStaticQueue_can);
+
+//     /* Create CAN filter */
 //     CAN_FilterTypeDef  sFilterConfig;
 //     sFilterConfig.FilterBank = 0;
 //     sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
@@ -141,7 +144,7 @@ static bool Amperes_ADC_Init() {
 //     sFilterConfig.FilterActivation = ENABLE;
 //     sFilterConfig.SlaveStartFilterBank = 14;
 
-//     // setup can1 init
+//     /* CAN1 Init Struct */
 //     hcan1->Init.Prescaler = 5;
 //     hcan1->Init.Mode = CAN_MODE_LOOPBACK;   // TODO: CHANGE LATER
 //     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
@@ -157,7 +160,7 @@ static bool Amperes_ADC_Init() {
 //     // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
 //     hcan1->Init.TransmitFifoPriority = ENABLE;
 
-//     // initialize CAN1
+//     /* Initialize CAN1 */
 //     if (can_init(hcan1, &sFilterConfig) != CAN_OK) return false;    // or call error handler?
 
 //     // Debug
@@ -207,21 +210,29 @@ AmperesStatus_t Amperes_GetReading(int32_t *current_reading) {
 }
 
 
-AmperesStatus_t Amperes_SendCAN(int32_t data) {
+AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = AMPERES_STD_ID;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = 2;
+    tx_header.DLC = 8;
     tx_header.TransmitGlobalTime = DISABLE;
 
     // Split int32 data into 4 uint8 elements; LSB at index 0
+
+    /* Raw ADC Value */
     uint8_t tx_data[8] = {0};
-    tx_data[0] = (uint8_t) (data & 0xFF);
-    tx_data[1] = (uint8_t) ((data >> 8) & 0xFF);
-    tx_data[2] = (uint8_t) ((data >> 16) & 0xFF);
-    tx_data[3] = (uint8_t) ((data >> 24) & 0xFF);
+    tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
+    tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
+    tx_data[2] = (uint8_t) ((data->adc_voltage >> 16) & 0xFF);
+    tx_data[3] = (uint8_t) ((data->adc_voltage >> 24) & 0xFF);
+    
+    /* Current Data */
+    tx_data[4] = (uint8_t) (data->current_data & 0xFF);
+    tx_data[5] = (uint8_t) ((data->current_data >> 8) & 0xFF);
+    tx_data[6] = (uint8_t) ((data->current_data >> 16) & 0xFF);
+    tx_data[7] = (uint8_t) ((data->current_data >> 24) & 0xFF);
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) {

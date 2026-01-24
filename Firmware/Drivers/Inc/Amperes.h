@@ -92,9 +92,9 @@ AmperesStatus_t Amperes_GetReading(int32_t *current_reading);
 
 /**
  * @brief Send Amperes data over BPS_CAN
- * @param data Amperes current data to send over CAN
+ * @param data Pointer to Amperes message struct
  * @retval Status: AMPERES_CAN_SEND_FAIL or OK
  */
-AmperesStatus_t Amperes_SendCAN(int32_t data);
+AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data);
 
 #endif // AMPERES_H

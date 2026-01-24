@@ -15,7 +15,7 @@
  * ========================================================== */
 
 /* LED Pins */
-#define AMPERES_LED_PORT        GPIOA
+#define AMPERES_GPIO_PORT       GPIOA
 #define AMPERES_HB_PIN          GPIO_PIN_3
 #define AMPERES_FAULT_PIN       GPIO_PIN_4
 #define AMPERES_CHARGE_PIN      GPIO_PIN_5
@@ -35,18 +35,7 @@
 #define AMPERES_ADC_PIN     GPIO_PIN_0
 
 // Reference voltage for bidirectional current reading (1.25V)
-#define AMPERES_VREF 1.25
 #define AMPERES_mVREF 1250
-
-/**
- * @brief Convert ADC reading to current (in milliamps).
- * @n 
- *  - ADC to mV: ADC * (3300 mV / 4096)
- * @n 
- *  - mV to mA: (mV - mVref) / ((250 E-6 ohm)(100 V/V))
- * @param reading ADC value to be converted
- */
-#define AMPERES_ADC_TO_CURRENT(reading) (((reading * (3300 / 4096)) - AMPERES_mVREF) / (0.025))
 
 extern QueueHandle_t adc_queue;
 
@@ -57,9 +46,16 @@ extern QueueHandle_t adc_queue;
 #define AMPERES_STD_ID 0x1
 extern QueueHandle_t can_queue;
 
+/**
+ * @brief Structure to hold Amperes data
+ * @n 
+ * - int32_t current_data
+ * @n 
+ * - uint16_t adc_voltage
+ */
 typedef struct {
-    int32_t current_data;
-    int32_t adc_voltage;
+    int32_t current_data;   // signed, 32 bit
+    uint16_t adc_voltage;   // unsigned, 12 bit
 } AmperesMsg_t;
 
 
@@ -75,11 +71,28 @@ typedef enum AmperesStatus {    // TODO: better states
     AMPERES_CAN_SEND_FAIL
 } AmperesStatus_t;
 
+
 /**
  * @brief Initializes ADC and CAN for Amperes
+ * @param timerDriven True if you want to trigger ADC conversion from hardware Timer6.
+ *                    False if you want to manually poll ADC.
  * @retval Status: AMPERES_INIT_FAIL or OK
  */
-AmperesStatus_t Amperes_Init();
+AmperesStatus_t Amperes_Init(bool timerDriven);
+
+
+/**
+ * @brief Convert ADC reading to current (in milliamps).
+ * @n 
+ *  - ADC to mV: ADC * (3300 mV / 4096)
+ * @n 
+ *  - mV to mA: (mV - mVref) / ((250 E-6 ohm)(100 V/V))
+ * @n 
+ * - ADC to mA: (reading * (3300 / 4096)) - mVref) / (0.025)
+ * @param reading 12 bit ADC value to be converted
+ */
+int32_t Amperes_ADCToCurrent(uint16_t reading);
+
 
 /**
  * @brief Get current reading (in milliamps) from ADC;

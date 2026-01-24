@@ -2,32 +2,50 @@
 #define TASKS_H
 #include "Amperes.h"
 
-/* Task Generation Macro 
-// #define FOR_EACH_TASK(TASK, PRIO, STACK_SIZE)   \
-//     extern StaticTask_t  TASK_##task_buffer;    \
-//     extern StackType_t TASK_##task_stack[STACK_SIZE];   \
-//     #define TASK_
-*/
+/* ADC Task */
+extern StaticTask_t     ADC_task_buffer;
+extern StackType_t      ADC_task_stack[configMINIMAL_STACK_SIZE];
+#define ADC_PRIO        1   // TODO: set
 
-/* Tasks */
-extern StaticTask_t ADC_task_buffer;
-extern StackType_t  ADC_task_stack[configMINIMAL_STACK_SIZE];
-#define ADC_PRIO    1
-#define ADC_DELAY   pdMS_TO_TICKS(200)     // TODO
-
-/**
- * @brief ADC Task: TODO
- * @retval none
- */
-void ADC_Task(void *pvParameters);
-void CAN_Task(void *pvParameters);
+/* CAN Task */
+extern StaticTask_t     CAN_task_buffer;
+extern StackType_t      CAN_task_stack[configMINIMAL_STACK_SIZE];
+#define CAN_PRIO        1   // TODO: set
 
 /* Init Task */
-#define TASK_INIT_PRIO          tskIDLE_PRIORITY + 1
-#define TASK_INIT_STACK_SIZE    configMINIMAL_STACK_SIZE
+extern StaticTask_t     Task_Init_Buffer;
+extern StackType_t      Task_Init_Stack_Array[configMINIMAL_STACK_SIZE];
+#define TASK_INIT_PRIO  tskIDLE_PRIORITY + 1
+
 
 /**
- * @brief Initializes all tasks
+ * @brief   ADC Task. 
+ * @n
+ * - Sleeps until ADC conversion is done and data 
+ *  is available in adc_queue; then converts ADC
+ *  data into current measurement. 
+ * @n
+ * - Packs ADC value and current measurement into 
+ *  AmperesMsg_t message, which is sent via can_queue to CAN task. 
+ * @n
+ * - Rate is set by Timer6 prompting ADC conversion 
+ *  (which is then stored in adc_queue).
+ * @retval  none
+ */
+void ADC_Task(void *pvParameters);
+
+/**
+ * @brief   CAN Task. 
+ * @n 
+ * - Sleeps until AmperesMsg is available in can_queue and sends data over CAN. 
+ * @n 
+ * - Rate is set by ADC_Task sending to can_queue.
+ * @retval  none
+ */
+void CAN_Task(void *pvParameters);
+
+/**
+ * @brief Initializes all tasks (ADC and CAN).
  * @retval none
  */
 void Task_Init();

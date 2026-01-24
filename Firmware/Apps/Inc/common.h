@@ -7,12 +7,12 @@
 #include "stm32xx_hal.h"
 
 /**
- * @brief Shared error hanlder
+ * @brief Shared error handler
  */
 void error_handler();
 
 /**
- * @brief Shared success hanlder
+ * @brief Shared success handler
  */
 void success_handler();
 
@@ -21,5 +21,12 @@ void success_handler();
   * @retval None
   */
 void SystemClock_Config(void);
+
+/**
+  * @brief Initializes Amperes GPIO - 
+  *        Heartbeat, Fault, Charge, Discharge LEDS; Boot GPIO.
+  * @retval None
+  */
+void MX_GPIO_Init(void);
 
 #endif

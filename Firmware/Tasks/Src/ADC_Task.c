@@ -1,7 +1,7 @@
 #include "Tasks.h"
 
 void ADC_Task(void *pvParameters) {
-    int32_t adc_value;
+    uint16_t adc_value;
     int32_t current_value;
     AmperesMsg_t message;
 
@@ -10,7 +10,7 @@ void ADC_Task(void *pvParameters) {
         xQueueReceive(adc_queue, &adc_value, portMAX_DELAY);
 
         // Convert data to current measurent
-        current_value = AMPERES_ADC_TO_CURRENT(adc_value);
+        current_value = Amperes_ADCToCurrent(adc_value);
         
         // Send data to CAN task via queue
         message.adc_voltage = adc_value;
@@ -19,7 +19,7 @@ void ADC_Task(void *pvParameters) {
 
         // Debug
         #ifdef DEBUG
-            HAL_GPIO_TogglePin(AMPERES_LED_PORT, AMPERES_CHARGE_PIN);
+            HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
         #endif
     }
 }

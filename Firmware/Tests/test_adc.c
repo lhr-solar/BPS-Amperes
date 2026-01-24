@@ -12,14 +12,15 @@ void Task_ReadADC(void *pvParameters) {
         AmperesStatus_t stat = Amperes_GetReading(&reading);
         if (stat != AMPERES_OK) error_handler();
 
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
 int main() {
     HAL_Init();
-
+    SystemClock_Config();
+    
     // Init LED
     GPIO_InitTypeDef led_config = {
         .Mode = GPIO_MODE_OUTPUT_PP,
@@ -30,7 +31,7 @@ int main() {
     HAL_GPIO_Init(GPIOA, &led_config);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(Task_ReadADC,
                     "ADC Test",

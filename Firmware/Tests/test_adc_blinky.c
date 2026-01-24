@@ -6,9 +6,11 @@ StaticTask_t xTaskBuffer;
 StackType_t xStack[ 200 ];
 
 void Task_ReadADC(void *pvParameters) {
-    int32_t reading = 0;
+    // int32_t reading = 0;
 
     while(1) {
+        // Manually polling ADC (not timer driven)
+
         AmperesStatus_t stat = Amperes_GetReading(&reading);
         while (stat != AMPERES_OK) error_handler();
         
@@ -16,25 +18,28 @@ void Task_ReadADC(void *pvParameters) {
         if (reading < 0) reading *= -1;
         reading *= 10;
 
-        HAL_GPIO_TogglePin(AMPERES_LED_PORT, AMPERES_CHARGE_PIN);
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
         vTaskDelay(pdMS_TO_TICKS(reading));
     }
 }
 
 int main() {
     HAL_Init();
-
+    SystemClock_Config();
+    MX_GPIO_Init();
+    
     // Init LED
-    GPIO_InitTypeDef led_config = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = AMPERES_HB_PIN | AMPERES_FAULT_PIN | AMPERES_CHARGE_PIN | AMPERES_DISCHARGE_PIN
-    };
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    HAL_GPIO_Init(AMPERES_LED_PORT, &led_config);
-    HAL_GPIO_WritePin(AMPERES_LED_PORT, AMPERES_HB_PIN, 1);
+    // GPIO_InitTypeDef led_config = {
+    //     .Mode = GPIO_MODE_OUTPUT_PP,
+    //     .Pull = GPIO_NOPULL,
+    //     .Pin = AMPERES_HB_PIN | AMPERES_FAULT_PIN | AMPERES_CHARGE_PIN | AMPERES_DISCHARGE_PIN
+    // };
+    // __HAL_RCC_GPIOA_CLK_ENABLE();
+    // HAL_GPIO_Init(AMPERES_GPIO_PORT, &led_config);
 
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN, 1);
+
+    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(Task_ReadADC,
                     "ADC Test",

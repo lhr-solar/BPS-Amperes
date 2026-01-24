@@ -3,8 +3,14 @@
 
 // CAN
 #define RX_DATA_32b ((rx_data[3] << 24) | (rx_data[2] << 16) | (rx_data[1] << 8) | rx_data[0])
-#define NUM1 -25
-#define NUM2 50
+AmperesMsg_t message1 = {
+    .adc_voltage = 25,
+    .current_data = -50
+};
+AmperesMsg_t message2 = {
+    .adc_voltage = 62,
+    .current_data = 60
+};
 
 // Task
 StaticTask_t xTaskBuffer;
@@ -19,8 +25,8 @@ void Task_SendCAN() {
 
     while (1) {
         // Send CAN data
-        if (Amperes_SendCAN(NUM1) != AMPERES_OK) error_handler();
-        if (Amperes_SendCAN(NUM2) != AMPERES_OK) error_handler();
+        if (Amperes_SendCAN(&message1) != AMPERES_OK) error_handler();
+        if (Amperes_SendCAN(&message2) != AMPERES_OK) error_handler();
 
         // Receive first payload
         status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
@@ -36,8 +42,9 @@ void Task_SendCAN() {
         if (status != CAN_RECV) error_handler();
 
         if (result) result += 0;
+        
         // Blinky for verification that we are still in loop
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
 
         vTaskDelay(pdMS_TO_TICKS(100));
     }
@@ -45,6 +52,7 @@ void Task_SendCAN() {
 
 int main() {
     HAL_Init();
+    SystemClock_Config();
 
     // Init LED
     GPIO_InitTypeDef led_config = {
@@ -59,7 +67,7 @@ int main() {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 
     // Make sure CAN is set to loopback
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(Task_SendCAN,
                     "CAN Test",

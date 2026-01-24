@@ -3,16 +3,16 @@
 
 void error_handler() {
     // Turn on fault LED
-    HAL_GPIO_WritePin(AMPERES_LED_PORT, AMPERES_FAULT_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_FAULT_PIN, GPIO_PIN_SET);
     // Disable interrupts ???
     __disable_irq();
     while (1) {}
 }
 
 void success_handler() {
-    // Blink HB LED
+    // Blink Heartbeat LED
     while(1){
-        HAL_GPIO_TogglePin(AMPERES_LED_PORT, AMPERES_HB_PIN);
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
         HAL_Delay(500);
     }
 }
@@ -65,4 +65,27 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+void MX_GPIO_Init(void) {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /* Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(AMPERES_GPIO_PORT, 
+                    AMPERES_HB_PIN|AMPERES_FAULT_PIN|
+                    AMPERES_CHARGE_PIN|AMPERES_DISCHARGE_PIN|
+                    AMPERES_BOOT_PIN, 
+                    GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PA3 PA4 PA5 PA6 PA7 */
+  GPIO_InitStruct.Pin = AMPERES_HB_PIN|AMPERES_FAULT_PIN|
+                        AMPERES_CHARGE_PIN|AMPERES_DISCHARGE_PIN|
+                        AMPERES_BOOT_PIN;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(AMPERES_GPIO_PORT, &GPIO_InitStruct);
 }

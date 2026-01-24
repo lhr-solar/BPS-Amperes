@@ -9,5 +9,10 @@ void CAN_Task(void *pvParameters) {
 
         // Send CAN message
         Amperes_SendCAN(&message);
+
+        // Debug
+        #ifdef DEBUG
+            HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);
+        #endif
     }
 }

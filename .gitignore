@@ -1,3 +1,5 @@
 # Firmware
 Firmware/build
+.DS_Store
 .vscode
+.venv/

@@ -12,9 +12,9 @@
  *  ADC: PA0
  *  Operation: Receive data from ADC, convert to 
  *             current reading, and send over CAN.
- * ========================================================== /
+ * ========================================================== */
 
- /* LED Pins*/
+/* LED Pins */
 #define AMPERES_LED_PORT        GPIOA
 #define AMPERES_HB_PIN          GPIO_PIN_3
 #define AMPERES_FAULT_PIN       GPIO_PIN_4
@@ -30,6 +30,7 @@
  * ================================================================ */
 #define AMPERES_ADC_CHANNEL ADC_CHANNEL_5
 #define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_2CYCLES_5
+// ADC_SAMPLETIME_47CYCLES_5
 #define AMPERES_ADC_PORT    GPIOA
 #define AMPERES_ADC_PIN     GPIO_PIN_0
 

@@ -16,5 +16,10 @@ void error_handler();
  */
 void success_handler();
 
+/**
+  * @brief System Clock Configuration: 80 MHz
+  * @retval None
+  */
+void SystemClock_Config(void);
 
 #endif

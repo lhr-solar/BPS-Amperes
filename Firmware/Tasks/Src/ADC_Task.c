@@ -6,7 +6,7 @@ void ADC_Task(void *pvParameters) {
     AmperesMsg_t message;
 
     while (1) {
-        // Sleep until data arrives in queue
+        // Block (sleep) until data arrives in queue
         xQueueReceive(adc_queue, &adc_value, portMAX_DELAY);
 
         // Convert data to current measurent
@@ -17,6 +17,8 @@ void ADC_Task(void *pvParameters) {
         message.current_data = current_value;
         xQueueSend(can_queue, &message, 0);
 
+        // TODO: error handling for queue send
+        
         // Debug
         #ifdef DEBUG
             HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);

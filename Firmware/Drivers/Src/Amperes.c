@@ -189,7 +189,8 @@ AmperesStatus_t Amperes_Init(bool timerDriven) {
 }
 
 int32_t Amperes_ADCToCurrent(uint16_t reading) {
-    int32_t adc_to_mV = reading * 1000 * (3300/4095);
+    // TODO: fixed point conversion (maybe to uA?)
+    int32_t adc_to_mV = reading * (3300/4095);
     adc_to_mV -= AMPERES_mVREF;
     adc_to_mV *= 40;    // 1 / ((250 E-6 ohm)*(100 V/V))
     return adc_to_mV;

@@ -3,20 +3,24 @@
 #include "Amperes.h"
 
 /* ADC Task */
-extern StaticTask_t     ADC_task_buffer;
-extern StackType_t      ADC_task_stack[configMINIMAL_STACK_SIZE];
-#define ADC_PRIO        1   // TODO: set
+#define ADC_PRIO                tskIDLE_PRIORITY + 3
+#define ADC_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
+extern StaticTask_t             ADC_task_buffer;
+extern StackType_t              ADC_task_stack[ADC_TASK_STACK_SIZE];
 
 /* CAN Task */
-extern StaticTask_t     CAN_task_buffer;
-extern StackType_t      CAN_task_stack[configMINIMAL_STACK_SIZE];
-#define CAN_PRIO        1   // TODO: set
+#define CAN_PRIO                tskIDLE_PRIORITY + 2
+#define CAN_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
+extern StaticTask_t             CAN_task_buffer;
+extern StackType_t              CAN_task_stack[CAN_TASK_STACK_SIZE];
 
 /* Init Task */
-extern StaticTask_t     Task_Init_Buffer;
-extern StackType_t      Task_Init_Stack_Array[configMINIMAL_STACK_SIZE];
-#define TASK_INIT_PRIO  tskIDLE_PRIORITY + 1
+#define TASK_INIT_PRIO          tskIDLE_PRIORITY + 1
+#define TASK_INIT_STACK_SIZE    configMINIMAL_STACK_SIZE * 4
+extern StaticTask_t             Task_Init_Buffer;
+extern StackType_t              Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
 
+// TODO: SET STACK SIZE AND PRIORITIES
 
 /**
  * @brief   ADC Task. 

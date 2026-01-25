@@ -6,11 +6,10 @@ StaticTask_t xTaskBuffer;
 StackType_t xStack[ 200 ];
 
 void Task_ReadADC(void *pvParameters) {
-    // int32_t reading = 0;
+    int32_t reading = 0;
 
     while(1) {
         // Manually polling ADC (not timer driven)
-
         AmperesStatus_t stat = Amperes_GetReading(&reading);
         while (stat != AMPERES_OK) error_handler();
         

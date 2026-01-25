@@ -11,7 +11,7 @@ int main() {
     xTaskCreateStatic(
         Task_Init,                  /* The function that implements the task. */
         "Task init",                /* Text name for the task. */
-        configMINIMAL_STACK_SIZE,   /* The size (in words) of the stack that should be created for the task. */
+        TASK_INIT_STACK_SIZE,       /* The size (in words) of the stack that should be created for the task. */
         (void*)NULL,                /* Paramter passed into the task. */
         TASK_INIT_PRIO,             /* Task Prioriy. */
         Task_Init_Stack_Array,      /* Stack array. */

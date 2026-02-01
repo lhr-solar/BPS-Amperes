@@ -31,7 +31,7 @@ BUILD_MAKEFILE_DIR = Embedded-Sharepoint
 # generate paths
 MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-PROJECT_MAIN_DIR ?= Apps/Src/main
+PROJECT_MAIN_DIR ?= Core/Src/main
 
 ifneq ($(TEST), main)
 PROJECT_C_SOURCES := $(filter-out $(PROJECT_MAIN_DIR).c, $(PROJECT_C_SOURCES))

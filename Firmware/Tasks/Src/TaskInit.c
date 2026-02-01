@@ -10,9 +10,8 @@ StaticTask_t Task_Init_Buffer;
 StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
 
 void Task_Init() {
-    // Init Amperes ADC and CAN
-    if (Amperes_Init(true) == AMPERES_INIT_FAIL) error_handler();
-    MX_GPIO_Init();
+    // Init Amperes GPIO, ADC, and CAN
+    if (Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
     
     // Init ADC task
     xTaskCreateStatic(
@@ -20,7 +19,7 @@ void Task_Init() {
         "ADC Task",
         ADC_TASK_STACK_SIZE,
         (void*) 1,
-        ADC_PRIO,
+        ADC_TASK_PRIO,
         ADC_task_stack,
         &ADC_task_buffer
     );
@@ -31,7 +30,7 @@ void Task_Init() {
         "CAN Task",
         CAN_TASK_STACK_SIZE,
         (void*) 1,
-        CAN_PRIO,
+        CAN_TASK_PRIO,
         CAN_task_stack,
         &CAN_task_buffer
     );

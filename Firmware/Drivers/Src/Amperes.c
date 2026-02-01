@@ -46,26 +46,34 @@ void HAL_ADC_MspGPIOInit() { // param: ADC_HandleTypeDef* hadc ??
 }
 
 static bool MX_TIM6_Init(void) {
-    TIM_MasterConfigTypeDef sMasterConfig = {0};
-
     /**
-     * 100 Hz
+     * Timer init
+     * 1 KHz
      * Rate = (80 MHz) / ((Prescaler + 1)*(Period + 1))
      */
     htim6.Instance = TIM6;
-    htim6.Init.Prescaler = 7999;
+    htim6.Init.Prescaler = 79;
     htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim6.Init.Period = 99;
+    htim6.Init.Period = 999;
     htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
     if (HAL_TIM_Base_Init(&htim6) != HAL_OK) {
         return false;
     }
 
-    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    /* Enable interrupt */
+    // HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
+    // HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
+
+    /* TRGO Trigger */
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE; // update event as trigger
     sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
     if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK) {
         return false;
     }
+
+    /* Enable timer 6 clock*/
+    __HAL_RCC_TIM6_CLK_ENABLE();
     return true;
 }
 
@@ -92,13 +100,15 @@ static bool Amperes_ADC_Init(bool timerDriven) {
     init.NbrOfConversion = 1;
     init.DiscontinuousConvMode = DISABLE;
 
-    /* Software triggered conversion */
-    // init.ExternalTrigConv = ADC_SOFTWARE_START;
-    // init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-
-    /* Timer (TIM6) triggered conversion */
-    init.ExternalTrigConv = ADC_EXTERNALTRIG_T6_TRGO;
-    init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
+    if (timerDriven) {
+        /* Timer (TIM6) triggered conversion */
+        init.ExternalTrigConv = ADC_EXTERNALTRIG_T6_TRGO;
+        init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
+    } else {
+        /* Software triggered conversion */
+        init.ExternalTrigConv = ADC_SOFTWARE_START;
+        init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+    }
 
     init.DMAContinuousRequests = DISABLE;
     init.Overrun = ADC_OVR_DATA_PRESERVED;
@@ -111,14 +121,13 @@ static bool Amperes_ADC_Init(bool timerDriven) {
     
     /* Calibrate after initialization (must be after clock setup)*/
     HAL_ADCEx_Calibration_Start(hadc1, ADC_SINGLE_ENDED);
-    
-    /* Start ADC */
-    if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
-        return false;
-    }
 
-    /* Start Timer (after ADC)*/
     if (timerDriven) {
+        /* Start ADC: Set channel, enable interrupts */
+        if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
+            return false;
+        }
+        /* Start Timer (after ADC)*/
         HAL_TIM_Base_Start(&htim6);
     }
 
@@ -176,6 +185,9 @@ static bool Amperes_CAN_Init() {
 AmperesStatus_t Amperes_Init(bool timerDriven) {
     /* HAL_Init should be run before this is called */
 
+    // Initialize GPIO
+    MX_GPIO_Init();
+
     // Init ADC
     if (!Amperes_ADC_Init(timerDriven)) return AMPERES_INIT_FAIL;
 
@@ -196,21 +208,23 @@ int32_t Amperes_ADCToCurrent(uint16_t reading) {
     return adc_to_mV;
 }
 
-AmperesStatus_t Amperes_GetReading(int32_t *current_reading) {
+AmperesStatus_t Amperes_StartADC() {
     // Read from ADC into queue
     if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
-        return AMPERES_ADC_FAIL;
+        return AMPERES_ADC_START_FAIL;
     }
-
-    // Read ADC value from queue
-    uint16_t adc_value = 0;
-    if (xQueueReceive(adc_queue, &adc_value, 0) == pdPASS) {
-        *current_reading = Amperes_ADCToCurrent(adc_value);
-        return AMPERES_OK;
-    } else {
-        return AMPERES_QUEUE_FULL;
-    }
+    return AMPERES_OK;
 }
+
+AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message) {
+    // Block until ADC value is in queue
+    if (xQueueReceive(adc_queue, &(message->adc_voltage), portMAX_DELAY) != pdPASS) { 
+        return AMPERES_ADC_READ_FAIL;
+    }
+    message->current_data = Amperes_ADCToCurrent(message->adc_voltage);
+    return AMPERES_OK;
+}
+
 
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
     // Create CAN payload

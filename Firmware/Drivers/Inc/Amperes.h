@@ -66,7 +66,8 @@ typedef struct {
 typedef enum AmperesStatus {    // TODO: better states
     AMPERES_OK,
     AMPERES_INIT_FAIL,
-    AMPERES_ADC_FAIL,
+    AMPERES_ADC_START_FAIL,
+    AMPERES_ADC_READ_FAIL,
     AMPERES_QUEUE_FULL,
     AMPERES_CAN_SEND_FAIL
 } AmperesStatus_t;
@@ -90,23 +91,31 @@ AmperesStatus_t Amperes_Init(bool timerDriven);
  * @n 
  * - ADC to mA: (reading * (3300 / 4096)) - mVref) / (0.025)
  * @param reading 12 bit ADC value to be converted
+ * @retval Amperes current reading in mA
  */
 int32_t Amperes_ADCToCurrent(uint16_t reading);
 
 
 /**
- * @brief Get current reading (in milliamps) from ADC;
- *        expected range is -50.000 to +82.00 amps.
- * @param current_reading Variable to hold current reading 
- * @retval Status: AMPERES_ADC_FAIL, QUEUE_FULL, or OK
+ * @brief Start ADC reading
+ * @retval Amperes Status: AMPERES_ADC_START_FAIL or OK
  */
-AmperesStatus_t Amperes_GetReading(int32_t *current_reading);
+AmperesStatus_t Amperes_StartADC();
+
+/**
+ * @brief Get adc reading from ADC queue and convert to current (mA);
+ *        expected range is -50.000 to +82.00 amps.
+ * @param current_reading Variable to hold current reading (int32_t)
+ * @param adc_reading Variable to holds raw ADC reading (uint16_t)
+ * @retval Amperes Status: AMPERES_ADC_READ_FAIL or OK
+ */
+AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message);
 
 
 /**
  * @brief Send Amperes data over BPS_CAN
  * @param data Pointer to Amperes message struct
- * @retval Status: AMPERES_CAN_SEND_FAIL or OK
+ * @retval Amperes Status: AMPERES_CAN_SEND_FAIL or OK
  */
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data);
 

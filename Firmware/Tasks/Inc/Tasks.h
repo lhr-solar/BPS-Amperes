@@ -3,13 +3,13 @@
 #include "Amperes.h"
 
 /* ADC Task */
-#define ADC_PRIO                tskIDLE_PRIORITY + 3
+#define ADC_TASK_PRIO           tskIDLE_PRIORITY + 3
 #define ADC_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
 extern StaticTask_t             ADC_task_buffer;
 extern StackType_t              ADC_task_stack[ADC_TASK_STACK_SIZE];
 
 /* CAN Task */
-#define CAN_PRIO                tskIDLE_PRIORITY + 2
+#define CAN_TASK_PRIO           tskIDLE_PRIORITY + 2
 #define CAN_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
 extern StaticTask_t             CAN_task_buffer;
 extern StackType_t              CAN_task_stack[CAN_TASK_STACK_SIZE];

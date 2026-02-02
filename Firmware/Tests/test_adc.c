@@ -23,7 +23,7 @@ void Task_Blinky(void *pvParameters) {
 // }
 
 int main() {
-    __HAL_DBGMCU_FREEZE_TIM6();
+    // __HAL_DBGMCU_FREEZE_TIM6();
     HAL_Init();
     SystemClock_Config();
     

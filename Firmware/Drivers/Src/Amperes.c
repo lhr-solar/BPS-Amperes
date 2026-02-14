@@ -4,115 +4,100 @@
  *  Local Variables
  * ================================================================ */
 /* ADC Queue (to store adc conversion)*/
-#define ITEM_SIZE sizeof(int32_t)
+#define ADC_ITEM_SIZE sizeof(int32_t)
 #ifndef ADC_QUEUE_LENGTH
-    // TODO: PICK SIZE
-    #define ADC_QUEUE_LENGTH 100    
+// TODO: PICK SIZE
+#define ADC_QUEUE_LENGTH 2
 #endif
-
 QueueHandle_t adc_queue;
-uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ITEM_SIZE];
+uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;
 
 /* CAN Queue (to send to CAN)*/
+#define CAN_ITEM_SIZE sizeof(AmperesMsg_t)
 #ifndef CAN_QUEUE_LENGTH
-    // TODO: PICK SIZE
-    #define CAN_QUEUE_LENGTH 100    
+// TODO: PICK SIZE
+#define CAN_QUEUE_LENGTH 20
 #endif
-
 QueueHandle_t can_queue;
-uint8_t can_qStorage[CAN_QUEUE_LENGTH * ITEM_SIZE];
+uint8_t can_qStorage[CAN_QUEUE_LENGTH * CAN_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_can;
-
-/* ADC Timer */
-TIM_HandleTypeDef htim6;
 
 
 /** ================================================================
  *  Local Init Functions
  * ================================================================ */
-/**
- * @brief Override MSP GPIO init
- */
-void HAL_ADC_MspGPIOInit() { // param: ADC_HandleTypeDef* hadc ??
-    // Initialize PA0 for ADC
-    GPIO_InitTypeDef input =  {
-        .Mode = GPIO_MODE_ANALOG_ADC_CONTROL,
-        .Pull = GPIO_NOPULL, 
-        .Pin = AMPERES_ADC_PIN
-    };
-    HAL_GPIO_Init(AMPERES_ADC_PORT, &input);
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-}
 
-static bool MX_TIM6_Init(void) {
-    /**
-     * Timer init
-     * 1 KHz
-     * Rate = (80 MHz) / ((Prescaler + 1)*(Period + 1))
+ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+
+    if(hadc->Instance==ADC1) {
+    /** Initializes the peripherals clock
      */
-    htim6.Instance = TIM6;
-    htim6.Init.Prescaler = 79;
-    htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim6.Init.Period = 999;
-    htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-    if (HAL_TIM_Base_Init(&htim6) != HAL_OK) {
-        return false;
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+    PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
+    PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+    PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
+    PeriphClkInit.PLLSAI1.PLLSAI1N = 16;
+    PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV7;
+    PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
+    PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+    PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
+      error_handler();
     }
 
-    /* Enable interrupt */
-    // HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 5, 0);
-    // HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
+    /* Peripheral clock enable */
+    __HAL_RCC_ADC_CLK_ENABLE();
 
-    /* TRGO Trigger */
-    TIM_MasterConfigTypeDef sMasterConfig = {0};
-    sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE; // update event as trigger
-    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK) {
-        return false;
-    }
+    /**ADC1 GPIO Configuration
+    PA0     ------> ADC1_IN5
+    */
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    GPIO_InitStruct.Pin = AMPERES_ADC_PIN;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(AMPERES_ADC_PORT, &GPIO_InitStruct);
 
-    /* Enable timer 6 clock*/
-    __HAL_RCC_TIM6_CLK_ENABLE();
-    return true;
+    /* ADC1 interrupt Init: PRIO MUST BE AT LEAST 5 */
+    HAL_NVIC_SetPriority(ADC1_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
+    HAL_NVIC_EnableIRQ(ADC1_IRQn);
+  }
+
 }
 
-static bool Amperes_ADC_Init(bool timerDriven) {
-    /* ================ Hardware Timer 6 Init ================ */
-    if (timerDriven) {
-        if (!MX_TIM6_Init()) return false;
-    }
+static bool Amperes_ADC_Init() {
+    /* Initialize ADC pin, clock, and interrupt */
+    HAL_ADC_MspInit(hadc1);
 
-    /* ================ ADC Init ================ */
     /* Initialize queue */
-    adc_queue = xQueueCreateStatic(ADC_QUEUE_LENGTH, ITEM_SIZE, adc_qStorage, &xStaticQueue_adc);
-
-    /* ADC Init struct*/
+    adc_queue = xQueueCreateStatic(
+        ADC_QUEUE_LENGTH, 
+        ADC_ITEM_SIZE, 
+        adc_qStorage, 
+        &xStaticQueue_adc
+    );
+    
+    /* ================ ADC Init Struct ================ */
     ADC_InitTypeDef init = {0};
-    init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2; /* ADC clock: TODO sync or async */
-    // init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV2;
-    init.Resolution = ADC_RESOLUTION_12B; 
+
+    init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2; /* ADC clock: synchronous */
+    init.Resolution = ADC_RESOLUTION_12B;   /* 12 bit ADC */
     init.DataAlign = ADC_DATAALIGN_RIGHT;
     init.ScanConvMode = ADC_SCAN_DISABLE;
     init.EOCSelection = ADC_EOC_SINGLE_CONV;
     init.LowPowerAutoWait = DISABLE;
-    init.ContinuousConvMode = DISABLE;  // Single Conversion
+    init.ContinuousConvMode = DISABLE;  /* Single Conversion */
     init.NbrOfConversion = 1;
     init.DiscontinuousConvMode = DISABLE;
-
-    if (timerDriven) {
-        /* Timer (TIM6) triggered conversion */
-        init.ExternalTrigConv = ADC_EXTERNALTRIG_T6_TRGO;
-        init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
-    } else {
-        /* Software triggered conversion */
-        init.ExternalTrigConv = ADC_SOFTWARE_START;
-        init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    }
-
     init.DMAContinuousRequests = DISABLE;
     init.Overrun = ADC_OVR_DATA_PRESERVED;
     init.OversamplingMode = DISABLE;
+
+    /* Software triggered conversion */
+    init.ExternalTrigConv = ADC_SOFTWARE_START;
+    init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
 
     /* Initialize ADC */
     volatile adc_status_t s = adc_init(&init, hadc1);
@@ -122,21 +107,17 @@ static bool Amperes_ADC_Init(bool timerDriven) {
     /* Calibrate after initialization (must be after clock setup)*/
     HAL_ADCEx_Calibration_Start(hadc1, ADC_SINGLE_ENDED);
 
-    if (timerDriven) {
-        /* Start ADC: Set channel, enable interrupts */
-        if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
-            return false;
-        }
-        /* Start Timer (after ADC)*/
-        HAL_TIM_Base_Start(&htim6);
-    }
-
     return true;
 }
 
 static bool Amperes_CAN_Init() {
     /* Initialize CAN queue */
-    can_queue = xQueueCreateStatic(CAN_QUEUE_LENGTH, ITEM_SIZE, can_qStorage, &xStaticQueue_can);
+    can_queue = xQueueCreateStatic(
+        CAN_QUEUE_LENGTH, 
+        CAN_ITEM_SIZE, 
+        can_qStorage, 
+        &xStaticQueue_can
+    );
 
     /* Create CAN filter */
     CAN_FilterTypeDef  sFilterConfig;
@@ -153,7 +134,7 @@ static bool Amperes_CAN_Init() {
 
     /* CAN1 Init Struct */
     hcan1->Init.Prescaler = 5;
-    hcan1->Init.Mode = CAN_MODE_LOOPBACK;   // TODO: CHANGE LATER
+    hcan1->Init.Mode = CAN_MODE_LOOPBACK;   // TODO: CHANGE LATER TO NO LOOPBACK
     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
     hcan1->Init.TimeSeg1 = CAN_BS1_6TQ;
     hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
@@ -168,11 +149,7 @@ static bool Amperes_CAN_Init() {
     hcan1->Init.TransmitFifoPriority = ENABLE;
 
     /* Initialize CAN1 */
-    if (can_init(hcan1, &sFilterConfig) != CAN_OK) return false;    // or call error handler?
-
-    // Debug
-    #ifdef DEBUG
-    #endif
+    if (can_init(hcan1, &sFilterConfig) != CAN_OK) return false;
     
     return true;
 }
@@ -182,14 +159,14 @@ static bool Amperes_CAN_Init() {
  *  Amperes Functions
  * ================================================================ */
 
-AmperesStatus_t Amperes_Init(bool timerDriven) {
+AmperesStatus_t Amperes_Init() {
     /* HAL_Init should be run before this is called */
 
     // Initialize GPIO
     MX_GPIO_Init();
 
     // Init ADC
-    if (!Amperes_ADC_Init(timerDriven)) return AMPERES_INIT_FAIL;
+    if (!Amperes_ADC_Init()) return AMPERES_INIT_FAIL;
 
     // Init CAN
     if (!Amperes_CAN_Init()) return AMPERES_INIT_FAIL;
@@ -209,16 +186,16 @@ int32_t Amperes_ADCToCurrent(uint16_t reading) {
 }
 
 AmperesStatus_t Amperes_StartADC() {
-    // Read from ADC into queue
-    if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, &adc_queue) != ADC_OK) {
+    // Start ADC conversion: result will appear in queue
+    if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
         return AMPERES_ADC_START_FAIL;
     }
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message) {
-    // Block until ADC value is in queue
-    if (xQueueReceive(adc_queue, &(message->adc_voltage), portMAX_DELAY) != pdPASS) { 
+AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait) {
+    // Get ADC value from queue
+    if (xQueueReceive(adc_queue, &(message->adc_voltage), ticksToWait) != pdPASS) { 
         return AMPERES_ADC_READ_FAIL;
     }
     message->current_data = Amperes_ADCToCurrent(message->adc_voltage);

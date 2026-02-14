@@ -29,8 +29,8 @@
  *  ADC (12 bit)
  * ================================================================ */
 #define AMPERES_ADC_CHANNEL ADC_CHANNEL_5
-#define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_2CYCLES_5
-// ADC_SAMPLETIME_47CYCLES_5
+#define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_47CYCLES_5
+// ADC_SAMPLETIME_2CYCLES_5
 #define AMPERES_ADC_PORT    GPIOA
 #define AMPERES_ADC_PIN     GPIO_PIN_0
 
@@ -75,11 +75,9 @@ typedef enum AmperesStatus {    // TODO: better states
 
 /**
  * @brief Initializes ADC and CAN for Amperes
- * @param timerDriven True if you want to trigger ADC conversion from hardware Timer6.
- *                    False if you want to manually poll ADC.
  * @retval Status: AMPERES_INIT_FAIL or OK
  */
-AmperesStatus_t Amperes_Init(bool timerDriven);
+AmperesStatus_t Amperes_Init();
 
 
 /**
@@ -105,11 +103,11 @@ AmperesStatus_t Amperes_StartADC();
 /**
  * @brief Get adc reading from ADC queue and convert to current (mA);
  *        expected range is -50.000 to +82.00 amps.
- * @param current_reading Variable to hold current reading (int32_t)
- * @param adc_reading Variable to holds raw ADC reading (uint16_t)
+ * @param message Pointer to AmperesMsg_t struct to hold adc and current values
+ * @param ticksToWait Number of ticks to wait on queue: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval Amperes Status: AMPERES_ADC_READ_FAIL or OK
  */
-AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message);
+AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait);
 
 
 /**

@@ -8,11 +8,11 @@ void CAN_Task(void *pvParameters) {
         xQueueReceive(can_queue, &message, portMAX_DELAY);
 
         // Send CAN message
-        Amperes_SendCAN(&message);
+        if (Amperes_SendCAN(&message) != AMPERES_OK) {
+            // Handle error
+        }
 
         // Debug
-        // #ifdef DEBUG
-            HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);
-        // #endif
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);
     }
 }

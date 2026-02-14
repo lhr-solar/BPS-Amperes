@@ -9,6 +9,14 @@ void error_handler() {
     while (1) {}
 }
 
+void Error_Handler() {
+    // Turn on fault LED
+    HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_FAULT_PIN, GPIO_PIN_SET);
+    // Disable interrupts ???
+    __disable_irq();
+    while (1) {}
+}
+
 void success_handler() {
     // Blink Heartbeat LED
     while(1){

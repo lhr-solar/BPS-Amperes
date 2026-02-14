@@ -23,11 +23,10 @@ void Task_Blinky(void *pvParameters) {
 // }
 
 int main() {
-    // __HAL_DBGMCU_FREEZE_TIM6();
     HAL_Init();
     SystemClock_Config();
     
-    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(
         ADC_Task,
@@ -35,8 +34,8 @@ int main() {
         ADC_TASK_STACK_SIZE,
         (void*) 1,
         ADC_TASK_PRIO,
-        ADC_task_stack,
-        &ADC_task_buffer
+        ADC_Task_Stack,
+        &ADC_Task_Buffer
     );
 
     xTaskCreateStatic(
@@ -44,7 +43,7 @@ int main() {
         "Blinky",
         200,
         (void*) 1,
-        tskIDLE_PRIORITY+2,
+        tskIDLE_PRIORITY+3,
         xBlinkyStack,
         &xBlinkyTaskBuffer
     );

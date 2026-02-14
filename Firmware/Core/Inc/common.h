@@ -11,6 +11,8 @@
  */
 void error_handler();
 
+void Error_Handler();
+
 /**
  * @brief Shared success handler
  */

@@ -8,11 +8,11 @@ StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[ 200 ];
 
 void Task_ReadADC(void *pvParameters) {
-    int32_t reading = 0;
+    AmperesMsg_t message;
 
     while(1) {
         // Manually polling ADC (not timer driven)
-        AmperesStatus_t stat = Amperes_GetReading(&reading);
+        AmperesStatus_t stat = Amperes_GetReading(&message);
         while (stat != AMPERES_OK) error_handler();
         
         // // using current value: approx -50000 to 82000 mA
@@ -20,7 +20,7 @@ void Task_ReadADC(void *pvParameters) {
         // reading /= 50;
 
         HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
-        vTaskDelay(pdMS_TO_TICKS(reading+100));
+        vTaskDelay(pdMS_TO_TICKS(message.adc_voltage+100));
     }
 }
 

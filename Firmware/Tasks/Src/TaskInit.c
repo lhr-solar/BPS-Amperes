@@ -1,13 +1,16 @@
 #include "Tasks.h"
 
-StaticTask_t ADC_task_buffer;
-StackType_t  ADC_task_stack[ADC_TASK_STACK_SIZE];
+StaticTask_t    Amperes_Task_Buffer;
+StackType_t     Amperes_Task_Stack[AMPERES_TASK_STACK_SIZE];
 
-StaticTask_t CAN_task_buffer;
-StackType_t  CAN_task_stack[CAN_TASK_STACK_SIZE];
+StaticTask_t    ADC_Task_Buffer;
+StackType_t     ADC_Task_Stack[ADC_TASK_STACK_SIZE];
 
-StaticTask_t Task_Init_Buffer;
-StackType_t Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
+StaticTask_t    CAN_Task_Buffer;
+StackType_t     CAN_Task_Stack[CAN_TASK_STACK_SIZE];
+
+StaticTask_t    Task_Init_Buffer;
+StackType_t     Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
 
 void Task_Init() {
     // Init Amperes GPIO, ADC, and CAN
@@ -20,8 +23,8 @@ void Task_Init() {
         ADC_TASK_STACK_SIZE,
         (void*) 1,
         ADC_TASK_PRIO,
-        ADC_task_stack,
-        &ADC_task_buffer
+        ADC_Task_Stack,
+        &ADC_Task_Buffer
     );
 
     // Init CAN task
@@ -31,8 +34,8 @@ void Task_Init() {
         CAN_TASK_STACK_SIZE,
         (void*) 1,
         CAN_TASK_PRIO,
-        CAN_task_stack,
-        &CAN_task_buffer
+        CAN_Task_Stack,
+        &CAN_Task_Buffer
     );
 
    // Delete Init Task

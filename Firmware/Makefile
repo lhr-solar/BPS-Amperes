@@ -41,6 +41,7 @@ PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
 endif
 
 # debug
+PRINT_DEBUG ?= false
 ifeq ($(PRINT_DEBUG), true)
 $(info SOURCES: $(PROJECT_C_SOURCES))
 $(info INCLUDES: $(PROJECT_C_INCLUDES))
@@ -63,8 +64,9 @@ BEAR_PREFIX :=
 # check if bear is installed
 BEAR_INSTALLED := $(shell command -v bear >/dev/null 2>&1 && echo yes || echo no)
 
-# define path of .vscode
-VS_CODE_DIR := $(realpath .vscode/)
+# define path of .vscode (create if missing)
+VS_CODE_DIR := $(MAKEFILE_DIR)/.vscode
+$(shell mkdir -p $(VS_CODE_DIR))
 
 ifeq ($(BEAR_INSTALLED),yes)
 BEAR_PREFIX := bear --output $(VS_CODE_DIR)/compile_commands.json --append --

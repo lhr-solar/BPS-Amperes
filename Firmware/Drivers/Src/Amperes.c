@@ -178,12 +178,12 @@ AmperesStatus_t Amperes_Init() {
     return AMPERES_OK;
 }
 
-int32_t Amperes_ADCToCurrent(uint16_t reading) {
-    // TODO: fixed point conversion (uA)
-    int32_t adc_to_uV = reading * (3300000/4095000);
-    int32_t uA = adc_to_uV - (AMPERES_mVREF * 1000);
-    uA *= 40;
-    return uA;
+int32_t Amperes_ADCToCurrent(uint16_t adc_val) {
+    // Get signed ADC value in terms of reference point; scale for fixed point math
+    int32_t adc_signed = (int32_t)(adc_val*1000) - AMPERES_ADC_VREF_SCALED;
+    // Convert to mA using intermediate scaling (see comments in Amperes.h)
+    int32_t current_mA = ((int64_t)(adc_signed * AMPERES_CONV_NUM_SCALED)) / (AMPERES_CONV_DEN_SCALED);
+    return current_mA;
 }
 
 AmperesStatus_t Amperes_StartADC(bool clearQueue) {

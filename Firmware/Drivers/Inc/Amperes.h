@@ -5,14 +5,21 @@
 #include "ADC.h"
 #include "CAN.h"
 
-/** ==========================================================
+/** ================================================================
  *  Driver for Amperes Board
- *  ==========================================================
+ *  ================================================================
  *  MCU: STM32L431CBT6
  *  ADC: PA0
  *  Operation: Receive data from ADC, convert to 
  *             current reading, and send over CAN.
- * ========================================================== */
+ * 
+ *  Specifications:
+ *  - Current range: -46 to +78 A (0.1 - 3.2 V respectively)
+ *  - Shunt: 250 uOhm
+ *  - Gain: 100 * 0.4 * 2.49 V/V = 99.6 V/V
+ *  - Reference voltage: 1.25 V (for bidirectinal sense amp)
+ *  - ADC: 12 bit
+ * ================================================================ */
 
 /* LED Pins */
 #define AMPERES_GPIO_PORT       GPIOA
@@ -33,11 +40,82 @@
 // ADC_SAMPLETIME_2CYCLES_5
 #define AMPERES_ADC_PORT    GPIOA
 #define AMPERES_ADC_PIN     GPIO_PIN_0
-
-// Reference voltage for bidirectional current reading (1.25V)
-#define AMPERES_mVREF 1250
-
 extern QueueHandle_t adc_queue;
+
+
+/** ================================================================
+ *  ADC Conversion: Fixed point math
+ * ================================================================ */
+
+/**
+ * In general, conversion is as follows:
+ * 
+ * ADC -> voltage -> signed voltage -> current
+ * - mA = [(reading * (3300 / 4096)) - mVref)] / (shunt*gain)
+ * 
+ * ADC -> signed ADC -> signed voltage -> current
+ * - mA = [(reading - ADC_Vref) * 3300] / [4095 * (shunt*gain)]
+ * 
+ * Note:
+ * - (shunt * gain) = 0.0249
+ * - 1 / (shunt * gain) = 40.1606425703
+ */
+
+/**
+ * ================================
+ * Conversion
+ * ================================
+ * Equation:
+ * mA = [(ADC_val - ADC_Vref) * adc_voltage_range_mV] / [adc_range * shunt*gain]
+ * 
+ * Plug in values:
+ * mA = [(ADC_val - (1250)(4095/3300)) * 3300] / [4095 * 0.0249]
+ * 
+ * Simplify:
+ * mA = [(ADC_val - 1551.13636364) * 3300] / [101.9655]
+ * 
+ * Scale values:
+ * mA = [(ADC_val*1000 - 1551.13636364*1000) * 3300*10] / [101.9655*10000]
+ *
+ * Final equation:
+ * mA = [(ADC_val*1000 - 1551136) * 33000] / [1019655]
+ * 
+ * ================================
+ * Constants
+ * ================================
+ * ADC Vref Scaled = 1551136
+ * Numerator Scaled = 33000
+ * Denominator Scaled = 1019655
+ */
+
+/**
+ * Reference voltage (1250 mV) in terms of ADC value, scaled by 1000.
+ * - (1250 mV * 4095 * 1000) / 3300 mV ~= 1551136
+ */
+#define AMPERES_ADC_VREF_SCALED 1551136
+
+/**
+ * Numerator Term: 3300 * 10 = 33000
+ */
+#define AMPERES_CONV_NUM_SCALED 33000
+
+/**
+ * Denominator Term: 4095 * 0.0249 * 10000 = 1019655
+ */
+#define AMPERES_CONV_DEN_SCALED 1019655
+
+/**
+ * @brief Convert ADC reading to current in milliamps (mA).
+ * @n 
+ * mA = [(ADC_val - ADC_Vref) * 3300] / [4095 * 0.0249]
+ * @n
+ * - Internally scales values to the order of 10^6 to preserve decimal places during integer division.
+ * @n
+ * - 0.0249 is (shunt * gain).
+ * @param adc_val 12 bit ADC value to be converted
+ * @retval Amperes current reading in mA
+ */
+int32_t Amperes_ADCToCurrent(uint16_t adc_val);
 
 
 /** ================================================================
@@ -79,21 +157,6 @@ typedef enum AmperesStatus {    // TODO: better states
  */
 AmperesStatus_t Amperes_Init();
 
-
-/**
- * @brief Convert ADC reading to current (in milliamps).
- * @n 
- *  - ADC to mV: ADC * (3300 mV / 4096)
- * @n 
- *  - mV to mA: (mV - mVref) / ((250 E-6 ohm)(100 V/V))
- * @n 
- * - ADC to mA: (reading * (3300 / 4096)) - mVref) / (0.025)
- * @param reading 12 bit ADC value to be converted
- * @retval Amperes current reading in mA
- */
-int32_t Amperes_ADCToCurrent(uint16_t reading);
-
-
 /**
  * @brief Start ADC reading
  * @param clearQueue Reset queue (if blocking on queue empty -> value)
@@ -109,7 +172,6 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue);
  * @retval Amperes Status: AMPERES_ADC_READ_FAIL or OK
  */
 AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait);
-
 
 /**
  * @brief Send Amperes data over BPS_CAN

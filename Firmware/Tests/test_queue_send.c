@@ -45,7 +45,7 @@ int main() {
     HAL_Init();
     SystemClock_Config();
     
-    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(
         Test_ADC,

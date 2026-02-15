@@ -10,17 +10,31 @@ StackType_t xBlinkyStack[ 200 ];
 void Task_ReadADC(void *pvParameters) {
     AmperesMsg_t message;
 
+    // Debug with CAN RX TX
+    GPIO_InitTypeDef debug_gpio = {
+        .Mode = GPIO_MODE_OUTPUT_PP,
+        .Pull = GPIO_NOPULL,
+        .Pin = GPIO_PIN_8 | GPIO_PIN_9
+    };
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    HAL_GPIO_Init(GPIOB, &debug_gpio); 
+
     while(1) {
-        // Manually polling ADC (not timer driven)
-        AmperesStatus_t stat = Amperes_GetReading(&message);
-        while (stat != AMPERES_OK) error_handler();
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
+        // Clear queue and start ADC
+        Amperes_StartADC(true);
+        if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+            error_handler();
+        }
         
-        // // using current value: approx -50000 to 82000 mA
+        // using current value: approx -50000 to 82000 mA
         // if (reading < 0) reading *= -1;
         // reading /= 50;
 
         HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
-        vTaskDelay(pdMS_TO_TICKS(message.adc_voltage+100));
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
+        vTaskDelay(pdMS_TO_TICKS(message.adc_voltage + 50));
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
     }
 }
 
@@ -37,7 +51,7 @@ int main() {
 
     HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN, 1);
 
-    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(
         Task_ReadADC,

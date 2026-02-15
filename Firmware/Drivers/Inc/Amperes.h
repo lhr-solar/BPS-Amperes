@@ -96,9 +96,10 @@ int32_t Amperes_ADCToCurrent(uint16_t reading);
 
 /**
  * @brief Start ADC reading
+ * @param clearQueue Reset queue (if blocking on queue empty -> value)
  * @retval Amperes Status: AMPERES_ADC_START_FAIL or OK
  */
-AmperesStatus_t Amperes_StartADC();
+AmperesStatus_t Amperes_StartADC(bool clearQueue);
 
 /**
  * @brief Get adc reading from ADC queue and convert to current (mA);

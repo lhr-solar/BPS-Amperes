@@ -3,11 +3,12 @@
 /** ================================================================
  *  Local Variables
  * ================================================================ */
-/* ADC Queue (to store adc conversion)*/
+/** ADC Queue to store ADC conversion
+ * - Only needs to hold 1 element from conversion
+ */
 #define ADC_ITEM_SIZE sizeof(int32_t)
 #ifndef ADC_QUEUE_LENGTH
-// TODO: PICK SIZE
-#define ADC_QUEUE_LENGTH 2
+    #define ADC_QUEUE_LENGTH 2
 #endif
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
@@ -178,14 +179,16 @@ AmperesStatus_t Amperes_Init() {
 }
 
 int32_t Amperes_ADCToCurrent(uint16_t reading) {
-    // TODO: fixed point conversion (maybe to uA?)
-    int32_t adc_to_mV = reading * (3300/4095);
-    adc_to_mV -= AMPERES_mVREF;
-    adc_to_mV *= 40;    // 1 / ((250 E-6 ohm)*(100 V/V))
-    return adc_to_mV;
+    // TODO: fixed point conversion (uA)
+    int32_t adc_to_uV = reading * (3300000/4095000);
+    int32_t uA = adc_to_uV - (AMPERES_mVREF * 1000);
+    uA *= 40;
+    return uA;
 }
 
-AmperesStatus_t Amperes_StartADC() {
+AmperesStatus_t Amperes_StartADC(bool clearQueue) {
+    // Clear queue (e.g. if blocking in GetReading based on queue empty -> value)
+    if (clearQueue) { xQueueReset(adc_queue); }
     // Start ADC conversion: result will appear in queue
     if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
         return AMPERES_ADC_START_FAIL;

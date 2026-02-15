@@ -67,7 +67,7 @@ int main() {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 
     // Make sure CAN is set to loopback
-    if(Amperes_Init(false) == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
 
     xTaskCreateStatic(Task_SendCAN,
                     "CAN Test",

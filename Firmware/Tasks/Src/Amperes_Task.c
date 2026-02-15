@@ -8,14 +8,25 @@ void Amperes_Task(void *pvParameters) {
     uint8_t counter = 0;
     uint8_t conv_count = 0;
 
-    while (1) {
-        /* =================== ADC =================== */
-        // Reset queue to prevent race condition 
-        // xQueueReceive with portMAX_DELAY unblocks when queue goes from empty -> something
-        xQueueReset(adc_queue);
+    // Enable CAN RX for debug (around 24 us)
+    GPIO_InitTypeDef debug_gpio = {
+        .Mode = GPIO_MODE_OUTPUT_PP,
+        .Pull = GPIO_NOPULL,
+        .Pin = GPIO_PIN_8 | GPIO_PIN_9
+    };
+    
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    HAL_GPIO_Init(GPIOB, &debug_gpio);
 
-        // Start ADC reading
-        if (Amperes_StartADC() != AMPERES_OK) { 
+    while (1) {
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
+
+        /* =================== ADC =================== */
+
+        // Start ADC reading. Clear queue because xQueueReceive with
+        // portMAX_DELAY unblocks when queue goes from empty -> something.
+        if (Amperes_StartADC(true) != AMPERES_OK) { 
             // error_handler();
         };
 
@@ -28,6 +39,7 @@ void Amperes_Task(void *pvParameters) {
         }
 
         /* =================== CAN =================== */
+
         // Send CAN messages at 100 Hz
         if (counter >= 10) {
             // Reset counters
@@ -43,12 +55,16 @@ void Amperes_Task(void *pvParameters) {
                 // error_handler();
             }
             HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);
+            HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_9);  // toggle CAN TX for debug
+
         }
 
-        /* =================== Update + delay =================== */
+        /* =================== Delay =================== */
+        
         // Using vTaskDelayUntil allows us to set a constant time period.
         // xLastWakeTime is updated within vTaskDelayUntil.
         counter++;
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);  // toggle CAN RX for debug
         vTaskDelayUntil(&xLastWakeTime, AMPERES_TASK_PERIOD); 
     }
 }

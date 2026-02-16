@@ -122,7 +122,6 @@ int32_t Amperes_ADCToCurrent(uint16_t adc_val);
  *  CAN
  * ================================================================ */
 #define AMPERES_STD_ID 0x1
-extern QueueHandle_t can_queue;
 
 /**
  * @brief Structure to hold Amperes data
@@ -159,7 +158,7 @@ AmperesStatus_t Amperes_Init();
 
 /**
  * @brief Start ADC reading
- * @param clearQueue Reset queue (if blocking on queue empty -> value)
+ * @param clearQueue Reset queue (if blocking on [queue empty -> has data] condition)
  * @retval Amperes Status: AMPERES_ADC_START_FAIL or OK
  */
 AmperesStatus_t Amperes_StartADC(bool clearQueue);

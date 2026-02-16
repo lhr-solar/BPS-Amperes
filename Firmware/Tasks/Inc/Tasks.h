@@ -2,6 +2,31 @@
 #define TASKS_H
 #include "Amperes.h"
 
+// TODO: SET STACK SIZE AND PRIORITIES
+
+/** ================================================================
+ *  Task Parameters: priority, stack size, static TCB buffer, stack arary
+ * ================================================================ */
+
+/**
+ * Amperes Task
+ * - High priority
+ */
+#define AMPERES_TASK_PRIO           tskIDLE_PRIORITY + 3
+#define AMPERES_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
+extern StaticTask_t                 Amperes_Task_Buffer;
+extern StackType_t                  Amperes_Task_Stack[AMPERES_TASK_STACK_SIZE];
+
+/**
+ * Init Task
+ * - Lowest priority: initializes tasks and then deletes itself
+ * - TODO: I'm only initializing one task do I even need this mane
+ */
+#define TASK_INIT_PRIO              tskIDLE_PRIORITY + 1
+#define TASK_INIT_STACK_SIZE        configMINIMAL_STACK_SIZE * 4
+extern StaticTask_t                 Task_Init_Buffer;
+extern StackType_t                  Task_Init_Stack[TASK_INIT_STACK_SIZE];
+
 /**
  * Amperes Task Period
  * - ADC LPF cutoff frequency is ~100 Hz
@@ -9,26 +34,10 @@
  */
 #define AMPERES_TASK_PERIOD         pdMS_TO_TICKS(1)
 
-/**
- * Amperes Task
- * - Combination of ADC and CAN task
- */
-#define AMPERES_TASK_PRIO           tskIDLE_PRIORITY + 3
-#define AMPERES_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
-extern StaticTask_t                 Amperes_Task_Buffer;
-extern StackType_t                  Amperes_Task_Stack[AMPERES_TASK_STACK_SIZE];
 
-
-/**
- * Init Task
- * - Lowest priority: initializes tasks and then deletes itself
- */
-#define TASK_INIT_PRIO          tskIDLE_PRIORITY + 1
-#define TASK_INIT_STACK_SIZE    configMINIMAL_STACK_SIZE * 4
-extern StaticTask_t             Task_Init_Buffer;
-extern StackType_t              Task_Init_Stack[TASK_INIT_STACK_SIZE];
-
-// TODO: SET STACK SIZE AND PRIORITIES
+/** ================================================================
+ *  Tasks
+ * ================================================================ */
 
 /**
  * @brief   Amperes Task
@@ -44,7 +53,6 @@ extern StackType_t              Task_Init_Stack[TASK_INIT_STACK_SIZE];
  * Values are averaged and sent over CAN every 100 Hz (10 sample avg).
  */
 void Amperes_Task(void *pvParameters);
-
 
 /**
  * @brief Initializes Amperes and all tasks (ADC and CAN),

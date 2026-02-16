@@ -17,7 +17,8 @@ int main() {
     SystemClock_Config();
 
     if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
-
+    MX_UART_Init();
+    
     // Amperes Task
     xTaskCreateStatic(
         Amperes_Task,           

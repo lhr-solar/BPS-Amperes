@@ -4,7 +4,7 @@ StaticTask_t    Amperes_Task_Buffer;
 StackType_t     Amperes_Task_Stack[AMPERES_TASK_STACK_SIZE];
 
 StaticTask_t    Task_Init_Buffer;
-StackType_t     Task_Init_Stack_Array[TASK_INIT_STACK_SIZE];
+StackType_t     Task_Init_Stack[TASK_INIT_STACK_SIZE];
 
 void Task_Init() {
     // Init Amperes GPIO, ADC, and CAN

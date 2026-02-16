@@ -5,6 +5,7 @@
  */
 
 #include "stm32xx_hal.h"
+#include "printf.h"
 
 /**
  * @brief Shared error handler
@@ -30,5 +31,8 @@ void SystemClock_Config(void);
   * @retval None
   */
 void MX_GPIO_Init(void);
+
+void MX_UART_Init();
+void Init_UART_Printf();
 
 #endif

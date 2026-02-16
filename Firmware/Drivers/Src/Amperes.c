@@ -14,16 +14,6 @@ QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;
 
-/* CAN Queue (to send to CAN)*/
-#define CAN_ITEM_SIZE sizeof(AmperesMsg_t)
-#ifndef CAN_QUEUE_LENGTH
-// TODO: PICK SIZE
-#define CAN_QUEUE_LENGTH 20
-#endif
-QueueHandle_t can_queue;
-uint8_t can_qStorage[CAN_QUEUE_LENGTH * CAN_ITEM_SIZE];
-static StaticQueue_t xStaticQueue_can;
-
 
 /** ================================================================
  *  Local Init Functions
@@ -112,14 +102,6 @@ static bool Amperes_ADC_Init() {
 }
 
 static bool Amperes_CAN_Init() {
-    /* Initialize CAN queue */
-    can_queue = xQueueCreateStatic(
-        CAN_QUEUE_LENGTH, 
-        CAN_ITEM_SIZE, 
-        can_qStorage, 
-        &xStaticQueue_can
-    );
-
     /* Create CAN filter */
     CAN_FilterTypeDef  sFilterConfig;
     sFilterConfig.FilterBank = 0;
@@ -187,7 +169,7 @@ int32_t Amperes_ADCToCurrent(uint16_t adc_val) {
 }
 
 AmperesStatus_t Amperes_StartADC(bool clearQueue) {
-    // Clear queue (e.g. if blocking in GetReading based on queue empty -> value)
+    // Clear queue if requested
     if (clearQueue) { xQueueReset(adc_queue); }
     // Start ADC conversion: result will appear in queue
     if (adc_read(AMPERES_ADC_CHANNEL, AMPERES_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
@@ -215,20 +197,18 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
     tx_header.DLC = 8;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Split int32 data into 4 uint8 elements; LSB at index 0
+    // Split data into uint8 elements; LSB at index 0
 
-    /* Raw ADC Value */
+    /* Raw ADC Value: uint16_t */
     uint8_t tx_data[8] = {0};
     tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
     tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
-    tx_data[2] = (uint8_t) ((data->adc_voltage >> 16) & 0xFF);
-    tx_data[3] = (uint8_t) ((data->adc_voltage >> 24) & 0xFF);
     
-    /* Current Data */
-    tx_data[4] = (uint8_t) (data->current_data & 0xFF);
-    tx_data[5] = (uint8_t) ((data->current_data >> 8) & 0xFF);
-    tx_data[6] = (uint8_t) ((data->current_data >> 16) & 0xFF);
-    tx_data[7] = (uint8_t) ((data->current_data >> 24) & 0xFF);
+    /* Current Data: int32_t */
+    tx_data[2] = (uint8_t) (data->current_data & 0xFF);
+    tx_data[3] = (uint8_t) ((data->current_data >> 8) & 0xFF);
+    tx_data[4] = (uint8_t) ((data->current_data >> 16) & 0xFF);
+    tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) {

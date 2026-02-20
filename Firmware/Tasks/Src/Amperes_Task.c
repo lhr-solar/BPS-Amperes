@@ -29,7 +29,7 @@ void Amperes_Task(void *pvParameters) {
         // Start ADC reading. Clear queue because xQueueReceive with
         // portMAX_DELAY blocks until queue goes from empty -> has data.
         if (Amperes_StartADC(true) != AMPERES_OK) { 
-            // error_handler();  // TODO: handle errors
+            // Error_Handler();  // TODO: handle errors
         };
 
         // Block until we receive data in queue
@@ -49,7 +49,7 @@ void Amperes_Task(void *pvParameters) {
 
             // Send data over CAN
             if (Amperes_SendCAN(&message) != AMPERES_OK) {
-                // error_handler();
+                // Error_Handler();
             }
 
             printf("adc = %d \r\n", message.adc_voltage);

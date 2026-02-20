@@ -25,21 +25,21 @@ void Task_SendCAN() {
 
     while (1) {
         // Send CAN data
-        if (Amperes_SendCAN(&message1) != AMPERES_OK) error_handler();
-        if (Amperes_SendCAN(&message2) != AMPERES_OK) error_handler();
+        if (Amperes_SendCAN(&message1) != AMPERES_OK) Error_Handler();
+        if (Amperes_SendCAN(&message2) != AMPERES_OK) Error_Handler();
 
         // Receive first payload
         status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
         result = RX_DATA_32b;
-        // if (status != CAN_RECV && result != NUM1) error_handler();
-        if (status != CAN_RECV) error_handler();
+        // if (status != CAN_RECV && result != NUM1) Error_Handler();
+        if (status != CAN_RECV) Error_Handler();
 
 
         // Receive second payload
         status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
         result = RX_DATA_32b;
-        // if (status != CAN_RECV && result != NUM2) error_handler();
-        if (status != CAN_RECV) error_handler();
+        // if (status != CAN_RECV && result != NUM2) Error_Handler();
+        if (status != CAN_RECV) Error_Handler();
 
         if (result) result += 0;
         
@@ -67,7 +67,7 @@ int main() {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 
     // Make sure CAN is set to loopback
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
 
     xTaskCreateStatic(Task_SendCAN,
                     "CAN Test",

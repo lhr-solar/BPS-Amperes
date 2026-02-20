@@ -16,7 +16,7 @@ int main() {
     HAL_Init();
     SystemClock_Config();
 
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
     MX_UART_Init();
     
     // Amperes Task
@@ -44,7 +44,7 @@ int main() {
     vTaskStartScheduler();
 
     // Code should not reach here
-    error_handler();
+    Error_Handler();
     while(1) {}
 
     return 0;

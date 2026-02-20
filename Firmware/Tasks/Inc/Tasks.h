@@ -1,5 +1,5 @@
-#ifndef TASKS_H
-#define TASKS_H
+#pragma once
+
 #include "Amperes.h"
 
 // TODO: SET STACK SIZE AND PRIORITIES
@@ -60,5 +60,3 @@ void Amperes_Task(void *pvParameters);
  * @retval none
  */
 void Task_Init();
-
-#endif

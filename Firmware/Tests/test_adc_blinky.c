@@ -24,7 +24,7 @@ void Task_ReadADC(void *pvParameters) {
         // Clear queue and start ADC
         Amperes_StartADC(true);
         if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
-            error_handler();
+            Error_Handler();
         }
         
         // using current value: approx -50000 to 82000 mA
@@ -51,7 +51,7 @@ int main() {
 
     HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN, 1);
 
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
 
     xTaskCreateStatic(
         Task_ReadADC,

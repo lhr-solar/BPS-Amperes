@@ -36,7 +36,7 @@ static StaticQueue_t xStaticQueue_adc;
     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
-      error_handler();
+      Error_Handler();
     }
 
     /* Peripheral clock enable */

@@ -1,5 +1,5 @@
-#ifndef COMMON_H
-#define COMMON_H
+#pragma once
+
 /**
  * Common Functionality
  */
@@ -10,14 +10,13 @@
 /**
  * @brief Shared error handler
  */
-void error_handler();
-
 void Error_Handler();
+
 
 /**
  * @brief Shared success handler
  */
-void success_handler();
+void Success_Handler();
 
 /**
   * @brief System Clock Configuration: 80 MHz
@@ -34,5 +33,3 @@ void MX_GPIO_Init(void);
 
 void MX_UART_Init();
 void Init_UART_Printf();
-
-#endif

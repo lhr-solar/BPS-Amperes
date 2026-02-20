@@ -8,7 +8,7 @@ StackType_t     Task_Init_Stack[TASK_INIT_STACK_SIZE];
 
 void Task_Init() {
     // Init Amperes GPIO, ADC, and CAN
-    if (Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if (Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
     
     // Init Amperes
     xTaskCreateStatic(

@@ -1,5 +1,4 @@
-#ifndef AMPERES_H
-#define AMPERES_H
+#pragma once
 
 #include "common.h"
 #include "ADC.h"
@@ -178,5 +177,3 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
  * @retval Amperes Status: AMPERES_CAN_SEND_FAIL or OK
  */
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data);
-
-#endif // AMPERES_H

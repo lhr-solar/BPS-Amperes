@@ -21,7 +21,7 @@ int main() {
     // Start scheduler
     vTaskStartScheduler();
 
-    error_handler();
+    Error_Handler();
     while(1) {  
         // Code should not reach here
     }

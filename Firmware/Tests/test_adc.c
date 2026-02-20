@@ -12,12 +12,10 @@ void ADC_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
     while (1) {
+        // Start ADC reading
         // Reset queue to prevent race condition (data already in queue and task does not wake up)
-        xQueueReset(adc_queue);
-
-        // // Start ADC reading
-        if (Amperes_StartADC() != AMPERES_OK) {
-            error_handler();
+        if (Amperes_StartADC(true) != AMPERES_OK) {
+            Error_Handler();
         };
 
         // Block until we receive data in queue
@@ -50,7 +48,7 @@ int main() {
     HAL_Init();
     SystemClock_Config();
     
-    if(Amperes_Init() == AMPERES_INIT_FAIL) error_handler();
+    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
 
     xTaskCreateStatic(
         ADC_Task,

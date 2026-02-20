@@ -1,3 +1,1 @@
-# BPS-AmperesPCB - Firmware
-
-- To do: update readme
+# BPS-Amperes

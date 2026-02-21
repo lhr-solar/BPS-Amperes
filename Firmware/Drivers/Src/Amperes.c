@@ -6,7 +6,7 @@
 /** ADC Queue to store ADC conversion
  * - Only needs to hold 1 element from conversion
  */
-#define ADC_ITEM_SIZE sizeof(int32_t)
+#define ADC_ITEM_SIZE sizeof(uint16_t)
 #ifndef ADC_QUEUE_LENGTH
     #define ADC_QUEUE_LENGTH 2
 #endif
@@ -19,6 +19,11 @@ static StaticQueue_t xStaticQueue_adc;
  *  Local Init Functions
  * ================================================================ */
 
+/**
+ * @brief Initialize ADC pin, clock, and interrupt.
+ * - Fails if clock config fails.
+ * - Called by HAL_ADC_Init().
+ */
  void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
     RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
@@ -58,10 +63,12 @@ static StaticQueue_t xStaticQueue_adc;
 
 }
 
+/**
+ * @brief Initializes ADC queue and hardware.
+ * - Fails if adc_init() fails.
+ * - Called by Amperes_Init().
+ */
 static bool Amperes_ADC_Init() {
-    /* Initialize ADC pin, clock, and interrupt */
-    HAL_ADC_MspInit(hadc1);
-
     /* Initialize queue */
     adc_queue = xQueueCreateStatic(
         ADC_QUEUE_LENGTH, 
@@ -83,7 +90,7 @@ static bool Amperes_ADC_Init() {
     init.NbrOfConversion = 1;
     init.DiscontinuousConvMode = DISABLE;
     init.DMAContinuousRequests = DISABLE;
-    init.Overrun = ADC_OVR_DATA_PRESERVED;
+    init.Overrun = ADC_OVR_DATA_OVERWRITTEN;    // vs ADC_OVR_DATA_PRESERVED
     init.OversamplingMode = DISABLE;
 
     /* Software triggered conversion */
@@ -101,6 +108,11 @@ static bool Amperes_ADC_Init() {
     return true;
 }
 
+/**
+ * @brief Initializes CAN filter and hardware.
+ * - Fails if can_init() fails.
+ * - Called in Amperes_Init().
+ */
 static bool Amperes_CAN_Init() {
     /* Create CAN filter */
     CAN_FilterTypeDef  sFilterConfig;
@@ -162,9 +174,9 @@ AmperesStatus_t Amperes_Init() {
 
 int32_t Amperes_ADCToCurrent(uint16_t adc_val) {
     // Get signed ADC value in terms of reference point; scale for fixed point math
-    int32_t adc_signed = (int32_t)(adc_val*1000) - AMPERES_ADC_VREF_SCALED;
+    int32_t adc_signed = ((int32_t)adc_val*1000) - AMPERES_ADC_VREF_SCALED;
     // Convert to mA using intermediate scaling (see comments in Amperes.h)
-    int32_t current_mA = ((int64_t)(adc_signed * AMPERES_CONV_NUM_SCALED)) / (AMPERES_CONV_DEN_SCALED);
+    int32_t current_mA = (int32_t) (((int64_t) adc_signed * AMPERES_CONV_NUM_SCALED) / ((int64_t)AMPERES_CONV_DEN_SCALED));
     return current_mA;
 }
 

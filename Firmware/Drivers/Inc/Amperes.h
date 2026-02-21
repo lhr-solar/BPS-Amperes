@@ -16,7 +16,7 @@
  *  - Current range: -46 to +78 A (0.1 - 3.2 V respectively)
  *  - Shunt: 250 uOhm
  *  - Gain: 100 * 0.4 * 2.49 V/V = 99.6 V/V
- *  - Reference voltage: 1.25 V (for bidirectinal sense amp)
+ *  - Reference voltage: 1.25 V (for bidirectional sense amp)
  *  - ADC: 12 bit
  * ================================================================ */
 
@@ -54,10 +54,6 @@ extern QueueHandle_t adc_queue;
  * 
  * ADC -> signed ADC -> signed voltage -> current
  * - mA = [(reading - ADC_Vref) * 3300] / [4095 * (shunt*gain)]
- * 
- * Note:
- * - (shunt * gain) = 0.0249
- * - 1 / (shunt * gain) = 40.1606425703
  */
 
 /**

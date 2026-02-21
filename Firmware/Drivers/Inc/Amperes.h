@@ -116,7 +116,8 @@ int32_t Amperes_ADCToCurrent(uint16_t adc_val);
 /** ================================================================
  *  CAN
  * ================================================================ */
-#define AMPERES_STD_ID 0x1
+#define AMPERES_CAN_STD_ID 0x1
+#define AMPERES_CAN_DLC 6
 
 /**
  * @brief Structure to hold Amperes data
@@ -147,14 +148,22 @@ typedef enum AmperesStatus {    // TODO: better states
 
 /**
  * @brief Initializes ADC and CAN for Amperes
- * @retval Status: AMPERES_INIT_FAIL or OK
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success 
+ * @n 
+ * - AMPERES_INIT_FAIL on fail
  */
 AmperesStatus_t Amperes_Init();
 
 /**
  * @brief Start ADC reading
  * @param clearQueue Reset queue (if blocking on [queue empty -> has data] condition)
- * @retval Amperes Status: AMPERES_ADC_START_FAIL or OK
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success
+ * @n 
+ * - AMPERES_ADC_START_FAIL on fail
  */
 AmperesStatus_t Amperes_StartADC(bool clearQueue);
 
@@ -163,13 +172,21 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue);
  *        expected range is -50.000 to +82.00 amps.
  * @param message Pointer to AmperesMsg_t struct to hold adc and current values
  * @param ticksToWait Number of ticks to wait on queue: 0 for non-blocking, portMAX_DELAY for blocking
- * @retval Amperes Status: AMPERES_ADC_READ_FAIL or OK
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success
+ * @n
+ * - AMPERES_ADC_READ_FAIL on fail
  */
 AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait);
 
 /**
  * @brief Send Amperes data over BPS_CAN
  * @param data Pointer to Amperes message struct
- * @retval Amperes Status: AMPERES_CAN_SEND_FAIL or OK
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success
+ * @n
+ * - AMPERES_CAN_SEND_FAIL on fail
  */
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data);

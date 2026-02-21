@@ -15,19 +15,16 @@ void Task_Blinky(void *pvParameters) {
 int main() {
     HAL_Init();
     SystemClock_Config();
-
-    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
-    MX_UART_Init();
     
     // Amperes Task
     xTaskCreateStatic(
-        Amperes_Task,           
-        "Amperes Task",         
-        AMPERES_TASK_STACK_SIZE,
+        Task_Init,           
+        "Initialize Tasks",         
+        TASK_INIT_STACK_SIZE,
         (void*)NULL,         
-        AMPERES_TASK_PRIO,      
-        Amperes_Task_Stack,     
-        &Amperes_Task_Buffer    
+        TASK_INIT_PRIO,      
+        Task_Init_Stack,     
+        &Task_Init_Buffer    
     );
 
     xTaskCreateStatic(

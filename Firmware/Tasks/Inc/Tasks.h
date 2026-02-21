@@ -55,7 +55,7 @@ extern StackType_t                  Task_Init_Stack[TASK_INIT_STACK_SIZE];
 void Amperes_Task(void *pvParameters);
 
 /**
- * @brief Initializes Amperes and all tasks (ADC and CAN),
+ * @brief Initializes Amperes hardware and task,
  *        then deletes itself.
  * @retval none
  */

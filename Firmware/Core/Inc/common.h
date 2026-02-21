@@ -1,8 +1,8 @@
 #pragma once
 
-/**
- * Common Functionality
- */
+/** ================================================================
+ *  Common Functionality: Handlers, Configs, Inits
+ * ================================================================ */
 
 #include "stm32xx_hal.h"
 #include "printf.h"
@@ -26,10 +26,18 @@ void SystemClock_Config(void);
 
 /**
   * @brief Initializes Amperes GPIO - 
-  *        Heartbeat, Fault, Charge, Discharge LEDS; Boot GPIO.
+  *   LEDS (Heartbeat, Fault, Charge, Discharge) and Boot GPIO.
   * @retval None
   */
 void MX_GPIO_Init(void);
 
+/**
+ * @brief Initializes UART hardware.
+ * @retval None
+ */
 void MX_UART_Init();
+
+/**
+ * @brief Initializes UART for printf serial debugging.
+ */
 void Init_UART_Printf();

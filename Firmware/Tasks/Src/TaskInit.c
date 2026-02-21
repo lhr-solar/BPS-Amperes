@@ -7,8 +7,12 @@ StaticTask_t    Task_Init_Buffer;
 StackType_t     Task_Init_Stack[TASK_INIT_STACK_SIZE];
 
 void Task_Init() {
-    // Init Amperes GPIO, ADC, and CAN
+    // Initialize Amperes GPIO, ADC, and CAN
     if (Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
+    
+    // Initialize UART for printf
+    MX_UART_Init();
+    Init_UART_Printf();
     
     // Init Amperes
     xTaskCreateStatic(

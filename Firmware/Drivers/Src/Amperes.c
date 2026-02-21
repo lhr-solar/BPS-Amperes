@@ -4,7 +4,7 @@
  *  Local Variables
  * ================================================================ */
 /** ADC Queue to store ADC conversion
- * - Only needs to hold 1 element from conversion
+ * - Only needs to hold 1 element. Basically a mailbox.
  */
 #define ADC_ITEM_SIZE sizeof(uint16_t)
 #ifndef ADC_QUEUE_LENGTH
@@ -81,16 +81,16 @@ static bool Amperes_ADC_Init() {
     ADC_InitTypeDef init = {0};
 
     init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2; /* ADC clock: synchronous */
-    init.Resolution = ADC_RESOLUTION_12B;   /* 12 bit ADC */
+    init.Resolution = ADC_RESOLUTION_12B;           /* 12 bit ADC */
     init.DataAlign = ADC_DATAALIGN_RIGHT;
     init.ScanConvMode = ADC_SCAN_DISABLE;
     init.EOCSelection = ADC_EOC_SINGLE_CONV;
     init.LowPowerAutoWait = DISABLE;
-    init.ContinuousConvMode = DISABLE;  /* Single Conversion */
+    init.ContinuousConvMode = DISABLE;              /* Single Conversion */
     init.NbrOfConversion = 1;
     init.DiscontinuousConvMode = DISABLE;
     init.DMAContinuousRequests = DISABLE;
-    init.Overrun = ADC_OVR_DATA_OVERWRITTEN;    // vs ADC_OVR_DATA_PRESERVED
+    init.Overrun = ADC_OVR_DATA_OVERWRITTEN;    // Overwrites data on overrun: vs ADC_OVR_DATA_PRESERVED
     init.OversamplingMode = DISABLE;
 
     /* Software triggered conversion */
@@ -203,16 +203,16 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = AMPERES_STD_ID;
+    tx_header.StdId = AMPERES_CAN_STD_ID;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = 8;
+    tx_header.DLC = AMPERES_CAN_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
     // Split data into uint8 elements; LSB at index 0
 
     /* Raw ADC Value: uint16_t */
-    uint8_t tx_data[8] = {0};
+    uint8_t tx_data[AMPERES_CAN_DLC] = {0};
     tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
     tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
     

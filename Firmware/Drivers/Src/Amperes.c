@@ -60,8 +60,27 @@ static StaticQueue_t xStaticQueue_adc;
     HAL_NVIC_SetPriority(ADC1_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
     HAL_NVIC_EnableIRQ(ADC1_IRQn);
   }
-
 }
+
+// void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan) {
+//   GPIO_InitTypeDef GPIO_InitStruct = {0};
+//   if(hcan->Instance==CAN1) {
+//     /* Peripheral clock enable */
+//     __HAL_RCC_CAN1_CLK_ENABLE();
+
+//     __HAL_RCC_GPIOB_CLK_ENABLE();
+//     /**CAN1 GPIO Configuration
+//     PB8     ------> CAN1_RX
+//     PB9     ------> CAN1_TX
+//     */
+//     GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
+//     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+//     GPIO_InitStruct.Pull = GPIO_NOPULL;
+//     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+//     GPIO_InitStruct.Alternate = GPIO_AF9_CAN1;
+//     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+//   }
+// }
 
 /**
  * @brief Initializes ADC queue and hardware.
@@ -200,7 +219,7 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
 }
 
 
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
+AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = AMPERES_CAN_STD_ID;
@@ -223,9 +242,20 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data) {
     tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
 
     // Send over CAN
-    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) != CAN_SENT) {
+    if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_SENT) {
         return AMPERES_CAN_SEND_FAIL;
     }
     
     return AMPERES_OK;
 }
+
+void Amperes_UpdateLEDs(int32_t currentValue) {
+    if (currentValue < 0) {
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 1);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 0);
+    } else if (currentValue > 0) {
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 1);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 0);
+    }
+}
+

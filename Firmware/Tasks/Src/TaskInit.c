@@ -12,7 +12,7 @@ void Task_Init() {
     
     // Initialize UART for printf
     MX_UART_Init();
-    Init_UART_Printf();
+    UART_Printf_Init();
     
     // Init Amperes
     xTaskCreateStatic(

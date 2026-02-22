@@ -40,4 +40,4 @@ void MX_UART_Init();
 /**
  * @brief Initializes UART for printf serial debugging.
  */
-void Init_UART_Printf();
+void UART_Printf_Init();

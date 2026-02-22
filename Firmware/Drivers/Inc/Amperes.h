@@ -183,10 +183,13 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
 /**
  * @brief Send Amperes data over BPS_CAN
  * @param data Pointer to Amperes message struct
+ * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
  * @n 
  * - AMPERES_OK on success
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data);
+AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait);
+
+void Amperes_UpdateLEDs(int32_t currentValue);

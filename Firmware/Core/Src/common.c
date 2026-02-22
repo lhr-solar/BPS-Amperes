@@ -117,7 +117,7 @@ void MX_UART_Init() {
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 }
 
-void Init_UART_Printf() {
+void UART_Printf_Init() {
     husart1->Init.BaudRate = 115200;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;

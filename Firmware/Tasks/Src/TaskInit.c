@@ -11,18 +11,17 @@ void Task_Init() {
     if (Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
     
     // Initialize UART for printf
-    MX_UART_Init();
     UART_Printf_Init();
     
     // Init Amperes
     xTaskCreateStatic(
-        Amperes_Task,
-        "Amperes Task",
-        AMPERES_TASK_STACK_SIZE,
-        (void*) NULL,
-        AMPERES_TASK_PRIO,
-        Amperes_Task_Stack,
-        &Amperes_Task_Buffer
+        Amperes_Task,               /* The function that implements the task. */
+        "Amperes Task",             /* Text name for the task. */
+        AMPERES_TASK_STACK_SIZE,    /* The size (in words) of the stack that should be created for the task. */
+        (void*) NULL,               /* Paramter passed into the task. */
+        AMPERES_TASK_PRIO,          /* Task Prioriy. */
+        Amperes_Task_Stack,         /* Stack array. */
+        &Amperes_Task_Buffer        /* Buffer for static allocation. */
     );
 
    // Delete Init Task

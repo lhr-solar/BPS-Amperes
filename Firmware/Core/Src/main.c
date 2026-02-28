@@ -21,10 +21,9 @@ int main() {
     // Start scheduler
     vTaskStartScheduler();
 
+    // Code should not reach here
     Error_Handler();
-    while(1) {  
-        // Code should not reach here
-    }
-
+    while(1) {}
+    
     return 0;
 }

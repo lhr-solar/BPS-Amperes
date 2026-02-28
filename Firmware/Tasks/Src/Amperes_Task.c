@@ -1,5 +1,7 @@
 #include "Tasks.h"
 
+#define PRINTF_ENABLED 1
+
 void Amperes_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
     AmperesMsg_t message = {0};
@@ -38,7 +40,9 @@ void Amperes_Task(void *pvParameters) {
                     // TODO: handle errors
                 }
 
+                #ifdef PRINTF_ENABLED
                 printf("adc %d|i %li \r\n", message.adc_voltage, message.current_data);
+                #endif
                 
                 // Reset variables
                 sum.adc_voltage = sum.current_data = 0;

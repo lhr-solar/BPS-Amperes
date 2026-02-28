@@ -1,7 +1,7 @@
 #pragma once
 
 /** ================================================================
- *  Common Functionality: Handlers, Configs, Inits
+ *  Common Functionality: Handlers, User-Callable Configs/Inits
  * ================================================================ */
 
 #include "stm32xx_hal.h"
@@ -30,12 +30,6 @@ void SystemClock_Config(void);
   * @retval None
   */
 void MX_GPIO_Init(void);
-
-/**
- * @brief Initializes UART hardware.
- * @retval None
- */
-void MX_UART_Init();
 
 /**
  * @brief Initializes UART for printf serial debugging.

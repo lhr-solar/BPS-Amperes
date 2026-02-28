@@ -4,27 +4,31 @@
 
 StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[ 200 ];
-// StaticTask_t xQueueTaskBuffer;
-// StackType_t xQueueStack[ 200 ];
+StaticTask_t xADCTaskBuffer;
+StackType_t xADCStack[ 200 ];
 
 void ADC_Task(void *pvParameters) {
-    AmperesMsg_t message;
+    AmperesMsg_t message = {
+        .adc_voltage = 0,
+        .current_data = 0
+    };
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
     while (1) {
-        // Start ADC reading
-        // Reset queue to prevent race condition (data already in queue and task does not wake up)
+        // Start ADC reading; reset queue
         if (Amperes_StartADC(true) != AMPERES_OK) {
             Error_Handler();
         };
 
-        // Block until we receive data in queue
-        if (Amperes_GetReading(&message, portMAX_DELAY) == AMPERES_OK) {
-            // Convert data to current measurent
-            message.current_data = Amperes_ADCToCurrent(message.adc_voltage);
+        // Block (indefinitely) until we receive data in queue
+        if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+            Error_Handler();
         }
-        
-        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
+
+        // Debug
+        printf("\r\n ADC: %4d, CURRENT: %5li \r\n", message.adc_voltage, message.current_data);
+        Amperes_UpdateLEDs(message.current_data);
+
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
     }
 }
@@ -36,49 +40,35 @@ void Task_Blinky(void *pvParameters) {
     }
 }
 
-// void Test_Queue(void *pvParameters) {
-//     int val = 3000;
-//     while (1) {
-//         xQueueSend(adc_queue, &val, 0);
-//         vTaskDelay(pdMS_TO_TICKS(1000));
-//     }
-// }
-
 int main() {
     HAL_Init();
     SystemClock_Config();
     
+    // UART for printf
+    UART_Printf_Init();
+
+    // Amperes hardware
     if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
 
     xTaskCreateStatic(
         ADC_Task,
         "ADC Task",
-        ADC_TASK_STACK_SIZE,
-        (void*) 1,
-        ADC_TASK_PRIO,
-        ADC_Task_Stack,
-        &ADC_Task_Buffer
+        200,
+        (void*) NULL,
+        tskIDLE_PRIORITY + 4,
+        xADCStack,
+        &xADCTaskBuffer
     );
 
     xTaskCreateStatic(
         Task_Blinky,
         "Blinky",
         200,
-        (void*) 1,
+        (void*) NULL,
         tskIDLE_PRIORITY+3,
         xBlinkyStack,
         &xBlinkyTaskBuffer
     );
-
-    // xTaskCreateStatic(
-    //     Test_Queue,
-    //     "Queue Send",
-    //     200,
-    //     (void*) 1,
-    //     tskIDLE_PRIORITY+4,
-    //     xQueueStack,
-    //     &xQueueTaskBuffer
-    // );
 
     vTaskStartScheduler();
 

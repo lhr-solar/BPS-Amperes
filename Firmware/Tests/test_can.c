@@ -73,7 +73,6 @@ void Task_SendCAN() {
 int main() {
     HAL_Init();
     SystemClock_Config();
-    MX_UART_Init();
     UART_Printf_Init();
 
     // Make sure CAN is set to loopback

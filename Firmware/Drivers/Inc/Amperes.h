@@ -36,7 +36,6 @@
  * ================================================================ */
 #define AMPERES_ADC_CHANNEL ADC_CHANNEL_5
 #define AMPERES_SAMPLE_TIME ADC_SAMPLETIME_47CYCLES_5
-// ADC_SAMPLETIME_2CYCLES_5
 #define AMPERES_ADC_PORT    GPIOA
 #define AMPERES_ADC_PIN     GPIO_PIN_0
 extern QueueHandle_t adc_queue;
@@ -45,16 +44,6 @@ extern QueueHandle_t adc_queue;
 /** ================================================================
  *  ADC Conversion: Fixed point math
  * ================================================================ */
-
-/**
- * In general, conversion is as follows:
- * 
- * ADC -> voltage -> signed voltage -> current
- * - mA = [(reading * (3300 / 4096)) - mVref)] / (shunt*gain)
- * 
- * ADC -> signed ADC -> signed voltage -> current
- * - mA = [(reading - ADC_Vref) * 3300] / [4095 * (shunt*gain)]
- */
 
 /**
  * ================================
@@ -116,8 +105,11 @@ int32_t Amperes_ADCToCurrent(uint16_t adc_val);
 /** ================================================================
  *  CAN
  * ================================================================ */
-#define AMPERES_CAN_STD_ID 0x1
-#define AMPERES_CAN_DLC 6
+#define AMPERES_CAN_STD_ID  0x1
+#define AMPERES_CAN_DLC     6
+#define AMPERES_CAN_PORT    GPIO_B
+#define AMPERES_RX_PIN      GPIO_PIN_8
+#define AMPERES_TX_PIN      GPIO_PIN_9
 
 /**
  * @brief Structure to hold Amperes data
@@ -135,16 +127,13 @@ typedef struct {
 /** ================================================================
  *  Amperes Functions
  * ================================================================ */
-
-typedef enum AmperesStatus {    // TODO: better states
+typedef enum AmperesStatus {
     AMPERES_OK,
     AMPERES_INIT_FAIL,
     AMPERES_ADC_START_FAIL,
     AMPERES_ADC_READ_FAIL,
-    AMPERES_QUEUE_FULL,
     AMPERES_CAN_SEND_FAIL
 } AmperesStatus_t;
-
 
 /**
  * @brief Initializes ADC and CAN for Amperes
@@ -192,4 +181,9 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
  */
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait);
 
+/**
+ * @brief Updates Amperes LED (Charge, Discharge) based on current measurement.
+ * @param currentValue Current measurement value
+ * @retval None
+ */
 void Amperes_UpdateLEDs(int32_t currentValue);

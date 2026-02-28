@@ -15,7 +15,7 @@ QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;
 
-// ADC Config
+// ADC Config for PA0
 ADC_ChannelConfTypeDef sConfig = {
     .Channel = AMPERES_ADC_CHANNEL,
     .Rank = ADC_REGULAR_RANK_1,
@@ -43,6 +43,7 @@ static bool Amperes_ADC_Init() {
         adc_qStorage, 
         &xStaticQueue_adc
     );
+    if (adc_queue == NULL) return false;
     
     /* ================ ADC Init Struct ================ */
     ADC_InitTypeDef init = {0};
@@ -177,7 +178,8 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_header.DLC = AMPERES_CAN_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Split data into uint8 elements; LSB at index 0
+    // Split data into uint8 elements
+    // Little Endian: LSB at index 0
 
     /* Raw ADC Value: uint16_t */
     uint8_t tx_data[AMPERES_CAN_DLC] = {0};
@@ -200,11 +202,13 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
 
 void Amperes_UpdateLEDs(int32_t currentValue) {
     if (currentValue < 0) {
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 1);
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 0);
-    } else if (currentValue > 0) {
+        // Negative means charging
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 1);
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 0);
+    } else if (currentValue > 0) {
+        // Positive means discharging
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 1);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 0);
     }
 }
 

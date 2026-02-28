@@ -2,40 +2,48 @@
 #include "Amperes.h"
 
 // CAN
-#define CURRENT_CONV    ((int32_t) ((rx_data[5] << 24) | (rx_data[4] << 16) | (rx_data[3] << 8) | rx_data[2]))
-#define ADC_CONV        ((uint16_t) ((rx_data[1] << 8) | rx_data[0]))
-AmperesMsg_t message1 = {
-    .adc_voltage = 25,
-    .current_data = -50
-};
-AmperesMsg_t message2 = {
-    .adc_voltage = 62,
-    .current_data = 60
-};
+#define CURRENT_CONV    ( (int32_t) (rx_data[5] << 24) | (int32_t) (rx_data[4] << 16) | (int32_t) (rx_data[3] << 8) | (int32_t) rx_data[2] )
+#define ADC_CONV        ( (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]) )
 
 // Task
 StaticTask_t xTaskBuffer;
 StackType_t xStack[200];
 
 void Task_SendCAN() {
-    // CAN receive
+    // Receive
     CAN_RxHeaderTypeDef rx_header = {0};
     uint8_t rx_data[6] = {0};
     can_status_t status;
     uint16_t adc;
     int32_t current;
 
+    // Transmit
+    AmperesMsg_t payload = {
+        .adc_voltage = 4095,
+        .current_data = 80000
+    };
+    
     while (1) {
+        // Increment data
+        if (payload.adc_voltage == 0) {
+            payload.adc_voltage = 4095;
+        } else {
+            payload.adc_voltage -= 15;
+        }
+        if (payload.current_data == -30000) {
+            payload.current_data = 80000;
+        } else {
+            payload.current_data -= 1000;
+        }
+
         // Send CAN data
-        if (Amperes_SendCAN(&message1, portMAX_DELAY) != AMPERES_OK) {
+        if (Amperes_SendCAN(&payload, portMAX_DELAY) != AMPERES_OK) {
             printf("no can send \r\n");
             Error_Handler();
         }
-        // if (Amperes_SendCAN(&message2, portMAX_DELAY) != AMPERES_OK) Error_Handler();
-        printf("SENT: adc %d | current %li \r\n", message1.adc_voltage, message1.current_data);
-        vTaskDelay(pdMS_TO_TICKS(10));
+        printf("\r\nSEND \t adc %4d | current %5li \r\n", payload.adc_voltage, payload.current_data);
 
-        // Receive first payload
+        // Receive payload
         status = can_recv(hcan1, AMPERES_CAN_STD_ID, &rx_header, rx_data, portMAX_DELAY);
         if (status != CAN_RECV) {
             if (status == CAN_EMPTY) {
@@ -45,27 +53,20 @@ void Task_SendCAN() {
             }
             Error_Handler();
         }
+
+        // Convert back hopefully
         adc = ADC_CONV;
         current = CURRENT_CONV;
-        printf("RECEIVED: adc %d | current %li \r\n", adc, current);
-        if ((adc != message1.adc_voltage) && (current != message1.current_data)) {
+        printf("RECV \t adc %4d | current %5li \r\n", adc, current);
+        if ((adc != payload.adc_voltage) && (current != payload.current_data)) {
             Error_Handler();
         }
+        printf("Match! \r\n");
 
-
-        // Receive second payload
-        // status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
-        // adc = ADC_CONV;
-        // current = CURRENT_CONV;
-        // if (status == CAN_RECV) Error_Handler();
-        // if ((adc != message2.adc_voltage) && (current != message2.current_data)) {
-        //     Error_Handler();
-        // }
-        
         // Blinky for verification that we are still in loop
         HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
 
-        vTaskDelay(pdMS_TO_TICKS(100));
+        vTaskDelay(pdMS_TO_TICKS(250));
     }
 }
 

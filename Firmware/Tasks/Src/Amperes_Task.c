@@ -14,7 +14,7 @@ void Amperes_Task(void *pvParameters) {
         // and we can block on it being empty.
 
         if (Amperes_StartADC(true) != AMPERES_OK) { 
-            // Error_Handler();  // TODO: handle errors
+            // TODO: handle errors
         };
 
         // Block until we receive data in queue
@@ -34,8 +34,8 @@ void Amperes_Task(void *pvParameters) {
                 message.current_data = (sum.current_data / conv_count);
 
                 // Send data over CAN
-                if (Amperes_SendCAN(&message, portMAX_DELAY) != AMPERES_OK) {
-                    // Error_Handler();
+                if (Amperes_SendCAN(&message, AMPERES_TASK_PERIOD) != AMPERES_OK) {
+                    // TODO: handle errors
                 }
 
                 printf("adc %d|i %li \r\n", message.adc_voltage, message.current_data);

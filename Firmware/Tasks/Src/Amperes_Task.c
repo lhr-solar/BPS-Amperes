@@ -38,7 +38,7 @@ void Amperes_Task(void *pvParameters) {
                     // Error_Handler();
                 }
 
-                printf("adc = %d | i = %li \r\n", message.adc_voltage, message.current_data);
+                printf("adc %d|i %li \r\n", message.adc_voltage, message.current_data);
                 
                 // Reset variables
                 sum.adc_voltage = sum.current_data = 0;

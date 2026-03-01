@@ -47,7 +47,7 @@ extern QueueHandle_t adc_queue;
  * ================================================================ */
 
 /**
- * Calibrated values.
+ * Calibrated values (using shunt).
  * - ADC_xA is the ADC value at different current values.
  * - Scale constant is just the slope: (current1 - current2) / (adc1 - adc2)
  */
@@ -56,7 +56,7 @@ extern QueueHandle_t adc_queue;
 // #define ADC_NEG_10A     1090
 // #define SCALE_CONST     33167
 
-#define ADC_0A          1528
+#define ADC_0A          1527
 #define ADC_PLUS_10A    1828
 #define ADC_NEG_10A     1228
 #define SCALE_CONST     33333

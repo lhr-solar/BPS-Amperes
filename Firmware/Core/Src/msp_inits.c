@@ -38,10 +38,10 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
     PA0     ------> ADC1_IN5
     */
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    GPIO_InitStruct.Pin = AMPERES_ADC_PIN;
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(AMPERES_ADC_PORT, &GPIO_InitStruct);
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
     /* ADC1 interrupt Init */
     HAL_NVIC_SetPriority(ADC1_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);

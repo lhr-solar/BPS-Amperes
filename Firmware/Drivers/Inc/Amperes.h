@@ -51,15 +51,13 @@ extern QueueHandle_t adc_queue;
  * - ADC_xA is the ADC value at different current values.
  * - Scale constant is just the slope: (current1 - current2) / (adc1 - adc2)
  */
-// #define ADC_0A          1395
-// #define ADC_PLUS_10A    1688
-// #define ADC_NEG_10A     1090
-// #define SCALE_CONST     33167
-
 #define ADC_0A          1527
 #define ADC_PLUS_10A    1828
 #define ADC_NEG_10A     1228
 #define SCALE_CONST     33333
+
+// Noise range in mA (arbitrary right now)
+#define NOISE_RANGE     35
 
 /**
  * @brief Convert ADC reading to current in milliamps (mA) using calibrated values.
@@ -153,52 +151,3 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait);
  * @retval None
  */
 void Amperes_UpdateLEDs(int32_t currentValue);
-
-
-
-/** ================================================================
- *  ADC Conversion: Fixed point math
- * ================================================================ */
-
-/**
- * ================================
- * Conversion
- * ================================
- * Equation:
- * mA = [(ADC_val - ADC_Vref) * adc_voltage_range_mV] / [adc_range * shunt*gain]
- * 
- * Plug in values:
- * mA = [(ADC_val - (1250)(4095/3300)) * 3300] / [4095 * 0.0249]
- * 
- * Simplify:
- * mA = [(ADC_val - 1551.13636364) * 3300] / [101.9655]
- * 
- * Scale values:
- * mA = [(ADC_val*1000 - 1551.13636364*1000) * 3300*10] / [101.9655*10000]
- *
- * Final equation:
- * mA = [(ADC_val*1000 - 1551136) * 33000] / [1019655]
- * 
- * ================================
- * Constants
- * ================================
- * ADC Vref Scaled = 1551136
- * Numerator Scaled = 33000
- * Denominator Scaled = 1019655
- */
-
-/**
- * Reference voltage (1250 mV) in terms of ADC value, scaled by 1000.
- * - (1250 mV * 4095 * 1000) / 3300 mV ~= 1551136
- */
-#define AMPERES_ADC_VREF_SCALED 1551136
-
-/**
- * Numerator Term: 3300 * 10 = 33000
- */
-#define AMPERES_CONV_NUM_SCALED 33000
-
-/**
- * Denominator Term: 4095 * 0.0249 * 10000 = 1019655
- */
-#define AMPERES_CONV_DEN_SCALED 1019655

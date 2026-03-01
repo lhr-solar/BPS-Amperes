@@ -22,7 +22,7 @@ void Amperes_Task(void *pvParameters) {
         // and we can block on it being empty.
         if (Amperes_StartADC(true) != AMPERES_OK) { 
             // TODO: handle errors. restart ADC ?
-        };
+        }
 
         // Block until we receive data in queue
         if (Amperes_GetReading(&message, AMPERES_TASK_PERIOD) == AMPERES_OK) {

@@ -16,7 +16,7 @@ uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;
 
 // ADC Config for PA0
-ADC_ChannelConfTypeDef sConfig = {
+static ADC_ChannelConfTypeDef sConfig = {
     .Channel = AMPERES_ADC_CHANNEL,
     .Rank = ADC_REGULAR_RANK_1,
     .SamplingTime = AMPERES_SAMPLE_TIME,
@@ -142,11 +142,6 @@ AmperesStatus_t Amperes_Init() {
 }
 
 int32_t Amperes_ADCToCurrent(uint16_t adc_val) {
-    // Get signed ADC value in terms of reference point; scale for fixed point math
-    // int32_t adc_signed = ((int32_t)adc_val*1000) - AMPERES_ADC_VREF_SCALED;
-    // Convert to mA using intermediate scaling (see comments in Amperes.h)
-    // int32_t current_mA = (int32_t) (((int64_t) adc_signed * AMPERES_CONV_NUM_SCALED) / ((int64_t)AMPERES_CONV_DEN_SCALED));
-
     int64_t current_uA = ((int64_t) adc_val - ADC_0A) * SCALE_CONST;
     int32_t current_mA = (int32_t) (current_uA / 1000);
     return current_mA;
@@ -207,7 +202,7 @@ void Amperes_UpdateLEDs(int32_t currentValue) {
         // Negative means charging
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);
-    } else if (currentValue > 0) {
+    } else {
         // Positive means discharging
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_SET);
         HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_RESET);

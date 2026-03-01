@@ -79,7 +79,7 @@ int main() {
 
     xTaskCreateStatic(Task_SendCAN,
                     "CAN Test",
-                    configMINIMAL_STACK_SIZE,
+                    200,
                     (void*) 1,
                     tskIDLE_PRIORITY+5,
                     xStack,

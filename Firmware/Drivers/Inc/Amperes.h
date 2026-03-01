@@ -3,6 +3,7 @@
 #include "common.h"
 #include "ADC.h"
 #include "CAN.h"
+#include "BPSCAN_can_msgs.h"
 
 /** ================================================================
  *  Driver for Amperes Board
@@ -105,9 +106,8 @@ int32_t Amperes_ADCToCurrent(uint16_t adc_val);
 /** ================================================================
  *  CAN
  * ================================================================ */
-#define AMPERES_CAN_STD_ID  0x1
-#define AMPERES_CAN_DLC     6
-#define AMPERES_CAN_PORT    GPIO_B
+#define AMPERES_MSG_DLC     6
+#define AMPERES_CAN_PORT    GPIOB
 #define AMPERES_RX_PIN      GPIO_PIN_8
 #define AMPERES_TX_PIN      GPIO_PIN_9
 

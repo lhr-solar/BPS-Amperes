@@ -1,11 +1,10 @@
 #include "stm32xx_hal.h"
 #include "Amperes.h"
 
-// CAN
+// Reconstruct Values
 #define CURRENT_CONV    ( (int32_t) (rx_data[5] << 24) | (int32_t) (rx_data[4] << 16) | (int32_t) (rx_data[3] << 8) | (int32_t) rx_data[2] )
 #define ADC_CONV        ( (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]) )
 
-// Task
 StaticTask_t xTaskBuffer;
 StackType_t xStack[200];
 
@@ -25,7 +24,7 @@ void Task_SendCAN() {
     
     while (1) {
         // Increment data
-        if (payload.adc_voltage == 0) {
+        if (payload.adc_voltage < 15) {
             payload.adc_voltage = 4095;
         } else {
             payload.adc_voltage -= 15;
@@ -44,7 +43,7 @@ void Task_SendCAN() {
         printf("\r\nSEND \t adc %4d | current %5li \r\n", payload.adc_voltage, payload.current_data);
 
         // Receive payload
-        status = can_recv(hcan1, AMPERES_CAN_STD_ID, &rx_header, rx_data, portMAX_DELAY);
+        status = can_recv(hcan1, CAN_ID_BPS_PACK_CURRENT, &rx_header, rx_data, portMAX_DELAY);
         if (status != CAN_RECV) {
             if (status == CAN_EMPTY) {
                 printf("can empty :(\r\n");
@@ -58,7 +57,7 @@ void Task_SendCAN() {
         adc = ADC_CONV;
         current = CURRENT_CONV;
         printf("RECV \t adc %4d | current %5li \r\n", adc, current);
-        if ((adc != payload.adc_voltage) && (current != payload.current_data)) {
+        if ((adc != payload.adc_voltage) || (current != payload.current_data)) {
             Error_Handler();
         }
         printf("Match! \r\n");

@@ -168,21 +168,20 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
     return AMPERES_OK;
 }
 
-
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = AMPERES_CAN_STD_ID;
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = AMPERES_CAN_DLC;
+    tx_header.DLC = AMPERES_MSG_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
     // Split data into uint8 elements
     // Little Endian: LSB at index 0
 
     /* Raw ADC Value: uint16_t */
-    uint8_t tx_data[AMPERES_CAN_DLC] = {0};
+    uint8_t tx_data[AMPERES_MSG_DLC] = {0};
     tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
     tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
     
@@ -203,11 +202,11 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
 void Amperes_UpdateLEDs(int32_t currentValue) {
     if (currentValue < 0) {
         // Negative means charging
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 1);
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 0);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);
     } else if (currentValue > 0) {
         // Positive means discharging
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, 1);
-        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, 0);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_RESET);
     }
 }

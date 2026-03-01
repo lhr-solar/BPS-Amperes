@@ -2,6 +2,11 @@
 #include "Amperes.h"
 #include "Tasks.h"
 
+/** ================================================================
+ * ADC Test
+ * - Reads from the ADC and prints via printf
+ * ================================================================ */
+
 StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[ 200 ];
 StaticTask_t xADCTaskBuffer;

@@ -1,6 +1,13 @@
 #include "stm32xx_hal.h"
 #include "Amperes.h"
 
+/** ================================================================
+ * CAN Test
+ * - Sends Amperes CAN messages (loopback) and checks 
+ *   that they were received correctly. 
+ * - Debug w/ printf and a CAN adapter.
+ * ================================================================ */
+
 // Reconstruct Values
 #define CURRENT_CONV    ( (int32_t) (rx_data[5] << 24) | (int32_t) (rx_data[4] << 16) | (int32_t) (rx_data[3] << 8) | (int32_t) rx_data[2] )
 #define ADC_CONV        ( (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]) )

@@ -2,6 +2,11 @@
 #include "Amperes.h"
 #include "Tasks.h"
 
+/** ================================================================
+ * Amperes Test
+ * - Tests entire system: ADC, CAN
+ * ================================================================ */
+
 StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[configMINIMAL_STACK_SIZE];
 

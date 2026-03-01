@@ -2,6 +2,13 @@
 #include "Amperes.h"
 #include "Tasks.h"
 
+/** ================================================================
+ * Calibration Test
+ * - Samples the ADC 100 times and prints the average.
+ * - Pass in a known current to find calibration values and put 
+ *   in Amperes.h.
+ * ================================================================ */
+
 StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[ 200 ];
 StaticTask_t xADCTaskBuffer;

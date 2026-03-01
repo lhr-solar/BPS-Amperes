@@ -1,6 +1,11 @@
 #include "stm32xx_hal.h"
 #include "Amperes.h"
 
+/** ================================================================
+ * Blinky Test
+ * - Blinks all LEDs
+ * ================================================================ */
+
 int main(){
     HAL_Init();
     SystemClock_Config();

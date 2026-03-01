@@ -1,5 +1,9 @@
-// A simple echo application to test input and output over serial
 #include "common.h"
+
+/** ================================================================
+ * Printf Test
+ * - Prints stuff, that's about it
+ * ================================================================ */
 
 StaticTask_t txTaskBuffer;
 StackType_t txTaskStack[configMINIMAL_STACK_SIZE*4];

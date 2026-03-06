@@ -33,14 +33,12 @@ void SystemClock_Config(void) {
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_MSI;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 40;
+  RCC_OscInitStruct.PLL.PLLN = 20;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
@@ -87,7 +85,7 @@ void MX_GPIO_Init(void) {
   HAL_GPIO_Init(AMPERES_GPIO_PORT, &GPIO_InitStruct);
 }
 
-void UART_Printf_Init() {
+bool UART_Printf_Init() {
     husart1->Init.BaudRate = 115200;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;
@@ -96,5 +94,5 @@ void UART_Printf_Init() {
     husart1->Init.HwFlowCtl = UART_HWCONTROL_NONE;
     husart1->Init.OverSampling = UART_OVERSAMPLING_16;
 
-    printf_init(husart1);
+    return printf_init(husart1);
 }

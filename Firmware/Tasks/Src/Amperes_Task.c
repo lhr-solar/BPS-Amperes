@@ -21,7 +21,9 @@ void Amperes_Task(void *pvParameters) {
         // Start ADC reading. Clear queue so it acts as a mailbox
         // and we can block on it being empty.
         if (Amperes_StartADC(true) != AMPERES_OK) { 
-            // TODO: handle errors. restart ADC ?
+            #ifdef PRINTF_ENABLED
+            printf("ADC Start Error\r\n");
+            #endif
         }
 
         // Block until we receive data in queue
@@ -30,8 +32,9 @@ void Amperes_Task(void *pvParameters) {
             sum.adc_voltage += message.adc_voltage;
             sum.current_data += message.current_data;
         } else {
-            // handle error
-            // adc_errors++;
+            #ifdef PRINTF_ENABLED
+            printf("ADC Reading Error\r\n");
+            #endif
         }
 
         /* =================== CAN =================== */
@@ -44,8 +47,9 @@ void Amperes_Task(void *pvParameters) {
 
                 // Send data over CAN
                 if (Amperes_SendCAN(&message, AMPERES_TASK_PERIOD) != AMPERES_OK) {
-                    // TODO: handle errors
-                    // can_errors++;
+                    #ifdef PRINTF_ENABLED
+                    printf("CAN Send Error\r\n");
+                    #endif
                 }
 
                 #ifdef PRINTF_ENABLED
@@ -56,8 +60,10 @@ void Amperes_Task(void *pvParameters) {
                 sum.adc_voltage = sum.current_data = 0;
                 counter = conv_count = 0;
             } else {
-                // Handle error: no adc conversions
-                // reinit ADC?
+                // Error: no adc conversions
+                #ifdef PRINTF_ENABLED
+                printf("No ADC Conversions\r\n");
+                #endif
             }
             
             // Update LED values

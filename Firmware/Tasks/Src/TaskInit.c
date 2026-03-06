@@ -9,10 +9,10 @@ StackType_t     Task_Init_Stack[TASK_INIT_STACK_SIZE];
 void Task_Init() {
     // Initialize Amperes hardware
     MX_GPIO_Init();
-    Amperes_ADC_Init();
-    Amperes_CAN_Init();
-    Amperes_CAN_Start();
-      
+    if (Amperes_ADC_Init() != AMPERES_OK) Error_Handler();
+    if (Amperes_CAN_Init() != AMPERES_OK) Error_Handler();
+    if (Amperes_CAN_Start() != AMPERES_OK) Error_Handler();
+
     // Initialize UART for printf
     UART_Printf_Init();
     

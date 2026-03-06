@@ -7,6 +7,7 @@
  * - Sends Amperes CAN messages (loopback) and checks 
  *   that they were received correctly. 
  * - Debug w/ printf and a CAN adapter.
+ * !!! CAN mode must be set to LOOPBACK and filter must accept ID
  * ================================================================ */
 
 // Reconstruct Values
@@ -16,7 +17,7 @@
 StaticTask_t xTaskBuffer;
 StackType_t xStack[200];
 
-void Task_SendCAN() {
+void Task_CAN_Loopback() {
     // Receive
     CAN_RxHeaderTypeDef rx_header = {0};
     uint8_t rx_data[6] = {0};
@@ -50,9 +51,9 @@ void Task_SendCAN() {
         }
         printf("\r\nSEND \t adc %4d | current %5li \r\n", payload.adc_voltage, payload.current_data);
 
-        // Receive payload
+        // Receive payload; make sure CAN filter in Amperes_CAN_Init will accept this ID
         status = can_recv(hcan1, AMPERES_MSG_ID, &rx_header, rx_data, portMAX_DELAY);
-        if (status != CAN_RECV) {
+        if (status != CAN_OK) {
             if (status == CAN_EMPTY) {
                 printf("can empty :(\r\n");
             } else if (status == CAN_ERR) {
@@ -87,7 +88,7 @@ int main() {
     if (Amperes_CAN_Init() != AMPERES_OK) Error_Handler();
     if (Amperes_CAN_Start() != AMPERES_OK) Error_Handler();
 
-    xTaskCreateStatic(Task_SendCAN,
+    xTaskCreateStatic(Task_CAN_Loopback,
                     "CAN Test",
                     200,
                     (void*) 1,

@@ -61,7 +61,7 @@ int main() {
 
     // Amperes hardware
     MX_GPIO_Init();
-    Amperes_ADC_Init();
+    if (Amperes_ADC_Init()) Error_Handler();
 
     xTaskCreateStatic(
         ADC_Task,

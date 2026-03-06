@@ -11,17 +11,23 @@
  */
 static bool MX_CAN_Init() {
     /* Create CAN filter */
+    /* For production, reject all incoming IDs */
     CAN_FilterTypeDef  sFilterConfig;
     sFilterConfig.FilterBank = 0;
-    sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-    sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-    sFilterConfig.FilterIdHigh = 0x0000;
-    sFilterConfig.FilterIdLow = 0x0000;
-    sFilterConfig.FilterMaskIdHigh = 0x0000;
-    sFilterConfig.FilterMaskIdLow = 0x0000;
-    sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-    sFilterConfig.FilterActivation = ENABLE;
-    sFilterConfig.SlaveStartFilterBank = 14;
+    sFilterConfig.FilterActivation = DISABLE;
+
+    /* For testing: accept all incoming IDs */
+    // CAN_FilterTypeDef  sFilterConfig;
+    // sFilterConfig.FilterBank = 0;
+    // sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+    // sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+    // sFilterConfig.FilterIdHigh = 0x0000;
+    // sFilterConfig.FilterIdLow = 0x0000;
+    // sFilterConfig.FilterMaskIdHigh = 0x0000;
+    // sFilterConfig.FilterMaskIdLow = 0x0000;
+    // sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+    // sFilterConfig.FilterActivation = ENABLE;
+    // sFilterConfig.SlaveStartFilterBank = 14;
 
     /* CAN1 Init Struct */
     // Baud rate is 250 kbit/s
@@ -86,7 +92,7 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
 
     // Send over CAN
-    if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_SENT) {
+    if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
         return AMPERES_CAN_SEND_FAIL;
     }
     

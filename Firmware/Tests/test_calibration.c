@@ -23,7 +23,7 @@ void ADC_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
     MX_GPIO_Init();
-    Amperes_ADC_Init();
+    if (Amperes_ADC_Init()) Error_Handler();
 
     for (uint8_t i=0; i <100; i++) {
         // Start ADC reading; reset queue

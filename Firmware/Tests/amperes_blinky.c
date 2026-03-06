@@ -22,6 +22,5 @@ int main(){
         HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);
         HAL_Delay(125);
     }
-
     return 0;
 }

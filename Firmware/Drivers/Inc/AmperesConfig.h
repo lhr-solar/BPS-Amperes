@@ -1,4 +1,5 @@
 #pragma once
+#include "BPSCAN_can_msgs.h"
 
 /** ================================================================
  *  Amperes Board
@@ -45,6 +46,7 @@
  * ================================================================ */
 
 #define AMPERES_MSG_DLC     6
+#define AMPERES_MSG_ID      CAN_ID_BPS_PACK_CURRENT
 #define AMPERES_CAN_PORT    GPIOB
 #define AMPERES_RX_PIN      GPIO_PIN_8
 #define AMPERES_TX_PIN      GPIO_PIN_9

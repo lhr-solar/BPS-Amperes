@@ -23,14 +23,21 @@ void ADC_Task(void *pvParameters) {
     int64_t current_sum = 0;
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
+    if(Amperes_Init() == AMPERES_INIT_FAIL) {
+        printf("\r\nAmperes init fail\r\n");
+        Error_Handler();
+    }
+
     for (uint8_t i=0; i <100; i++) {
         // Start ADC reading; reset queue
         if (Amperes_StartADC(true) != AMPERES_OK) {
+            printf("\r\n ADC start fail\r\n");
             Error_Handler();
         };
 
         // Block (indefinitely) until we receive data in queue
         if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+            printf("\r\n ADC get reading fail \r\n");
             Error_Handler();
         }
 
@@ -59,9 +66,6 @@ int main() {
     
     // UART for printf
     UART_Printf_Init();
-
-    // Amperes hardware
-    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
 
     xTaskCreateStatic(
         ADC_Task,

@@ -50,7 +50,7 @@ void Task_SendCAN() {
         printf("\r\nSEND \t adc %4d | current %5li \r\n", payload.adc_voltage, payload.current_data);
 
         // Receive payload
-        status = can_recv(hcan1, CAN_ID_BPS_PACK_CURRENT, &rx_header, rx_data, portMAX_DELAY);
+        status = can_recv(hcan1, AMPERES_MSG_ID, &rx_header, rx_data, portMAX_DELAY);
         if (status != CAN_RECV) {
             if (status == CAN_EMPTY) {
                 printf("can empty :(\r\n");

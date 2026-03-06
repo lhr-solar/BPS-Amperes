@@ -1,4 +1,4 @@
 // CAN_RECV_ENTRY(ID, SIZE, CIRCULAR)
-#include "Amperes.h"
+#include "AmperesConfig.h"
 
-CAN_RECV_ENTRY(CAN_ID_BPS_PACK_CURRENT, AMPERES_MSG_DLC, false)
+CAN_RECV_ENTRY(AMPERES_MSG_ID, AMPERES_MSG_DLC, false)

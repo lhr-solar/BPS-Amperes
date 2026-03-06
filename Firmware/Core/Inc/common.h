@@ -33,5 +33,6 @@ void MX_GPIO_Init(void);
 
 /**
  * @brief Initializes UART for printf serial debugging.
+ * @retval True if init successful.
  */
-void UART_Printf_Init();
+bool UART_Printf_Init();

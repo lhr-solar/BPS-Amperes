@@ -101,7 +101,7 @@ static bool Amperes_CAN_Init() {
     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
     hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
     hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-    hcan1->Init.Mode = CAN_MODE_NORMAL;
+    hcan1->Init.Mode = CAN_MODE_LOOPBACK;   // TODO: change for testing
     hcan1->Init.TimeTriggeredMode = DISABLE;
     hcan1->Init.AutoBusOff = DISABLE;
     hcan1->Init.AutoWakeUp = DISABLE;
@@ -169,7 +169,7 @@ AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT;
+    tx_header.StdId = AMPERES_MSG_ID;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
     tx_header.DLC = AMPERES_MSG_DLC;

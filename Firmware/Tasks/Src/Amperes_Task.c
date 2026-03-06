@@ -60,7 +60,16 @@ void Amperes_Task(void *pvParameters) {
                 // reinit ADC?
             }
             
-            Amperes_UpdateLEDs(message.current_data);
+            // Update LED values
+            if (message.current_data < 0) {
+                // Negative means charging
+                HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
+                HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);
+            } else {
+                // Positive means discharging
+                HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_SET);
+                HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_RESET);
+            }
         }
 
         /* =================== Handle Errors =================== */

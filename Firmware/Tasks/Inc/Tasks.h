@@ -1,5 +1,7 @@
 #pragma once
-#include "Amperes.h"
+#include "AmperesCAN.h"
+#include "AmperesADC.h"
+#include "common.h"
 
 /** ================================================================
  *  Task Parameters: priority, stack size, static TCB buffer, stack arary

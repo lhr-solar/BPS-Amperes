@@ -1,4 +1,6 @@
 #pragma once
+
+#include "stm32xx_hal.h"
 #include "BPSCAN_can_msgs.h"
 
 /** ================================================================
@@ -17,8 +19,21 @@
  *  - ADC: 12 bit
 */
 
+/** ================================================================
+ *  Status
+ * ================================================================ */
 
- /** ================================================================
+typedef enum AmperesStatus {
+    AMPERES_OK,
+    AMPERES_ADC_INIT_FAIL,
+    AMPERES_CAN_INIT_FAIL,
+    AMPERES_CAN_START_FAIL,
+    AMPERES_ADC_START_FAIL,
+    AMPERES_ADC_READ_FAIL,
+    AMPERES_CAN_SEND_FAIL
+} AmperesStatus_t;
+
+/** ================================================================
  *  GPIO
  * ================================================================ */
 
@@ -58,3 +73,11 @@
 #define AMPERES_UART_PORT   GPIOA
 #define AMPERES_UART_TX_PIN GPIO_PIN_9
 #define AMPERES_UART_RX_PIN GPIO_PIN_10
+
+
+#define AMPERES_INIT() do { \
+    MX_GPIO_Init(); \
+    if (Amperes_ADC_Init() != AMPERES_OK) { Error_Handler(); } \
+    if (Amperes_CAN_Init() != AMPERES_OK) { Error_Handler(); } \
+    if (Amperes_CAN_Start() != AMPERES_OK) { Error_Handler(); } \
+    } while (0)

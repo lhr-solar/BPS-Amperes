@@ -1,5 +1,4 @@
-#include "stm32xx_hal.h"
-#include "Amperes.h"
+#include "AmperesConfig.h"
 #include "Tasks.h"
 
 /** ================================================================
@@ -23,10 +22,8 @@ void ADC_Task(void *pvParameters) {
     int64_t current_sum = 0;
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
-    if(Amperes_Init() == AMPERES_INIT_FAIL) {
-        printf("\r\nAmperes init fail\r\n");
-        Error_Handler();
-    }
+    MX_GPIO_Init();
+    Amperes_ADC_Init();
 
     for (uint8_t i=0; i <100; i++) {
         // Start ADC reading; reset queue

@@ -1,5 +1,6 @@
-#include "stm32xx_hal.h"
-#include "Amperes.h"
+#include "AmperesConfig.h"
+#include "AmperesCAN.h"
+#include "common.h"
 
 /** ================================================================
  * CAN Test
@@ -82,7 +83,9 @@ int main() {
     UART_Printf_Init();
 
     // Make sure CAN is set to loopback
-    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
+    MX_GPIO_Init();
+    if (Amperes_CAN_Init() != AMPERES_OK) Error_Handler();
+    if (Amperes_CAN_Start() != AMPERES_OK) Error_Handler();
 
     xTaskCreateStatic(Task_SendCAN,
                     "CAN Test",

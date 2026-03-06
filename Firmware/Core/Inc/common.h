@@ -5,6 +5,7 @@
  * ================================================================ */
 
 #include "stm32xx_hal.h"
+#include "AmperesConfig.h"
 #include "printf.h"
 
 /**

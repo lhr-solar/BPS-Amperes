@@ -1,5 +1,4 @@
-#include "stm32xx_hal.h"
-#include "Amperes.h"
+#include "AmperesConfig.h"
 #include "Tasks.h"
 
 /** ================================================================
@@ -32,7 +31,15 @@ void ADC_Task(void *pvParameters) {
 
         // Debug
         printf("\r\n ADC: %4d, CURRENT: %5li \r\n", message.adc_voltage, message.current_data);
-        Amperes_UpdateLEDs(message.current_data);
+        if (message.current_data < 0) {
+            // Negative means charging
+            HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);
+        } else {
+            // Positive means discharging
+            HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_RESET);
+        }
 
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
     }
@@ -53,7 +60,8 @@ int main() {
     UART_Printf_Init();
 
     // Amperes hardware
-    if(Amperes_Init() == AMPERES_INIT_FAIL) Error_Handler();
+    MX_GPIO_Init();
+    Amperes_ADC_Init();
 
     xTaskCreateStatic(
         ADC_Task,

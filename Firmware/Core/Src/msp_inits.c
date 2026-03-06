@@ -1,4 +1,4 @@
-#include "Amperes.h"
+#include "AmperesConfig.h"
 
 /** ================================================================
  *  MSP Inits: ADC, CAN, UART GPIO (Called by HAL functions)

@@ -1,5 +1,4 @@
-#include "stm32xx_hal.h"
-#include "Amperes.h"
+#include "AmperesConfig.h"
 #include "Tasks.h"
 
 /** ================================================================

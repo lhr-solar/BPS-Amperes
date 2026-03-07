@@ -36,6 +36,7 @@ PROJECT_MAIN_DIR ?= Core/Src/main
 ifneq ($(TEST), main)
 PROJECT_C_SOURCES := $(filter-out $(PROJECT_MAIN_DIR).c, $(PROJECT_C_SOURCES))
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/$(TEST).c)
+PROJECT_MACROS ?= TEST_MODE=1 
 else
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
 endif
@@ -56,6 +57,7 @@ export PROJECT_TARGET
 export PROJECT_C_SOURCES
 export PROJECT_C_INCLUDES
 export PROJECT_BUILD_DIR
+export PROJECT_MACROS
 
 
 #-------------------------------
@@ -113,16 +115,21 @@ debug:
 # Help
 .PHONY: help
 help:
-	@echo -e "Format: ${ORANGE}make  ${GREEN}PROJECT_TARGET=${PURPLE}<stm-target>${NC} ${BLUE}TEST=${PURPLE}<Test name>${NC}"
-	@echo -e "- Simply running '${ORANGE}make${NC}' or '${ORANGE}make${NC} all' will compile the production code."
-	@echo -e "- Specify ${GREEN}TARGET${NC}if different than default; ${BLUE}TEST${NC}is optional. \n"
+	@echo "Format: ${ORANGE}make  ${GREEN}PROJECT_TARGET=${PURPLE}<stm-target>${NC} ${BLUE}TEST=${PURPLE}<Test name>${NC}"
+	@echo "- Simply running '${ORANGE}make${NC}' or '${ORANGE}make${NC} all' will compile the production code."
+	@echo "- Specify ${GREEN}TARGET${NC}if different than default; ${BLUE}TEST${NC}is optional. \n"
 
-	@echo -e "${GREEN}PROJECT_TARGET${NC}( default is ${PURPLE}stm32l431cbt${NC}):"
-	@echo -e "- Specify stm32 target by entering the full stm chip number.\n"
+	@echo "${GREEN}PROJECT_TARGET${NC}( default is ${PURPLE}stm32l431cbt${NC}):"
+	@echo "- Specify stm32 target by entering the full stm chip number.\n"
 
-	@echo -e "${BLUE}TEST${NC}( OPTIONAL ):"
-	@echo -e "- If you want to run a test, specify ${BLUE}TEST=${PURPLE}<Test name>${NC}, with ${PURPLE}<Test name>${NC}"
-	@echo -e "   being the exact name of the test file ${RED} without${NC} the .c suffix.\n"
-	@echo -e "PRINT_DEBUG:"
-	@echo -e "- For debugs, specify ${BLUE}PRINT_DEBUG=${PURPLE}true${NC}."
-	@echo -e "- For now, this will print the directories that will be compiled (can be useful for troubleshooting)."
+	@echo "${BLUE}TEST${NC}( OPTIONAL ):"
+	@echo "- If you want to run a test, specify ${BLUE}TEST=${PURPLE}<Test name>${NC}, with ${PURPLE}<Test name>${NC}"
+	@echo "   being the exact name of the test file ${RED}without${NC}the .c suffix.\n"
+
+	@echo "${BLUE}PRINT_DEBUG:${NC}( OPTIONAL )"
+	@echo "- For debugs, specify ${BLUE}PRINT_DEBUG=${PURPLE}true${NC}"
+	@echo "- For now, this will print the directories that will be compiled (can be useful for troubleshooting).\n"
+
+	@echo "${BLUE}PROJECT_MACROS${NC}( OPTIONAL ):"
+	@echo "- If you want to specify project c macros, specify ${BLUE}PROJECT_MACROS=${NC}MACRO=value\n"
+	

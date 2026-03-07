@@ -1,6 +1,8 @@
 #include "Tasks.h"
 
-#define PRINTF_ENABLED 1
+#ifndef PRINTF_ENABLED
+    #define PRINTF_ENABLED 0
+#endif
 
 void Amperes_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -21,7 +23,7 @@ void Amperes_Task(void *pvParameters) {
         // Start ADC reading. Clear queue so it acts as a mailbox
         // and we can block on it being empty.
         if (Amperes_StartADC(true) != AMPERES_OK) { 
-            #ifdef PRINTF_ENABLED
+            #if PRINTF_ENABLED
             printf("ADC Start Error\r\n");
             #endif
         }
@@ -32,7 +34,7 @@ void Amperes_Task(void *pvParameters) {
             sum.adc_voltage += message.adc_voltage;
             sum.current_data += message.current_data;
         } else {
-            #ifdef PRINTF_ENABLED
+            #if PRINTF_ENABLED
             printf("ADC Reading Error\r\n");
             #endif
         }
@@ -47,12 +49,12 @@ void Amperes_Task(void *pvParameters) {
 
                 // Send data over CAN
                 if (Amperes_SendCAN(&message, AMPERES_TASK_PERIOD) != AMPERES_OK) {
-                    #ifdef PRINTF_ENABLED
+                    #if PRINTF_ENABLED
                     printf("CAN Send Error\r\n");
                     #endif
                 }
 
-                #ifdef PRINTF_ENABLED
+                #if PRINTF_ENABLED
                 printf("\r\n adc %d|i %li| conv %d \r\n", message.adc_voltage, message.current_data, conv_count);
                 #endif
                 
@@ -61,7 +63,7 @@ void Amperes_Task(void *pvParameters) {
                 counter = conv_count = 0;
             } else {
                 // Error: no adc conversions
-                #ifdef PRINTF_ENABLED
+                #if PRINTF_ENABLED
                 printf("No ADC Conversions\r\n");
                 #endif
             }

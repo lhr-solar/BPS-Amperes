@@ -4,7 +4,11 @@
 #include "common.h"
 
 /** ================================================================
- *  Task Parameters: priority, stack size, static TCB buffer, stack arary
+ *  Task Parameters: 
+ *  - priority
+ *  - stack size
+ *  - static TCB buffer
+ *  - stack arary
  * ================================================================ */
 
 /**
@@ -15,6 +19,15 @@
 #define AMPERES_TASK_STACK_SIZE     configMINIMAL_STACK_SIZE * 2
 extern StaticTask_t                 Amperes_Task_Buffer;
 extern StackType_t                  Amperes_Task_Stack[AMPERES_TASK_STACK_SIZE];
+
+/**
+ * CAN Mirroring Task
+ * - Lower than Amperes Task
+ */
+#define MIRROR_CAN_TASK_PRIO        tskIDLE_PRIORITY + 2
+#define MIRROR_CAN_TASK_STACK_SIZE  configMINIMAL_STACK_SIZE * 2
+extern StaticTask_t                 MirrorCAN_Task_Buffer;
+extern StackType_t                  MirrorCAN_Task_Stack[MIRROR_CAN_TASK_STACK_SIZE];
 
 /**
  * Init Task
@@ -30,7 +43,7 @@ extern StackType_t                  Task_Init_Stack[TASK_INIT_STACK_SIZE];
  * - ADC LPF cutoff frequency is ~100 Hz
  * - Sample at around 10 times that: 1000 Hz (1ms period)
  */
-#define AMPERES_TASK_PERIOD         pdMS_TO_TICKS(1)
+#define AMPERES_TASK_PERIOD         pdMS_TO_TICKS(10)
 
 
 /** ================================================================
@@ -51,6 +64,12 @@ extern StackType_t                  Task_Init_Stack[TASK_INIT_STACK_SIZE];
  * Values are averaged and sent over CAN every 100 Hz (10 sample avg).
  */
 void Amperes_Task(void *pvParameters);
+
+/**
+ * @brief   Mirror CAN Task. 
+ *          Receives TX CAN messages and prints them over UART.
+ */
+void MirrorCAN_Task(void *pvParameters);
 
 /**
  * @brief Initializes Amperes hardware and task,

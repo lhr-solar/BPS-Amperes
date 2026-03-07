@@ -1,5 +1,14 @@
 #include "AmperesCAN.h"
 
+/** ================================================================
+ *  Queue for CAN Message mirroring
+ * ================================================================ */
+
+QueueHandle_t can_tx_queue;
+uint8_t can_tx_qStorage[CAN_TX_QUEUE_LENGTH * CAN_TX_ITEM_SIZE];
+static StaticQueue_t xStaticQueue_can_tx;
+
+
  /** ================================================================
  *  Local Init Function
  * ================================================================ */
@@ -10,32 +19,52 @@
  * - Called in Amperes_Init().
  */
 static bool MX_CAN_Init() {
+    /* Initialize queue */
+    can_tx_queue = xQueueCreateStatic(
+        CAN_TX_QUEUE_LENGTH, 
+        CAN_TX_ITEM_SIZE, 
+        can_tx_qStorage, 
+        &xStaticQueue_can_tx
+    );
+    if (can_tx_queue == NULL) return false;
+
     /* Create CAN filter */
-    /* For production, reject all incoming IDs */
+    /* For testing: accept all incoming IDs */
     CAN_FilterTypeDef  sFilterConfig;
     sFilterConfig.FilterBank = 0;
-    sFilterConfig.FilterActivation = DISABLE;
-
-    /* For testing: accept all incoming IDs */
-    // CAN_FilterTypeDef  sFilterConfig;
-    // sFilterConfig.FilterBank = 0;
-    // sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-    // sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-    // sFilterConfig.FilterIdHigh = 0x0000;
-    // sFilterConfig.FilterIdLow = 0x0000;
-    // sFilterConfig.FilterMaskIdHigh = 0x0000;
-    // sFilterConfig.FilterMaskIdLow = 0x0000;
-    // sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-    // sFilterConfig.FilterActivation = ENABLE;
-    // sFilterConfig.SlaveStartFilterBank = 14;
+    sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+    sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+    #ifdef TEST_MODE
+    /* For testing: accept all IDs */
+    sFilterConfig.FilterIdHigh = 0x0000;
+    sFilterConfig.FilterIdLow = 0x0000;
+    sFilterConfig.FilterMaskIdHigh = 0x0000;
+    sFilterConfig.FilterMaskIdLow = 0x0000;
+    #else
+    /* For production: reject all IDs */
+    sFilterConfig.FilterIdHigh = 0xFFFF;
+    sFilterConfig.FilterIdLow = 0xFFFF;
+    sFilterConfig.FilterMaskIdHigh = 0xFFFF;
+    sFilterConfig.FilterMaskIdLow = 0xFFFF;
+    #endif
+    sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+    sFilterConfig.FilterActivation = ENABLE;
+    sFilterConfig.SlaveStartFilterBank = 14;
 
     /* CAN1 Init Struct */
     // Baud rate is 250 kbit/s
+    hcan1->Instance = CAN1;
     hcan1->Init.Prescaler = 20;
     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
     hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
     hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-    hcan1->Init.Mode = CAN_MODE_NORMAL;   // TODO: change for testing
+    #ifdef TEST_MODE
+    /* For testing: loopback mode */
+    hcan1->Init.Mode = CAN_MODE_LOOPBACK;
+    #else
+    /* For production: normal CAN mode */
+    hcan1->Init.Mode = CAN_MODE_NORMAL;
+    #endif
     hcan1->Init.TimeTriggeredMode = DISABLE;
     hcan1->Init.AutoBusOff = DISABLE;
     hcan1->Init.AutoWakeUp = DISABLE;
@@ -68,6 +97,7 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
+#include "printf.h"
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
@@ -90,7 +120,6 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_data[3] = (uint8_t) ((data->current_data >> 8) & 0xFF);
     tx_data[4] = (uint8_t) ((data->current_data >> 16) & 0xFF);
     tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
-
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
         return AMPERES_CAN_SEND_FAIL;

@@ -1,16 +1,12 @@
 #include "AmperesADC.h"
 
 /** ================================================================
- *  Local Variables
+ *  Queue and ADC Channel Config
  * ================================================================ */
 
 /** ADC Queue to store ADC conversion
  * - Only needs to hold 1 element. Basically a mailbox.
  */
-#define ADC_ITEM_SIZE sizeof(uint16_t)
-#ifndef ADC_QUEUE_LENGTH
-    #define ADC_QUEUE_LENGTH 2
-#endif
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;

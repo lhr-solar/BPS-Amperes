@@ -1,0 +1,4 @@
+// CAN_RECV_ENTRY(ID, SIZE, CIRCULAR)
+#include "AmperesConfig.h"
+
+CAN_RECV_ENTRY(AMPERES_MSG_ID, AMPERES_MSG_DLC, false)

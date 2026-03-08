@@ -22,15 +22,14 @@ void MirrorCAN_Task(void *pvParameters) {
         xQueueReceive(can_tx_queue, &message, portMAX_DELAY);
 
         // Print TX message
-        printf("TX: ");
-        for (uint32_t i=0; i < AMPERES_MSG_DLC; i++) {
-            printf("%02x ", message.data[i]);
+        printf("\r\n\r\nTX: ");
+        for (uint8_t i=0; i < message.header.DLC; i++) {
+            printf("%.2X ", message.data[i]);
         }
-        printf("\r\n");
-
+        
         // Print unpacked message
         int32_t current = CURRENT_CONV(message.data);
         uint16_t adc = ADC_CONV(message.data);
-        printf("Value:\tadc %04d | mA %5li \r\n\r\n", adc, current);
+        printf("\r\nValue:\tadc %04d | mA %5li \r\n", adc, current);
     }
 }

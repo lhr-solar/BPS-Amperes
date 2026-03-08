@@ -97,7 +97,6 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-#include "printf.h"
 AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
@@ -120,6 +119,7 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_data[3] = (uint8_t) ((data->current_data >> 8) & 0xFF);
     tx_data[4] = (uint8_t) ((data->current_data >> 16) & 0xFF);
     tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
+    
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
         return AMPERES_CAN_SEND_FAIL;

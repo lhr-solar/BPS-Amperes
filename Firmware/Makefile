@@ -115,21 +115,17 @@ debug:
 # Help
 .PHONY: help
 help:
-	@echo "Format: ${ORANGE}make  ${GREEN}PROJECT_TARGET=${PURPLE}<stm-target>${NC} ${BLUE}TEST=${PURPLE}<Test name>${NC}"
-	@echo "- Simply running '${ORANGE}make${NC}' or '${ORANGE}make${NC} all' will compile the production code."
-	@echo "- Specify ${GREEN}TARGET${NC}if different than default; ${BLUE}TEST${NC}is optional. \n"
-
-	@echo "${GREEN}PROJECT_TARGET${NC}( default is ${PURPLE}stm32l431cbt${NC}):"
-	@echo "- Specify stm32 target by entering the full stm chip number.\n"
-
-	@echo "${BLUE}TEST${NC}( OPTIONAL ):"
-	@echo "- If you want to run a test, specify ${BLUE}TEST=${PURPLE}<Test name>${NC}, with ${PURPLE}<Test name>${NC}"
-	@echo "   being the exact name of the test file ${RED}without${NC}the .c suffix.\n"
-
-	@echo "${BLUE}PRINT_DEBUG:${NC}( OPTIONAL )"
-	@echo "- For debugs, specify ${BLUE}PRINT_DEBUG=${PURPLE}true${NC}"
-	@echo "- For now, this will print the directories that will be compiled (can be useful for troubleshooting).\n"
-
-	@echo "${BLUE}PROJECT_MACROS${NC}( OPTIONAL ):"
-	@echo "- If you want to specify project c macros, specify ${BLUE}PROJECT_MACROS=${NC}MACRO=value\n"
-	
+	@printf "\
+	Format: ${ORANGE}make  ${GREEN}PROJECT_TARGET=${PURPLE}<stm-target>${NC} ${BLUE}TEST=${PURPLE}<Test name>${NC} \n\
+	- Simply running '${ORANGE}make${NC}' or '${ORANGE}make${NC} all' will compile the production code. \n\
+	- Specify ${GREEN}TARGET${NC}if different than default; ${BLUE}TEST${NC}is optional. \n\n\
+	${GREEN}PROJECT_TARGET${NC}( default is ${PURPLE}stm32l431cbt${NC}): \n\
+	- Specify stm32 target by entering the full stm chip number. \n\n\
+	${BLUE}TEST${NC}( OPTIONAL ): \n\
+	- If you want to run a test, specify ${BLUE}TEST=${PURPLE}<Test name>${NC}, with ${PURPLE}<Test name>${NC} \n\
+	being the exact name of the test file ${RED}without${NC}the .c suffix. \n\n\
+	${BLUE}PRINT_DEBUG:${NC}( OPTIONAL ) \n\
+	- For debugs, specify ${BLUE}PRINT_DEBUG=${PURPLE}true${NC} \n\
+	- For now, this will print the directories that will be compiled (can be useful for troubleshooting). \n\n\
+	${BLUE}PROJECT_MACROS${NC}( OPTIONAL ): \n\
+	- If you want to specify C macro definitions for your project, specify ${BLUE}PROJECT_MACROS=${NC}MACRO1=value MACRO2=value ...\n\n"

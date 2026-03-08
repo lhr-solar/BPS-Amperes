@@ -43,7 +43,7 @@ extern StackType_t                  Task_Init_Stack[TASK_INIT_STACK_SIZE];
  * - ADC LPF cutoff frequency is ~100 Hz
  * - Sample at around 10 times that: 1000 Hz (1ms period)
  */
-#define AMPERES_TASK_PERIOD         pdMS_TO_TICKS(10)
+#define AMPERES_TASK_PERIOD         pdMS_TO_TICKS(1)
 
 
 /** ================================================================

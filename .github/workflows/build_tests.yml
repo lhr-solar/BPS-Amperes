@@ -27,7 +27,7 @@ jobs:
 
       - name: Clean & Build tests
         run: |
-          cd Firemware/Tests '
+          cd Firmware/Tests '
               make clean
               python3 makeAllTests.py
               cd ..

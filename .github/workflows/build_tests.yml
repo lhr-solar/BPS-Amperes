@@ -30,11 +30,11 @@ jobs:
           python-version: '3.x'
 
       - name: Clean & Build tests
-        working-directory: Firmware
+        working-directory: Firmware/
         run: |
           make clean
-          # cd Tests/
-          # python3 makeAllTests.py
+# cd Tests/
+# python3 makeAllTests.py
 
       # - name: Clean Root
       #   working-directory: Firmware

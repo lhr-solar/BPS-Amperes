@@ -53,7 +53,6 @@ def compile_test(script_dir: Path, port: str, test_name: str,
     info(f"Compiling the test - {test_name} for {port}")
 
     build_dir = script_dir.parent / "Firmware" / "build" / port / test_name
-
     cmd = [
         "make",
         "-C", str(script_dir),

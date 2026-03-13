@@ -27,7 +27,7 @@ jobs:
 
       - name: Clean & Build tests
         run: |
-          nix develop ./Firmware/Embedded-Sharepoint --accept-flake-config --command bash -c '
+          nix develop Firmware/Embedded-Sharepoint --accept-flake-config --command bash -c '
               cd Firmware/Tests
               make clean
               python3 makeAllTests.py

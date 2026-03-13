@@ -25,11 +25,18 @@ jobs:
       # - name: Install Nix Action
       #   uses: cachix/install-nix-action@v31
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Clean & Build tests
+        working-directory: Firmware
         run: |
-          cd Firmware/Tests '
-              make clean
-              python3 makeAllTests.py
-              cd ..
-              make clean
-          '
+          make clean
+          cd Tests/
+          python3 makeAllTests.py
+
+      - name: Clean Root
+        working-drectory: Firmare
+          make clean
+

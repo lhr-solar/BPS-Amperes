@@ -38,5 +38,5 @@ jobs:
 
       - name: Clean Root
         working-directory: Firmware
-          make clean
+        run: make clean
 

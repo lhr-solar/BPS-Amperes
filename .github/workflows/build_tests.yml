@@ -37,6 +37,6 @@ jobs:
           python3 makeAllTests.py
 
       - name: Clean Root
-        working-drectory: Firmare
+        working-directory: Firmware
           make clean
 

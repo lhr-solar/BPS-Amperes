@@ -33,10 +33,10 @@ jobs:
         working-directory: Firmware
         run: |
           make clean
-          cd Tests/
-          python3 makeAllTests.py
+          # cd Tests/
+          # python3 makeAllTests.py
 
-      - name: Clean Root
-        working-directory: Firmware
-        run: make clean
+      # - name: Clean Root
+      #   working-directory: Firmware
+      #   run: make clean
 

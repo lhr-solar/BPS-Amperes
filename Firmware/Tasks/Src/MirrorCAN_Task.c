@@ -8,11 +8,7 @@ void can_tx_callback_hook(CAN_HandleTypeDef* hcan, const can_tx_payload_t* paylo
     BaseType_t higherPriorityTaskWoken = pdFALSE;
     HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
     xQueueSendFromISR(can_tx_queue, payload, &higherPriorityTaskWoken);
-    // portYIELD_FROM_ISR(higherPriorityTaskWoken);
-}
-
-void can_rx_callback_hook(CAN_HandleTypeDef* hcan, const can_rx_payload_t* payload) {
-    // HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN);
+    // Don't yield from ISR
 }
 
 void MirrorCAN_Task(void *pvParameters) {
@@ -31,5 +27,7 @@ void MirrorCAN_Task(void *pvParameters) {
         int32_t current = CURRENT_CONV(message.data);
         uint16_t adc = ADC_CONV(message.data);
         printf("\r\nValue:\tadc %04d | mA %5li \r\n", adc, current);
+
+        portYIELD();
     }
 }

@@ -2,9 +2,6 @@ name: Build Tests
 
 on:
   push:
-    paths-ignore:
-      - "*.md"
-      - "*.dbc"
 
 jobs:
   build:
@@ -13,25 +10,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # - name: Cache Nix
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       ~/.cache/nix
-      #     key: nix-${{ runner.os }}-${{ hashFiles('flake.lock') }}
-      #     restore-keys: |
-      #       nix-${{ runner.os }}-
+      - name: Initialize Submodules
+        run: |
+          git submodule update --init --recursive
 
-      # - name: Install Nix Action
-      #   uses: cachix/install-nix-action@v31
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Clean & Build tests
+      - name: Clean
         run: |
           cd Firmware/
           make clean
-          cd Tests/
+      
+      - name: Build tests
+        run: |
+          cd Firmware/Tests/
           python3 makeAllTests.py

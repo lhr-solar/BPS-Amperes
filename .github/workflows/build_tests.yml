@@ -2,6 +2,7 @@ name: Build Tests
 
 on:
   push:
+  pull_request:
 
 jobs:
   build:
@@ -17,13 +18,16 @@ jobs:
 
       - name: Initialize Submodules
         run: git submodule update --init Firmware/Embedded-Sharepoint
-
-      - name: Clean
+      
+      - name: Clean & Build Tests
         run: |
           cd Firmware/
           make clean
-      
-      - name: Build tests
-        run: |
-          cd Firmware/Tests/
+          cd Tests/
           python3 makeAllTests.py
+
+      - name: Clean & Build Production Code
+        run: |
+          cd Firmware/
+          make clean
+          make

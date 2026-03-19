@@ -10,6 +10,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install
+        run: |
+          sudo apt -y update
+          sudo apt -y install gcc-arm-none-eabi
+
       - name: Initialize Submodules
         run: git submodule update --init Firmware/Embedded-Sharepoint
 

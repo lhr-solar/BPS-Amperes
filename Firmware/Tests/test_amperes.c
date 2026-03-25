@@ -31,15 +31,15 @@ int main() {
         &Task_Init_Buffer    
     );
 
-    xTaskCreateStatic(
-        Task_Blinky,
-        "Blinky",
-        configMINIMAL_STACK_SIZE,
-        (void*) NULL,
-        tskIDLE_PRIORITY+2,
-        xBlinkyStack,
-        &xBlinkyTaskBuffer
-    );
+    // xTaskCreateStatic(
+    //     Task_Blinky,
+    //     "Blinky",
+    //     configMINIMAL_STACK_SIZE,
+    //     (void*) NULL,
+    //     tskIDLE_PRIORITY+2,
+    //     xBlinkyStack,
+    //     &xBlinkyTaskBuffer
+    // );
 
     // Start scheduler
     vTaskStartScheduler();

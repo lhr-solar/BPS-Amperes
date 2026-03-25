@@ -7,6 +7,10 @@
 /** ================================================================
  *  ADC
  * ================================================================ */
+#define ADC_ITEM_SIZE sizeof(uint16_t)
+#ifndef ADC_QUEUE_LENGTH
+    #define ADC_QUEUE_LENGTH 2
+#endif
 extern QueueHandle_t adc_queue;
 
 /** ==============================================================

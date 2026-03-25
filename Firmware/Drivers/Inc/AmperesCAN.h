@@ -8,6 +8,11 @@
 /** ================================================================
  *  CAN
  * ================================================================ */
+#define CAN_TX_ITEM_SIZE sizeof(can_tx_payload_t)
+#ifndef CAN_TX_QUEUE_LENGTH
+    #define CAN_TX_QUEUE_LENGTH 20
+#endif
+extern QueueHandle_t can_tx_queue;
 
 /**
  * @brief Structure to hold Amperes data

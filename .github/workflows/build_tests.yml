@@ -1,0 +1,33 @@
+name: Build Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install
+        run: |
+          sudo apt -y update
+          sudo apt -y install gcc-arm-none-eabi
+
+      - name: Initialize Submodules
+        run: git submodule update --init Firmware/Embedded-Sharepoint
+      
+      - name: Clean & Build Tests
+        run: |
+          cd Firmware/
+          make clean
+          cd Tests/
+          python3 makeAllTests.py
+
+      - name: Clean & Build Production Code
+        run: |
+          cd Firmware/
+          make clean
+          make

@@ -6,8 +6,8 @@
 
 void Amperes_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    AmperesMsg_t message = {0};
-    AmperesMsg_t sum = {0};
+    bps_pack_current_t message = {0};
+    bps_pack_current_t sum = {0};
 
     uint8_t counter = 0;
     uint8_t conv_count = 0;
@@ -31,8 +31,8 @@ void Amperes_Task(void *pvParameters) {
         // Block until we receive data in queue
         if (Amperes_GetReading(&message, AMPERES_TASK_PERIOD) == AMPERES_OK) {
             conv_count++;
-            sum.adc_voltage += message.adc_voltage;
-            sum.current_data += message.current_data;
+            sum.Main_Battery_Current += message.Main_Battery_Current;
+            sum.Main_Battery_Current_RawV += message.Main_Battery_Current_RawV;
         } else {
             #if PRINTF_ENABLED
             printf("ADC Reading Error\r\n");
@@ -44,8 +44,8 @@ void Amperes_Task(void *pvParameters) {
         if (counter >= 10) {
             if (conv_count > 0) {
                 // Average data and send over CAN
-                message.adc_voltage = (sum.adc_voltage / conv_count);
-                message.current_data = (sum.current_data / conv_count);
+                message.Main_Battery_Current = (sum.Main_Battery_Current / conv_count);
+                message.Main_Battery_Current_RawV = (sum.Main_Battery_Current_RawV / conv_count);
 
                 // Send data over CAN
                 if (Amperes_SendCAN(&message, AMPERES_TASK_PERIOD) != AMPERES_OK) {
@@ -55,11 +55,11 @@ void Amperes_Task(void *pvParameters) {
                 }
 
                 #if PRINTF_ENABLED
-                printf("\r\n adc %d|i %li| conv %d \r\n", message.adc_voltage, message.current_data, conv_count);
+                printf("\r\n i %li| adc %d | conv %d \r\n", message.Main_Battery_Current, message.Main_Battery_Current_RawV, conv_count);
                 #endif
                 
                 // Reset variables
-                sum.adc_voltage = sum.current_data = 0;
+                sum.Main_Battery_Current = sum.Main_Battery_Current_RawV = 0;
                 counter = conv_count = 0;
             } else {
                 // Error: no adc conversions
@@ -69,7 +69,7 @@ void Amperes_Task(void *pvParameters) {
             }
             
             // Update LED values
-            if (message.current_data < 0) {
+            if (message.Main_Battery_Current < 0) {
                 // Negative means charging
                 HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
                 HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);

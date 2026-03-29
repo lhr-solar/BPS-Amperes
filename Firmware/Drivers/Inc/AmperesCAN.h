@@ -14,17 +14,6 @@
 #endif
 extern QueueHandle_t can_tx_queue;
 
-/**
- * @brief Structure to hold Amperes data
- * @n 
- * - int32_t current_data
- * @n 
- * - uint16_t adc_voltage
- */
-typedef struct AmperesMsg {
-    int32_t current_data;   // signed, 32 bit
-    uint16_t adc_voltage;   // unsigned, 12 bit
-} AmperesMsg_t;
 
 /**
  * @brief Initialize CAN filter and hardware
@@ -48,7 +37,7 @@ AmperesStatus_t Amperes_CAN_Start();
 
 /**
  * @brief Send Amperes data over BPS_CAN
- * @param data Pointer to Amperes message struct
+ * @param data Pointer to bps_pack_current_t message struct
  * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
  * @n 
@@ -56,4 +45,4 @@ AmperesStatus_t Amperes_CAN_Start();
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait);
+AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait);

@@ -12,9 +12,9 @@ StaticTask_t xADCTaskBuffer;
 StackType_t xADCStack[ 200 ];
 
 void ADC_Task(void *pvParameters) {
-    AmperesMsg_t message = {
-        .adc_voltage = 0,
-        .current_data = 0
+    bps_pack_current_t message = {
+        .Main_Battery_Current = 0,
+        .Main_Battery_Current_RawV = 0
     };
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
@@ -30,8 +30,8 @@ void ADC_Task(void *pvParameters) {
         }
 
         // Debug
-        printf("\r\n ADC: %4d, CURRENT: %5li \r\n", message.adc_voltage, message.current_data);
-        if (message.current_data < 0) {
+        printf("\r\n CURRENT: %5li, ADC: %4d \r\n", message.Main_Battery_Current, message.Main_Battery_Current_RawV);
+        if (message.Main_Battery_Current < 0) {
             // Negative means charging
             HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);
             HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN, GPIO_PIN_RESET);

@@ -97,7 +97,7 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
+AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = AMPERES_MSG_ID;
@@ -106,20 +106,19 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_header.DLC = AMPERES_MSG_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Split data into uint8 elements
+    // Split data into uint8 elements; reference bps_pack_current_t struct
     // Little Endian: LSB at index 0
+    uint8_t tx_data[AMPERES_MSG_DLC] = {0};
+
+    /* Current Data: int32_t */
+    tx_data[0] = (uint8_t) (data->Main_Battery_Current & 0xFF);
+    tx_data[1] = (uint8_t) ((data->Main_Battery_Current >> 8) & 0xFF);
+    tx_data[2] = (uint8_t) ((data->Main_Battery_Current >> 16) & 0xFF);
 
     /* Raw ADC Value: uint16_t */
-    uint8_t tx_data[AMPERES_MSG_DLC] = {0};
-    tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
-    tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
-    
-    /* Current Data: int32_t */
-    tx_data[2] = (uint8_t) (data->current_data & 0xFF);
-    tx_data[3] = (uint8_t) ((data->current_data >> 8) & 0xFF);
-    tx_data[4] = (uint8_t) ((data->current_data >> 16) & 0xFF);
-    tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
-    
+    tx_data[3] = (uint8_t) (data->Main_Battery_Current_RawV & 0xFF);
+    tx_data[4] = (uint8_t) ((data->Main_Battery_Current_RawV >> 8) & 0xFF);
+
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
         return AMPERES_CAN_SEND_FAIL;

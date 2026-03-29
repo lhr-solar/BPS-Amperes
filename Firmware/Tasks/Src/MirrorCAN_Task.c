@@ -1,8 +1,8 @@
 #include "Tasks.h"
 
-// Reconstruct Values
-#define CURRENT_CONV(x)    ( (int32_t) (x[5] << 24) | (int32_t) (x[4] << 16) | (int32_t) (x[3] << 8) | (int32_t) x[2] )
-#define ADC_CONV(x)        ( (uint16_t)((x[1] << 8) | (uint16_t) x[0]) )
+// Reconstruct Values: little endian, see bps_pack_current_t struct
+#define CURRENT_CONV(x)    ( (int32_t) (x[2] << 16) | (int32_t) (x[1] << 8) | (int32_t) x[0] )
+#define ADC_CONV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
 
 void can_tx_callback_hook(CAN_HandleTypeDef* hcan, const can_tx_payload_t* payload) {
     BaseType_t higherPriorityTaskWoken = pdFALSE;
@@ -26,7 +26,7 @@ void MirrorCAN_Task(void *pvParameters) {
         // Print unpacked message
         int32_t current = CURRENT_CONV(message.data);
         uint16_t adc = ADC_CONV(message.data);
-        printf("\r\nValue:\tadc %04d | mA %5li \r\n", adc, current);
+        printf("\r\nValue:\tmA %5li | adc %04d \r\n", current, adc);
 
         portYIELD();
     }

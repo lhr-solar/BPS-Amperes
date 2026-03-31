@@ -1,7 +1,7 @@
 #include "Tasks.h"
 
-// Reconstruct Values: little endian, see bps_pack_current_t struct
-#define CURRENT_CONV(x)    ( (int32_t) (x[2] << 16) | (int32_t) (x[1] << 8) | (int32_t) x[0] )
+// Reconstruct Values: little endian, see bps_pack_current_t struct. handle sign extension for 24b -> int32_t
+#define CURRENT_CONV(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
 #define ADC_CONV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
 
 void can_tx_callback_hook(CAN_HandleTypeDef* hcan, const can_tx_payload_t* payload) {

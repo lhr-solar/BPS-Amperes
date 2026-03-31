@@ -106,6 +106,9 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     tx_header.DLC = AMPERES_MSG_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
+    // Convert ADC to voltage
+    uint16_t adc_to_voltage = ((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
+
     // Split data into uint8 elements; reference bps_pack_current_t struct
     // Little Endian: LSB at index 0
     uint8_t tx_data[AMPERES_MSG_DLC] = {0};
@@ -115,9 +118,9 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     tx_data[1] = (uint8_t) ((data->Main_Battery_Current >> 8) & 0xFF);
     tx_data[2] = (uint8_t) ((data->Main_Battery_Current >> 16) & 0xFF);
 
-    /* Raw ADC Value: uint16_t */
-    tx_data[3] = (uint8_t) (data->Main_Battery_Current_RawV & 0xFF);
-    tx_data[4] = (uint8_t) ((data->Main_Battery_Current_RawV >> 8) & 0xFF);
+    /* Raw Voltage Value: uint16_t */
+    tx_data[3] = (uint8_t) (adc_to_voltage & 0xFF);
+    tx_data[4] = (uint8_t) ((adc_to_voltage >> 8) & 0xFF);
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {

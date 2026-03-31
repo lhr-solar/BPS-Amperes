@@ -17,8 +17,9 @@ extern QueueHandle_t adc_queue;
  * Calibration and conversion
  * ===============================================================
  * - ADC_xA is the ADC value at different current values.
- * - Scale constant is just the slope scaled by 1000: 
- *      (mA1 - mA2) / (adc1 - adc2) * 1000
+ * - Scale constant (uA / adc count) is the slope: 
+ *      ((mA1 - mA2) / (adc1 - adc2)) * 1000
+ * - Remember to divide by 1000 to scale back to mA
  */
 #define ADC_0A          1527
 #define ADC_PLUS_10A    1828

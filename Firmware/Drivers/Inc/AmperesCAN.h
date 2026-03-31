@@ -14,6 +14,11 @@
 #endif
 extern QueueHandle_t can_tx_queue;
 
+/**
+ * NOTE: Amperes CAN message is held in bps_pack_current_t
+ * - I'm using Main_Battery_Current_RawV internally to hold the ADC value;
+ *   it gets converted to actual voltage value inside Amperes_SendCAN
+ */
 
 /**
  * @brief Initialize CAN filter and hardware

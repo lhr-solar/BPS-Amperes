@@ -107,7 +107,7 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     tx_header.TransmitGlobalTime = DISABLE;
 
     // Convert ADC to voltage
-    uint16_t adc_to_voltage = ((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
+    uint16_t adc_to_voltage = (((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
 
     // Split data into uint8 elements; reference bps_pack_current_t struct
     // Little Endian: LSB at index 0

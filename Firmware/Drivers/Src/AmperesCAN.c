@@ -67,7 +67,7 @@ static bool MX_CAN_Init() {
     hcan1->Init.Mode = CAN_MODE_NORMAL;
     #endif
     hcan1->Init.TimeTriggeredMode = DISABLE;
-    hcan1->Init.AutoBusOff = DISABLE;
+    hcan1->Init.AutoBusOff = ENABLE;
     hcan1->Init.AutoWakeUp = DISABLE;
     hcan1->Init.AutoRetransmission = ENABLE;
     hcan1->Init.ReceiveFifoLocked = DISABLE;

@@ -1,4 +1,5 @@
 #include "AmperesCAN.h"
+#include <string.h>
 
 /** ================================================================
  *  Queue for CAN Message mirroring
@@ -113,14 +114,11 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
     uint8_t tx_data[AMPERES_MSG_DLC] = {0};
 
-    /* Current Data: int32_t */
-    tx_data[0] = (uint8_t) (data->Main_Battery_Current & 0xFF);
-    tx_data[1] = (uint8_t) ((data->Main_Battery_Current >> 8) & 0xFF);
-    tx_data[2] = (uint8_t) ((data->Main_Battery_Current >> 16) & 0xFF);
+    /* Current Data: int32_t into 24 bit field (little endian)*/
+    memcpy(tx_data, &data->Main_Battery_Current, 3);
 
-    /* Raw Voltage Value: uint16_t */
-    tx_data[3] = (uint8_t) (adc_to_voltage & 0xFF);
-    tx_data[4] = (uint8_t) ((adc_to_voltage >> 8) & 0xFF);
+    /* Raw Voltage Value: uint16_t into 16 bit field (little endian)*/
+    memcpy(tx_data+3, &adc_to_voltage, 2);
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {

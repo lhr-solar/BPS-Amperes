@@ -18,8 +18,8 @@ void Task_CAN_Loopback() {
     CAN_RxHeaderTypeDef rx_header = {0};
     uint8_t rx_data[AMPERES_MSG_DLC] = {0};
     can_status_t status;
-    uint16_t adc;
-    int32_t current;
+    int32_t current_mA;
+    uint16_t raw_mV;
 
     // Transmit
     bps_pack_current_t payload = {
@@ -59,10 +59,10 @@ void Task_CAN_Loopback() {
         }
 
         // Convert back hopefully
-        current = CURRENT_CONV(rx_data);
-        adc = ADC_CONV(rx_data);
-        printf("RECV \t current %5li | adc %4d \r\n", current, adc);
-        if ((current != payload.Main_Battery_Current) || (adc != payload.Main_Battery_Current_RawV)) {
+        current_mA = AMPERES_UNPACK_CURRENT_mA(rx_data);
+        raw_mV = AMPERES_UNPACK_RAW_mV(rx_data);
+        printf("RECV \t current %5li | raw_mV %4d \r\n", current_mA, raw_mV);
+        if ((current_mA != payload.Main_Battery_Current) || (raw_mV != payload.Main_Battery_Current_RawV)) {
             Error_Handler();
         }
         printf("Match! \r\n");

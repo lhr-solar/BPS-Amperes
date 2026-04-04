@@ -25,8 +25,8 @@ extern QueueHandle_t can_tx_queue;
  * - little endian, see bps_pack_current_t struct. 
  * - handle sign extension for 24b -> int32_t
  */
-#define CURRENT_CONV(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
-#define ADC_CONV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
+#define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
+#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
 
 /**
  * @brief Initialize CAN filter and hardware

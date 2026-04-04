@@ -20,9 +20,9 @@ void MirrorCAN_Task(void *pvParameters) {
         }
         
         // Print unpacked message
-        int32_t current = CURRENT_CONV(message.data);
-        uint16_t adc = ADC_CONV(message.data);
-        printf("\r\nValue:\tmA %5li | adc %04d \r\n", current, adc);
+        int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
+        uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
+        printf("\r\nValue:\tmA %5li | raw_mV %04d \r\n", current_mA, raw_mV);
 
         portYIELD();
     }

@@ -109,8 +109,8 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     // Convert ADC to voltage
     uint16_t adc_to_voltage = (((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
 
-    // Split data into uint8 elements; reference bps_pack_current_t struct
-    // Little Endian: LSB at index 0
+    // Pack data into fields: reference bps_pack_current_t struct
+    // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
     uint8_t tx_data[AMPERES_MSG_DLC] = {0};
 
     /* Current Data: int32_t */

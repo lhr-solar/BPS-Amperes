@@ -1,9 +1,5 @@
 #include "Tasks.h"
 
-// Reconstruct Values
-#define CURRENT_CONV(x)    ( (int32_t) (x[5] << 24) | (int32_t) (x[4] << 16) | (int32_t) (x[3] << 8) | (int32_t) x[2] )
-#define ADC_CONV(x)        ( (uint16_t)((x[1] << 8) | (uint16_t) x[0]) )
-
 void can_tx_callback_hook(CAN_HandleTypeDef* hcan, const can_tx_payload_t* payload) {
     BaseType_t higherPriorityTaskWoken = pdFALSE;
     HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
@@ -24,9 +20,9 @@ void MirrorCAN_Task(void *pvParameters) {
         }
         
         // Print unpacked message
-        int32_t current = CURRENT_CONV(message.data);
-        uint16_t adc = ADC_CONV(message.data);
-        printf("\r\nValue:\tadc %04d | mA %5li \r\n", adc, current);
+        int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
+        uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
+        printf("\r\nValue:\tmA %5li | raw_mV %04d \r\n", current_mA, raw_mV);
 
         portYIELD();
     }

@@ -17,8 +17,9 @@ extern QueueHandle_t adc_queue;
  * Calibration and conversion
  * ===============================================================
  * - ADC_xA is the ADC value at different current values.
- * - Scale constant is just the slope scaled by 1000: 
- *      (mA1 - mA2) / (adc1 - adc2) * 1000
+ * - Scale constant (uA / adc count) is the slope: 
+ *      ((mA1 - mA2) / (adc1 - adc2)) * 1000
+ * - Remember to divide by 1000 to scale back to mA
  */
 #define ADC_0A          1527
 #define ADC_PLUS_10A    1828
@@ -59,7 +60,7 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue);
 /**
  * @brief Get adc reading from ADC queue and convert to current (mA);
  *        expected range is -50,000 to +82,00 mA.
- * @param message Pointer to AmperesMsg_t struct to hold adc and current values
+ * @param message Pointer to bps_pack_current_t struct to hold adc and current values
  * @param ticksToWait Number of ticks to wait on queue: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
  * @n 
@@ -67,4 +68,4 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue);
  * @n
  * - AMPERES_ADC_READ_FAIL on fail
  */
-AmperesStatus_t Amperes_GetReading(AmperesMsg_t *message, TickType_t ticksToWait);
+AmperesStatus_t Amperes_GetReading(bps_pack_current_t *message, TickType_t ticksToWait);

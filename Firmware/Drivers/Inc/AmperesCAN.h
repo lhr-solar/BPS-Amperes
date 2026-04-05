@@ -15,16 +15,18 @@
 extern QueueHandle_t can_tx_queue;
 
 /**
- * @brief Structure to hold Amperes data
- * @n 
- * - int32_t current_data
- * @n 
- * - uint16_t adc_voltage
+ * NOTE: Amperes CAN message is held in bps_pack_current_t
+ * - I'm using Main_Battery_Current_RawV internally to hold the ADC value;
+ *   it gets converted to actual voltage value inside Amperes_SendCAN
  */
-typedef struct AmperesMsg {
-    int32_t current_data;   // signed, 32 bit
-    uint16_t adc_voltage;   // unsigned, 12 bit
-} AmperesMsg_t;
+
+/**
+ * Macros to reconstruct values
+ * - little endian, see bps_pack_current_t struct. 
+ * - handle sign extension for 24b -> int32_t
+ */
+#define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
+#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
 
 /**
  * @brief Initialize CAN filter and hardware
@@ -48,7 +50,7 @@ AmperesStatus_t Amperes_CAN_Start();
 
 /**
  * @brief Send Amperes data over BPS_CAN
- * @param data Pointer to Amperes message struct
+ * @param data Pointer to bps_pack_current_t message struct
  * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
  * @n 
@@ -56,4 +58,4 @@ AmperesStatus_t Amperes_CAN_Start();
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait);
+AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait);

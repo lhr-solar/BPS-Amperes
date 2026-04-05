@@ -1,4 +1,5 @@
 #include "AmperesCAN.h"
+#include <string.h>
 
 /** ================================================================
  *  Queue for CAN Message mirroring
@@ -66,7 +67,7 @@ static bool MX_CAN_Init() {
     hcan1->Init.Mode = CAN_MODE_NORMAL;
     #endif
     hcan1->Init.TimeTriggeredMode = DISABLE;
-    hcan1->Init.AutoBusOff = DISABLE;
+    hcan1->Init.AutoBusOff = ENABLE;
     hcan1->Init.AutoWakeUp = DISABLE;
     hcan1->Init.AutoRetransmission = ENABLE;
     hcan1->Init.ReceiveFifoLocked = DISABLE;
@@ -97,7 +98,7 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
+AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = AMPERES_MSG_ID;
@@ -106,20 +107,19 @@ AmperesStatus_t Amperes_SendCAN(AmperesMsg_t *data, TickType_t ticksToWait) {
     tx_header.DLC = AMPERES_MSG_DLC;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Split data into uint8 elements
-    // Little Endian: LSB at index 0
+    // Convert ADC to voltage
+    uint16_t adc_to_voltage = (((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
 
-    /* Raw ADC Value: uint16_t */
+    // Pack data into fields: reference bps_pack_current_t struct
+    // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
     uint8_t tx_data[AMPERES_MSG_DLC] = {0};
-    tx_data[0] = (uint8_t) (data->adc_voltage & 0xFF);
-    tx_data[1] = (uint8_t) ((data->adc_voltage >> 8) & 0xFF);
-    
-    /* Current Data: int32_t */
-    tx_data[2] = (uint8_t) (data->current_data & 0xFF);
-    tx_data[3] = (uint8_t) ((data->current_data >> 8) & 0xFF);
-    tx_data[4] = (uint8_t) ((data->current_data >> 16) & 0xFF);
-    tx_data[5] = (uint8_t) ((data->current_data >> 24) & 0xFF);
-    
+
+    /* Current Data: int32_t into 24 bit field (little endian)*/
+    memcpy(tx_data, &data->Main_Battery_Current, 3);
+
+    /* Raw Voltage Value: uint16_t into 16 bit field (little endian)*/
+    memcpy(tx_data+3, &adc_to_voltage, 2);
+
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
         return AMPERES_CAN_SEND_FAIL;

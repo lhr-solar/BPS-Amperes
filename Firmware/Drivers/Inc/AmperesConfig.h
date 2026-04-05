@@ -60,7 +60,7 @@ typedef enum AmperesStatus {
  *  CAN (CAN1)
  * ================================================================ */
 
-#define AMPERES_MSG_DLC     6
+#define AMPERES_MSG_DLC     CAN_DLC_BPS_PACK_CURRENT
 #define AMPERES_MSG_ID      CAN_ID_BPS_PACK_CURRENT
 #define AMPERES_CAN_PORT    GPIOB
 #define AMPERES_RX_PIN      GPIO_PIN_8

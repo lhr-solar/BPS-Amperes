@@ -17,7 +17,7 @@ void Queue_Send() {
             .DLC = AMPERES_MSG_DLC,
             .TransmitGlobalTime = DISABLE
         },
-        .data = {0, 1, 2, 3, 4, 5}
+        .data = {0, 1, 2, 3, 4}
     };
     
     while (1) {
@@ -28,9 +28,9 @@ void Queue_Send() {
 }
 
 void CAN_Send() {
-    AmperesMsg_t message = {
-        .adc_voltage = 20,
-        .current_data = -1000
+    bps_pack_current_t message = {
+        .Main_Battery_Current = -1000,
+        .Main_Battery_Current_RawV = 20
     };
     
     while (1) {

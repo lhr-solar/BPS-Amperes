@@ -30,11 +30,10 @@ void Queue_Send() {
 void CAN_Send() {
     bps_pack_current_t message = {
         .Main_Battery_Current = -1000,
-        .Main_Battery_Current_RawV = 20
     };
     
     while (1) {
-        if (Amperes_SendCAN(&message, 0) != AMPERES_OK) {
+        if (Amperes_SendPackCurrentCAN(&message, 0) != AMPERES_OK) {
             printf("bruh\r\n");
         }
         HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_DISCHARGE_PIN);

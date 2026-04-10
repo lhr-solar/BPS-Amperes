@@ -32,17 +32,18 @@ void ADC_Task(void *pvParameters) {
             Error_Handler();
         };
 
+        uint16_t adc_data = 0;
+
         // Block (indefinitely) until we receive data in queue
-        if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+        if (Amperes_GetReading(&adc_data, portMAX_DELAY) != AMPERES_OK) {
             printf("\r\n ADC get reading fail \r\n");
             Error_Handler();
         }
 
         // Sum
         current_sum += message.Main_Battery_Current;
-        adc_sum += message.Main_Battery_Current_RawV;
+        adc_sum += adc_data;
         
-        // printf("\r\n CURRENT: %5li, ADC: %4d \r\n", message.Main_Battery_Current, message.Main_Battery_Current_RawV);
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1));
     }
     // Print result

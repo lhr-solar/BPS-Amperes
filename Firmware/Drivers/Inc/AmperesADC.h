@@ -68,4 +68,4 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue);
  * @n
  * - AMPERES_ADC_READ_FAIL on fail
  */
-AmperesStatus_t Amperes_GetReading(bps_pack_current_t *message, TickType_t ticksToWait);
+AmperesStatus_t Amperes_GetReading(uint16_t *adcReading, TickType_t ticksToWait);

@@ -98,27 +98,53 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
+AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait){
+
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = AMPERES_MSG_ID;
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT_RAWV;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = AMPERES_MSG_DLC;
+    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT_RAWV;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Convert ADC to voltage
-    uint16_t adc_to_voltage = (((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
+    // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
+    uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT_RAWV] = {0};
+
+    // 1st and 2nd byte are Amperes raw data
+    memcpy(&tx_data[0], &(data->Main_Battery_Current_RawV), sizeof(uint16_t));
+
+    // frame ID is the 3rd byte
+    tx_data[2] = data->FrameID_Amperes;
+
+    if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
+        return AMPERES_CAN_SEND_FAIL;
+    }
+    
+    return AMPERES_OK;
+}
+
+AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
+    // Create CAN payload
+    CAN_TxHeaderTypeDef tx_header = {0};
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT;
+    tx_header.RTR = CAN_RTR_DATA;
+    tx_header.IDE = CAN_ID_STD;
+    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT;
+    tx_header.TransmitGlobalTime = DISABLE;
+
 
     // Pack data into fields: reference bps_pack_current_t struct
     // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
     uint8_t tx_data[AMPERES_MSG_DLC] = {0};
 
-    /* Current Data: int32_t into 24 bit field (little endian)*/
-    memcpy(tx_data, &data->Main_Battery_Current, 3);
+    tx_data[0] = data->BPS_Amperes_Fault;
 
-    /* Raw Voltage Value: uint16_t into 16 bit field (little endian)*/
-    memcpy(tx_data+3, &adc_to_voltage, 2);
+    // /* Current Data: int32_t into 24 bit field (little endian)*/
+    // memcpy(tx_data, &data->Main_Battery_Current, 3);
+
+    // /* Raw Voltage Value: uint16_t into 16 bit field (little endian)*/
+    // memcpy(tx_data+3, &adc_to_voltage, 2);
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {

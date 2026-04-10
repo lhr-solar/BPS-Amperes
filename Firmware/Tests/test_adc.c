@@ -14,7 +14,6 @@ StackType_t xADCStack[ 200 ];
 void ADC_Task(void *pvParameters) {
     bps_pack_current_t message = {
         .Main_Battery_Current = 0,
-        .Main_Battery_Current_RawV = 0
     };
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
@@ -24,13 +23,14 @@ void ADC_Task(void *pvParameters) {
             Error_Handler();
         };
 
+        uint16_t adc_reading = 0;
         // Block (indefinitely) until we receive data in queue
-        if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+        if (Amperes_GetReading(&adc_reading, portMAX_DELAY) != AMPERES_OK) {
             Error_Handler();
         }
 
         // Debug
-        printf("\r\n CURRENT: %5li, ADC: %4d \r\n", message.Main_Battery_Current, message.Main_Battery_Current_RawV);
+        printf("\r\n CURRENT: %5li, ADC: %4d \r\n", message.Main_Battery_Current, adc_reading);
         if (message.Main_Battery_Current < 0) {
             // Negative means charging
             HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_CHARGE_PIN, GPIO_PIN_SET);

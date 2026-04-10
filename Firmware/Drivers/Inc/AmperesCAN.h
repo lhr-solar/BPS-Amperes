@@ -58,4 +58,16 @@ AmperesStatus_t Amperes_CAN_Start();
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait);
+AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t ticksToWait);
+
+/**
+ * @brief Send Amperes rawMv data over BPS_CAN
+ * @param data Pointer to bps_pack_current_rawv_t message struct
+ * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success
+ * @n
+ * - AMPERES_CAN_SEND_FAIL on fail
+ */
+AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait);

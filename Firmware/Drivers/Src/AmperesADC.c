@@ -98,11 +98,17 @@ AmperesStatus_t Amperes_StartADC(bool clearQueue) {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_GetReading(bps_pack_current_t *message, TickType_t ticksToWait) {
-    // Get ADC value from queue
-    if (xQueueReceive(adc_queue, &(message->Main_Battery_Current_RawV), ticksToWait) != pdPASS) { 
+AmperesStatus_t Amperes_GetReading(uint16_t *adcReading, TickType_t ticksToWait) {
+
+    if(adcReading == NULL){
         return AMPERES_ADC_READ_FAIL;
     }
-    message->Main_Battery_Current = Amperes_ADCToCurrent(message->Main_Battery_Current_RawV);
+
+    // Get ADC value from queue
+    if (xQueueReceive(adc_queue, &adcReading, ticksToWait) != pdPASS) { 
+        return AMPERES_ADC_READ_FAIL;
+    }
+
+    // message->Main_Battery_Current = Amperes_ADCToCurrent(message->Main_Battery_Current_RawV);
     return AMPERES_OK;
 }

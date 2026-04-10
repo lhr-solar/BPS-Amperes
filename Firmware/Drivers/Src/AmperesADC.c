@@ -109,6 +109,5 @@ AmperesStatus_t Amperes_GetReading(uint16_t *adcReading, TickType_t ticksToWait)
         return AMPERES_ADC_READ_FAIL;
     }
 
-    // message->Main_Battery_Current = Amperes_ADCToCurrent(message->Main_Battery_Current_RawV);
     return AMPERES_OK;
 }

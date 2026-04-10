@@ -46,8 +46,7 @@ void Amperes_Task(void *pvParameters) {
         if (Amperes_GetReading(&adc_reading, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) == AMPERES_OK) {
 
             // convert adc counts to rawMv
-            message_rawMv.Main_Battery_Current_RawV = ((uint16_t) ((adc_reading) * 3300)/4095);
-
+            message_rawMv.Main_Battery_Current_RawV = (uint16_t)(((uint32_t)adc_reading * 3300) / 4095);
             // convert adc counts to battery current
              message_packCurr.Main_Battery_Current = Amperes_ADCToCurrent(adc_reading);
 

@@ -53,7 +53,7 @@ void Task_CAN_Loopback() {
 
         // Convert back hopefully
         current_mA = AMPERES_UNPACK_CURRENT_mA(rx_data);
-        printf("RECV \t current %5li %4d \r\n", current_mA);
+        printf("RECV \t current %5li \r\n", current_mA);
         if ((current_mA != payload.Main_Battery_Current) ) {
             Error_Handler();
         }

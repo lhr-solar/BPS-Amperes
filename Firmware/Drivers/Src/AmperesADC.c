@@ -105,7 +105,7 @@ AmperesStatus_t Amperes_GetReading(uint16_t *adcReading, TickType_t ticksToWait)
     }
 
     // Get ADC value from queue
-    if (xQueueReceive(adc_queue, &adcReading, ticksToWait) != pdPASS) { 
+    if (xQueueReceive(adc_queue, adcReading, ticksToWait) != pdPASS) { 
         return AMPERES_ADC_READ_FAIL;
     }
 

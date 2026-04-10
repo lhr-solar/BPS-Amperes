@@ -39,7 +39,6 @@ int main() {
     //     tskIDLE_PRIORITY+2,
     //     xBlinkyStack,
     //     &xBlinkyTaskBuffer
-    //     sohan was herew :) 
     // );
 
     // Start scheduler

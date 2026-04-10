@@ -7,7 +7,7 @@
 #define CAN_SEND_PERIOD_MS 100
 #define CAN_SEND_PERIOD_COUNT (CAN_SEND_PERIOD_MS / AMPERES_TASK_PERIOD_MS)
 
-#define MAX_FRAME_ID 255
+#define MAX_FRAME_ID 256
 
 void Amperes_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();

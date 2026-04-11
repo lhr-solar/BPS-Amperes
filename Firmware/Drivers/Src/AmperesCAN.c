@@ -99,7 +99,6 @@ AmperesStatus_t Amperes_CAN_Start() {
 }
 
 AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait){
-
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = CAN_ID_BPS_PACK_CURRENT_RAWV;
@@ -133,17 +132,17 @@ AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t 
     tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT;
     tx_header.TransmitGlobalTime = DISABLE;
 
-
-    // Pack data into fields: reference bps_pack_current_t struct
     // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
     uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT] = {0};
 
+    // Fault bitfield: byte 1
     tx_data[0] = data->BPS_Amperes_Fault;
 
-    // /* Current Data: int32_t into 24 bit field (little endian)*/
-    memcpy(&tx_data[1], &data->Main_Battery_Current, 3);
+    // Current Data: int32_t into bytes 2,3,4 (little endian)
+    memcpy(&tx_data[1], &(data->Main_Battery_Current), 3*sizeof(uint8_t));
 
-    memcpy(&tx_data[4], &data->FrameID_Amperes, 1);
+    // Frame ID: byte 5
+    tx_data[4] = data->FrameID_Amperes;
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {

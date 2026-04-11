@@ -25,8 +25,8 @@ extern QueueHandle_t can_tx_queue;
  * - little endian, see bps_pack_current_t struct. 
  * - handle sign extension for 24b -> int32_t
  */
-#define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
-#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
+#define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[3] << 24) | ((uint32_t)(x)[2] << 16) | ((uint32_t)(x)[1] << 8)) >> 8 )
+#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[2] << 8) | (uint16_t) x[1]) )
 
 /**
  * @brief Initialize CAN filter and hardware
@@ -49,7 +49,7 @@ AmperesStatus_t Amperes_CAN_Init();
 AmperesStatus_t Amperes_CAN_Start();
 
 /**
- * @brief Send Amperes data over BPS_CAN
+ * @brief Send Amperes current data over BPS_CAN
  * @param data Pointer to bps_pack_current_t message struct
  * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t

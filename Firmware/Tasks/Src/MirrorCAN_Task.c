@@ -18,11 +18,28 @@ void MirrorCAN_Task(void *pvParameters) {
         for (uint8_t i=0; i < message.header.DLC; i++) {
             printf("%.2X ", message.data[i]);
         }
-        
+
         // Print unpacked message
-        int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
-        uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
-        printf("\r\nValue:\tmA %5li | raw_mV %04d \r\n", current_mA, raw_mV);
+        switch (message.header.StdId) {
+            case (CAN_ID_BPS_PACK_CURRENT): {
+                uint8_t faults = message.data[0];
+                int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
+                uint8_t frame_id = message.data[4];
+                printf("\r\n\r\nCurrent msg: ");
+                printf("\r\tfault: 0x%1X | mA: %5li | frame ID: %d \r\n", faults, current_mA, frame_id);
+            } break;
+
+            case (CAN_ID_BPS_PACK_CURRENT_RAWV): {
+                uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
+                uint8_t frame_id = message.data[2];
+                printf("\r\n\r\nRawV msg: ");
+                printf("\r\traw mV: %ld | frame ID: %d \r\n", raw_mV, frame_id);
+            } break;
+
+            default: {
+                printf("\r\nUnknown ID %ld", message.header.StdId);
+            } break;
+        }
 
         portYIELD();
     }

@@ -127,7 +127,7 @@ void Amperes_Task(void *pvParameters) {
                 } else can_send_error = 0;
 
                 #if PRINTF_ENABLED
-                printf("\r\nAmperes Task: i %li| raw mV %d | conv %d \r\n", 
+                printf("\r\nAmperes Task:\t[i %li| raw mV %d | conv %d]\r\n", 
                         message_packCurr.Main_Battery_Current, 
                         message_rawMv.Main_Battery_Current_RawV, 
                         conv_count);

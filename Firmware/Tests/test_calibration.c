@@ -17,7 +17,6 @@ StackType_t xADCStack[ 200 ];
  * Measure 100 ADC readings at known currents and outputs to console.
  */
 void ADC_Task(void *pvParameters) {
-    bps_pack_current_t message = {0};
     uint32_t adc_sum = 0;
     int64_t current_sum = 0;
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -41,7 +40,7 @@ void ADC_Task(void *pvParameters) {
         }
 
         // Sum
-        current_sum += message.Main_Battery_Current;
+        current_sum += Amperes_ADCToCurrent(adc_data);
         adc_sum += adc_data;
         
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1));

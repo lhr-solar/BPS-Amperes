@@ -151,3 +151,15 @@ AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t 
     
     return AMPERES_OK;
 }
+
+void Amperes_Unpack_Current_mA(uint8_t rx_data[], bps_pack_current_t *result) {
+    result->BPS_Amperes_Fault = rx_data[0];
+    // sign-extend from 24 bits to int32_t
+    result->Main_Battery_Current = (int32_t)(((uint32_t)rx_data[3] << 24) | ((uint32_t)rx_data[2] << 16) | ((uint32_t)rx_data[1] << 8)) >> 8;
+    result->FrameID_Amperes = rx_data[4];
+}
+
+void Amperes_Unpack_Raw_mV(uint8_t rx_data[], bps_pack_current_rawv_t *result) {
+    result->Main_Battery_Current_RawV = (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]);
+    result->FrameID_Amperes = rx_data[2];
+}

@@ -26,7 +26,7 @@ extern QueueHandle_t can_tx_queue;
  * - handle sign extension for 24b -> int32_t
  */
 #define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[3] << 24) | ((uint32_t)(x)[2] << 16) | ((uint32_t)(x)[1] << 8)) >> 8 )
-#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[2] << 8) | (uint16_t) x[1]) )
+#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[1] << 8) | (uint16_t) x[0]) )
 
 /**
  * @brief Initialize CAN filter and hardware

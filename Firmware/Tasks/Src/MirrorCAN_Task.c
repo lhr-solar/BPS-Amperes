@@ -25,15 +25,15 @@ void MirrorCAN_Task(void *pvParameters) {
                 uint8_t faults = message.data[0];
                 int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
                 uint8_t frame_id = message.data[4];
-                printf("\r\n\r\nCurrent msg: ");
-                printf("\r\tfault: 0x%1X | mA: %5li | frame ID: %d \r\n", faults, current_mA, frame_id);
+                printf("\r\nCurrent msg:");
+                printf("\tfault: 0x%.2X | mA: %5li | frame ID: %d \r\n", faults, current_mA, frame_id);
             } break;
 
             case (CAN_ID_BPS_PACK_CURRENT_RAWV): {
                 uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
                 uint8_t frame_id = message.data[2];
-                printf("\r\n\r\nRawV msg: ");
-                printf("\r\traw mV: %ld | frame ID: %d \r\n", raw_mV, frame_id);
+                printf("\r\nRawV msg:");
+                printf("\traw mV: %ld | frame ID: %d \r\n", raw_mV, frame_id);
             } break;
 
             default: {

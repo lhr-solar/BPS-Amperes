@@ -1,8 +1,5 @@
 #include "Tasks.h"
 
-#ifndef PRINTF_ENABLED
-    #define PRINTF_ENABLED 0
-#endif
 
 #define CAN_SEND_PERIOD_MS 100
 #define CAN_SEND_PERIOD_COUNT (CAN_SEND_PERIOD_MS / AMPERES_TASK_PERIOD_MS)
@@ -81,22 +78,23 @@ void Amperes_Task(void *pvParameters) {
                 // Handle faults
                 if ((adc_read_error > ADC_WATCHDOG_COUNT) || (can_send_error > CAN_SEND_WATCHDOG_COUNT)) {
                     // Watchdog fault
-                    message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_MESSAGE_WATCHDOG);
+                    message_packCurr.BPS_Amperes_Fault = BPS_PACK_CURRENT_BPS_AMPERES_FAULT_MESSAGE_WATCHDOG;
                 } else if ((message_packCurr.Main_Battery_Current < OUT_OF_BOUNDS_CHARGE_THRESHOLD_mA) ||
                     (message_packCurr.Main_Battery_Current > OUT_OF_BOUNDS_DISCHARGE_THRESHOLD_mA) ) {
                     // Out of bounds fault
-                    message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OUT_OF_BOUNDS);
+                    message_packCurr.BPS_Amperes_Fault = BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OUT_OF_BOUNDS;
                 } else if (message_packCurr.Main_Battery_Current < OVERCURRENT_CHARGE_THRESHOLD_mA) {
                     // Overcurrent faults
-                    message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OVER_CURRENT_CHARGE_);
+                    
+                    message_packCurr.BPS_Amperes_Fault = BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OVER_CURRENT_CHARGE_;
                 } else if (message_packCurr.Main_Battery_Current > OVERCURRENT_DISCHARGE_THRESHOLD_mA) {
-                    message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OVER_CURRENT_DISCHARGE_);
+                    message_packCurr.BPS_Amperes_Fault = BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OVER_CURRENT_DISCHARGE_;
                 } else {
                     // Amperes OK
-                    message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OK);
+                    message_packCurr.BPS_Amperes_Fault = BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OK;
                 }
 
-                if (message_packCurr.BPS_Amperes_Fault == (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OK)) {
+                if (message_packCurr.BPS_Amperes_Fault == BPS_PACK_CURRENT_BPS_AMPERES_FAULT_OK) {
                     HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_FAULT_PIN, GPIO_PIN_RESET);
                 } else {
                     HAL_GPIO_WritePin(AMPERES_GPIO_PORT, AMPERES_FAULT_PIN, GPIO_PIN_SET);

@@ -21,12 +21,21 @@ extern QueueHandle_t can_tx_queue;
  */
 
 /**
- * Macros to reconstruct values
- * - little endian, see bps_pack_current_t struct. 
- * - handle sign extension for 24b -> int32_t
+ * @brief Unpack rx_data array into bps_pack_current_t message
+ * (BPS_Amperes_Fault, Main_Battery_Current, FrameID_Amperes fields)
+ * @param rx_data Receive message array
+ * @param result Pointer to bps_pack_current_t struct to store result; MUST BE CORRECT SIZE
  */
-#define AMPERES_UNPACK_CURRENT_mA(x)    ( (int32_t)(((uint32_t)(x)[2] << 24) | ((uint32_t)(x)[1] << 16) | ((uint32_t)(x)[0] << 8)) >> 8 )
-#define AMPERES_UNPACK_RAW_mV(x)        ( (uint16_t)((x[4] << 8) | (uint16_t) x[3]) )
+void Amperes_Unpack_Current_mA(uint8_t rx_data[], bps_pack_current_t *result);
+
+/**
+ * @brief Unpack rx_data array into bps_pack_current_rawv_t message
+ * (Main_Battery_Current_RawV, FrameID_Amperes fields)
+ * @param rx_data Receive message array
+ * @param result Pointer to bps_pack_current_rawv_t struct to store result; MUST BE CORRECT SIZE
+ */
+void Amperes_Unpack_Raw_mV(uint8_t rx_data[], bps_pack_current_rawv_t *result);
+
 
 /**
  * @brief Initialize CAN filter and hardware
@@ -49,7 +58,7 @@ AmperesStatus_t Amperes_CAN_Init();
 AmperesStatus_t Amperes_CAN_Start();
 
 /**
- * @brief Send Amperes data over BPS_CAN
+ * @brief Send Amperes current data over BPS_CAN
  * @param data Pointer to bps_pack_current_t message struct
  * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
@@ -58,4 +67,16 @@ AmperesStatus_t Amperes_CAN_Start();
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait);
+AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t ticksToWait);
+
+/**
+ * @brief Send Amperes rawMv data over BPS_CAN
+ * @param data Pointer to bps_pack_current_rawv_t message struct
+ * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
+ * @retval AmperesStatus_t
+ * @n 
+ * - AMPERES_OK on success
+ * @n
+ * - AMPERES_CAN_SEND_FAIL on fail
+ */
+AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait);

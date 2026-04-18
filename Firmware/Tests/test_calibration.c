@@ -17,7 +17,6 @@ StackType_t xADCStack[ 200 ];
  * Measure 100 ADC readings at known currents and outputs to console.
  */
 void ADC_Task(void *pvParameters) {
-    bps_pack_current_t message = {0};
     uint32_t adc_sum = 0;
     int64_t current_sum = 0;
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -32,17 +31,18 @@ void ADC_Task(void *pvParameters) {
             Error_Handler();
         };
 
+        uint16_t adc_data = 0;
+
         // Block (indefinitely) until we receive data in queue
-        if (Amperes_GetReading(&message, portMAX_DELAY) != AMPERES_OK) {
+        if (Amperes_GetReading(&adc_data, portMAX_DELAY) != AMPERES_OK) {
             printf("\r\n ADC get reading fail \r\n");
             Error_Handler();
         }
 
         // Sum
-        current_sum += message.Main_Battery_Current;
-        adc_sum += message.Main_Battery_Current_RawV;
+        current_sum += Amperes_ADCToCurrent(adc_data);
+        adc_sum += adc_data;
         
-        // printf("\r\n CURRENT: %5li, ADC: %4d \r\n", message.Main_Battery_Current, message.Main_Battery_Current_RawV);
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1));
     }
     // Print result

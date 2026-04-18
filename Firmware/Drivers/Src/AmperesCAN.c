@@ -98,27 +98,51 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
+AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait){
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = AMPERES_MSG_ID;
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT_RAWV;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = AMPERES_MSG_DLC;
+    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT_RAWV;
     tx_header.TransmitGlobalTime = DISABLE;
 
-    // Convert ADC to voltage
-    uint16_t adc_to_voltage = (((uint32_t) data->Main_Battery_Current_RawV * 3300)/4095);
-
-    // Pack data into fields: reference bps_pack_current_t struct
     // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
-    uint8_t tx_data[AMPERES_MSG_DLC] = {0};
+    uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT_RAWV] = {0};
 
-    /* Current Data: int32_t into 24 bit field (little endian)*/
-    memcpy(tx_data, &data->Main_Battery_Current, 3);
+    // 1st and 2nd byte are Amperes raw data
+    memcpy(&tx_data[0], &(data->Main_Battery_Current_RawV), sizeof(uint16_t));
 
-    /* Raw Voltage Value: uint16_t into 16 bit field (little endian)*/
-    memcpy(tx_data+3, &adc_to_voltage, 2);
+    // frame ID is the 3rd byte
+    tx_data[2] = data->FrameID_Amperes;
+
+    if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
+        return AMPERES_CAN_SEND_FAIL;
+    }
+    
+    return AMPERES_OK;
+}
+
+AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t ticksToWait) {
+    // Create CAN payload
+    CAN_TxHeaderTypeDef tx_header = {0};
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT;
+    tx_header.RTR = CAN_RTR_DATA;
+    tx_header.IDE = CAN_ID_STD;
+    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT;
+    tx_header.TransmitGlobalTime = DISABLE;
+
+    // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
+    uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT] = {0};
+
+    // Fault bitfield: byte 1
+    tx_data[0] = data->BPS_Amperes_Fault;
+
+    // Current Data: int32_t into bytes 2,3,4 (little endian)
+    memcpy(&tx_data[1], &(data->Main_Battery_Current), 3*sizeof(uint8_t));
+
+    // Frame ID: byte 5
+    tx_data[4] = data->FrameID_Amperes;
 
     // Send over CAN
     if (can_send(hcan1, &tx_header, tx_data, ticksToWait) != CAN_OK) {
@@ -126,4 +150,16 @@ AmperesStatus_t Amperes_SendCAN(bps_pack_current_t *data, TickType_t ticksToWait
     }
     
     return AMPERES_OK;
+}
+
+void Amperes_Unpack_Current_mA(uint8_t rx_data[], bps_pack_current_t *result) {
+    result->BPS_Amperes_Fault = rx_data[0];
+    // sign-extend from 24 bits to int32_t
+    result->Main_Battery_Current = (int32_t)(((uint32_t)rx_data[3] << 24) | ((uint32_t)rx_data[2] << 16) | ((uint32_t)rx_data[1] << 8)) >> 8;
+    result->FrameID_Amperes = rx_data[4];
+}
+
+void Amperes_Unpack_Raw_mV(uint8_t rx_data[], bps_pack_current_rawv_t *result) {
+    result->Main_Battery_Current_RawV = (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]);
+    result->FrameID_Amperes = rx_data[2];
 }

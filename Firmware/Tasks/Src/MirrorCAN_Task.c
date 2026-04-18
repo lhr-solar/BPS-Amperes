@@ -1,9 +1,13 @@
 #include "Tasks.h"
 
 void can_tx_callback_hook(CAN_HandleTypeDef* hcan, const can_tx_payload_t* payload) {
+    static uint8_t toggle_count = 0; // toggle every other send (two sends in a row)
     BaseType_t higherPriorityTaskWoken = pdFALSE;
-    HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
+    if (toggle_count) {
+        HAL_GPIO_TogglePin(AMPERES_GPIO_PORT, AMPERES_HB_PIN);
+    }
     xQueueSendFromISR(can_tx_queue, payload, &higherPriorityTaskWoken);
+    toggle_count = (toggle_count + 1) & 0x1;
     // Don't yield from ISR
 }
 
@@ -18,11 +22,32 @@ void MirrorCAN_Task(void *pvParameters) {
         for (uint8_t i=0; i < message.header.DLC; i++) {
             printf("%.2X ", message.data[i]);
         }
-        
+
         // Print unpacked message
-        int32_t current_mA = AMPERES_UNPACK_CURRENT_mA(message.data);
-        uint16_t raw_mV = AMPERES_UNPACK_RAW_mV(message.data);
-        printf("\r\nValue:\tmA %5li | raw_mV %04d \r\n", current_mA, raw_mV);
+        switch (message.header.StdId) {
+            case (CAN_ID_BPS_PACK_CURRENT): {
+                bps_pack_current_t result = {0};
+                Amperes_Unpack_Current_mA(message.data, &result);
+                printf("\r\nCurrent msg:");
+                printf("\t[fault: 0x%.2X | mA: %5li | frame ID: %d]\r\n", 
+                        result.BPS_Amperes_Fault, 
+                        result.Main_Battery_Current, 
+                        result.FrameID_Amperes);
+            } break;
+
+            case (CAN_ID_BPS_PACK_CURRENT_RAWV): {
+                bps_pack_current_rawv_t result = {0};
+                Amperes_Unpack_Raw_mV(message.data, &result);
+                printf("\r\nRawV msg:");
+                printf("\t[raw mV: %ld | frame ID: %d]\r\n", 
+                        result.Main_Battery_Current_RawV,
+                        result.FrameID_Amperes);
+            } break;
+
+            default: {
+                printf("\r\nUnknown ID %ld", message.header.StdId);
+            } break;
+        }
 
         portYIELD();
     }

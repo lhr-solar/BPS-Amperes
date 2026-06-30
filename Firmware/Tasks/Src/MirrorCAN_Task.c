@@ -35,12 +35,12 @@ void MirrorCAN_Task(void *pvParameters) {
                         result.FrameID_Amperes);
             } break;
 
-            case (CAN_ID_BPS_PACK_CURRENT_RAWV): {
-                bps_pack_current_rawv_t result = {0};
-                Amperes_Unpack_Raw_mV(message.data, &result);
-                printf("\r\nRawV msg:");
-                printf("\t[raw mV: %ld | frame ID: %d]\r\n", 
-                        result.Main_Battery_Current_RawV,
+            case (CAN_ID_BPS_PACK_CURRENT_ADC): {
+                bps_pack_current_adc_t result = {0};
+                Amperes_Unpack_ADC(message.data, &result);
+                printf("\r\nADC msg:");
+                printf("\t[adc counts: %u | frame ID: %d]\r\n", 
+                        result.Main_Battery_Current_ADC,
                         result.FrameID_Amperes);
             } break;
 

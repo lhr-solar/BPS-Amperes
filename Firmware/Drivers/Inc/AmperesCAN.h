@@ -15,9 +15,9 @@
 extern QueueHandle_t can_tx_queue;
 
 /**
- * NOTE: Amperes CAN message is held in bps_pack_current_t
- * - I'm using Main_Battery_Current_RawV internally to hold the ADC value;
- *   it gets converted to actual voltage value inside Amperes_SendCAN
+ * NOTE: the Amperes pack-current message is held in bps_pack_current_t.
+ * The raw measurement is now sent as 12-bit ADC counts (0-4095) in
+ * Main_Battery_Current_ADC on CAN_ID_BPS_PACK_CURRENT_ADC (no mV conversion).
  */
 
 /**
@@ -29,12 +29,12 @@ extern QueueHandle_t can_tx_queue;
 void Amperes_Unpack_Current_mA(uint8_t rx_data[], bps_pack_current_t *result);
 
 /**
- * @brief Unpack rx_data array into bps_pack_current_rawv_t message
- * (Main_Battery_Current_RawV, FrameID_Amperes fields)
+ * @brief Unpack rx_data array into bps_pack_current_adc_t message
+ * (Main_Battery_Current_ADC, FrameID_Amperes fields)
  * @param rx_data Receive message array
- * @param result Pointer to bps_pack_current_rawv_t struct to store result; MUST BE CORRECT SIZE
+ * @param result Pointer to bps_pack_current_adc_t struct to store result; MUST BE CORRECT SIZE
  */
-void Amperes_Unpack_Raw_mV(uint8_t rx_data[], bps_pack_current_rawv_t *result);
+void Amperes_Unpack_ADC(uint8_t rx_data[], bps_pack_current_adc_t *result);
 
 
 /**
@@ -70,8 +70,8 @@ AmperesStatus_t Amperes_CAN_Start();
 AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t ticksToWait);
 
 /**
- * @brief Send Amperes rawMv data over BPS_CAN
- * @param data Pointer to bps_pack_current_rawv_t message struct
+ * @brief Send Amperes raw ADC-count data over BPS_CAN
+ * @param data Pointer to bps_pack_current_adc_t message struct
  * @param ticksToWait Number of ticks to wait on send: 0 for non-blocking, portMAX_DELAY for blocking
  * @retval AmperesStatus_t
  * @n 
@@ -79,4 +79,4 @@ AmperesStatus_t Amperes_SendPackCurrentCAN(bps_pack_current_t *data, TickType_t 
  * @n
  * - AMPERES_CAN_SEND_FAIL on fail
  */
-AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait);
+AmperesStatus_t Amperes_SendPackCurrentADC(bps_pack_current_adc_t *data, TickType_t ticksToWait);

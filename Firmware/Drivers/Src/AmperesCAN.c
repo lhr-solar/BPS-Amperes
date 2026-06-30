@@ -98,20 +98,20 @@ AmperesStatus_t Amperes_CAN_Start() {
     return AMPERES_OK;
 }
 
-AmperesStatus_t Amperes_SendPackCurrentRaw(bps_pack_current_rawv_t *data, TickType_t ticksToWait){
+AmperesStatus_t Amperes_SendPackCurrentADC(bps_pack_current_adc_t *data, TickType_t ticksToWait){
     // Create CAN payload
     CAN_TxHeaderTypeDef tx_header = {0};
-    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT_RAWV;
+    tx_header.StdId = CAN_ID_BPS_PACK_CURRENT_ADC;
     tx_header.RTR = CAN_RTR_DATA;
     tx_header.IDE = CAN_ID_STD;
-    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT_RAWV;
+    tx_header.DLC = CAN_DLC_BPS_PACK_CURRENT_ADC;
     tx_header.TransmitGlobalTime = DISABLE;
 
     // Little Endian (LSB first): e.g. 0x123456 is stored as [56][34][12]
-    uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT_RAWV] = {0};
+    uint8_t tx_data[CAN_DLC_BPS_PACK_CURRENT_ADC] = {0};
 
-    // 1st and 2nd byte are Amperes raw data
-    memcpy(&tx_data[0], &(data->Main_Battery_Current_RawV), sizeof(uint16_t));
+    // 1st and 2nd byte are the raw 12-bit ADC counts
+    memcpy(&tx_data[0], &(data->Main_Battery_Current_ADC), sizeof(uint16_t));
 
     // frame ID is the 3rd byte
     tx_data[2] = data->FrameID_Amperes;
@@ -159,7 +159,7 @@ void Amperes_Unpack_Current_mA(uint8_t rx_data[], bps_pack_current_t *result) {
     result->FrameID_Amperes = rx_data[4];
 }
 
-void Amperes_Unpack_Raw_mV(uint8_t rx_data[], bps_pack_current_rawv_t *result) {
-    result->Main_Battery_Current_RawV = (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]);
+void Amperes_Unpack_ADC(uint8_t rx_data[], bps_pack_current_adc_t *result) {
+    result->Main_Battery_Current_ADC = (uint16_t)((rx_data[1] << 8) | (uint16_t) rx_data[0]);
     result->FrameID_Amperes = rx_data[2];
 }

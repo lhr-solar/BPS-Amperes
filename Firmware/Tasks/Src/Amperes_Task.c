@@ -1,7 +1,7 @@
 #include "Tasks.h"
 
 
-#define CAN_SEND_PERIOD_MS 100
+#define CAN_SEND_PERIOD_MS 25
 #define CAN_SEND_PERIOD_COUNT (CAN_SEND_PERIOD_MS / AMPERES_TASK_PERIOD_MS)
 
 #define MAX_FRAME_ID 256
@@ -16,7 +16,7 @@
 
 // Error messages when ADC is broken (no converions at all)
 #define CURRENT_ERROR_MSG   69420
-#define RAW_V_ERROR_MSG     6769
+#define ADC_ERROR_MSG     6769
 
 // Thresholds for sending watchdog fault 
 #define ADC_WATCHDOG_COUNT      500     // 500 ms of missing adc readings
@@ -26,7 +26,7 @@ void Amperes_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
     int32_t current_sum = 0;
-    uint32_t raw_mV_sum = 0;
+    uint32_t adc_sum = 0;
 
     uint16_t counter = 0;           // loop counter
     uint16_t conv_count = 0;        // adc conversion count
@@ -51,8 +51,8 @@ void Amperes_Task(void *pvParameters) {
             uint16_t adc_reading = 0;
             // Block until we receive data in queue
             if (Amperes_GetReading(&adc_reading, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) == AMPERES_OK) {
-                // Add data to sum
-                raw_mV_sum += (uint16_t)(((uint32_t)adc_reading * 3300) / 4095);
+                // Add data to sum (accumulate raw 12-bit ADC counts; the DBC field is now ADC counts, not mV)
+                adc_sum += adc_reading;
                 current_sum += Amperes_ADCToCurrent(adc_reading);
                 conv_count++;
                 adc_read_error = 0; // reset read error count
@@ -69,7 +69,7 @@ void Amperes_Task(void *pvParameters) {
         if (counter >= CAN_SEND_PERIOD_COUNT) {
             if (conv_count > 0) {
                 bps_pack_current_t message_packCurr = {0};
-                bps_pack_current_rawv_t message_rawMv = {0};
+                bps_pack_current_adc_t message_adc = {0};
 
                 /* ============= Current Msg ============= */
                 message_packCurr.Main_Battery_Current = (current_sum / conv_count);
@@ -101,9 +101,9 @@ void Amperes_Task(void *pvParameters) {
                 }
 
 
-                /* ============= RawV Msg ============= */
-                message_rawMv.Main_Battery_Current_RawV = (raw_mV_sum / conv_count);
-                message_rawMv.FrameID_Amperes = frame_id;
+                /* ============= ADC Msg ============= */
+                message_adc.Main_Battery_Current_ADC = (adc_sum / conv_count);
+                message_adc.FrameID_Amperes = frame_id;
             
                 // Send data over CAN
                 uint8_t can_send_failed = 0;
@@ -113,7 +113,7 @@ void Amperes_Task(void *pvParameters) {
                     printf("Pack current CAN Send Error\r\n");
                     #endif
                 }
-                if (Amperes_SendPackCurrentRaw(&message_rawMv, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) != AMPERES_OK) {
+                if (Amperes_SendPackCurrentADC(&message_adc, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) != AMPERES_OK) {
                     can_send_failed = 1;
                     #if PRINTF_ENABLED
                     printf("Pack mV CAN Send Error\r\n");
@@ -125,9 +125,9 @@ void Amperes_Task(void *pvParameters) {
                 } else can_send_error = 0;
 
                 #if PRINTF_ENABLED
-                printf("\r\nAmperes Task:\t[i %li| raw mV %d | conv %d]\r\n", 
+                printf("\r\nAmperes Task:\t[i %li| adc %u | conv %d]\r\n", 
                         message_packCurr.Main_Battery_Current, 
-                        message_rawMv.Main_Battery_Current_RawV, 
+                        message_adc.Main_Battery_Current_ADC, 
                         conv_count);
                 #endif
 
@@ -145,7 +145,7 @@ void Amperes_Task(void *pvParameters) {
             } else {
                 /* ============= ERROR: No ADC conversions ============= */
                 bps_pack_current_t message_packCurr = {0};
-                bps_pack_current_rawv_t message_rawMv = {0};
+                bps_pack_current_adc_t message_adc = {0};
 
                 // Watchdog fault
                 message_packCurr.BPS_Amperes_Fault = (1 << BPS_PACK_CURRENT_BPS_AMPERES_FAULT_MESSAGE_WATCHDOG);
@@ -154,9 +154,9 @@ void Amperes_Task(void *pvParameters) {
                 message_packCurr.Main_Battery_Current = CURRENT_ERROR_MSG;
                 message_packCurr.FrameID_Amperes = frame_id;
 
-                /* ============= RawV Msg ============= */
-                message_rawMv.Main_Battery_Current_RawV = RAW_V_ERROR_MSG;
-                message_rawMv.FrameID_Amperes = frame_id;
+                /* ============= ADC Msg ============= */
+                message_adc.Main_Battery_Current_ADC = ADC_ERROR_MSG;
+                message_adc.FrameID_Amperes = frame_id;
 
                 // Send data over CAN
                 uint8_t can_send_failed = 0;
@@ -166,7 +166,7 @@ void Amperes_Task(void *pvParameters) {
                     printf("Pack current CAN Send Error\r\n");
                     #endif
                 }
-                if (Amperes_SendPackCurrentRaw(&message_rawMv, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) != AMPERES_OK) {
+                if (Amperes_SendPackCurrentADC(&message_adc, pdMS_TO_TICKS(AMPERES_TASK_PERIOD_MS)) != AMPERES_OK) {
                     can_send_failed = 1;
                     #if PRINTF_ENABLED
                     printf("Pack mV CAN Send Error\r\n");
@@ -183,7 +183,7 @@ void Amperes_Task(void *pvParameters) {
             }
             // Update variables
             frame_id = (frame_id + 1) % MAX_FRAME_ID;
-            current_sum = raw_mV_sum = 0;
+            current_sum = adc_sum = 0;
             counter = conv_count = 0;
         }
 

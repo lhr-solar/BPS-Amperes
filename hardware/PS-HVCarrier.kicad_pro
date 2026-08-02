@@ -624,7 +624,7 @@
     ],
     [
       "7a8f5d40-8cff-476b-a6d6-a001c957bc73",
-      "Other_CAN_Transceiver"
+      "CAB_BPS_CAN_Transceiver"
     ],
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
@@ -661,6 +661,14 @@
     [
       "83ab5b0b-4732-42c0-82fe-e74f4113c82a",
       "Voltage_Sense"
+    ],
+    [
+      "9458df2f-9615-411b-aad2-5f3e31112f39",
+      "AMC3311 Design"
+    ],
+    [
+      "f80b2a8a-0bb6-44ce-a057-d1999ed66d19",
+      "AMC1311 Design"
     ]
   ],
   "text_variables": {}

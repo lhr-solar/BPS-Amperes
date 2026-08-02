@@ -6,4 +6,5 @@
   (lib (name "lhrs_power")(type "KiCad")(uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_power.kicad_sym")(options "")(descr ""))
   (lib (name "lhrs_special")(type "KiCad")(uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_special.kicad_sym")(options "")(descr ""))
   (lib (name "AMC1311QDWVRQ1")(type "KiCad")(uri "/Users/shampoo/Documents/UTAustin/Club/LHR/Projects/PS-Amperes/External Parts/AMC1311QDWVRQ1/KiCADv6/2026-07-12_23-55-06.kicad_sym")(options "")(descr ""))
+  (lib (name "AMC3311QDWERQ1")(type "KiCad")(uri "/Users/shampoo/Documents/UTAustin/Club/LHR/Projects/PS-Amperes/External Parts/AMC3311QDWERQ1/KiCADv6/2026-08-02_06-15-44.kicad_sym")(options "")(descr ""))
 )

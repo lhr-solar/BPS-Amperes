@@ -167,7 +167,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 41.91) (xy 41.91 41.91)
+			(xy 31.75 41.91) (xy 41.91 41.91)
 		)
 		(stroke
 			(width 0)
@@ -316,7 +316,7 @@
 		(uuid "eabb30d7-6361-4271-8729-d7658d9291bc")
 	)
 	(label "HV+"
-		(at 29.21 41.91 0)
+		(at 35.56 41.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -370,7 +370,7 @@
 	)
 	(hierarchical_label "HV+"
 		(shape input)
-		(at 24.13 41.91 180)
+		(at 31.75 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)

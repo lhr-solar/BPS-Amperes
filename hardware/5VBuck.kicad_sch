@@ -3717,57 +3717,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "22338674-787b-46a2-a955-af494497ea0d")
-	)
-	(label "FB"
-		(at 181.61 88.9 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "411f0caa-4763-49d4-878f-4db98b41c33c")
-	)
-	(label "SW"
-		(at 88.9 46.99 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7c41df6a-46a7-4e30-b13f-9fcf7cfe26ca")
-	)
-	(label "CB"
-		(at 168.91 102.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "afb52fa8-f98c-4624-9556-1a4410b9d8dd")
-	)
-	(label "FB"
-		(at 162.56 46.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c30873e0-70b7-440a-b133-d9c59b88b10f")
-	)
-	(label "FB"
-		(at 92.71 52.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c533223b-21b1-4b30-bc9d-c96a2ea9ecbd")
+		(uuid "0315a068-1890-4670-92fe-e278a332e9dc")
 	)
 	(label "SW"
 		(at 181.61 102.87 180)
@@ -3777,73 +3727,57 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d655096d-1007-4943-b6eb-9fa9f522f87b")
+		(uuid "36961a67-3e4b-4791-b155-4bb655448e74")
 	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 127 55.88 180)
+	(label "FB"
+		(at 162.56 46.99 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "000f5ffc-9409-4c24-af44-0efb1e2df7f1")
+		(uuid "63943070-9efd-4ff0-be89-aada5d40a46c")
 	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 91.44 57.15 0)
+	(label "CB"
+		(at 168.91 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right bottom)
 		)
-		(uuid "3aff6b87-5f9e-426c-809b-9eeeae873cf2")
+		(uuid "95342de7-54e4-4b1c-9c6f-0cceed7775f9")
 	)
-	(hierarchical_label "V_out_5V"
-		(shape output)
-		(at 133.35 46.99 0)
+	(label "SW"
+		(at 88.9 46.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "6b693e4f-1f5f-40df-8820-9a9f71e66804")
+		(uuid "c78772dd-849f-4c61-b89e-67034039d93b")
 	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 167.64 54.61 180)
+	(label "FB"
+		(at 92.71 52.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left bottom)
 		)
-		(uuid "70454c81-f1f9-407f-a456-c0aed3a1c913")
+		(uuid "f16b799a-8dbc-4adb-a6f0-f3c617e30d8e")
 	)
-	(hierarchical_label "V_in_24V"
-		(shape input)
-		(at 27.94 41.91 180)
+	(label "FB"
+		(at 181.61 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "8c0492e1-015c-4dd6-81ea-e5c89adffa9f")
-	)
-	(hierarchical_label "V_out_5V"
-		(shape output)
-		(at 167.64 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "98065265-f6d5-4968-881b-b30b1e5187af")
+		(uuid "f1f24976-6bc2-4dbc-9c74-f6fcb2030c5c")
 	)
 	(hierarchical_label "GND"
 		(shape input)
@@ -3854,7 +3788,18 @@
 			)
 			(justify right)
 		)
-		(uuid "ba49efaf-37ce-4ada-87d4-f87b23b96eac")
+		(uuid "2c1aec5b-8578-4060-b3f6-2d724565ff2c")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 91.44 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5ca961e9-41cb-4ca7-a47f-1efd20e135fe")
 	)
 	(hierarchical_label "GND"
 		(shape input)
@@ -3865,7 +3810,29 @@
 			)
 			(justify right)
 		)
-		(uuid "d58c04be-d5d6-4316-8375-d83839b4cd77")
+		(uuid "63a73ad1-9423-4736-a04e-a99ecf29b20a")
+	)
+	(hierarchical_label "V_out_5V"
+		(shape output)
+		(at 133.35 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9f5d7958-0906-4f06-a38c-7ec22d34cc0d")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 167.64 54.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a0603102-4bc6-4576-9981-987041d1db9d")
 	)
 	(hierarchical_label "V_in_24V"
 		(shape input)
@@ -3876,126 +3843,53 @@
 			)
 			(justify right)
 		)
-		(uuid "d7a1a35e-2038-4b68-8cbc-15a7a94f8d75")
+		(uuid "a4635578-49a2-4b59-99db-442224d5fc75")
+	)
+	(hierarchical_label "V_in_24V"
+		(shape input)
+		(at 27.94 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ac426e9e-4db2-4f61-9b4b-500fa24a9297")
+	)
+	(hierarchical_label "V_out_5V"
+		(shape output)
+		(at 167.64 39.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "edd65eb0-e560-45d4-b4af-2dd023d20ac0")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 127 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fb221f8e-30ee-4b57-853b-d42a11c68757")
 	)
 	(symbol
-		(lib_id "Device:L_Small")
-		(at 106.68 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "09b8345d-8918-4267-ae46-9429646200dd")
-		(property "Reference" "L1"
-			(at 106.68 48.514 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 106.68 50.546 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LHRS_Passives:SRN8040-101M"
-			(at 106.68 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 106.68 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Inductor, small symbol"
-			(at 106.68 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C54563397"
-			(at 106.68 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "SRN8040-101M"
-			(at 106.68 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "202d2c2c-3777-44de-9e7a-03ac405cef2a")
-		)
-		(pin "2"
-			(uuid "7d12297f-1c4c-4128-b9b3-cdd23ce8c403")
-		)
-		(instances
-			(project "5VBuck"
-				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-			(project "5VBuck"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-			(project "PS-Buck"
-				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "L2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 167.64 50.8 0)
+		(lib_id "Device:C_Small")
+		(at 127 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0a82137d-8871-44a3-ab21-ce47721f3f56")
-		(property "Reference" "R2"
-			(at 170.18 49.5299 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10.2k"
-			(at 170.18 52.0699 0)
+		(uuid "070498a8-b613-4a15-a5ef-3c27fd112cc6")
+		(property "Reference" "C16"
+			(at 129.54 49.5362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4003,8 +3897,17 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.64 50.8 0)
+		(property "Value" "47u"
+			(at 129.54 52.0762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
+			(at 127 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4013,7 +3916,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 50.8 0)
+			(at 127 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4021,8 +3924,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 167.64 50.8 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 127 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4030,8 +3933,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC P/N" "C22772"
-			(at 167.64 50.8 0)
+		(property "P/N" "GRM32ER61C476KE15L"
+			(at 127 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4039,8 +3942,8 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "0603WAF1022T5E"
-			(at 167.64 50.8 0)
+		(property "LCSC P/N" "C77101"
+			(at 127 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4049,27 +3952,106 @@
 			)
 		)
 		(pin "1"
-			(uuid "71b2dc9b-e2c4-4b40-a97b-e85223483b9d")
+			(uuid "cefa0e5c-bc6f-4c80-8f4b-8426e614b555")
 		)
 		(pin "2"
-			(uuid "11b4fb93-1497-44cc-895b-b5c2b8669f38")
+			(uuid "5d5e65c7-2189-4395-92c6-ce10ec9d0f25")
 		)
 		(instances
 			(project "5VBuck"
 				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "R2")
+					(reference "C4")
 					(unit 1)
 				)
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "R2")
+					(reference "C16")
 					(unit 1)
 				)
 			)
 			(project "PS-Buck"
 				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "R3")
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 168.91 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "093592ff-c6af-4927-b8a1-52f789349063")
+		(property "Reference" "TP15"
+			(at 171.45 80.5179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "V_in_24V"
+			(at 163.83 79.248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
+			(at 173.99 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 168.91 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "604139f8-1aea-448d-9051-15364e895672")
+		)
+		(instances
+			(project "5VBuck"
+				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
+					(reference "TP?")
+					(unit 1)
+				)
+			)
+			(project "5VBuck"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -4084,8 +4066,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1968d22c-1f78-4f77-9dd3-42d14dfd1316")
-		(property "Reference" "C1"
+		(uuid "0a6e5948-520a-4f1b-9a27-29aae5bd661c")
+		(property "Reference" "C13"
 			(at 40.64 45.7262 0)
 			(effects
 				(font
@@ -4163,7 +4145,7 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "C1")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -4176,16 +4158,213 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 181.61 85.09 0)
+		(lib_id "Device:L_Small")
+		(at 106.68 46.99 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1a05fa4d-69b8-4025-a5e1-b9eaf2e07e09")
-		(property "Reference" "TP?"
-			(at 184.15 80.5179 0)
+		(uuid "22dd5f8b-a377-475f-9ec3-ea2c29875589")
+		(property "Reference" "L2"
+			(at 106.68 48.514 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10u"
+			(at 106.68 50.546 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LHRS_Passives:SRN8040-101M"
+			(at 106.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 106.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C54563397"
+			(at 106.68 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SRN8040-101M"
+			(at 106.68 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "202d2c2c-3777-44de-9e7a-03ac405cef2a")
+		)
+		(pin "2"
+			(uuid "7d12297f-1c4c-4128-b9b3-cdd23ce8c403")
+		)
+		(instances
+			(project "5VBuck"
+				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+			(project "5VBuck"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+			(project "PS-Buck"
+				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 167.64 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26e585c9-696b-4ee5-bc20-fce1ff401089")
+		(property "Reference" "R8"
+			(at 170.18 41.9099 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "53.6k"
+			(at 170.18 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 167.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 167.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 167.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "0603WAF5362T5E"
+			(at 167.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C23074"
+			(at 167.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d147276-2971-40ca-93a9-7ef99e786087")
+		)
+		(pin "2"
+			(uuid "94a4c3ff-a922-438f-9d6c-9e71e7d273c5")
+		)
+		(instances
+			(project "5VBuck"
+				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+			(project "5VBuck"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+			(project "PS-Buck"
+				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 181.61 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7275c6f0-8d25-454f-8fb2-03af1e8f9cc6")
+		(property "Reference" "TP18"
+			(at 184.15 93.2179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4194,8 +4373,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "FB"
-			(at 180.086 79.502 0)
+		(property "Value" "SW"
+			(at 180.086 92.202 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4204,7 +4383,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 186.69 85.09 0)
+			(at 186.69 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4213,7 +4392,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 85.09 0)
+			(at 186.69 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4222,7 +4401,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 181.61 85.09 0)
+			(at 181.61 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4231,7 +4410,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "16b24b4e-ea22-4704-a0b4-5ebfda8280e5")
+			(uuid "7ce99e8c-679a-436d-a98f-ffbb8a741835")
 		)
 		(instances
 			(project "5VBuck"
@@ -4242,29 +4421,39 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "TP?")
+					(reference "TP18")
 					(unit 1)
 				)
 			)
 			(project "PowerPath"
 				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
-					(reference "TP15")
+					(reference "TP16")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 97.79 44.45 0)
+		(lib_id "Connector:TestPoint")
+		(at 168.91 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3878a141-21e0-43f9-ad59-f707dea32310")
-		(property "Reference" "C2"
-			(at 100.838 40.64 0)
+		(uuid "77b100de-84de-43ed-bb48-6ae03939c4de")
+		(property "Reference" "TP16"
+			(at 171.45 93.2179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "CB"
+			(at 167.64 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4272,17 +4461,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
-			(at 100.838 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 97.79 44.45 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
+			(at 173.99 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4291,7 +4471,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.79 44.45 0)
+			(at 173.99 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4299,26 +4479,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 97.79 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "MLASH168SB7104KTNA01"
-			(at 97.79 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C14663"
-			(at 97.79 44.45 0)
+		(property "Description" "test point"
+			(at 168.91 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4327,27 +4489,124 @@
 			)
 		)
 		(pin "1"
-			(uuid "3f492e05-dc85-4cd9-b07a-90470567f276")
-		)
-		(pin "2"
-			(uuid "f2d282fd-9946-4637-8cd6-dfb9210a4c38")
+			(uuid "a2f5ef80-5291-4d20-9e27-e8670f780ccf")
 		)
 		(instances
 			(project "5VBuck"
 				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "C2")
+					(reference "TP?")
 					(unit 1)
 				)
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "C2")
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+			(project "PowerPath"
+				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 167.64 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79420c18-c635-42f8-9b5e-5491a0daa5c3")
+		(property "Reference" "R9"
+			(at 170.18 49.5299 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10.2k"
+			(at 170.18 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 167.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 167.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 167.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C22772"
+			(at 167.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "0603WAF1022T5E"
+			(at 167.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "71b2dc9b-e2c4-4b40-a97b-e85223483b9d")
+		)
+		(pin "2"
+			(uuid "11b4fb93-1497-44cc-895b-b5c2b8669f38")
+		)
+		(instances
+			(project "5VBuck"
+				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+			(project "5VBuck"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
+					(reference "R9")
 					(unit 1)
 				)
 			)
 			(project "PS-Buck"
 				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "C2")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -4362,8 +4621,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "39cf9a7e-6653-47e4-a5ee-edf6ac47a9a5")
-		(property "Reference" "U1"
+		(uuid "941ad842-75ae-450c-bf4f-484b35380e83")
+		(property "Reference" "U2"
 			(at 73.66 31.75 0)
 			(effects
 				(font
@@ -4453,350 +4712,13 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
 			(project "PS-Buck"
 				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 168.91 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "550d6821-9bdf-4eca-b477-5cc866df1ecf")
-		(property "Reference" "TP?"
-			(at 171.45 80.5179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "V_in_24V"
-			(at 163.83 79.248 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 173.99 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 173.99 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 168.91 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "604139f8-1aea-448d-9051-15364e895672")
-		)
-		(instances
-			(project "5VBuck"
-				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "TP?")
-					(unit 1)
-				)
-			)
-			(project "5VBuck"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "TP?")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
-					(reference "TP13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 93.98 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a9a423a-0e34-4ded-a4b1-4212ade0f564")
-		(property "Reference" "#FLG01"
-			(at 93.98 40.005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 93.98 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 93.98 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 93.98 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 93.98 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "deb4a48a-6b2d-47ca-a2dd-a2295f685465")
-		)
-		(instances
-			(project "5VBuck"
-				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-			(project "5VBuck"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-			(project "PS-Buck"
-				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "#FLG08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 181.61 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "89a9a8dd-edb3-41d3-83e8-254a53afc325")
-		(property "Reference" "TP?"
-			(at 184.15 93.2179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "SW"
-			(at 180.086 92.202 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 186.69 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 181.61 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7ce99e8c-679a-436d-a98f-ffbb8a741835")
-		)
-		(instances
-			(project "5VBuck"
-				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "TP?")
-					(unit 1)
-				)
-			)
-			(project "5VBuck"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "TP?")
-					(unit 1)
-				)
-			)
-			(project "PowerPath"
-				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
-					(reference "TP16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 127 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9397b22a-9016-444d-92df-aeef08b040d9")
-		(property "Reference" "C4"
-			(at 129.54 49.5362 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47u"
-			(at 129.54 52.0762 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder"
-			(at 127 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 127 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "GRM32ER61C476KE15L"
-			(at 127 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C77101"
-			(at 127 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cefa0e5c-bc6f-4c80-8f4b-8426e614b555")
-		)
-		(pin "2"
-			(uuid "5d5e65c7-2189-4395-92c6-ce10ec9d0f25")
-		)
-		(instances
-			(project "5VBuck"
-				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-			(project "5VBuck"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-			(project "PS-Buck"
-				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -4810,8 +4732,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c11cb379-7aea-4b99-9233-bc7cdd9f23b5")
-		(property "Reference" "#FLG02"
+		(uuid "b52386be-4d02-4fbe-b446-0b5df275f252")
+		(property "Reference" "#FLG06"
 			(at 93.98 45.085 0)
 			(effects
 				(font
@@ -4868,7 +4790,7 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "#FLG02")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -4881,35 +4803,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 167.64 43.18 0)
+		(lib_id "power:PWR_FLAG")
+		(at 93.98 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c22156a2-b827-4f79-bec6-44d42ccd9b29")
-		(property "Reference" "R1"
-			(at 170.18 41.9099 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "53.6k"
-			(at 170.18 44.4499 0)
+		(uuid "bc74fdb6-a3be-4420-9a0d-4a8da838c0cd")
+		(property "Reference" "#FLG05"
+			(at 93.98 40.005 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.64 43.18 0)
+		(property "Value" "PWR_FLAG"
+			(at 93.98 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4918,7 +4840,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 43.18 0)
+			(at 93.98 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4926,26 +4848,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 167.64 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "0603WAF5362T5E"
-			(at 167.64 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C23074"
-			(at 167.64 43.18 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 93.98 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4954,27 +4858,123 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d147276-2971-40ca-93a9-7ef99e786087")
-		)
-		(pin "2"
-			(uuid "94a4c3ff-a922-438f-9d6c-9e71e7d273c5")
+			(uuid "deb4a48a-6b2d-47ca-a2dd-a2295f685465")
 		)
 		(instances
 			(project "5VBuck"
 				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
-					(reference "R1")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "R1")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
 			(project "PS-Buck"
 				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
-					(reference "R2")
+					(reference "#FLG08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 97.79 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1a29107-636e-409a-9547-68dd8c2ec236")
+		(property "Reference" "C14"
+			(at 100.838 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 100.838 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 97.79 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 97.79 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 97.79 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 97.79 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C14663"
+			(at 97.79 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f492e05-dc85-4cd9-b07a-90470567f276")
+		)
+		(pin "2"
+			(uuid "f2d282fd-9946-4637-8cd6-dfb9210a4c38")
+		)
+		(instances
+			(project "5VBuck"
+				(path "/1a7db697-3478-4f8f-a838-af5608c43196"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+			(project "5VBuck"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+			(project "PS-Buck"
+				(path "/331f457b-ed4e-4d4a-ad6d-c8acb2febfed/fd0ad9ec-55a0-4daf-b550-9a7f2436753f"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -4989,8 +4989,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "cd112dfd-7b8d-4d77-beee-5f7198135a8a")
-		(property "Reference" "C3"
+		(uuid "db0e91ed-1cef-4d45-bb95-223b058a6331")
+		(property "Reference" "C15"
 			(at 118.11 49.5362 0)
 			(effects
 				(font
@@ -5068,7 +5068,7 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "C3")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -5082,15 +5082,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 168.91 97.79 0)
+		(at 181.61 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e3ae4365-a578-40b2-aaa3-5063f3e55771")
-		(property "Reference" "TP?"
-			(at 171.45 93.2179 0)
+		(uuid "e5065daa-beba-4a3a-a81c-50bc875eb8de")
+		(property "Reference" "TP17"
+			(at 184.15 80.5179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5099,8 +5099,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "CB"
-			(at 167.64 91.948 0)
+		(property "Value" "FB"
+			(at 180.086 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5109,7 +5109,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 173.99 97.79 0)
+			(at 186.69 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5118,7 +5118,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 97.79 0)
+			(at 186.69 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5127,7 +5127,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 168.91 97.79 0)
+			(at 181.61 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5136,7 +5136,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a2f5ef80-5291-4d20-9e27-e8670f780ccf")
+			(uuid "16b24b4e-ea22-4704-a0b4-5ebfda8280e5")
 		)
 		(instances
 			(project "5VBuck"
@@ -5147,13 +5147,13 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "TP?")
+					(reference "TP17")
 					(unit 1)
 				)
 			)
 			(project "PowerPath"
 				(path "/ad6c7df0-eb90-4670-9aa8-3e2007aefc2d/ae63f0a9-78b8-4efb-b2ee-a2699a24d705"
-					(reference "TP14")
+					(reference "TP15")
 					(unit 1)
 				)
 			)

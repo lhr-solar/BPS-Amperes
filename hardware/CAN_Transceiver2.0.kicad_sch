@@ -33389,127 +33389,6 @@
 	)
 	(hierarchical_label "3.3v"
 		(shape input)
-		(at 149.86 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "03ac9165-2ea4-425b-a3a2-2a3ac86ba5ac")
-	)
-	(hierarchical_label "CAN_L"
-		(shape bidirectional)
-		(at 182.88 57.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0aab3452-ca44-4153-98ab-a4260fdc2c76")
-	)
-	(hierarchical_label "CAN_H"
-		(shape bidirectional)
-		(at 182.88 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "16805fa4-525f-4785-8211-5b63dd1de1ce")
-	)
-	(hierarchical_label "CAN_H"
-		(shape bidirectional)
-		(at 107.95 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "16ba06cb-8cbf-4ba2-8961-aabeac5c19e1")
-	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 87.63 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "257454c3-1cbb-49bf-ac29-55b2bfc39800")
-	)
-	(hierarchical_label "CAN_L"
-		(shape bidirectional)
-		(at 223.52 97.79 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "35735da6-cd68-4170-b8db-e419be0a1130")
-	)
-	(hierarchical_label "CAN_TX"
-		(shape input)
-		(at 107.95 71.12 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3f3478ae-d264-4a67-9c59-7de031940324")
-	)
-	(hierarchical_label "CAN_RX"
-		(shape output)
-		(at 107.95 73.66 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "53fc980d-cf29-4e0c-92a6-a4c6e65a77b0")
-	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 213.36 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "91f995af-5ad6-4388-b5d2-2ba28b704c70")
-	)
-	(hierarchical_label "CAN_L"
-		(shape bidirectional)
-		(at 107.95 78.74 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c47537e4-6cb2-42bd-9e36-f2fdbbd88467")
-	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 190.5 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "deaa5507-d4de-4c93-9ade-af6e02b24328")
-	)
-	(hierarchical_label "3.3v"
-		(shape input)
 		(at 87.63 63.5 0)
 		(effects
 			(font
@@ -33517,18 +33396,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e95fa83f-96e3-4782-8016-c95c1e9ac089")
-	)
-	(hierarchical_label "CAN_H"
-		(shape bidirectional)
-		(at 170.18 96.52 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e9ec658b-ebce-4051-855c-5a456c917486")
+		(uuid "1b5ca1b8-1b3c-4c0e-8cfe-cfd2dece74b7")
 	)
 	(hierarchical_label "GND"
 		(shape input)
@@ -33539,7 +33407,128 @@
 			)
 			(justify left)
 		)
-		(uuid "f1342c2b-b829-43d4-8ac0-e31472078542")
+		(uuid "2191146e-3768-44c2-9600-1dbf59080dec")
+	)
+	(hierarchical_label "3.3v"
+		(shape input)
+		(at 149.86 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "30b753c9-df1b-4e0f-b7ce-d3736999821d")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 213.36 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "41fbaa9d-5a04-4484-ac13-0e6f62a62baa")
+	)
+	(hierarchical_label "CAN_RX"
+		(shape output)
+		(at 107.95 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4d19f2df-3cce-44ac-a71f-4eb42c2bbff2")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 190.5 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5cf83611-5445-4f3d-925f-50b89073feb7")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 87.63 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "639c2a60-4c20-4376-adf8-a95f37c198d7")
+	)
+	(hierarchical_label "CAN_TX"
+		(shape input)
+		(at 107.95 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "65dba2f1-ef50-40ae-a1b6-c291872a52fb")
+	)
+	(hierarchical_label "CAN_H"
+		(shape bidirectional)
+		(at 182.88 54.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "793e262c-2bb6-4d8a-9f19-eabd69b9b160")
+	)
+	(hierarchical_label "CAN_L"
+		(shape bidirectional)
+		(at 107.95 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a4be1e89-fbfd-476a-a8ac-70460f7018f0")
+	)
+	(hierarchical_label "CAN_H"
+		(shape bidirectional)
+		(at 107.95 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a830a831-3700-43f3-a7fa-4cacac0c9ef0")
+	)
+	(hierarchical_label "CAN_H"
+		(shape bidirectional)
+		(at 170.18 96.52 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0fe813a-9ad4-4dff-a600-6075b133669e")
+	)
+	(hierarchical_label "CAN_L"
+		(shape bidirectional)
+		(at 223.52 97.79 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cc8e8a27-c4cb-4a8b-89b5-e5014bdb6e78")
 	)
 	(hierarchical_label "GND"
 		(shape input)
@@ -33550,106 +33539,18 @@
 			)
 			(justify left)
 		)
-		(uuid "f97194eb-8b04-459a-bd92-5670cfc15c32")
+		(uuid "d499e27d-9bb6-45d9-8c8a-8ea28444c273")
 	)
-	(symbol
-		(lib_id "Device:C")
-		(at 73.66 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "11fc3897-418c-456a-8fd5-75858f7bdad9")
-		(property "Reference" "C6"
-			(at 76.2 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+	(hierarchical_label "CAN_L"
+		(shape bidirectional)
+		(at 182.88 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right)
 		)
-		(property "Value" "0.1u"
-			(at 75.946 75.946 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 74.6252 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 73.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 73.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C14663"
-			(at 73.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "MLASH168SB7104KTNA01"
-			(at 73.66 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "62490040-1afe-4ec9-9fdd-5ae650351c74")
-		)
-		(pin "2"
-			(uuid "cfbcadea-96cf-424c-ad91-890e544e6363")
-		)
-		(instances
-			(project ""
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-			(project "CAN_Transceiver"
-				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "f7a372e9-9dea-4ba9-9989-c6c2b2ce0b4c")
 	)
 	(symbol
 		(lib_id "ECE319K:C")
@@ -33659,7 +33560,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "269c1b14-22dd-4a9f-bc64-46d9c4d23a1e")
+		(uuid "05ee02aa-4bf8-4f83-87f7-d6c4f9483769")
 		(property "Reference" "C8"
 			(at 194.564 88.646 0)
 			(effects
@@ -33749,393 +33650,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 215.9 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "418918ed-79a5-4844-a068-77984ff1998e")
-		(property "Reference" "JP2"
-			(at 215.9 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TRM"
-			(at 215.9 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 215.9 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 215.9 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Jumper, 2-pole, open"
-			(at 215.9 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1ec1902-e105-4b87-9a53-3c130be47f4d")
-		)
-		(pin "2"
-			(uuid "3d0c2ea2-acd1-49f7-986a-b378f6b430a0")
-		)
-		(instances
-			(project ""
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "JP2")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "JP2")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/81d906df-a099-480a-8398-28a8e913d125"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-			(project "CAN_Transceiver"
-				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 85.09 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7484bcdc-1ddf-4a31-9ac2-deff0b8d2fc5")
-		(property "Reference" "C7"
-			(at 88.138 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 88.138 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 86.0552 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 85.09 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 85.09 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C14663"
-			(at 85.09 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "MLASH168SB7104KTNA01"
-			(at 85.09 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "85aa2bda-d2f7-4634-9149-c3a03f575c6e")
-		)
-		(pin "2"
-			(uuid "1e6d57eb-788f-4ab6-9e32-f0227f9fcce7")
-		)
-		(instances
-			(project ""
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-			(project "CAN_Transceiver"
-				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 62.23 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8bc6d0f8-90a9-4a3e-bd4c-4f1d37db40e4")
-		(property "Reference" "C5"
-			(at 65.278 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 65.278 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 63.1952 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 62.23 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 62.23 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C440198"
-			(at 62.23 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "GRM21BR61H106KE43K"
-			(at 62.23 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "931d7d00-34c0-432f-b957-5973964ff07a")
-		)
-		(pin "2"
-			(uuid "a68fbfcf-27e7-4ded-8e8c-d9afa05a2b87")
-		)
-		(instances
-			(project ""
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/81d906df-a099-480a-8398-28a8e913d125"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-			(project "CAN_Transceiver"
-				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 201.93 85.09 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d3dc1093-5927-44fd-b183-035a11ec5677")
-		(property "Reference" "R23"
-			(at 201.93 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "60"
-			(at 201.93 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 201.93 86.868 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 201.93 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 201.93 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C166918"
-			(at 201.93 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CRCW060360R4FKEA"
-			(at 201.93 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9bcdf47c-1070-4824-954d-f11fc9f517da")
-		)
-		(pin "2"
-			(uuid "eadbc9ef-015e-416b-b429-cb310da85012")
-		)
-		(instances
-			(project "kk36984"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "R23")
-					(unit 1)
-				)
-			)
-			(project "kk36984"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "R23")
-					(unit 1)
-				)
-			)
-			(project "CAN_Transceiver"
-				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "CDSOT23-T24CAN:CDSOT23-T24CAN")
 		(at 185.42 54.61 0)
 		(unit 1)
@@ -34144,8 +33658,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d7bbf058-1019-472a-b210-c9dc6eda02c8")
-		(property "Reference" "D8"
+		(uuid "243198c7-db3f-4bc2-b771-36ed8b4be60f")
+		(property "Reference" "D2"
 			(at 196.85 46.99 0)
 			(effects
 				(font
@@ -34261,7 +33775,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "D8")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -34280,6 +33794,305 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 201.93 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a254260-1e37-4d80-84c4-25a562834ebf")
+		(property "Reference" "R5"
+			(at 201.93 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "60"
+			(at 201.93 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 201.93 86.868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 201.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C166918"
+			(at 201.93 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "CRCW060360R4FKEA"
+			(at 201.93 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9bcdf47c-1070-4824-954d-f11fc9f517da")
+		)
+		(pin "2"
+			(uuid "eadbc9ef-015e-416b-b429-cb310da85012")
+		)
+		(instances
+			(project "kk36984"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+			(project "kk36984"
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+			(project "CAN_Transceiver"
+				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 85.09 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7e978286-fcb5-4793-84ba-096b3387b42e")
+		(property "Reference" "C7"
+			(at 88.138 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 88.138 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 86.0552 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 85.09 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C14663"
+			(at 85.09 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 85.09 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85aa2bda-d2f7-4634-9149-c3a03f575c6e")
+		)
+		(pin "2"
+			(uuid "1e6d57eb-788f-4ab6-9e32-f0227f9fcce7")
+		)
+		(instances
+			(project ""
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+			(project "CAN_Transceiver"
+				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 176.53 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89e56e91-9029-469d-869d-2fe5dab115e0")
+		(property "Reference" "R4"
+			(at 176.53 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "60"
+			(at 176.53 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 176.53 86.868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 176.53 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 176.53 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C166918"
+			(at 176.53 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "CRCW060360R4FKEA"
+			(at 176.53 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86d33648-15d7-4302-99c9-26ba60e42db7")
+		)
+		(pin "2"
+			(uuid "c60f6f6c-5e75-4ba9-87cd-a842ff79f089")
+		)
+		(instances
+			(project ""
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/81d906df-a099-480a-8398-28a8e913d125"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+			(project "CAN_Transceiver"
+				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "TCAN3413DR:TCAN3413DR")
 		(at 111.76 71.12 0)
 		(unit 1)
@@ -34288,8 +34101,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f525b581-e914-48f3-856d-b707a04117a7")
-		(property "Reference" "IC1"
+		(uuid "8f6d7da1-96f4-478e-ba36-6d4cc7ed9c51")
+		(property "Reference" "IC2"
 			(at 128.27 63.5 0)
 			(effects
 				(font
@@ -34420,7 +34233,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "IC1")
+					(reference "IC2")
 					(unit 1)
 				)
 			)
@@ -34439,32 +34252,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 176.53 85.09 90)
+		(lib_id "Device:C")
+		(at 73.66 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f905bbd5-25e3-4518-9a89-c3e959777327")
-		(property "Reference" "R22"
-			(at 176.53 80.01 90)
+		(uuid "b5f0fae8-1c01-4f12-b5a1-0b172f8731d4")
+		(property "Reference" "C6"
+			(at 76.2 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "60"
-			(at 176.53 82.55 90)
+		(property "Value" "0.1u"
+			(at 75.946 75.946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 176.53 86.868 90)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 74.6252 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34473,7 +34288,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 176.53 85.09 0)
+			(at 73.66 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34481,8 +34296,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 176.53 85.09 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 73.66 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34490,8 +34305,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC P/N" "C166918"
-			(at 176.53 85.09 90)
+		(property "LCSC P/N" "C14663"
+			(at 73.66 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34499,8 +34314,8 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "CRCW060360R4FKEA"
-			(at 176.53 85.09 90)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 73.66 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34509,33 +34324,218 @@
 			)
 		)
 		(pin "1"
-			(uuid "86d33648-15d7-4302-99c9-26ba60e42db7")
+			(uuid "62490040-1afe-4ec9-9fdd-5ae650351c74")
 		)
 		(pin "2"
-			(uuid "c60f6f6c-5e75-4ba9-87cd-a842ff79f089")
+			(uuid "cfbcadea-96cf-424c-ad91-890e544e6363")
 		)
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
-					(reference "R22")
+					(reference "C6")
 					(unit 1)
 				)
 			)
 			(project ""
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
-					(reference "R22")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/81d906df-a099-480a-8398-28a8e913d125"
-					(reference "R1")
+					(reference "C6")
 					(unit 1)
 				)
 			)
 			(project "CAN_Transceiver"
 				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
-					(reference "R1")
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 215.9 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e36ccae7-a09b-4c63-aa11-726a2f895ab8")
+		(property "Reference" "JP2"
+			(at 215.9 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TRM"
+			(at 215.9 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 215.9 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 215.9 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1ec1902-e105-4b87-9a53-3c130be47f4d")
+		)
+		(pin "2"
+			(uuid "3d0c2ea2-acd1-49f7-986a-b378f6b430a0")
+		)
+		(instances
+			(project ""
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/81d906df-a099-480a-8398-28a8e913d125"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+			(project "CAN_Transceiver"
+				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 62.23 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "efe5cf3f-c177-4e78-bfcd-384d4298d6ab")
+		(property "Reference" "C5"
+			(at 65.278 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 65.278 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 63.1952 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 62.23 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C440198"
+			(at 62.23 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "GRM21BR61H106KE43K"
+			(at 62.23 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "931d7d00-34c0-432f-b957-5973964ff07a")
+		)
+		(pin "2"
+			(uuid "a68fbfcf-27e7-4ded-8e8c-d9afa05a2b87")
+		)
+		(instances
+			(project ""
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/7a8f5d40-8cff-476b-a6d6-a001c957bc73"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb/9d9eae1e-c713-4323-9845-a569cff8d5d3"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/81d906df-a099-480a-8398-28a8e913d125"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+			(project "CAN_Transceiver"
+				(path "/a09f9696-80ee-4697-8aaa-225f287b667b"
+					(reference "C1")
 					(unit 1)
 				)
 			)

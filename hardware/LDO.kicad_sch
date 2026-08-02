@@ -1824,17 +1824,6 @@
 			)
 		)
 	)
-	(hierarchical_label "GND"
-		(shape input)
-		(at 152.4 76.2 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "71eb7a58-b210-43f6-bdf1-ae13cddb4c73")
-	)
 	(hierarchical_label "Vin"
 		(shape input)
 		(at 127 63.5 180)
@@ -1844,7 +1833,18 @@
 			)
 			(justify right)
 		)
-		(uuid "b986cdb7-a211-439b-bcc5-d65b4ad2edc5")
+		(uuid "05e26697-c48c-4b5b-b5cc-d824c3e32c72")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 152.4 76.2 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "463dab3f-2c76-4cd5-9aca-e725d52e66da")
 	)
 	(hierarchical_label "Vout"
 		(shape output)
@@ -1855,7 +1855,117 @@
 			)
 			(justify left)
 		)
-		(uuid "bfdf1ec7-726d-4392-bf5a-168e481b8216")
+		(uuid "f3f84005-9890-46b2-8f50-9ed02572cb01")
+	)
+	(symbol
+		(lib_id "Device:D_Schottky_Small")
+		(at 133.35 63.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58d3e084-7ec0-40d2-981d-e39cf4b2c9f7")
+		(property "Reference" "D5"
+			(at 133.604 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SBA130CH-AU_R1_000A1"
+			(at 133.604 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+			(at 133.35 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/3/3736/1/11145663EF9055F8C188C22CC003165FC5A818A8439A953D3A6E1D8FCBF51DA1.pdf"
+			(at 133.35 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode, small symbol"
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC P/N" "C191023"
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SBA130CH-AU_R1_000A1 "
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Old P/N" "BAT760-7"
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Old LCSC P/N" "C124187"
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07949f2e-a083-4273-9382-0b69eba2a8a9")
+		)
+		(pin "2"
+			(uuid "92239788-8b6a-4474-afbc-db272288e943")
+		)
+		(instances
+			(project ""
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/8ff43370-8d10-4d2c-b1a3-81d1c2934a98"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -1866,8 +1976,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2b102e1c-01e8-4653-92eb-2045626b696c")
-		(property "Reference" "C2"
+		(uuid "737e22b1-453e-499f-812f-140e8f1e4469")
+		(property "Reference" "C32"
 			(at 168.275 68.5735 0)
 			(effects
 				(font
@@ -1939,7 +2049,7 @@
 		(instances
 			(project "LDO"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
-					(reference "C2")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -1965,7 +2075,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5f10b56c-7496-424f-a7ed-4cbbd3fc3660")
+		(uuid "a1349646-654d-4eac-a4be-35c50c0a1f54")
 		(property "Reference" "TP_3.3V1"
 			(at 166.624 54.356 90)
 			(effects
@@ -2068,8 +2178,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "766d371a-42b5-499b-b058-ab8f85cbe506")
-		(property "Reference" "U1"
+		(uuid "b3c0f02a-cdf5-46ab-b742-e59cb6a25dcf")
+		(property "Reference" "U4"
 			(at 152.4 56.515 0)
 			(effects
 				(font
@@ -2160,123 +2270,13 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
-					(reference "U1")
+					(reference "U4")
 					(unit 1)
 				)
 			)
 			(project ""
 				(path "/8ff43370-8d10-4d2c-b1a3-81d1c2934a98"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky_Small")
-		(at 133.35 63.5 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "adbd74cf-e28f-4fcb-b636-d956609f6a8d")
-		(property "Reference" "D1"
-			(at 133.604 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SBA130CH-AU_R1_000A1"
-			(at 133.604 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
-			(at 133.35 63.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/datasheet/3/3736/1/11145663EF9055F8C188C22CC003165FC5A818A8439A953D3A6E1D8FCBF51DA1.pdf"
-			(at 133.35 63.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Schottky diode, small symbol"
-			(at 133.35 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC P/N" "C191023"
-			(at 133.35 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "SBA130CH-AU_R1_000A1 "
-			(at 133.35 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Old P/N" "BAT760-7"
-			(at 133.35 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Old LCSC P/N" "C124187"
-			(at 133.35 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "07949f2e-a083-4273-9382-0b69eba2a8a9")
-		)
-		(pin "2"
-			(uuid "92239788-8b6a-4474-afbc-db272288e943")
-		)
-		(instances
-			(project ""
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/8ff43370-8d10-4d2c-b1a3-81d1c2934a98"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -2291,8 +2291,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f96e3358-3125-41a4-8f93-006fa6c5f6b9")
-		(property "Reference" "C1"
+		(uuid "f1f989ec-915c-4451-b680-36c0bead4328")
+		(property "Reference" "C31"
 			(at 142.875 68.5735 0)
 			(effects
 				(font
@@ -2364,7 +2364,7 @@
 		(instances
 			(project "LDO"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
-					(reference "C1")
+					(reference "C31")
 					(unit 1)
 				)
 			)

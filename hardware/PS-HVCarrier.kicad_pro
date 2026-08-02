@@ -619,12 +619,12 @@
       "IMD_CAN_Transceiver"
     ],
     [
-      "3d7c722a-11ca-4e65-b53b-d133826eeb8d",
-      "12VBuck"
-    ],
-    [
       "7a8f5d40-8cff-476b-a6d6-a001c957bc73",
       "CAB_BPS_CAN_Transceiver"
+    ],
+    [
+      "3d7c722a-11ca-4e65-b53b-d133826eeb8d",
+      "12VBuck"
     ],
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
@@ -640,7 +640,7 @@
     ],
     [
       "904fa10a-747c-46cf-90d1-33d76069dc5d",
-      "Power"
+      "Power_Data"
     ],
     [
       "429789a2-93db-48e4-a73d-32df605a2afb",
@@ -669,6 +669,10 @@
     [
       "f80b2a8a-0bb6-44ce-a057-d1999ed66d19",
       "AMC1311 Design"
+    ],
+    [
+      "60357f19-c5b5-475b-9bda-3cd8a17d6bc5",
+      "Shunt Design"
     ]
   ],
   "text_variables": {}

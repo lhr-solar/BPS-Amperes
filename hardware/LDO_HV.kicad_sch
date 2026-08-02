@@ -1867,7 +1867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b102e1c-01e8-4653-92eb-2045626b696c")
-		(property "Reference" "C2"
+		(property "Reference" "C47"
 			(at 168.275 68.5735 0)
 			(effects
 				(font
@@ -1939,7 +1939,7 @@
 		(instances
 			(project "LDO"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/65331a51-ccf3-4481-a1ca-d2dd52d3f2f0"
-					(reference "C2")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -1966,7 +1966,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5f10b56c-7496-424f-a7ed-4cbbd3fc3660")
-		(property "Reference" "TP_3.3V1"
+		(property "Reference" "TP_3.3V2"
 			(at 166.624 54.356 90)
 			(effects
 				(font
@@ -2047,7 +2047,7 @@
 		(instances
 			(project "LDO"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/65331a51-ccf3-4481-a1ca-d2dd52d3f2f0"
-					(reference "TP_3.3V1")
+					(reference "TP_3.3V2")
 					(unit 1)
 				)
 			)
@@ -2069,7 +2069,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "766d371a-42b5-499b-b058-ab8f85cbe506")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 152.4 56.515 0)
 			(effects
 				(font
@@ -2160,7 +2160,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/65331a51-ccf3-4481-a1ca-d2dd52d3f2f0"
-					(reference "U1")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -2182,7 +2182,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "adbd74cf-e28f-4fcb-b636-d956609f6a8d")
-		(property "Reference" "D1"
+		(property "Reference" "D12"
 			(at 133.604 57.15 0)
 			(effects
 				(font
@@ -2270,7 +2270,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/65331a51-ccf3-4481-a1ca-d2dd52d3f2f0"
-					(reference "D1")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -2292,7 +2292,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f96e3358-3125-41a4-8f93-006fa6c5f6b9")
-		(property "Reference" "C1"
+		(property "Reference" "C46"
 			(at 142.875 68.5735 0)
 			(effects
 				(font
@@ -2364,7 +2364,7 @@
 		(instances
 			(project "LDO"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/65331a51-ccf3-4481-a1ca-d2dd52d3f2f0"
-					(reference "C1")
+					(reference "C46")
 					(unit 1)
 				)
 			)

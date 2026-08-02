@@ -5201,7 +5201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2a58f5c-5b53-4bfa-af1c-ad84b32d2305")
-		(property "Reference" "R6"
+		(property "Reference" "R13"
 			(at 227.33 85.0899 0)
 			(effects
 				(font
@@ -5273,7 +5273,7 @@
 		(instances
 			(project "PS-Buck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/3d7c722a-11ca-4e65-b53b-d133826eeb8d"
-					(reference "R6")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -5307,7 +5307,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c670e479-9032-4930-8709-ad4a3c228811")
-		(property "Reference" "R7"
+		(property "Reference" "R14"
 			(at 227.33 92.7099 0)
 			(effects
 				(font
@@ -5379,7 +5379,7 @@
 		(instances
 			(project "PS-Buck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/3d7c722a-11ca-4e65-b53b-d133826eeb8d"
-					(reference "R7")
+					(reference "R14")
 					(unit 1)
 				)
 			)

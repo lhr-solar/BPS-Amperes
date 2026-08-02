@@ -34047,7 +34047,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d3dc1093-5927-44fd-b183-035a11ec5677")
-		(property "Reference" "R3"
+		(property "Reference" "R10"
 			(at 201.93 80.01 90)
 			(effects
 				(font
@@ -34117,7 +34117,7 @@
 		(instances
 			(project "kk36984"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/8e4b18be-f701-4f79-b148-bbeadfa1a129"
-					(reference "R3")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -34145,7 +34145,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d7bbf058-1019-472a-b210-c9dc6eda02c8")
-		(property "Reference" "D1"
+		(property "Reference" "D8"
 			(at 196.85 46.99 0)
 			(effects
 				(font
@@ -34261,7 +34261,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/8e4b18be-f701-4f79-b148-bbeadfa1a129"
-					(reference "D1")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -34447,7 +34447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f905bbd5-25e3-4518-9a89-c3e959777327")
-		(property "Reference" "R2"
+		(property "Reference" "R9"
 			(at 176.53 80.01 90)
 			(effects
 				(font
@@ -34517,7 +34517,7 @@
 		(instances
 			(project ""
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/8e4b18be-f701-4f79-b148-bbeadfa1a129"
-					(reference "R2")
+					(reference "R9")
 					(unit 1)
 				)
 			)

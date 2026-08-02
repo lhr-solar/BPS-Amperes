@@ -4264,7 +4264,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26e585c9-696b-4ee5-bc20-fce1ff401089")
-		(property "Reference" "R8"
+		(property "Reference" "R15"
 			(at 170.18 41.9099 0)
 			(effects
 				(font
@@ -4342,7 +4342,7 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "R8")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -4522,7 +4522,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79420c18-c635-42f8-9b5e-5491a0daa5c3")
-		(property "Reference" "R9"
+		(property "Reference" "R16"
 			(at 170.18 49.5299 0)
 			(effects
 				(font
@@ -4600,7 +4600,7 @@
 			)
 			(project "5VBuck"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/cdc38143-6c01-474d-8a8e-ff8bf18b44d0"
-					(reference "R9")
+					(reference "R16")
 					(unit 1)
 				)
 			)

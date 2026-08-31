@@ -580,12 +580,132 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet Embed",
+          "name": "Datasheet Embed",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "If",
+          "name": "If",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC MFG P/N",
+          "name": "LCSC MFG P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC P/N",
+          "name": "LCSC P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LSCS P/N",
+          "name": "LSCS P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mfg",
+          "name": "Mfg",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser P/N",
+          "name": "Mouser P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Old LCSC P/N",
+          "name": "Old LCSC P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Old P/N",
+          "name": "Old P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "P/N",
+          "name": "P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vf",
+          "name": "Vf",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Color",
+          "name": "Color",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -638,7 +758,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG7-8,#PWR44-50",
+    "used_designators": "Q1-2,S1,JP1-2,TP_3.3V1,R1-67,TP1-24,Reset1,L1-2,J1-10,IC1-3,Y1,D1-22,#PWR1-52,SW1,FB1-2,C1-71,U1-10,#FLG1-8",
     "variants": []
   },
   "sheets": [
@@ -647,16 +767,16 @@
       "PS-HVCarrier"
     ],
     [
-      "3d7c722a-11ca-4e65-b53b-d133826eeb8d",
-      "12VBuck"
+      "90a25a21-5b5d-49e9-8593-0616cc5fc62a",
+      "PowerProtection"
     ],
     [
       "d9c02800-502d-4b66-a933-6a0fcb4cc3ad",
       "LDO"
     ],
     [
-      "e8d89aa6-a5dc-41a5-9023-e7cd759e49d9",
-      "PowerProtection"
+      "c5db4e3e-bfb8-40cd-87d6-5e9e9bc2d94c",
+      "100PinMCU"
     ],
     [
       "8e4b18be-f701-4f79-b148-bbeadfa1a129",
@@ -664,15 +784,11 @@
     ],
     [
       "7a8f5d40-8cff-476b-a6d6-a001c957bc73",
-      "CAB_BPS_CAN_Transceiver"
+      "BPS_CAN_Transceiver"
     ],
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
       "5VBuck"
-    ],
-    [
-      "f0812fe3-6145-4dbc-9ba0-df8905216d8c",
-      "100PinMCU"
     ],
     [
       "904fa10a-747c-46cf-90d1-33d76069dc5d",
@@ -685,10 +801,6 @@
     [
       "83ab5b0b-4732-42c0-82fe-e74f4113c82a",
       "Voltage_Sense"
-    ],
-    [
-      "60357f19-c5b5-475b-9bda-3cd8a17d6bc5",
-      "Shunt Design"
     ]
   ],
   "text_variables": {},

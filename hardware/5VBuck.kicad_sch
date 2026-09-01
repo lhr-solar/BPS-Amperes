@@ -14,8 +14,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 2.54 0)
+			(property "Reference" "U3"
+				(at 15.24 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -25,7 +25,7 @@
 				)
 			)
 			(property "Value" "LMR51635XDDCR"
-				(at 0 0 0)
+				(at 15.24 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -34,7 +34,7 @@
 					)
 				)
 			)
-			(property "Footprint" "DDC0006A-MFG"
+			(property "Footprint" "LHRS_ICs:DDC0006A-MFG"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -46,7 +46,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/gpn/lmr51635"
+			(property "Datasheet" "kicad-embed://lmr51635.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -59,6 +59,28 @@
 				)
 			)
 			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC P/N" "C42432812"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "P/N" "LMR51635XDDCR"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -150,24 +172,6 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
-					(at 30.48 -10.16 180)
-					(length 5.08)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at 0 -5.08 0)
 					(length 5.08)
@@ -179,24 +183,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 5.08)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -251,6 +237,44 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LMR51635XDDCR_1_1"
+				(pin input line
+					(at 30.48 -10.16 180)
+					(length 5.08)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 0 0)
+					(length 5.08)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)

@@ -1794,8 +1794,8 @@
 		(uuid "7f9b5fa7-fe1f-4aa2-af0f-5efd33d08d53")
 	)
 	(rectangle
-		(start 96.393 128.27)
-		(end 57.658 154.94)
+		(start 57.658 128.27)
+		(end 101.346 154.94)
 		(stroke
 			(width 0)
 			(type default)
@@ -2318,16 +2318,6 @@
 		)
 		(uuid "ff745ed2-4292-4258-b787-ac69b2c52881")
 	)
-	(label "D+"
-		(at 90.17 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "20990875-d3ee-450c-824f-82d16ae5a1d9")
-	)
 	(label "CC1"
 		(at 78.74 105.41 0)
 		(effects
@@ -2358,36 +2348,6 @@
 		)
 		(uuid "5517f78d-0a4d-4155-9950-8465cc5d80d5")
 	)
-	(label "USB_5V"
-		(at 67.31 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8795ce27-e01e-4ab1-910c-5b851a7c76de")
-	)
-	(label "D-"
-		(at 53.34 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a3b3379d-0ee8-4374-b798-607ffe1f234e")
-	)
-	(label "D+"
-		(at 53.34 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b32b0afb-7fef-4ba3-98e2-0591bbc251d3")
-	)
 	(label "CC1"
 		(at 55.88 96.52 180)
 		(effects
@@ -2407,26 +2367,6 @@
 			(justify left bottom)
 		)
 		(uuid "d7a3130a-b768-42b2-91ab-ed9467fd9675")
-	)
-	(label "D-"
-		(at 90.17 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ec840648-e02e-4b4f-9c48-1d46dde81838")
-	)
-	(label "USB_5V"
-		(at 185.42 49.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fcbcb005-e26f-4128-9988-5a9633334fcf")
 	)
 	(hierarchical_label "+3v3"
 		(shape output)
@@ -2472,6 +2412,28 @@
 		)
 		(uuid "4feeed03-fcbc-4387-be0c-2296b2ca67a2")
 	)
+	(hierarchical_label "+5V"
+		(shape output)
+		(at 67.31 86.36 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "74c55c2f-9504-41bf-a037-95922c700758")
+	)
+	(hierarchical_label "USB_DP"
+		(shape input)
+		(at 90.17 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b59a2095-4747-44c9-8f6c-6fe46870e306")
+	)
 	(hierarchical_label "+24V"
 		(shape output)
 		(at 115.57 44.45 90)
@@ -2482,6 +2444,17 @@
 			(justify left)
 		)
 		(uuid "b6c9cf8f-c1b5-43e4-9121-5ce190582892")
+	)
+	(hierarchical_label "USB_DM"
+		(shape input)
+		(at 90.17 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c87f3e95-6b63-469a-859b-a33922f9e7a5")
 	)
 	(hierarchical_label "USB_DM"
 		(shape input)
@@ -3437,7 +3410,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_ICs:TPD2EUSB30DRTR"
+		(property "Footprint" "LHRS_ICs:TPD2EUSB30DRTR"
 			(at 67.31 234.62 0)
 			(hide yes)
 			(show_name no)
@@ -3908,7 +3881,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "UTSVT_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+		(property "Footprint" "LHRS_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 39.37 106.68 0)
 			(hide yes)
 			(show_name no)

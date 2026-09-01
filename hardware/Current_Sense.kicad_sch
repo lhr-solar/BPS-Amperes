@@ -49740,7 +49740,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LHRS_Connectors:Molex_Nano-Fit_105309-xx05_1x05_P2.50mm_Vertical"
+		(property "Footprint" "LHRS_Connectors:Molex_Nano-Fit_105309-xx04_1x04_P2.50mm_Vertical"
 			(at 142.24 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -51449,28 +51449,28 @@
 			)
 		)
 		(pin "7"
-			(uuid "2421449c-7da6-4eb3-a799-c4723967d6f7")
+			(uuid "2421449c-7da6-4eb3-a799-c4723967d6f8")
 		)
 		(pin "8"
-			(uuid "c7e0cdeb-5ccd-46b2-8a83-2e9b2df00b49")
+			(uuid "c7e0cdeb-5ccd-46b2-8a83-2e9b2df00b4a")
 		)
 		(pin "4"
-			(uuid "7e67d141-3b6d-482e-9ca0-48b422cb2359")
+			(uuid "7e67d141-3b6d-482e-9ca0-48b422cb235a")
 		)
 		(pin "5"
-			(uuid "4781528f-b153-446e-9c9a-d4a856dccd71")
+			(uuid "4781528f-b153-446e-9c9a-d4a856dccd72")
 		)
 		(pin "2"
-			(uuid "42c70c27-82e2-4149-b659-f7b4db7a63b7")
+			(uuid "42c70c27-82e2-4149-b659-f7b4db7a63b8")
 		)
 		(pin "6"
-			(uuid "da5d35d0-c107-471a-8c7d-30e4f27d78de")
+			(uuid "da5d35d0-c107-471a-8c7d-30e4f27d78df")
 		)
 		(pin "1"
-			(uuid "db380af0-78d9-4a08-a6b6-9872da73516d")
+			(uuid "db380af0-78d9-4a08-a6b6-9872da73516e")
 		)
 		(pin "3"
-			(uuid "430fc58b-26cc-4ebb-bc83-41b9ce069710")
+			(uuid "430fc58b-26cc-4ebb-bc83-41b9ce069711")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -52612,28 +52612,28 @@
 			)
 		)
 		(pin "7"
-			(uuid "2421449c-7da6-4eb3-a799-c4723967d6f7")
+			(uuid "2421449c-7da6-4eb3-a799-c4723967d6f9")
 		)
 		(pin "8"
-			(uuid "c7e0cdeb-5ccd-46b2-8a83-2e9b2df00b49")
+			(uuid "c7e0cdeb-5ccd-46b2-8a83-2e9b2df00b4b")
 		)
 		(pin "4"
-			(uuid "7e67d141-3b6d-482e-9ca0-48b422cb2359")
+			(uuid "7e67d141-3b6d-482e-9ca0-48b422cb235b")
 		)
 		(pin "5"
-			(uuid "4781528f-b153-446e-9c9a-d4a856dccd71")
+			(uuid "4781528f-b153-446e-9c9a-d4a856dccd73")
 		)
 		(pin "2"
-			(uuid "42c70c27-82e2-4149-b659-f7b4db7a63b7")
+			(uuid "42c70c27-82e2-4149-b659-f7b4db7a63b9")
 		)
 		(pin "6"
-			(uuid "da5d35d0-c107-471a-8c7d-30e4f27d78de")
+			(uuid "da5d35d0-c107-471a-8c7d-30e4f27d78e0")
 		)
 		(pin "1"
-			(uuid "db380af0-78d9-4a08-a6b6-9872da73516d")
+			(uuid "db380af0-78d9-4a08-a6b6-9872da73516f")
 		)
 		(pin "3"
-			(uuid "430fc58b-26cc-4ebb-bc83-41b9ce069710")
+			(uuid "430fc58b-26cc-4ebb-bc83-41b9ce069712")
 		)
 		(instances
 			(project "PS-HVCarrier"

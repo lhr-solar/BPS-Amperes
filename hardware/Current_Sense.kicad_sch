@@ -48977,17 +48977,6 @@
 		)
 		(uuid "c09d09d6-1987-473e-be5d-89bfee893e77")
 	)
-	(hierarchical_label "3v3+"
-		(shape input)
-		(at 246.38 69.85 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0fb175f1-3ab1-4b86-8e52-2809f5c18d4a")
-	)
 	(hierarchical_label "LZSR UOUT"
 		(shape output)
 		(at 33.02 33.02 180)
@@ -48999,7 +48988,18 @@
 		)
 		(uuid "1d2da1e4-f192-4f89-b779-066e73132a36")
 	)
-	(hierarchical_label "3v3+"
+	(hierarchical_label "+3v3"
+		(shape input)
+		(at 50.8 52.07 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "206cb804-bf92-41ba-bc0c-721ed7e86435")
+	)
+	(hierarchical_label "+3v3"
 		(shape input)
 		(at 171.45 69.85 180)
 		(effects
@@ -49032,27 +49032,16 @@
 		)
 		(uuid "37f6901e-0006-415b-ae7c-d7dadaa5b36f")
 	)
-	(hierarchical_label "3v3+"
+	(hierarchical_label "+3v3"
 		(shape input)
-		(at 55.88 76.2 90)
+		(at 50.8 25.4 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "48cefeb9-c55f-4c01-ba7a-85de8c3d0e66")
-	)
-	(hierarchical_label "3v3+"
-		(shape input)
-		(at 50.8 52.07 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "48efd65c-07b3-4555-bc43-2e57edab7fd9")
+		(uuid "4352db17-e403-44e6-84c5-bc61f6b03c8e")
 	)
 	(hierarchical_label "LZSR UREF"
 		(shape output)
@@ -49065,7 +49054,29 @@
 		)
 		(uuid "4fedb5fd-cc35-4115-937d-b9044b403dfe")
 	)
-	(hierarchical_label "3v3+"
+	(hierarchical_label "+3v3"
+		(shape input)
+		(at 55.88 76.2 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "52fcd492-4a30-42b5-a591-89774c98628d")
+	)
+	(hierarchical_label "+3v3"
+		(shape input)
+		(at 246.38 69.85 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5a9bfce9-8088-44d5-bb73-303ef59c996f")
+	)
+	(hierarchical_label "+3v3"
 		(shape input)
 		(at 144.78 60.96 0)
 		(effects
@@ -49086,17 +49097,6 @@
 			(justify left)
 		)
 		(uuid "7010aa18-2aab-4400-9ec0-73309a794142")
-	)
-	(hierarchical_label "3v3+"
-		(shape input)
-		(at 50.8 25.4 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "78c1ab1b-90f0-434c-8b70-58e6a6bc055a")
 	)
 	(hierarchical_label "SHUNT ADC UREF"
 		(shape input)
@@ -49132,7 +49132,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "032d2de0-fbbf-490a-a2d0-116e5a11a6d6")
-		(property "Reference" "R34"
+		(property "Reference" "R33"
 			(at 62.23 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49194,7 +49194,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "R34")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -49976,7 +49976,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40faa8ee-d4fb-4bb3-a1b3-0c7158fe7317")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR024"
 			(at 153.67 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -50036,7 +50036,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "#PWR025")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -50053,7 +50053,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4438cd4c-ec68-4189-a295-3f8e3354f835")
-		(property "Reference" "TP17"
+		(property "Reference" "TP18"
 			(at 80.01 80.5179 0)
 			(hide yes)
 			(show_name no)
@@ -50115,7 +50115,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP17")
+					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -50434,7 +50434,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "54be466e-2666-4040-bffa-ea29ebd64471")
-		(property "Reference" "TP16"
+		(property "Reference" "TP17"
 			(at 80.01 56.3879 0)
 			(hide yes)
 			(show_name no)
@@ -50496,7 +50496,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP16")
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -50594,7 +50594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "692b898f-c918-49cf-b397-f59d24688ec0")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR026"
 			(at 229.87 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -50654,7 +50654,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "#PWR027")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -50855,7 +50855,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ec0a1cc-d199-4026-9c5c-ba6ff4117f6f")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR025"
 			(at 180.34 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -50915,7 +50915,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "#PWR026")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -51189,7 +51189,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "967a7a44-6adf-46b9-9230-a629d99098bd")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR023"
 			(at 86.36 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -51250,7 +51250,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "#PWR024")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -51585,7 +51585,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ac684a57-d23a-4c99-9874-606666e61057")
-		(property "Reference" "TP15"
+		(property "Reference" "TP16"
 			(at 80.01 28.4479 0)
 			(hide yes)
 			(show_name no)
@@ -51647,7 +51647,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP15")
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -51744,7 +51744,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b13dab3b-ba53-4f1f-b479-dee7de5d6d63")
-		(property "Reference" "TP18"
+		(property "Reference" "TP19"
 			(at 179.07 29.7179 0)
 			(hide yes)
 			(show_name no)
@@ -51806,7 +51806,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP18")
+					(reference "TP19")
 					(unit 1)
 				)
 			)
@@ -51917,7 +51917,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b62967d1-b434-4960-a6c1-5bdcf5b8cd01")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR027"
 			(at 246.38 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -51977,7 +51977,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "#PWR028")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -51994,7 +51994,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd9912ab-b543-4716-8935-5e559f271204")
-		(property "Reference" "TP19"
+		(property "Reference" "TP20"
 			(at 179.07 50.0379 0)
 			(hide yes)
 			(show_name no)
@@ -52056,7 +52056,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP19")
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -52835,7 +52835,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ef316b3f-c80d-4c81-bcff-af61be04d9bb")
-		(property "Reference" "R32"
+		(property "Reference" "R34"
 			(at 62.23 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52897,7 +52897,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "R32")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -52914,7 +52914,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f10ec30c-b6a2-40ba-a60e-eda7faa71393")
-		(property "Reference" "TP20"
+		(property "Reference" "TP21"
 			(at 247.65 48.7679 0)
 			(hide yes)
 			(show_name no)
@@ -52976,7 +52976,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP20")
+					(reference "TP21")
 					(unit 1)
 				)
 			)
@@ -53074,7 +53074,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe9e6792-2da3-4987-94e8-72f6a7aa4579")
-		(property "Reference" "R33"
+		(property "Reference" "R32"
 			(at 62.23 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53136,7 +53136,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "R33")
+					(reference "R32")
 					(unit 1)
 				)
 			)

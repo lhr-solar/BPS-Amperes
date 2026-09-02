@@ -985,7 +985,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 71.12) (xy 266.7 71.12)
+			(xy 257.81 36.83) (xy 265.43 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1025,7 +1025,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 82.55) (xy 266.7 82.55)
+			(xy 257.81 48.26) (xy 265.43 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1035,7 +1035,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 86.36) (xy 266.7 86.36)
+			(xy 257.81 52.07) (xy 265.43 52.07)
 		)
 		(stroke
 			(width 0)
@@ -1065,7 +1065,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 78.74) (xy 266.7 78.74)
+			(xy 257.81 44.45) (xy 265.43 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1105,7 +1105,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 74.93) (xy 266.7 74.93)
+			(xy 257.81 40.64) (xy 265.43 40.64)
 		)
 		(stroke
 			(width 0)
@@ -13018,7 +13018,7 @@
 		(uuid "0c165719-7ace-4658-8b5b-c9f5225dbb3b")
 	)
 	(label "UOUT"
-		(at 259.08 78.74 0)
+		(at 257.81 44.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13028,7 +13028,7 @@
 		(uuid "13bf41c0-efd3-4bac-9d4f-3fa45d9fd260")
 	)
 	(label "UREF"
-		(at 259.08 82.55 0)
+		(at 257.81 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13058,7 +13058,7 @@
 		(uuid "3c1fb7e0-55e4-472e-8390-8e36b827fc12")
 	)
 	(label "OCD"
-		(at 259.08 86.36 0)
+		(at 257.81 52.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13078,7 +13078,7 @@
 		(uuid "7e8444f1-d328-4cc9-aee8-c8462086a58f")
 	)
 	(label "GND"
-		(at 259.08 74.93 0)
+		(at 257.81 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13098,7 +13098,7 @@
 		(uuid "d7141c0d-b73d-4c99-8eba-50990d5c570c")
 	)
 	(label "+UC"
-		(at 259.08 71.12 0)
+		(at 257.81 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13737,7 +13737,7 @@
 	(symbol
 		(lib_name "CAN_NANO_01x05_1")
 		(lib_id "lhrs_connectors:CAN_NANO_01x05")
-		(at 267.97 64.77 0)
+		(at 266.7 30.48 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13747,7 +13747,7 @@
 		(dnp no)
 		(uuid "dc53a860-9763-4f5f-8cf0-26033539a4a9")
 		(property "Reference" "J8"
-			(at 272.288 64.77 0)
+			(at 271.018 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13758,7 +13758,7 @@
 			)
 		)
 		(property "Value" "LZSR 80-P"
-			(at 268.732 67.31 0)
+			(at 267.462 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13769,7 +13769,7 @@
 			)
 		)
 		(property "Footprint" "LHRS_Connectors:Molex_Nano-Fit_105309-xx05_1x05_P2.50mm_Vertical"
-			(at 267.97 64.77 0)
+			(at 266.7 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13780,7 +13780,7 @@
 			)
 		)
 		(property "Datasheet" "kicad-embed://lzsr_80_p.pdf"
-			(at 267.97 64.77 0)
+			(at 266.7 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13791,7 +13791,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 267.97 64.77 0)
+			(at 266.7 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13802,7 +13802,7 @@
 			)
 		)
 		(property "P/N" "1053091105"
-			(at 267.97 64.77 0)
+			(at 266.7 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

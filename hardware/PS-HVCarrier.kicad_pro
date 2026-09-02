@@ -758,7 +758,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "Q1-2,S1,JP1-2,TP_3.3V1,R1-67,TP1-29,U1-10,FB1-2,C1-71,SW1,Reset1,L1-2,J1-10,IC1-3,D1-24,#PWR1-52,Y1,#FLG1-8",
+    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-27,IC1-3,J1-14,L1-2,Reset1,FB1-4,C1-78,SW1-3,U1-10,TP1-35,R1-69,TP_3.3V1,JP1-2,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -789,6 +789,10 @@
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
       "5VBuck"
+    ],
+    [
+      "525eebd7-cd9b-471b-950d-358e3ce0c5f6",
+      "48PinMCU"
     ],
     [
       "904fa10a-747c-46cf-90d1-33d76069dc5d",

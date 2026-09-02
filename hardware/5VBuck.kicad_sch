@@ -4892,7 +4892,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "kicad-embed://lmr51635.pdf"
+		(property "Datasheet" "kicad-embed://LMR51635XDDCR.pdf"
 			(at 58.42 41.91 0)
 			(hide yes)
 			(show_name no)

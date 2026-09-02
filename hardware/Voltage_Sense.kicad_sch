@@ -46982,7 +46982,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/amc3311-q1"
+		(property "Datasheet" "kicad-embed://amc3311-q1.pdf"
 			(at 114.3 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -51502,7 +51502,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/amc3311-q1"
+		(property "Datasheet" "kicad-embed://amc3311-q1.pdf"
 			(at 113.03 22.86 0)
 			(hide yes)
 			(show_name no)

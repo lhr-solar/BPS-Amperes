@@ -43760,7 +43760,7 @@
 	)
 	(text "Vin_HV = Motor_ADC = Precharge_ADC\n\n0V = 0V\n35V = 0.5V\n70V = 1V\n105V = 1.5V\n140V = 2.0V"
 		(exclude_from_sim no)
-		(at 36.576 185.674 0)
+		(at 53.848 186.436 0)
 		(effects
 			(font
 				(size 1.27 1.27)

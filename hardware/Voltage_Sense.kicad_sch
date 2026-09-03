@@ -249,7 +249,7 @@
 		)
 		(uuid "f24d8a13-2425-433d-98f3-4b48b934540c")
 	)
-	(hierarchical_label "Motor-_DIAG"
+	(hierarchical_label "MOTOR-_DIAG"
 		(shape output)
 		(at 204.47 113.03 0)
 		(effects
@@ -293,7 +293,7 @@
 		)
 		(uuid "36497370-32fe-43dc-be3e-36276db1e371")
 	)
-	(hierarchical_label "Motor+_ADC"
+	(hierarchical_label "MOTOR+_ADC"
 		(shape output)
 		(at 110.49 120.65 0)
 		(effects
@@ -370,7 +370,7 @@
 		)
 		(uuid "a78273d1-42c6-479d-acb1-cadc26fa1eda")
 	)
-	(hierarchical_label "Motor+_DIAG"
+	(hierarchical_label "MOTOR+_DIAG"
 		(shape output)
 		(at 110.49 111.76 0)
 		(effects
@@ -392,7 +392,7 @@
 		)
 		(uuid "bcbb3918-8d1d-4322-936c-9c95fc2ec790")
 	)
-	(hierarchical_label "Motor-_ADC"
+	(hierarchical_label "MOTOR-_ADC"
 		(shape output)
 		(at 204.47 121.92 0)
 		(effects
@@ -452,7 +452,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "voltageSense.kicad_sch"
+		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
 			(at 45.72 76.7846 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -538,7 +538,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "voltageSense.kicad_sch"
+		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
 			(at 45.72 142.8246 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -624,7 +624,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "voltageSense.kicad_sch"
+		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
 			(at 140.97 144.0946 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -710,7 +710,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "voltageSense.kicad_sch"
+		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
 			(at 140.97 76.7846 0)
 			(show_name no)
 			(do_not_autoplace no)

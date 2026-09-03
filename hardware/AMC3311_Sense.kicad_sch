@@ -45383,7 +45383,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "HV+_OUTN"
+		(property "Value" "OUTN TP"
 			(at 249.936 76.454 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45928,7 +45928,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "HV+_DIAG"
+		(property "Value" "DIAG TP"
 			(at 249.936 53.594 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46881,7 +46881,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "HV+_OUTP"
+		(property "Value" "OUTP TP"
 			(at 249.936 66.294 0)
 			(show_name no)
 			(do_not_autoplace no)

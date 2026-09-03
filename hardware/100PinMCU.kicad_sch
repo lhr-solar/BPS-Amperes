@@ -63528,7 +63528,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3d1f9f1-3933-41be-a847-6dcccd91f7d9")
-		(property "Reference" "J7"
+		(property "Reference" "J6"
 			(at 225.552 128.524 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63629,7 +63629,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c5db4e3e-bfb8-40cd-87d6-5e9e9bc2d94c"
-					(reference "J7")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -66424,7 +66424,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fe1500a8-881f-4651-91f8-6b45a7a1302b")
-		(property "Reference" "J8"
+		(property "Reference" "J7"
 			(at 224.536 146.304 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -66494,7 +66494,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c5db4e3e-bfb8-40cd-87d6-5e9e9bc2d94c"
-					(reference "J8")
+					(reference "J7")
 					(unit 1)
 				)
 			)

@@ -2302,7 +2302,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b3c0f02a-cdf5-46ab-b742-e59cb6a25dcf")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 152.4 56.515 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2411,7 +2411,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/d9c02800-502d-4b66-a933-6a0fcb4cc3ad"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)

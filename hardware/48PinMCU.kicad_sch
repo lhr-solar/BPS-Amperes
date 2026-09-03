@@ -5,280 +5,6 @@
 	(uuid "b973e36d-c926-4cad-b0c3-dce51444ffeb")
 	(paper "A4")
 	(lib_symbols
-		(symbol "100PinMCU:SWD_Header_02x02"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SWD_Header_02x02"
-				(at 1.778 -11.684 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "878320406:CONN04_878320406_MOL"
-				(at -0.254 6.604 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "kicad-embed://Conn_02x02_Odd_Even.pdf"
-				(at 1.016 10.922 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x02"
-				(at 1.016 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "P/N" "0878320406"
-				(at 0 4.064 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LSCS P/N" "C17492485"
-				(at 11.938 4.064 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SWD_Header_02x02_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 5.334 -8.89)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 0.254)
-					(end 0 0)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.54)
-					(end 0 -2.794)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.62)
-					(end 0 -7.874)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 0 -5.334)
-					(end -1.27 -5.08)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "3V3\n\n"
-					(at 0.508 -0.762 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-						(justify left)
-					)
-				)
-				(text "GND\n"
-					(at 0.508 -2.54 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-						(justify left)
-					)
-				)
-				(text "SWCLK"
-					(at 0.508 -5.08 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-						(justify left)
-					)
-				)
-				(text "SWDIO"
-					(at 0.508 -7.62 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-						(justify left)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
@@ -1488,6 +1214,280 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lhrs_connectors:SWD_Header"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SWD_Header"
+				(at 1.27 -10.668 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "878320406:CONN04_878320406_MOL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "kicad-embed://Conn_02x02_Odd_Even.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x02"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "P/N" "0878320406"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LSCS P/N" "C17492485"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SWD_Header_1_1"
+				(rectangle
+					(start 0 1.27)
+					(end 6.604 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 0 0.254)
+					(end 1.27 0)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 -2.54)
+					(end 1.27 -2.794)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 -7.62)
+					(end 1.27 -7.874)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.334)
+					(end 0 -5.08)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "3V3\n\n"
+					(at 1.778 -0.762 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+						(justify left)
+					)
+				)
+				(text "GND\n"
+					(at 1.778 -2.54 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+						(justify left)
+					)
+				)
+				(text "SWCLK"
+					(at 1.778 -5.08 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+						(justify left)
+					)
+				)
+				(text "SWDIO"
+					(at 1.778 -7.62 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+						(justify left)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -5.08 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -7.62 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -59944,7 +59944,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23d9952f-43a1-4fa6-846e-7b34b1746eac")
-		(property "Reference" "D11"
+		(property "Reference" "D9"
 			(at 238.76 101.5999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -60052,7 +60052,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
-					(reference "D11")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -60075,7 +60075,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "24916197-2f7a-4e03-839c-f0c49e9c9e5b")
-		(property "Reference" "U3"
+		(property "Reference" "U6"
 			(at 88.392 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -60301,137 +60301,13 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
-					(reference "U3")
+					(reference "U6")
 					(unit 1)
 				)
 			)
 			(project "48PinMCU"
 				(path "/b973e36d-c926-4cad-b0c3-dce51444ffeb"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "100PinMCU:SWD_Header_02x02")
-		(at 247.65 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2742cada-834a-48e8-9d33-2eeab8aef9af")
-		(property "Reference" "J6"
-			(at 259.334 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SWD_Header"
-			(at 259.334 138.43 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LHRS_Connectors:SWD_Conn"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "kicad-embed://Conn_02x02_Odd_Even.pdf"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x02"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "P/N" "0878320406"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC P/N" "C17492485"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LSCS P/N" "C17492485"
-			(at 247.65 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4abb4abc-77d0-4c5b-b840-555354e46c5e")
-		)
-		(pin "1"
-			(uuid "c5147aaa-946e-4f0e-bc73-d63c286d76cb")
-		)
-		(pin "4"
-			(uuid "d22caeb3-5123-48b0-b2a4-091ba2e5cfea")
-		)
-		(pin "3"
-			(uuid "2b9c2ebb-e20f-41f9-914f-1bbb3b7f1c1d")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-			(project "48PinMCU"
-				(path "/b973e36d-c926-4cad-b0c3-dce51444ffeb"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -61944,7 +61820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9811c885-a285-4ef0-956c-e2301fae7a18")
-		(property "Reference" "D10"
+		(property "Reference" "D8"
 			(at 194.31 142.2399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -62055,7 +61931,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
-					(reference "D10")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -62390,6 +62266,116 @@
 			(project "48PinMCU"
 				(path "/b973e36d-c926-4cad-b0c3-dce51444ffeb"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lhrs_connectors:SWD_Header")
+		(at 246.38 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0a6ca11-9ef7-4b50-92fc-d5a8171ec7be")
+		(property "Reference" "J6"
+			(at 254 135.8899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SWD_Header"
+			(at 254 138.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LHRS_Connectors:SWD_Conn"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "kicad-embed://Conn_02x02_Odd_Even.pdf"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x02"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "P/N" "0878320406"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LSCS P/N" "C17492485"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "6abd8041-bded-4e20-aef6-8cb13b60c164")
+		)
+		(pin "3"
+			(uuid "e14024ff-7d36-49a3-a502-d496b3c1f2b0")
+		)
+		(pin "2"
+			(uuid "8b665e8b-9620-4284-acd7-aa89b9aafa10")
+		)
+		(pin "1"
+			(uuid "1c0a63ea-95ce-4b7b-b9c3-bf0ec5377623")
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -63000,7 +62986,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3a2c0ee-ff10-452f-901d-c9cb7da371a6")
-		(property "Reference" "D12"
+		(property "Reference" "D10"
 			(at 261.62 103.1874 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63097,7 +63083,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/525eebd7-cd9b-471b-950d-358e3ce0c5f6"
-					(reference "D12")
+					(reference "D10")
 					(unit 1)
 				)
 			)

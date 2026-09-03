@@ -45131,7 +45131,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "95b07b14-5800-4057-96bd-90fae4a2220c")
+			(uuid "ad458760-c431-44ab-b988-03e98220f488")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45185,7 +45185,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 227.33 81.788 90)
 			(hide yes)
 			(show_name no)
@@ -45219,10 +45219,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "727700cd-b9df-45e7-a94b-b9061f3464d5")
+			(uuid "1d213ce7-f018-41c8-8cdc-74d3d2210301")
 		)
 		(pin "1"
-			(uuid "7164fefa-a90b-4de0-a56c-7cb9535d8f80")
+			(uuid "92e44339-035b-4293-8f1b-9d51da7ef33e")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45256,7 +45256,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c91dd69-28ff-407f-b0c9-0120dd75f741")
-		(property "Reference" "D21"
+		(property "Reference" "D19"
 			(at 175.26 120.6499 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45311,7 +45311,7 @@
 				)
 			)
 		)
-		(property "P/N" "SMF3.3"
+		(property "P/N" "576-SMF3.3"
 			(at 172.72 121.92 90)
 			(hide yes)
 			(show_name no)
@@ -45334,27 +45334,27 @@
 			)
 		)
 		(pin "2"
-			(uuid "f5fa458e-6784-40a4-b579-4c24068b3c71")
+			(uuid "9c699313-91af-492d-80a6-a20d2948103a")
 		)
 		(pin "1"
-			(uuid "8c5b86ad-8365-4412-9e04-0d58fb65bd75")
+			(uuid "626231d6-50cd-4694-8b90-8dd94f4a516e")
 		)
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "D23")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
 					(reference "D21")
 					(unit 1)
 				)
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
+					(reference "D19")
+					(unit 1)
+				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "D27")
+					(reference "D25")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "D25")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -45394,7 +45394,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 254 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -45428,7 +45428,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c38abad3-045d-416b-8ed1-46b1c25b22c8")
+			(uuid "e7241083-a86f-4053-9056-ccf7bac6e707")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45482,7 +45482,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 227.33 71.628 90)
 			(hide yes)
 			(show_name no)
@@ -45516,10 +45516,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "af356a85-7fb2-4b78-be7e-8c6102f1cc44")
+			(uuid "dbe82e71-7d25-4bb6-b464-eee90f2f7b5b")
 		)
 		(pin "1"
-			(uuid "d6918cde-2152-4525-a690-48372b67b221")
+			(uuid "f5d8a5ef-792d-45b8-b204-d94f5df57c9b")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45609,7 +45609,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3c1ad4e3-d562-4c0f-928a-2b755691ebe6")
+			(uuid "b709e229-e87d-444f-affe-209903fe38ea")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45699,7 +45699,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c6bb9015-647d-43a6-9ca8-487aea5cab4f")
+			(uuid "7d3f8eb9-eee3-4576-8f5f-764b94c017f5")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45753,7 +45753,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 223.2152 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -45787,10 +45787,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "c20af548-3e07-43f1-96d7-9cba5fbca20b")
+			(uuid "1ad99e10-8547-422b-b1e7-6ba0b2effc19")
 		)
 		(pin "1"
-			(uuid "57da3a4c-745f-49a0-be54-1c070d455b17")
+			(uuid "c0b5edd9-aacc-44f4-af0e-9019862eb5e9")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45845,7 +45845,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 45.72 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -45879,10 +45879,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "bbbd9370-dd11-468f-95b0-52463ec3a2a1")
+			(uuid "3d9105e1-e373-4c5c-af0b-11aaeaa61e22")
 		)
 		(pin "1"
-			(uuid "d81131f4-3fec-4ee2-b64b-1b9045a31e60")
+			(uuid "26b3abbf-6144-4c2c-bf58-846772ac6b51")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -45939,7 +45939,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 254 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -45973,7 +45973,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec8c9aab-2ea1-4a7a-ace3-ff39ca6c27a6")
+			(uuid "eb11a9d6-e0c6-43b9-9d55-44add4379cda")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46027,7 +46027,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 128.27 142.5448 0)
 			(hide yes)
 			(show_name no)
@@ -46061,10 +46061,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "5a9eaf86-9a38-47b8-a4cd-6b28e0eed1dd")
+			(uuid "a2ac1dd9-669d-4281-9fa7-7c2fa1eb2549")
 		)
 		(pin "1"
-			(uuid "2834bddc-e328-4c3d-975d-0bf60849249a")
+			(uuid "47726fe0-6cfd-4d78-a509-2cf5bebc6639")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46099,7 +46099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4aa92a32-510b-4378-ac43-bd580c9b6183")
-		(property "Reference" "U6"
+		(property "Reference" "U9"
 			(at 233.68 124.4599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46199,10 +46199,10 @@
 			)
 		)
 		(pin "4"
-			(uuid "083547ae-4c85-4d3a-ba3d-3693017b599d")
+			(uuid "6f870aad-7757-4d42-a547-48c5262ee13b")
 		)
 		(pin "8"
-			(uuid "1315c277-3e68-48da-8f1b-9a08b4689024")
+			(uuid "3359b5da-b9fb-4eef-ab91-09376c8df73e")
 		)
 		(pin "6"
 			(uuid "e0485397-d50c-4e54-b2c7-4aa9b1cbb8a4")
@@ -46225,19 +46225,19 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "U8")
+					(reference "U11")
 					(unit 3)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "U6")
+					(reference "U9")
 					(unit 3)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "U12")
+					(reference "U15")
 					(unit 3)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "U10")
+					(reference "U13")
 					(unit 3)
 				)
 			)
@@ -46274,7 +46274,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 105.7148 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -46308,10 +46308,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "1b6d9675-9f96-42a3-8a44-240e6f53c7cf")
+			(uuid "7b93af60-cb8b-406f-815e-6260206f5117")
 		)
 		(pin "1"
-			(uuid "1e34c47f-f798-454f-aa48-9138ea1d62eb")
+			(uuid "06e78222-9b8f-40d5-82de-a4e28986fc9b")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46366,7 +46366,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 63.5 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -46400,10 +46400,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "6729953d-625e-490e-8024-686137208dbb")
+			(uuid "0c755e6c-93fa-4002-8e5b-7ec0afbcb795")
 		)
 		(pin "1"
-			(uuid "eaac7d04-f720-485f-9081-efdde7eab117")
+			(uuid "f9e2c0bc-7e2b-456f-b19d-ba7b16fbd33b")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46460,7 +46460,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 183.8452 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -46494,10 +46494,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "d8155e37-cadf-455d-8e15-8a3b3532a819")
+			(uuid "b2cbcd83-095b-4213-afe3-350eae14e6e0")
 		)
 		(pin "1"
-			(uuid "60f32587-19db-4f86-ad5e-7ba20dfa84df")
+			(uuid "d4725d94-55a6-4319-b721-524226bda6e5")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46532,7 +46532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b5d5516-aa09-486c-b33a-6bc567102790")
-		(property "Reference" "U6"
+		(property "Reference" "U9"
 			(at 123.19 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46639,16 +46639,16 @@
 			(uuid "e0485397-d50c-4e54-b2c7-4aa9b1cbb8a5")
 		)
 		(pin "1"
-			(uuid "c5f43f76-e436-4325-b4dd-e63047de6d41")
+			(uuid "f11e7d6c-7d2c-41bb-b114-22121692c189")
 		)
 		(pin "2"
-			(uuid "3fa95433-554f-4871-b7e2-c367cf00de80")
+			(uuid "fbed69ab-c5cd-46a5-95b2-3efe76b24164")
 		)
 		(pin "5"
 			(uuid "c6e9ecdd-ed4c-4ee6-8c50-fd1fe7a07c8a")
 		)
 		(pin "3"
-			(uuid "bf1b576a-0f19-4cce-9428-d1089444e242")
+			(uuid "7b84ed39-91ed-4623-96af-66a141bd9675")
 		)
 		(pin "7"
 			(uuid "5caaeddc-8c3a-4dbf-9dbd-88312b2642d2")
@@ -46656,19 +46656,19 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "U8")
+					(reference "U11")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "U6")
+					(reference "U9")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "U12")
+					(reference "U15")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "U10")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -46707,7 +46707,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 233.9848 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -46741,10 +46741,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "145f451e-2730-4516-9a10-0c8f48d8ffea")
+			(uuid "549403b1-207e-4dfd-bde0-94d204df6e36")
 		)
 		(pin "1"
-			(uuid "680e5972-6683-4dd3-bdfd-1a47ccb3f494")
+			(uuid "2f7b3534-0ed1-4534-b94f-d42d99fbbd60")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46798,7 +46798,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 105.41 127.508 90)
 			(hide yes)
 			(show_name no)
@@ -46832,10 +46832,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "ae02a19b-0eff-46ce-999d-7668ee6692f2")
+			(uuid "9c3b41d5-8d30-405d-9230-e7a160a326da")
 		)
 		(pin "2"
-			(uuid "3c5fbd8c-e87d-49d0-85c2-7ad925404301")
+			(uuid "28beb090-f309-47fe-88f4-833e45ee25b4")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46892,7 +46892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 254 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -46926,7 +46926,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "971ef702-a415-4793-b0d2-b66fc438dcd2")
+			(uuid "746f2eb7-170c-4384-9612-c6bcfe53121a")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -46980,7 +46980,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 105.1052 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -47014,10 +47014,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "3e569857-156f-42a7-bec8-1f627014f4c4")
+			(uuid "b9247746-7c06-427c-ac61-33671e8943d3")
 		)
 		(pin "1"
-			(uuid "5ccd8db6-8848-40c5-9b1c-addd9ee8fe35")
+			(uuid "9b2584f6-3201-4af4-aaed-e37ccc2fbfe6")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47071,7 +47071,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 124.46 134.112 90)
 			(hide yes)
 			(show_name no)
@@ -47105,10 +47105,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "651c9965-4f89-4ad3-92fe-1d23b00d98f7")
+			(uuid "7df80912-7ff7-4858-ad65-6d7a35c3792f")
 		)
 		(pin "1"
-			(uuid "70d8f2fc-e58d-4dc1-8dd3-88ecd80b6515")
+			(uuid "650a368c-0db2-4d4a-bafb-b964b8937120")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47165,7 +47165,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 199.0852 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -47199,10 +47199,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "6027cd7d-81ad-4f9c-9477-c4815099498e")
+			(uuid "dc847a0a-e19c-4c7d-8a6e-ea527d35e32a")
 		)
 		(pin "1"
-			(uuid "ec595d63-3813-4ca2-81c8-8453f6318aa7")
+			(uuid "df9b1294-6d6c-419d-a203-e2076963c5d4")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47256,7 +47256,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 96.8248 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -47290,10 +47290,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "93dd9404-eaf7-45d8-8c87-7f07bb253aa5")
+			(uuid "6bb629de-2b67-4b5a-b08b-5b43902960db")
 		)
 		(pin "1"
-			(uuid "c2f24895-1c2c-4c0f-81c9-5f90c2efc3da")
+			(uuid "2db7c58f-19eb-4a49-b8b8-72a04dbb95c1")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47350,7 +47350,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 206.502 50.8 90)
 			(hide yes)
 			(show_name no)
@@ -47384,10 +47384,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "b2b742a6-a75a-4f62-97af-515b8aff5c91")
+			(uuid "07eea836-f9da-4f95-9f1f-ead9bb0c97df")
 		)
 		(pin "1"
-			(uuid "1bd6ee8f-fc16-4595-806e-3ed85b532963")
+			(uuid "0ef511cc-f174-4644-b1a6-7c312decf81f")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47441,7 +47441,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 105.41 132.588 90)
 			(hide yes)
 			(show_name no)
@@ -47475,10 +47475,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "74982175-2049-43c8-a52f-b59c923d0c58")
+			(uuid "98b59f9b-2428-4d5f-94a2-143756a421f4")
 		)
 		(pin "2"
-			(uuid "b5506499-154c-434b-93c1-6ff8816f1b44")
+			(uuid "179bd303-1f9c-42f4-ade2-b7a1743bcef5")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47535,7 +47535,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 71.628 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -47569,10 +47569,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "ad9b1d53-94b7-4eaf-92e4-68c39b151bbc")
+			(uuid "2a484145-c0ee-4dc0-a05b-38e580288ad1")
 		)
 		(pin "1"
-			(uuid "b4d5779c-0219-41b9-97d5-c02e7ffe8cfd")
+			(uuid "9eb85624-588d-49be-b8c9-5da2be20968a")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47629,7 +47629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 189.23 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -47663,7 +47663,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cc6be042-ef24-47dc-a153-45962fba3ba3")
+			(uuid "afa99cf8-dfc4-426a-8bd1-2ce99267931b")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47698,7 +47698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cecf24e2-eed9-4eb9-b1fb-34658f9483f5")
-		(property "Reference" "U5"
+		(property "Reference" "U8"
 			(at 140.97 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47754,69 +47754,69 @@
 			)
 		)
 		(pin "9"
-			(uuid "1c94a752-1bdb-46e8-8c71-6f31167856fd")
+			(uuid "b8e0e421-d433-419b-8f22-08defa805f65")
 		)
 		(pin "10"
-			(uuid "45dd575c-76c3-4d69-a2de-287ccd70a357")
+			(uuid "d74d9610-e4fd-492b-bbc4-677139a241e5")
 		)
 		(pin "8"
-			(uuid "ef618419-f97a-4370-941c-4e3afbe89988")
+			(uuid "cf41cd90-d234-4355-9106-9882f6d75320")
 		)
 		(pin "13"
-			(uuid "73b4f5c9-24c5-4220-8324-efaf913aa7d9")
+			(uuid "0728ad93-a83f-4f06-afe7-ea2ab55b1bd4")
 		)
 		(pin "15"
-			(uuid "0d35f61a-f99e-45e9-b86c-3c6cedcba2ef")
+			(uuid "819bc3c6-ed94-418b-b891-809b10b463ce")
 		)
 		(pin "14"
-			(uuid "e1aa5c89-8a00-4d34-8899-d714f5b023cc")
+			(uuid "b0c07f64-1977-4e5f-ab9c-275f3872c280")
 		)
 		(pin "16"
-			(uuid "96899a9c-fee8-4af9-8a44-0aae3e18b2ad")
+			(uuid "719ac4dc-2a12-4cc0-b7e4-05caae85ebeb")
 		)
 		(pin "12"
-			(uuid "385f30bd-2950-486a-a341-a94a8d22992e")
+			(uuid "95c4d277-20cb-43b1-a083-4300acb48af2")
 		)
 		(pin "3"
-			(uuid "ad6f626b-ddad-4da6-841e-f4108e4990aa")
+			(uuid "3b7e479f-26b7-426b-9fcf-a81411234381")
 		)
 		(pin "4"
-			(uuid "20081086-00f7-4e72-afbe-63be89fb217b")
+			(uuid "f5c8bdf4-6298-4378-bb2a-f392e5dbd544")
 		)
 		(pin "5"
-			(uuid "37608ba2-1b48-4729-930a-a13a8a9d8a06")
+			(uuid "146b421e-a3a3-47ad-a2fe-91c3b42890c7")
 		)
 		(pin "2"
-			(uuid "56e7d4c7-c909-4c7a-adef-eda11c68f780")
+			(uuid "93677c4c-8562-421f-a39f-d771af20a928")
 		)
 		(pin "1"
-			(uuid "5d303d90-415e-4daf-a93a-f0efa0e8031a")
+			(uuid "70cb2136-b025-49a4-8ca8-76102871e2ff")
 		)
 		(pin "6"
-			(uuid "97470f06-2cf5-436d-b480-e153d40c2d25")
+			(uuid "410e2041-60c0-48f6-a1f8-f1922c106ea0")
 		)
 		(pin "7"
-			(uuid "fa9a3245-2d37-4dd7-9bc9-1bd1f620536f")
+			(uuid "6fc42b0c-b65f-4071-8335-9dad87f1df3a")
 		)
 		(pin "11"
-			(uuid "ff53cc89-5cc8-4175-8e96-cd28e9462112")
+			(uuid "36f393c0-21ae-44f8-9c87-472707e5c8ad")
 		)
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "U7")
+					(reference "U10")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "U5")
+					(reference "U8")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "U11")
+					(reference "U14")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "U9")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -47888,7 +47888,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e2ef4bb8-7387-4960-be17-a5b9c5c35c0a")
+			(uuid "4b0fb84a-0b6d-4f93-a8f9-db9898e4215b")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -47923,7 +47923,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dac9c01f-b3ca-4c71-b2f1-246a3fcbd5bc")
-		(property "Reference" "U6"
+		(property "Reference" "U9"
 			(at 154.94 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48027,7 +48027,7 @@
 			(uuid "1315c277-3e68-48da-8f1b-9a08b4689026")
 		)
 		(pin "6"
-			(uuid "e0485397-d50c-4e54-b2c7-4aa9b1cbb8a6")
+			(uuid "f6e21adf-8192-4ea7-a0ec-d4203dc29484")
 		)
 		(pin "1"
 			(uuid "c5f43f76-e436-4325-b4dd-e63047de6d42")
@@ -48036,30 +48036,30 @@
 			(uuid "3fa95433-554f-4871-b7e2-c367cf00de81")
 		)
 		(pin "5"
-			(uuid "c6e9ecdd-ed4c-4ee6-8c50-fd1fe7a07c8b")
+			(uuid "60197c9b-474b-4a4b-974c-bc0197dee107")
 		)
 		(pin "3"
 			(uuid "bf1b576a-0f19-4cce-9428-d1089444e243")
 		)
 		(pin "7"
-			(uuid "5caaeddc-8c3a-4dbf-9dbd-88312b2642d3")
+			(uuid "3a217053-ee9c-4ded-9412-896d579fd42b")
 		)
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "U8")
+					(reference "U11")
 					(unit 2)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "U6")
+					(reference "U9")
 					(unit 2)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "U12")
+					(reference "U15")
 					(unit 2)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "U10")
+					(reference "U13")
 					(unit 2)
 				)
 			)
@@ -48076,7 +48076,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dbee18a8-5a0f-49ed-a4b2-4db17df55247")
-		(property "Reference" "D22"
+		(property "Reference" "D20"
 			(at 175.26 128.2699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48131,7 +48131,7 @@
 				)
 			)
 		)
-		(property "P/N" "SMF3.3"
+		(property "P/N" "576-SMF3.3"
 			(at 172.72 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -48154,27 +48154,27 @@
 			)
 		)
 		(pin "2"
-			(uuid "0490990d-bff1-4dbe-94a7-8eeb9a5a33f1")
+			(uuid "8410d2e1-365a-4053-8ee1-c998863ae742")
 		)
 		(pin "1"
-			(uuid "fae1daae-a65f-4a13-a6f7-3f3660858dde")
+			(uuid "4791f8d5-b6eb-4700-86f8-f676e4f6a44e")
 		)
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "D24")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
 					(reference "D22")
 					(unit 1)
 				)
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
+					(reference "D20")
+					(unit 1)
+				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "D28")
+					(reference "D26")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "D26")
+					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -48211,7 +48211,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 99.3648 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -48245,10 +48245,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "ef6ee729-38e2-461f-8579-eb20ea85263e")
+			(uuid "a737eda4-dd56-44ac-8dfd-02a5ad602edc")
 		)
 		(pin "1"
-			(uuid "ad451430-9d84-4f7d-9086-231b0455ade4")
+			(uuid "e41efddf-3c59-4707-8de3-88c9e4cb3dfa")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -48305,7 +48305,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 82.2452 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -48339,10 +48339,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "519661f6-7170-4698-ac72-badb561320b0")
+			(uuid "bd28a889-5cee-4586-a0c0-cfba04b41d96")
 		)
 		(pin "1"
-			(uuid "acfea48f-7342-4e34-ad71-1745ba1e7e38")
+			(uuid "6f228f42-0bf5-43d7-b897-919842868120")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -48396,7 +48396,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 54.61 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -48430,10 +48430,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "f45774bc-9b5a-4185-8e63-5a1753f4c7dd")
+			(uuid "61e2d7fa-24be-423e-9a43-5a3a9d4c6053")
 		)
 		(pin "1"
-			(uuid "4d612d80-ec8a-45d6-a928-1278708798da")
+			(uuid "358099fc-09d2-4483-9d2e-fa49fdc8b55d")
 		)
 		(instances
 			(project "PS-HVCarrier"
@@ -48490,7 +48490,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 209.2452 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -48524,10 +48524,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "03fde0b5-8729-4144-b1f9-155322b1d4ca")
+			(uuid "dc61bda0-8fd5-467d-af9a-440c2a26aea1")
 		)
 		(pin "1"
-			(uuid "70fc7bd5-fb32-49dd-a3d3-1c231b88d96a")
+			(uuid "700fae21-09f6-4ae9-bb20-dc1f91e2c6a8")
 		)
 		(instances
 			(project "PS-HVCarrier"

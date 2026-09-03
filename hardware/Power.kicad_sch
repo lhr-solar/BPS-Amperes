@@ -589,210 +589,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "USB_PD_Symbols:TPD2EUSB30DRTR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 21.59 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "TPD2EUSB30DRTR"
-				(at 21.59 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "UTSVT_ICs:TPD2EUSB30DRTR"
-				(at 21.59 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "kicad-embed://sf-000234749.pdf"
-				(at 21.59 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "Texas Instruments TPD2EUSB30DRTR Dual Bi-Directional TVS Diode Array, 45W peak, 3-Pin SOT"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "0.5"
-				(at 21.59 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" "595-TPD2EUSB30DRTR"
-				(at 21.59 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD2EUSB30DRTR?qs=%2Fqzd9s%252BcLd6bPJi5HXCDvw%3D%3D"
-				(at 21.59 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Texas Instruments"
-				(at 21.59 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "P/N" "TPD2EUSB30DRTR"
-				(at 21.59 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "LCSC P/N" "C97502"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TPD2EUSB30DRTR_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 20.32 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 0 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "UTSVT-Connectors:USB_C_Receptacle_USB2.0_16P"
+		(symbol "lhrs_connectors:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
 			)
@@ -821,7 +618,7 @@
 					)
 				)
 			)
-			(property "Footprint" "UTSVT_ICs:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+			(property "Footprint" "LHRS_ICs:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 				(at 3.81 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1540,6 +1337,209 @@
 						)
 					)
 					(number "S4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lhrs_ics:TPD2EUSB30DRTR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 21.59 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "TPD2EUSB30DRTR"
+				(at 21.59 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "LHRS_ICs:TPD2EUSB30DRTR"
+				(at 21.59 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "kicad-embed://sf-000234749.pdf"
+				(at 21.59 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Texas Instruments TPD2EUSB30DRTR Dual Bi-Directional TVS Diode Array, 45W peak, 3-Pin SOT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "0.5"
+				(at 21.59 -394.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "595-TPD2EUSB30DRTR"
+				(at 21.59 -494.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD2EUSB30DRTR?qs=%2Fqzd9s%252BcLd6bPJi5HXCDvw%3D%3D"
+				(at 21.59 -594.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Texas Instruments"
+				(at 21.59 -694.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "P/N" "TPD2EUSB30DRTR"
+				(at 21.59 -794.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "LCSC P/N" "C97502"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPD2EUSB30DRTR_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 20.32 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 25.4 0 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2501,7 +2501,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 99.06 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -2657,7 +2657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 91.44 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -3145,6 +3145,140 @@
 		)
 	)
 	(symbol
+		(lib_id "lhrs_connectors:USB_C_Receptacle_USB2.0_16P")
+		(at 35.56 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43c16b3d-3694-4329-88c8-0817a1b3efdd")
+		(property "Reference" "J8"
+			(at 35.56 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_C_Receptacle_USB2.0_16P"
+			(at 35.56 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LHRS_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+			(at 39.37 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 39.37 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 35.56 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "B12"
+			(uuid "cf00ea8c-9baf-4054-8165-2bb5d6d8a576")
+		)
+		(pin "A1"
+			(uuid "2bc705e3-8a38-4d60-a0f7-eebaf91ed8a0")
+		)
+		(pin "A5"
+			(uuid "0f6c71fd-483d-42b0-b068-e7f72a19a073")
+		)
+		(pin "A6"
+			(uuid "7dd8da01-4e16-40e3-a4fb-940986211dba")
+		)
+		(pin "A7"
+			(uuid "9d77d59a-b8b3-4634-b523-a23fc555d0ae")
+		)
+		(pin "A4"
+			(uuid "a35778cc-2012-432c-8c8c-e91fcd3d13ff")
+		)
+		(pin "A8"
+			(uuid "111bab4e-211a-4e62-a9a4-ca86357afac2")
+		)
+		(pin "A9"
+			(uuid "bf8b7e95-7ba2-497d-a422-216d0a9a27db")
+		)
+		(pin "S3"
+			(uuid "fd4987ca-0b67-47ec-a94f-718504b76221")
+		)
+		(pin "S1"
+			(uuid "1629c2ef-bbf9-4c66-8eeb-865c8f2bb290")
+		)
+		(pin "S2"
+			(uuid "2fd1c5d7-2dc6-4957-a3e7-8ea00ba88b38")
+		)
+		(pin "S4"
+			(uuid "13668459-c5cc-4c98-b123-0565587916ec")
+		)
+		(pin "B9"
+			(uuid "01319a4b-384c-4d0f-8242-64a555123a65")
+		)
+		(pin "B6"
+			(uuid "f3eed4fa-530e-4846-966c-2bcf6995d2d9")
+		)
+		(pin "B7"
+			(uuid "61397cd0-22e6-451d-9ee3-0c328034fa86")
+		)
+		(pin "B4"
+			(uuid "7dda20f3-cecf-4be0-b65e-08dad91048d3")
+		)
+		(pin "A12"
+			(uuid "54202350-f25e-45d6-a0a4-d16809eeaaf7")
+		)
+		(pin "B1"
+			(uuid "4b76af86-dae9-4436-923d-e08b789d0a72")
+		)
+		(pin "B8"
+			(uuid "6bbc1f54-6fdb-46cb-a0bf-5c672147640c")
+		)
+		(pin "B5"
+			(uuid "4cb624e1-8b58-4ed3-9e3c-de0eae08b656")
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 82.55 114.3 0)
 		(unit 1)
@@ -3255,7 +3389,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 77.47 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -3378,163 +3512,6 @@
 		)
 	)
 	(symbol
-		(lib_id "USB_PD_Symbols:TPD2EUSB30DRTR")
-		(at 88.9 139.7 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aba3aa7b-bbe1-46e3-9943-30919b4c7e0a")
-		(property "Reference" "D14"
-			(at 76.2 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPD2EUSB30DRTR"
-			(at 76.2 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LHRS_ICs:TPD2EUSB30DRTR"
-			(at 67.31 234.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "kicad-embed://tpd2eusb30a.pdf"
-			(at 67.31 334.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "Texas Instruments TPD2EUSB30DRTR Dual Bi-Directional TVS Diode Array, 45W peak, 3-Pin SOT"
-			(at 88.9 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.5"
-			(at 67.31 534.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "595-TPD2EUSB30DRTR"
-			(at 67.31 634.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD2EUSB30DRTR?qs=%2Fqzd9s%252BcLd6bPJi5HXCDvw%3D%3D"
-			(at 67.31 734.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 67.31 834.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "P/N" "TPD2EUSB30DRTR"
-			(at 67.31 934.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "LCSC P/N" "C97502"
-			(at 88.9 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4291cab1-c9be-4a2c-8587-427478225f84")
-		)
-		(pin "1"
-			(uuid "017f72bc-946d-4393-a839-f5ad701cef15")
-		)
-		(pin "3"
-			(uuid "5c52d506-0d38-4780-af21-4cfdd11676a2")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 157.48 55.88 0)
 		(unit 1)
@@ -3646,7 +3623,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 83.82 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -3849,192 +3826,6 @@
 		)
 	)
 	(symbol
-		(lib_id "UTSVT-Connectors:USB_C_Receptacle_USB2.0_16P")
-		(at 35.56 106.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d8cab521-ba3c-4cba-b869-e279c9533d4d")
-		(property "Reference" "J8"
-			(at 48.006 84.074 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "USB_C_Receptacle_USB2.0_16P"
-			(at 48.006 86.614 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LHRS_Connectors:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
-			(at 39.37 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "kicad-embed://USB Type-C Specification Release 1.3 - Redline from 1.2.pdf"
-			(at 39.37 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
-			(at 35.56 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Color" ""
-			(at 35.56 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "If" ""
-			(at 35.56 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg" ""
-			(at 35.56 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vf" ""
-			(at 35.56 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" "640-USB4105-GF-A"
-			(at 35.56 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "B6"
-			(uuid "4512d7dd-3389-4542-9c89-deb940bc1ffd")
-		)
-		(pin "B7"
-			(uuid "6d399404-0f6d-4f42-b46b-3fa7d1bfd71c")
-		)
-		(pin "S1"
-			(uuid "4fa45ef8-4fb3-43fa-b688-093e9affc87f")
-		)
-		(pin "A4"
-			(uuid "b5fbecd2-6be8-484e-a69d-4d0f456408ef")
-		)
-		(pin "A7"
-			(uuid "bceb98cd-7be4-4ca5-bc29-7dee2650b100")
-		)
-		(pin "A9"
-			(uuid "b4041a90-cad1-487f-8945-141b09299f70")
-		)
-		(pin "B8"
-			(uuid "50662050-ec2f-4dd8-9b63-65338afe4a8f")
-		)
-		(pin "A5"
-			(uuid "fbbc59dd-d657-4558-ad2b-588b1c9e6f6a")
-		)
-		(pin "A1"
-			(uuid "f0d24fcd-10ce-4ac3-b827-cb1387828647")
-		)
-		(pin "A12"
-			(uuid "b4394270-67c2-4311-8067-8585caafe302")
-		)
-		(pin "B12"
-			(uuid "67a4a96a-a8ce-4dee-a98b-d59e68435ba9")
-		)
-		(pin "B5"
-			(uuid "9dc8d97f-c974-4435-a479-506cea60147c")
-		)
-		(pin "A6"
-			(uuid "a804458d-323c-4c2d-8470-1ff1e34a955f")
-		)
-		(pin "B4"
-			(uuid "8aebdfcd-daf5-43ca-934b-1b50cb8b9c5c")
-		)
-		(pin "A8"
-			(uuid "8f1ff0eb-8014-4793-89af-71ebf8d8c3d0")
-		)
-		(pin "B1"
-			(uuid "c3d1716b-aeab-4a43-a60a-9d8220a6bc20")
-		)
-		(pin "B9"
-			(uuid "4ebe2407-189f-44f7-a127-46df2ab0441f")
-		)
-		(pin "S3"
-			(uuid "ec210726-a0c1-45d2-9073-47a88a4b76e0")
-		)
-		(pin "S4"
-			(uuid "a2681918-bf99-4935-a13c-7be4fb819a8d")
-		)
-		(pin "S2"
-			(uuid "f2bb8559-b96e-4390-8b6b-9436c3e0cf3b")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 62.23 91.44 180)
 		(unit 1)
@@ -4045,7 +3836,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "da76b70d-1d08-42fa-9779-e2d100318d24")
-		(property "Reference" "D13"
+		(property "Reference" "D11"
 			(at 59.69 85.725 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4202,7 +3993,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "D13")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -4457,6 +4248,162 @@
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
 					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lhrs_ics:TPD2EUSB30DRTR")
+		(at 88.9 139.7 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fe3aff89-8d94-4559-bc65-3ae42b33c9c5")
+		(property "Reference" "D12"
+			(at 76.2 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD2EUSB30DRTR"
+			(at 76.2 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LHRS_ICs:TPD2EUSB30DRTR"
+			(at 67.31 234.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "kicad-embed://sf-000234749.pdf"
+			(at 67.31 334.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Texas Instruments TPD2EUSB30DRTR Dual Bi-Directional TVS Diode Array, 45W peak, 3-Pin SOT"
+			(at 88.9 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "0.5"
+			(at 67.31 534.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "595-TPD2EUSB30DRTR"
+			(at 67.31 634.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPD2EUSB30DRTR?qs=%2Fqzd9s%252BcLd6bPJi5HXCDvw%3D%3D"
+			(at 67.31 734.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 67.31 834.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "P/N" "TPD2EUSB30DRTR"
+			(at 67.31 934.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "LCSC P/N" "C97502"
+			(at 88.9 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "ad39412d-f2f5-4127-9de4-176d5105cee6")
+		)
+		(pin "1"
+			(uuid "00d13f51-36e4-4d90-a022-66d8dadcbff1")
+		)
+		(pin "2"
+			(uuid "e75dbdb8-46f6-49b5-b6cc-de9cebd6ae13")
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
+					(reference "D12")
 					(unit 1)
 				)
 			)

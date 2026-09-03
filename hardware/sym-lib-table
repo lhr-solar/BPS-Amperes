@@ -1,8 +1,6 @@
 (sym_lib_table
 	(version 7)
 	(lib (name "AMC3311QDWERQ1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/AMC3311QDWERQ1/2026-08-02_06-15-44.kicad_sym") (options "") (descr ""))
-	(lib (name "USB4105-GF-A") (type "KiCad") (uri "${KIPRJMOD}/External Parts/USB4105-GF-A/2026-08-02_23-10-36.kicad_sym") (options "") (descr ""))
-	(lib (name "USBLC6_2SC6Y") (type "KiCad") (uri "${KIPRJMOD}/External Parts/USBLC6_2SC6Y/2026-08-02_23-22-15.kicad_sym") (options "") (descr ""))
 	(lib (name "OPA333AIDBVRG4") (type "KiCad") (uri "${KIPRJMOD}/External Parts/OPA333AIDBVRG4/2026-08-25_06-31-36.kicad_sym") (options "") (descr ""))
 	(lib (name "TLV9002QDRQ1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/TLV9002QDRQ1/TLV9002QDRQ1.kicad_sym") (options "") (descr ""))
 	(lib (name "lhrs_connectors") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_connectors.kicad_sym") (options "") (descr ""))

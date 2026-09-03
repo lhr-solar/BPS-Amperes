@@ -49152,7 +49152,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 62.23 62.738 90)
 			(hide yes)
 			(show_name no)
@@ -49232,7 +49232,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 171.45 48.768 90)
 			(hide yes)
 			(show_name no)
@@ -49311,7 +49311,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 239.7252 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -49391,7 +49391,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 154.94 56.388 90)
 			(hide yes)
 			(show_name no)
@@ -49473,7 +49473,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 44.958 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -49532,7 +49532,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "23d3a6ca-ac96-46b4-bf17-822804f17271")
-		(property "Reference" "D20"
+		(property "Reference" "D18"
 			(at 232.41 55.8799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49587,7 +49587,7 @@
 				)
 			)
 		)
-		(property "P/N" "SMF3.3"
+		(property "P/N" "576-SMF3.3"
 			(at 229.87 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -49618,7 +49618,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D20")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -49657,7 +49657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 86.36 41.6052 0)
 			(hide yes)
 			(show_name no)
@@ -49838,7 +49838,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 86.36 31.4452 0)
 			(hide yes)
 			(show_name no)
@@ -50076,7 +50076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 82.55 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -50133,7 +50133,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "47f163e0-fdd1-4ef6-90e2-5b1bbb9e40c6")
-		(property "Reference" "U4"
+		(property "Reference" "U7"
 			(at 193.802 44.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50257,7 +50257,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U4")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -50375,7 +50375,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 36.5252 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -50457,7 +50457,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 82.55 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -50534,7 +50534,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 185.42 33.3248 0)
 			(hide yes)
 			(show_name no)
@@ -50671,7 +50671,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6b019704-10ea-480a-8b04-ac580e6242c2")
-		(property "Reference" "D19"
+		(property "Reference" "D17"
 			(at 232.41 48.2599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50726,7 +50726,7 @@
 				)
 			)
 		)
-		(property "P/N" "SMF3.3"
+		(property "P/N" "576-SMF3.3"
 			(at 229.87 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -50757,7 +50757,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D19")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -50795,7 +50795,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 171.45 56.388 90)
 			(hide yes)
 			(show_name no)
@@ -50955,7 +50955,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 44.958 36.83 90)
 			(hide yes)
 			(show_name no)
@@ -51036,7 +51036,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 57.658 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -51095,7 +51095,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9481a2b2-a76a-4750-ad04-2d7f96d9f64d")
-		(property "Reference" "D18"
+		(property "Reference" "D16"
 			(at 57.15 65.278 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51118,7 +51118,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 54.61 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -51151,7 +51151,7 @@
 				)
 			)
 		)
-		(property "P/N" "BAT54S-Q "
+		(property "P/N" "576-SMF3.3"
 			(at 54.61 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -51171,7 +51171,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D18")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -51290,7 +51290,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 175.5648 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -51351,7 +51351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a81966cd-eb61-451c-a5d8-800d8cd86ba2")
-		(property "Reference" "U4"
+		(property "Reference" "U7"
 			(at 214.63 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51475,7 +51475,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U4")
+					(reference "U7")
 					(unit 2)
 				)
 			)
@@ -51492,7 +51492,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aaa88594-f341-43ff-9cca-6839c1875c25")
-		(property "Reference" "D17"
+		(property "Reference" "D15"
 			(at 57.15 37.338 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51515,7 +51515,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 54.61 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -51548,7 +51548,7 @@
 				)
 			)
 		)
-		(property "P/N" "BAT54S-Q "
+		(property "P/N" "576-SMF3.3"
 			(at 54.61 36.83 90)
 			(hide yes)
 			(show_name no)
@@ -51568,7 +51568,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D17")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -51608,7 +51608,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 82.55 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -51685,7 +51685,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 173.228 62.23 90)
 			(hide yes)
 			(show_name no)
@@ -51767,7 +51767,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 181.61 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -51823,7 +51823,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b5625095-b20b-48f2-b69c-6e4be48994e4")
-		(property "Reference" "D16"
+		(property "Reference" "D14"
 			(at 53.086 57.404 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51846,7 +51846,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 50.8 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -51879,7 +51879,7 @@
 				)
 			)
 		)
-		(property "P/N" "BAT54S-Q "
+		(property "P/N" "576-SMF3.3"
 			(at 50.8 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -51899,7 +51899,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D16")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -52017,7 +52017,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 181.61 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -52094,7 +52094,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 189.23 42.418 90)
 			(hide yes)
 			(show_name no)
@@ -52176,7 +52176,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 164.1348 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -52235,7 +52235,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d2e9753e-50aa-4236-9bcd-9e9f527f11cf")
-		(property "Reference" "D15"
+		(property "Reference" "D13"
 			(at 53.086 29.464 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52258,7 +52258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 50.8 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -52291,7 +52291,7 @@
 				)
 			)
 		)
-		(property "P/N" "BAT54S-Q "
+		(property "P/N" "576-SMF3.3"
 			(at 50.8 29.21 90)
 			(hide yes)
 			(show_name no)
@@ -52311,7 +52311,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "D15")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -52452,7 +52452,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 36.5252 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -52512,7 +52512,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea5b7dc8-c932-407a-bbe0-e9c643f8692e")
-		(property "Reference" "U4"
+		(property "Reference" "U7"
 			(at 247.65 79.248 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52638,7 +52638,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U4")
+					(reference "U7")
 					(unit 3)
 				)
 			)
@@ -52676,7 +52676,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 184.658 62.23 90)
 			(hide yes)
 			(show_name no)
@@ -52733,9 +52733,9 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp yes)
 		(uuid "eeedf2cd-cc47-48fe-9922-f0ae61a25577")
 		(property "Reference" "J11"
 			(at 137.922 66.04 0)
@@ -52855,7 +52855,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 62.23 86.868 90)
 			(hide yes)
 			(show_name no)
@@ -52937,7 +52937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
 			(at 250.19 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -53014,7 +53014,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 154.94 48.768 90)
 			(hide yes)
 			(show_name no)
@@ -53094,7 +53094,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 62.23 34.798 90)
 			(hide yes)
 			(show_name no)

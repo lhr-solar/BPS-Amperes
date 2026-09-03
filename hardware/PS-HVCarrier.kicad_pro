@@ -423,7 +423,7 @@
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
-      "footprint_filter": "warning",
+      "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
@@ -433,7 +433,7 @@
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
-      "lib_symbol_mismatch": "warning",
+      "lib_symbol_mismatch": "ignore",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -669,7 +669,7 @@
           "group_by": false,
           "label": "P/N",
           "name": "P/N",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -699,6 +699,60 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MANUFACTURER",
+          "name": "MANUFACTURER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey P/N",
+          "name": "Digikey P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Inventory",
+          "name": "Inventory",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLC P/N",
+          "name": "JLC P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "p/n",
+          "name": "p/n",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PN",
+          "name": "PN",
           "show": false
         }
       ],
@@ -766,7 +820,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-3,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-13,TP1-45,R1-99,TP_3.3V1,JP1-2,S1,Q1-2",
+    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-6,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-15,TP1-45,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -783,12 +837,12 @@
       "LDO"
     ],
     [
-      "8e4b18be-f701-4f79-b148-bbeadfa1a129",
-      "IMD_CAN_Transceiver"
+      "891507c0-eb7b-4bd7-b7e8-bba1d4bfa654",
+      "BPS_CAN_Transceiver"
     ],
     [
-      "7a8f5d40-8cff-476b-a6d6-a001c957bc73",
-      "BPS_CAN_Transceiver"
+      "8e4b18be-f701-4f79-b148-bbeadfa1a129",
+      "IMD_CAN_Transceiver"
     ],
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",

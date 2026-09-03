@@ -45284,6 +45284,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 227.33 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "1d213ce7-f018-41c8-8cdc-74d3d2210301")
 		)
@@ -45399,6 +45410,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 172.72 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9c699313-91af-492d-80a6-a20d2948103a")
 		)
@@ -45460,7 +45482,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
 			(at 254 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -45483,6 +45505,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 248.92 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 248.92 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -45572,6 +45605,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 227.33 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 227.33 69.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45852,6 +45896,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 222.25 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "1ad99e10-8547-422b-b1e7-6ba0b2effc19")
 		)
@@ -45944,6 +45999,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 45.72 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3d9105e1-e373-4c5c-af0b-11aaeaa61e22")
 		)
@@ -46005,7 +46071,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
 			(at 254 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -46028,6 +46094,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 248.92 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 248.92 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -46117,6 +46194,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 124.46 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 124.46 137.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46264,6 +46352,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 234.95 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "6f870aad-7757-4d42-a547-48c5262ee13b")
 		)
@@ -46373,6 +46472,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 99.06 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7b93af60-cb8b-406f-815e-6260206f5117")
 		)
@@ -46456,6 +46566,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 63.5 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 63.5 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46549,6 +46670,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 182.88 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 182.88 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -46695,6 +46827,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 123.19 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "083547ae-4c85-4d3a-ba3d-3693017b599e")
 		)
@@ -46806,6 +46949,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 234.95 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "549403b1-207e-4dfd-bde0-94d204df6e36")
 		)
@@ -46897,6 +47051,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 105.41 119.38 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9c3b41d5-8d30-405d-9230-e7a160a326da")
 		)
@@ -46958,7 +47123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
 			(at 254 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -46981,6 +47146,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 248.92 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 248.92 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -47026,7 +47202,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7d478626-f823-4072-9386-dcc22954613f")
-		(property "Reference" "C47"
+		(property "Reference" "C45"
 			(at 95.504 33.782 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47079,6 +47255,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 99.06 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b9247746-7c06-427c-ac61-33671e8943d3")
 		)
@@ -47088,19 +47275,19 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C58")
+					(reference "C56")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "C47")
+					(reference "C45")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "C80")
+					(reference "C78")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "C69")
+					(reference "C67")
 					(unit 1)
 				)
 			)
@@ -47161,6 +47348,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 124.46 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 124.46 129.54 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47263,6 +47461,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 198.12 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "dc847a0a-e19c-4c7d-8a6e-ea527d35e32a")
 		)
@@ -47301,7 +47510,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "82725cb2-e105-4fb1-9051-9c5694e038a2")
-		(property "Reference" "C45"
+		(property "Reference" "C46"
 			(at 94.996 47.498 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47354,6 +47563,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 99.06 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6bb629de-2b67-4b5a-b08b-5b43902960db")
 		)
@@ -47363,19 +47583,19 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C56")
+					(reference "C57")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "C45")
+					(reference "C46")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "C78")
+					(reference "C79")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "C67")
+					(reference "C68")
 					(unit 1)
 				)
 			)
@@ -47438,6 +47658,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 208.28 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 208.28 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -47530,6 +47761,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 105.41 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 105.41 124.46 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47633,6 +47875,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 69.85 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2a484145-c0ee-4dc0-a05b-38e580288ad1")
 		)
@@ -47694,7 +47947,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LHRS_Special:TestPoint_HEX_3mmID"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
 			(at 189.23 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -47717,6 +47970,17 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 184.15 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 184.15 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -47808,6 +48072,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 115.57 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 115.57 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -48085,6 +48360,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 154.94 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "083547ae-4c85-4d3a-ba3d-3693017b599f")
 		)
@@ -48218,6 +48504,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 172.72 128.27 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8410d2e1-365a-4053-8ee1-c998863ae742")
 		)
@@ -48256,7 +48553,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7488926-011a-49aa-b288-d037686f432f")
-		(property "Reference" "C46"
+		(property "Reference" "C47"
 			(at 95.504 57.912 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48309,6 +48606,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 99.06 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a737eda4-dd56-44ac-8dfd-02a5ad602edc")
 		)
@@ -48318,19 +48626,19 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C57")
+					(reference "C58")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/75ffbad4-11c2-4c48-b4e9-5987716b7b4c"
-					(reference "C46")
+					(reference "C47")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9912c899-43b0-4472-ae21-1c88529879fd"
-					(reference "C79")
+					(reference "C80")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/f5850dee-f508-4102-acbc-4e3b9fd85122"
-					(reference "C68")
+					(reference "C69")
 					(unit 1)
 				)
 			)
@@ -48392,6 +48700,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 81.28 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 81.28 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -48493,6 +48812,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 54.61 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "61e2d7fa-24be-423e-9a43-5a3a9d4c6053")
 		)
@@ -48576,6 +48906,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 208.28 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 208.28 66.04 0)
 			(hide yes)
 			(show_name no)

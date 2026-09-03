@@ -2774,6 +2774,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 189.23 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d45923c7-b65b-4734-a48d-dbef5b6b8376")
 		)
@@ -2881,6 +2892,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 73.66 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "27f82d89-600a-448d-8f39-1db39d6c5ab5")
 		)
@@ -2955,6 +2977,17 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, open"
+			(at 215.9 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 215.9 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -3072,6 +3105,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 85.09 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f66b06ee-1769-4f46-8da7-b2bd69edd43a")
 		)
@@ -3169,6 +3213,17 @@
 			)
 		)
 		(property "P/N" "GRM21BR61H106KE43K"
+			(at 62.23 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 62.23 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -3336,6 +3391,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 111.76 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "3c8d65a0-5822-4590-b1c4-645470fb55a8")
 		)
@@ -3459,6 +3525,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 201.93 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "47ad6aea-a88b-4107-a206-573e5ca21160")
 		)
@@ -3564,6 +3641,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 176.53 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d5c1996a-0d22-4932-b645-b3db17c61078")
 		)
@@ -3649,6 +3737,17 @@
 			)
 		)
 		(property "P/N" "CDSOT23-T24CAN"
+			(at 194.31 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 194.31 55.88 0)
 			(hide yes)
 			(show_name no)

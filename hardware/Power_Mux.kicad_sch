@@ -1849,17 +1849,6 @@
 				)
 			)
 		)
-		(property "Mfg" "MLASH168SB7104KTNA01"
-			(at 88.9 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "cdea4d5c-14cc-422b-b60c-9f4ffab73794")
 		)
@@ -2054,17 +2043,6 @@
 				)
 			)
 		)
-		(property "Mfg" "MLASH168SB7104KTNA01"
-			(at 21.59 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "15e06278-345c-4cda-89aa-1c631a524a93")
 		)
@@ -2242,54 +2220,6 @@
 				)
 			)
 		)
-		(property "PARTREV" "A"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "STANDARD" "IPC-7351B"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "0.6mm"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Texas Instruments"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
 		(property "P/N" "TPS2117DRLR"
 			(at 60.96 49.53 0)
 			(show_name no)
@@ -2406,17 +2336,6 @@
 			)
 		)
 		(property "P/N" "MLASH168SB7104KTNA01"
-			(at 40.64 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg" "MLASH168SB7104KTNA01"
 			(at 40.64 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -2605,17 +2524,6 @@
 			)
 		)
 		(property "P/N" "MLASH168SB7104KTNA01"
-			(at 35.56 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg" "MLASH168SB7104KTNA01"
 			(at 35.56 45.72 0)
 			(hide yes)
 			(show_name no)

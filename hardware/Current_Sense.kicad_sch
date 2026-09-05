@@ -53923,17 +53923,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 62.23 60.96 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "ff64b7c8-674a-44c7-852f-f9011cb623cb")
 		)
@@ -54014,17 +54003,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 171.45 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "04eb9581-1d62-4908-8f7f-44d7b808b86e")
 		)
@@ -54094,17 +54072,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 238.76 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 238.76 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -54195,17 +54162,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 154.94 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f4ba2189-bb0c-46ef-bcba-a05babd7e0ed")
 		)
@@ -54278,17 +54234,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 43.18 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 43.18 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -54391,28 +54336,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "576-SMF3.3"
-			(at 229.87 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 229.87 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "479aea79-c355-4433-80eb-6ef2f548726e")
 		)
@@ -54485,17 +54408,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 87.63 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 87.63 40.64 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54599,17 +54511,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 142.24 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "db350ddd-c38d-469e-a44f-01870aa07a91")
 		)
@@ -54688,17 +54589,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 87.63 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 87.63 30.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54790,17 +54680,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 77.47 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "47c1c37b-f088-4076-b8ec-5fe94c6cfd96")
 		)
@@ -54879,50 +54758,6 @@
 			)
 		)
 		(property "P/N" "TLV9002QDRQ1"
-			(at 186.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser P/N" "595-TLV9002QDRQ1"
-			(at 186.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey P/N" "296-TLV9002QDRQ1CT-ND"
-			(at 186.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C2860922"
-			(at 186.69 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 186.69 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -55032,17 +54867,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 35.56 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7f473802-1fe8-47b6-9145-b591d4e0e0f6")
 		)
@@ -55125,17 +54949,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 77.47 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "aa56e3fb-d0df-4616-ae25-e1576bc19ab4")
 		)
@@ -55204,17 +55017,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 189.23 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 189.23 34.29 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55316,28 +55118,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "576-SMF3.3"
-			(at 229.87 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 229.87 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "4a890c71-d600-4f31-ae20-8d1d8eabb40f")
 		)
@@ -55409,17 +55189,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 171.45 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 171.45 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55511,17 +55280,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 43.18 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "93474b0a-2ad4-4606-b630-8f0a3124cb54")
 		)
@@ -55593,17 +55351,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 55.88 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 55.88 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -55707,17 +55454,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 54.61 64.77 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "a59c6f84-af71-40e5-9008-78f2cdc4ab1a")
 		)
@@ -55790,17 +55526,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 176.53 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 176.53 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -55893,50 +55618,6 @@
 			)
 		)
 		(property "P/N" "TLV9002QDRQ1"
-			(at 214.63 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser P/N" "595-TLV9002QDRQ1"
-			(at 214.63 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey P/N" "296-TLV9002QDRQ1CT-ND"
-			(at 214.63 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C2860922"
-			(at 214.63 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 214.63 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -56058,17 +55739,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 54.61 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "5414f6dd-9004-4dba-8bf6-2babac97f9ff")
 		)
@@ -56151,17 +55821,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 77.47 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "2810f171-5954-454b-a67c-7dcad749e9f5")
 		)
@@ -56230,17 +55889,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 171.45 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 171.45 62.23 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56332,17 +55980,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 176.53 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7537b748-4950-4c66-ac1a-9c76874a573b")
 		)
@@ -56421,28 +56058,6 @@
 			)
 		)
 		(property "P/N" "3557-2"
-			(at 97.79 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser P/N" "534-3557-2"
-			(at 97.79 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey P/N" "36-3557-2-ND"
 			(at 97.79 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -56557,17 +56172,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 50.8 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "40a80c55-cdb3-4245-b6b1-1f199af08ad3")
 		)
@@ -56640,17 +56244,6 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 176.53 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 176.53 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -56738,17 +56331,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 189.23 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "4ba77609-d1b2-4919-b6db-14018b6fb292")
 		)
@@ -56821,17 +56403,6 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 165.1 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -56935,17 +56506,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 50.8 29.21 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f401b355-af08-4ad9-8318-c6ef0010799d")
 		)
@@ -57029,17 +56589,6 @@
 			)
 		)
 		(property "P/N" "1053091105"
-			(at 102.87 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 102.87 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -57140,17 +56689,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 35.56 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "a01602c3-a556-483c-9e68-c578fbb09754")
 		)
@@ -57234,50 +56772,6 @@
 			)
 		)
 		(property "P/N" "TLV9002QDRQ1"
-			(at 243.84 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser P/N" "595-TLV9002QDRQ1"
-			(at 243.84 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey P/N" "296-TLV9002QDRQ1CT-ND"
-			(at 243.84 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC P/N" "C2860922"
-			(at 243.84 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 243.84 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -57386,17 +56880,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 182.88 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "8011b1fa-5297-472e-9056-420a61f90a1a")
 		)
@@ -57481,17 +56964,6 @@
 			)
 		)
 		(property "P/N" "1053071204"
-			(at 142.24 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 142.24 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -57587,17 +57059,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 62.23 85.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "391f034b-caa7-480c-a065-f9718bbe009f")
 		)
@@ -57670,17 +57131,6 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 245.11 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 245.11 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -57768,17 +57218,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 154.94 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "fafb8161-f023-45f0-8067-fc78a05b01a2")
 		)
@@ -57850,17 +57289,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 62.23 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 62.23 33.02 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -583,86 +583,8 @@
         },
         {
           "group_by": false,
-          "label": "Datasheet Embed",
-          "name": "Datasheet Embed",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Height",
-          "name": "Height",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "If",
-          "name": "If",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC MFG P/N",
-          "name": "LCSC MFG P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "LCSC P/N",
           "name": "LCSC P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LSCS P/N",
-          "name": "LSCS P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Name",
-          "name": "Manufacturer_Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mfg",
-          "name": "Mfg",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser P/N",
-          "name": "Mouser P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Part Number",
-          "name": "Mouser Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Price/Stock",
-          "name": "Mouser Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Old LCSC P/N",
-          "name": "Old LCSC P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Old P/N",
-          "name": "Old P/N",
           "show": false
         },
         {
@@ -670,24 +592,6 @@
           "label": "P/N",
           "name": "P/N",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Vf",
-          "name": "Vf",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Color",
-          "name": "Color",
-          "show": false
         },
         {
           "group_by": false,
@@ -699,78 +603,6 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MANUFACTURER",
-          "name": "MANUFACTURER",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Type",
-          "name": "Sim.Type",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC",
-          "name": "LCSC",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Digikey P/N",
-          "name": "Digikey P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Inventory",
-          "name": "Inventory",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "JLC P/N",
-          "name": "JLC P/N",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "p/n",
-          "name": "p/n",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "PN",
-          "name": "PN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MAXIMUM_PACKAGE_HEIGHT",
-          "name": "MAXIMUM_PACKAGE_HEIGHT",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "STANDARD",
-          "name": "STANDARD",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "PARTREV",
-          "name": "PARTREV",
           "show": false
         }
       ],
@@ -838,7 +670,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "Q1-2,S1,JP1-5,TP_3.3V1,R1-99,TP_1,TP1-45,U1-16,FB1-4,C1-109,SW1-3,Reset1,L1-2,J1-14,IC1-6,D1-33,#PWR1-52,Y1-2,#FLG1-8",
+    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-6,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-16,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -864,7 +696,7 @@
     ],
     [
       "e4eeb78c-a673-4aa0-9da6-938ecb9aa669",
-      "HV- Voltage Sense"
+      "HV- V Sense"
     ],
     [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
@@ -884,11 +716,11 @@
     ],
     [
       "37364f3b-40a4-4457-87c5-7b5b860406dd",
-      "Motor Precharge- Voltage Sense"
+      "Motor- V Sense"
     ],
     [
       "058f727f-48a9-481a-84d8-b39cdbc2591c",
-      "HV+ Voltage Sense"
+      "HV+ V Sense"
     ],
     [
       "83ab5b0b-4732-42c0-82fe-e74f4113c82a",
@@ -896,7 +728,7 @@
     ],
     [
       "54840e85-0cf7-4130-9891-f9fe2f02e074",
-      "Motor Precharge+ Voltage Sense"
+      "Motor+ V Sense"
     ],
     [
       "b66ae0b0-03e3-4dd0-8364-435fb922b758",

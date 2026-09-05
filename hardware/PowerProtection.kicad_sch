@@ -22305,29 +22305,7 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "963-MSASU168SB7224KT"
-			(at 54.61 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C344195"
-			(at 54.61 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 54.61 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -22425,50 +22403,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "595-LM74502DDFR"
-			(at 77.47 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM74502HDDFR?qs=t7xnP681wgWDbfat8Yg%252B%2Fg%3D%3D"
-			(at 77.47 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 77.47 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Part_Number" "LM74502DDFR"
-			(at 77.47 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "LM74502DDFR"
 			(at 77.47 92.71 0)
 			(hide yes)
@@ -22481,17 +22415,6 @@
 			)
 		)
 		(property "LCSC P/N" "C3236215"
-			(at 77.47 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 77.47 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -22613,29 +22536,7 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "963-MSASU168SB7224KT"
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C344195"
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 60.96 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -22739,29 +22640,7 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "71-CRCW060310K0FKEI"
-			(at 43.18 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C25804"
-			(at 43.18 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 43.18 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -22870,17 +22749,6 @@
 		)
 		(property "LCSC P/N" "C25804"
 			(at 128.27 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 128.27 77.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22999,17 +22867,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 34.29 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "5c47b456-ab13-454c-8204-d028bbdd6949")
 		)
@@ -23117,17 +22974,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 128.27 87.63 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "89291cf3-8423-4094-8b52-c69d7c7593b8")
 		)
@@ -23224,30 +23070,8 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "594-MCT06030C2003FP5"
-			(at 67.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C844927"
 			(at 67.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 67.31 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23367,17 +23191,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 24.13 50.8 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "5522845b-c8b4-499c-a39e-0e04c972b3e7")
 		)
@@ -23463,39 +23276,6 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 73.025 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 74.93 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 71.12 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "PSMN012-100YSFX"
 			(at 55.88 46.99 90)
 			(hide yes)
@@ -23509,17 +23289,6 @@
 		)
 		(property "LCSC P/N" "C20443035"
 			(at 55.88 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 59.69 38.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23647,17 +23416,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 109.22 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "6d918cc5-c8d5-43c2-8338-ae65813ec49e")
 		)
@@ -23744,39 +23502,6 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 109.855 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 111.76 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 107.95 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "PSMN012-100YSFX"
 			(at 92.71 45.72 90)
 			(hide yes)
@@ -23790,17 +23515,6 @@
 		)
 		(property "LCSC P/N" "C20443035"
 			(at 92.71 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 96.52 36.83 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23926,17 +23640,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 116.84 87.63 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "751598e8-89a0-4294-bcf4-3da7afe3c3a7")
 		)
@@ -24024,39 +23727,6 @@
 				)
 			)
 		)
-		(property "If" ""
-			(at 43.18 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Vf" ""
-			(at 43.18 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" "833-SMAF4758A-TP"
-			(at 43.18 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "SMAF4758A-TP"
 			(at 43.18 83.82 90)
 			(hide yes)
@@ -24069,17 +23739,6 @@
 			)
 		)
 		(property "LCSC P/N" "C779051"
-			(at 43.18 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 43.18 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -24200,17 +23859,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 36.83 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "c25b94cb-e033-4c0d-8a3c-c233e6cf28fe")
 		)
@@ -24311,17 +23959,6 @@
 		)
 		(property "LCSC P/N" "C2090661"
 			(at 116.84 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 116.84 77.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

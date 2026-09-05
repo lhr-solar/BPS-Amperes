@@ -491,129 +491,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -911,8 +788,8 @@
 		)
 	)
 	(rectangle
-		(start 92.583 154.813)
-		(end 175.641 195.707)
+		(start 143.637 98.171)
+		(end 226.695 139.065)
 		(stroke
 			(width 0)
 			(type default)
@@ -923,8 +800,8 @@
 		(uuid "6e8f8849-0d24-4fe5-8d8e-653aefc5c335")
 	)
 	(rectangle
-		(start 13.716 154.813)
-		(end 90.551 196.342)
+		(start 64.77 98.171)
+		(end 141.605 139.7)
 		(stroke
 			(width 0)
 			(type default)
@@ -936,7 +813,7 @@
 	)
 	(text "Voltage Error @ 140V for 1% tolerance\nDivider error: +-2% and +-2.8V difference"
 		(exclude_from_sim no)
-		(at 134.366 183.642 0)
+		(at 185.42 127 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -946,7 +823,7 @@
 	)
 	(text "+-1% Tolerance\nNominal: 1.5M + 20k divider, ratio of 0.013158\n140 * 0.013158 = 1.8421\n\nHighest reading: 1,485,000 (min) + 20,200 (max), ratio of 0.013419\n140* 0.013419 = 1.8787 (+1.99%)\n\nLowest reading: 1,515,000 (max) + 19,800 (min), ratio of 0.012900\n140 * 0.012900 = 1.8060 (-1.96%)"
 		(exclude_from_sim no)
-		(at 135.636 169.672 0)
+		(at 186.69 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -956,7 +833,7 @@
 	)
 	(text "Ratio = V_AMC3311_MAX / V_HV_MAX = 2.0V/140V = 0.014286V/V\n\nOp_amp_gain = 1.0\n\nV_Out_Diff = = Vin_HV * Ratio * Op_amp_gain = Vin_HV * 0.014286 * 1\n\nV_ADC = V_Out_Diff * Op_amp_gain"
 		(exclude_from_sim no)
-		(at 53.086 168.402 0)
+		(at 104.14 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -966,7 +843,7 @@
 	)
 	(text "1% Resistor Divider Worst Case"
 		(exclude_from_sim no)
-		(at 108.966 156.972 0)
+		(at 160.02 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -976,7 +853,7 @@
 	)
 	(text "AMC3311 ADC Output Calc"
 		(exclude_from_sim no)
-		(at 27.686 156.972 0)
+		(at 78.74 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -986,7 +863,7 @@
 	)
 	(text "Vin_HV = Motor_ADC = Precharge_ADC\n\n0V = 0V\n35V = 0.5V\n70V = 1V\n105V = 1.5V\n140V = 2.0V"
 		(exclude_from_sim no)
-		(at 53.086 186.182 0)
+		(at 104.14 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1011,12 +888,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "24196b42-f30e-462e-993f-5aae1862a1de")
-	)
-	(junction
-		(at 248.92 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "276c9cc4-1aa9-4583-9742-18477b2cc300")
 	)
 	(junction
 		(at 190.5 82.55)
@@ -1047,12 +918,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "558afdc9-cdc7-4bad-9b2f-837a2225a33b")
-	)
-	(junction
-		(at 248.92 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83230ae4-3108-48df-bc16-09d2dce3ef17")
 	)
 	(junction
 		(at 203.2 45.72)
@@ -1133,12 +998,6 @@
 		(uuid "e0915519-7f60-4f2f-aeac-d53ef1bf54be")
 	)
 	(junction
-		(at 248.92 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f04a8389-b5eb-49d1-8862-4daf66dc7939")
-	)
-	(junction
 		(at 106.68 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1216,7 +1075,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 57.15) (xy 248.92 57.15)
+			(xy 208.28 57.15) (xy 252.73 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1413,16 +1272,6 @@
 			(type default)
 		)
 		(uuid "76b37316-91a9-4fa0-9a78-eff6ed2ca011")
-	)
-	(wire
-		(pts
-			(xy 248.92 57.15) (xy 252.73 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b005ea5-082b-49c3-b1ec-7960673f744c")
 	)
 	(wire
 		(pts
@@ -1746,17 +1595,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 69.85) (xy 261.62 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d57c8708-5659-468b-8cc0-1f97d9e504f9")
-	)
-	(wire
-		(pts
-			(xy 234.95 80.01) (xy 248.92 80.01)
+			(xy 234.95 80.01) (xy 261.62 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1783,16 +1622,6 @@
 			(type default)
 		)
 		(uuid "ddd568f2-d48f-4108-b1b3-6cbb8a06caf2")
-	)
-	(wire
-		(pts
-			(xy 248.92 80.01) (xy 261.62 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e225adaf-8189-4c4f-83be-26c49faf284c")
 	)
 	(wire
 		(pts
@@ -1836,7 +1665,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 69.85) (xy 248.92 69.85)
+			(xy 234.95 69.85) (xy 261.62 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2025,17 +1854,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 227.33 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "17fc9a03-a25f-4eeb-81c3-66cd50e3a8e2")
 		)
@@ -2129,17 +1947,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 198.12 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "008a2f15-586d-47af-90d9-d11fcc756b99")
 		)
@@ -2162,108 +1969,6 @@
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
 					(reference "C23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 248.92 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1f77c982-bdb3-4e4c-8507-5dd0106ecef3")
-		(property "Reference" "TP9"
-			(at 251.46 75.4379 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OUTN TP"
-			(at 249.936 76.454 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 254 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 248.92 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 248.92 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "654bcd22-0fea-4eb8-910e-8f8a2251835b")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "TP31")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "TP28")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "TP34")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
-					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -2324,17 +2029,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 227.33 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 227.33 69.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2436,17 +2130,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 45.72 72.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "b6f5db03-759d-4362-afc9-b03132d5a9b7")
 		)
@@ -2469,108 +2152,6 @@
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
 					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 248.92 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3b773438-5257-43d4-839b-cf84ded44570")
-		(property "Reference" "TP7"
-			(at 251.46 52.5779 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DIAG TP"
-			(at 249.936 53.594 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 254 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 248.92 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 248.92 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e31c4b79-9076-4792-afd3-448a15098061")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "TP29")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "TP26")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "TP32")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
-					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -2631,17 +2212,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 99.06 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 99.06 69.85 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2734,17 +2304,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 63.5 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 63.5 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2848,17 +2407,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 184.15 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "acd9712a-530e-44ea-8402-86e87d57fbbf")
 		)
@@ -2952,17 +2500,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 234.95 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "255c26d8-e3c7-4755-9f72-d6fcf1401f08")
 		)
@@ -2985,108 +2522,6 @@
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
 					(reference "C24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 248.92 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7be4ea3b-250c-46ce-8e4d-c37373d28c2a")
-		(property "Reference" "TP8"
-			(at 251.46 65.2779 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OUTP TP"
-			(at 249.936 66.294 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 254 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 248.92 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 248.92 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7d1772a9-ee8a-4040-bc74-847072c3d6cb")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "TP30")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "TP27")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "TP33")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
-					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -3147,17 +2582,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 99.06 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 99.06 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3260,17 +2684,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 190.5 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "1de7e28a-8fde-4b22-ac01-84ecf5cc49e7")
 		)
@@ -3353,17 +2766,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 99.06 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 99.06 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3457,17 +2859,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 208.28 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 208.28 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3572,17 +2963,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 69.85 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "97da66a9-e503-4199-b4ae-da5d05d5041c")
 		)
@@ -3667,17 +3047,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 115.57 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -3821,17 +3190,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 99.06 64.77 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "bc679879-61c0-45e3-9703-6096c1d98f8f")
 		)
@@ -3925,17 +3283,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 95.25 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "06953207-6c96-4eab-9ccc-eaccf9bb2454")
 		)
@@ -4018,17 +3365,6 @@
 		)
 		(property "Description" "Resistor"
 			(at 54.61 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
-			(at 54.61 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -2774,17 +2774,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 189.23 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "d45923c7-b65b-4734-a48d-dbef5b6b8376")
 		)
@@ -2892,17 +2881,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 73.66 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "27f82d89-600a-448d-8f39-1db39d6c5ab5")
 		)
@@ -2977,17 +2955,6 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, open"
-			(at 215.9 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 215.9 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -3105,17 +3072,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 85.09 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f66b06ee-1769-4f46-8da7-b2bd69edd43a")
 		)
@@ -3223,17 +3179,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 62.23 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "a24e94c7-29fe-422c-b012-88d16f650b0d")
 		)
@@ -3320,54 +3265,6 @@
 				)
 			)
 		)
-		(property "Height" "1.75"
-			(at 140.97 466.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "595-TCAN3413DR"
-			(at 140.97 566.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "-"
-			(at 140.97 666.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 140.97 766.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
 		(property "P/N" "TCAN3413DR"
 			(at 140.97 866.04 0)
 			(hide yes)
@@ -3381,17 +3278,6 @@
 			)
 		)
 		(property "LCSC P/N" "C22433320"
-			(at 111.76 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 111.76 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3525,17 +3411,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 201.93 85.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "47ad6aea-a88b-4107-a206-573e5ca21160")
 		)
@@ -3641,17 +3516,6 @@
 				)
 			)
 		)
-		(property "LCSC" ""
-			(at 176.53 85.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "d5c1996a-0d22-4932-b645-b3db17c61078")
 		)
@@ -3737,17 +3601,6 @@
 			)
 		)
 		(property "P/N" "CDSOT23-T24CAN"
-			(at 194.31 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" ""
 			(at 194.31 55.88 0)
 			(hide yes)
 			(show_name no)

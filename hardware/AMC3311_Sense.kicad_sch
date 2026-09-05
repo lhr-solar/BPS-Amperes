@@ -1854,6 +1854,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310R0FKEE"
+			(at 227.33 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "17fc9a03-a25f-4eeb-81c3-66cd50e3a8e2")
 		)
@@ -1863,15 +1874,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R62")
+					(reference "R60")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R55")
+					(reference "R53")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R69")
+					(reference "R67")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -1947,6 +1958,17 @@
 				)
 			)
 		)
+		(property "P/N" "MLASU168SB5105KTNA01"
+			(at 198.12 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "008a2f15-586d-47af-90d9-d11fcc756b99")
 		)
@@ -1956,15 +1978,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C69")
+					(reference "C65")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C60")
+					(reference "C56")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C78")
+					(reference "C74")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2038,6 +2060,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310R0FKEE"
+			(at 227.33 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a62b2620-a070-494a-80b5-83fac0848278")
 		)
@@ -2047,15 +2080,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R61")
+					(reference "R59")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R54")
+					(reference "R52")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R68")
+					(reference "R66")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2139,15 +2172,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R56")
+					(reference "R54")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R49")
+					(reference "R47")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R63")
+					(reference "R61")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2221,6 +2254,17 @@
 				)
 			)
 		)
+		(property "P/N" "UMK107B7102MAHT"
+			(at 99.06 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "77813153-26d0-4f02-8de9-aaa87bdbb478")
 		)
@@ -2230,15 +2274,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C66")
+					(reference "C62")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C57")
+					(reference "C53")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C75")
+					(reference "C71")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2322,15 +2366,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R58")
+					(reference "R56")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R51")
+					(reference "R49")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R65")
+					(reference "R63")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2407,6 +2451,17 @@
 				)
 			)
 		)
+		(property "P/N" "MAJCH168BB7104KTEA01"
+			(at 184.15 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "acd9712a-530e-44ea-8402-86e87d57fbbf")
 		)
@@ -2416,15 +2471,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C67")
+					(reference "C63")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C58")
+					(reference "C54")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C76")
+					(reference "C72")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2500,6 +2555,17 @@
 				)
 			)
 		)
+		(property "P/N" "EMK107SD103KA-T"
+			(at 234.95 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "255c26d8-e3c7-4755-9f72-d6fcf1401f08")
 		)
@@ -2509,15 +2575,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C70")
+					(reference "C66")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C61")
+					(reference "C57")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C79")
+					(reference "C75")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2591,6 +2657,17 @@
 				)
 			)
 		)
+		(property "P/N" "MAJCH168BB7104KTEA01"
+			(at 99.06 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "166eab91-ed49-4d3a-8d87-6a21ff5cb66f")
 		)
@@ -2600,15 +2677,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C64")
+					(reference "C60")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C55")
+					(reference "C51")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C73")
+					(reference "C69")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2684,6 +2761,17 @@
 				)
 			)
 		)
+		(property "P/N" "UMK107B7102MAHT"
+			(at 190.5 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "1de7e28a-8fde-4b22-ac01-84ecf5cc49e7")
 		)
@@ -2693,15 +2781,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C68")
+					(reference "C64")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C59")
+					(reference "C55")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C77")
+					(reference "C73")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2775,6 +2863,17 @@
 				)
 			)
 		)
+		(property "P/N" "UMK107B7102MAHT"
+			(at 99.06 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4749e511-5bcb-4fc3-8325-8f1efb73bf5c")
 		)
@@ -2784,15 +2883,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C63")
+					(reference "C59")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C54")
+					(reference "C50")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C72")
+					(reference "C68")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2869,6 +2968,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060347K0FKECC"
+			(at 208.28 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a9dcd2f3-1311-487e-b8c7-3a276d75129e")
 		)
@@ -2878,15 +2988,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R60")
+					(reference "R58")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R53")
+					(reference "R51")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R67")
+					(reference "R65")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -2972,15 +3082,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R59")
+					(reference "R57")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R52")
+					(reference "R50")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R66")
+					(reference "R64")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -3057,6 +3167,17 @@
 				)
 			)
 		)
+		(property "P/N" "AMC3311QDWERQ1"
+			(at 115.57 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "9"
 			(uuid "3c44dc44-f752-4f08-8d18-85452e995472")
 		)
@@ -3108,15 +3229,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "U10")
-					(unit 1)
-				)
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
 					(reference "U9")
 					(unit 1)
 				)
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
+					(reference "U8")
+					(unit 1)
+				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "U11")
+					(reference "U10")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -3190,6 +3311,17 @@
 				)
 			)
 		)
+		(property "P/N" "MAJCH168BB7104KTEA01"
+			(at 99.06 64.77 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bc679879-61c0-45e3-9703-6096c1d98f8f")
 		)
@@ -3199,15 +3331,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C65")
+					(reference "C61")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C56")
+					(reference "C52")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C74")
+					(reference "C70")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -3283,6 +3415,17 @@
 				)
 			)
 		)
+		(property "P/N" "MMARQ167SCG101JTRA18 "
+			(at 95.25 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "06953207-6c96-4eab-9ccc-eaccf9bb2454")
 		)
@@ -3292,15 +3435,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "C62")
+					(reference "C58")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "C53")
+					(reference "C49")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "C71")
+					(reference "C67")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"
@@ -3383,15 +3526,15 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/058f727f-48a9-481a-84d8-b39cdbc2591c"
-					(reference "R57")
+					(reference "R55")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/37364f3b-40a4-4457-87c5-7b5b860406dd"
-					(reference "R50")
+					(reference "R48")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/54840e85-0cf7-4130-9891-f9fe2f02e074"
-					(reference "R64")
+					(reference "R62")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/e4eeb78c-a673-4aa0-9da6-938ecb9aa669"

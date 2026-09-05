@@ -1783,7 +1783,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "01ead70c-0165-4879-828f-f34459038239")
-		(property "Reference" "C83"
+		(property "Reference" "C79"
 			(at 91.8972 57.2516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1858,7 +1858,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C83")
+					(reference "C79")
 					(unit 1)
 				)
 			)
@@ -1881,7 +1881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2b5b7fd6-b1a2-49bf-aab6-5b1c87c9f917")
-		(property "Reference" "R72"
+		(property "Reference" "R70"
 			(at 78.994 67.564 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1954,7 +1954,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "R72")
+					(reference "R70")
 					(unit 1)
 				)
 			)
@@ -1977,7 +1977,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34e6f2ae-d271-4a6d-9148-a06a796ccc05")
-		(property "Reference" "C80"
+		(property "Reference" "C76"
 			(at 24.5872 44.5516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2052,7 +2052,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C80")
+					(reference "C76")
 					(unit 1)
 				)
 			)
@@ -2075,7 +2075,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a88b8b0-5d65-4555-85e0-d2b7991884fc")
-		(property "Reference" "R70"
+		(property "Reference" "R68"
 			(at 35.052 59.944 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2128,7 +2128,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060316K0FKTA "
 			(at 31.75 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -2148,7 +2148,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "R70")
+					(reference "R68")
 					(unit 1)
 				)
 			)
@@ -2166,7 +2166,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8edbd683-d226-4095-b4a7-38849f22f4d9")
-		(property "Reference" "U12"
+		(property "Reference" "U11"
 			(at 60.96 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2257,7 +2257,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "U12")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -2280,7 +2280,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b11a1149-af1e-4d2e-b9ef-9558fb40c6e9")
-		(property "Reference" "C82"
+		(property "Reference" "C78"
 			(at 43.6372 67.4116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2355,7 +2355,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C82")
+					(reference "C78")
 					(unit 1)
 				)
 			)
@@ -2378,7 +2378,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb944474-859f-493a-bb10-aead7e299c7c")
-		(property "Reference" "R71"
+		(property "Reference" "R69"
 			(at 35.052 67.564 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2431,7 +2431,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW06034K70FKEA"
 			(at 31.75 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -2451,7 +2451,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "R71")
+					(reference "R69")
 					(unit 1)
 				)
 			)
@@ -2468,7 +2468,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fffce44d-6a2f-431a-a7e0-1c503bf34ef7")
-		(property "Reference" "C81"
+		(property "Reference" "C77"
 			(at 38.5572 44.5516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2543,7 +2543,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C81")
+					(reference "C77")
 					(unit 1)
 				)
 			)

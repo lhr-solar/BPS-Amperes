@@ -1825,7 +1825,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 49.53) (xy 193.04 49.53)
+			(xy 176.53 48.26) (xy 185.42 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1845,7 +1845,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 48.26) (xy 124.46 48.26)
+			(xy 115.57 48.26) (xy 130.81 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1865,7 +1865,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 57.15) (xy 157.48 54.61)
+			(xy 161.29 64.77) (xy 161.29 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2354,7 +2354,7 @@
 		(uuid "b8864b34-c04e-418b-bc1d-d43ca0e35b47")
 	)
 	(label "Buck_5V"
-		(at 193.04 49.53 180)
+		(at 185.42 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2571,7 +2571,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape input)
-		(at 157.48 57.15 270)
+		(at 161.29 64.77 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2591,7 +2591,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "169628eb-a83e-4fad-88c8-6ca39b59c1a8")
-		(property "Reference" "TP18"
+		(property "Reference" "TP11"
 			(at 92.456 22.098 0)
 			(hide yes)
 			(show_name no)
@@ -2653,7 +2653,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP18")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -2670,7 +2670,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a510596-5f99-43a6-98eb-ebfd734d338f")
-		(property "Reference" "TP17"
+		(property "Reference" "TP10"
 			(at 84.836 22.098 0)
 			(hide yes)
 			(show_name no)
@@ -2732,7 +2732,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP17")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -2749,7 +2749,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1e4802a2-1696-4f84-a997-10989ac104a8")
-		(property "Reference" "R34"
+		(property "Reference" "R32"
 			(at 78.486 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2813,6 +2813,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW06035K10FKEC "
+			(at 82.55 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b38703e6-2a93-4c75-901a-3d4c44a0ef75")
 		)
@@ -2822,7 +2833,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "R34")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -2839,7 +2850,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1fe3fa78-8c96-4fec-92a4-65d0f069d53a")
-		(property "Reference" "R35"
+		(property "Reference" "R33"
 			(at 86.106 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2903,6 +2914,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW06035K10FKEC "
+			(at 90.17 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fa534472-9dd0-4838-8e65-6de41aa77ce7")
 		)
@@ -2912,7 +2934,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "R35")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -3063,7 +3085,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "75bf347c-4042-485e-9abc-d7e41eb70a21")
-		(property "Reference" "TP15"
+		(property "Reference" "TP8"
 			(at 70.358 21.844 0)
 			(hide yes)
 			(show_name no)
@@ -3125,7 +3147,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP15")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -3143,7 +3165,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7bc748aa-cbf0-44b1-ad07-adc120d8872a")
-		(property "Reference" "TP19"
+		(property "Reference" "TP12"
 			(at 120.65 123.6979 0)
 			(hide yes)
 			(show_name no)
@@ -3205,7 +3227,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP19")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -3223,7 +3245,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa00ef11-fb17-43f4-b8de-3139dee3b07d")
-		(property "Reference" "TP14"
+		(property "Reference" "TP7"
 			(at 73.1521 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -3285,7 +3307,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP14")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -3302,7 +3324,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b93975d3-058b-4251-89b2-32bb5b6c5df3")
-		(property "Reference" "TP16"
+		(property "Reference" "TP9"
 			(at 77.216 22.098 0)
 			(hide yes)
 			(show_name no)
@@ -3364,7 +3386,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "TP16")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -3382,7 +3404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb253572-93fa-4369-bbf7-5f45d193f6ff")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG02"
 			(at 71.755 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -3443,7 +3465,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "#FLG04")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -3561,7 +3583,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f4c3dd7f-84ec-4dcb-899f-0b4a41d3690f")
-		(property "Reference" "C44"
+		(property "Reference" "C40"
 			(at 64.3128 98.9584 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3616,7 +3638,7 @@
 				)
 			)
 		)
-		(property "P/N" "TMK212BBJ106MGHT"
+		(property "P/N" "GRM21BR61H106KE43K"
 			(at 67.31 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3647,7 +3669,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(reference "C44")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -3757,6 +3779,82 @@
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
 					(reference "D12")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 130.81 36.83)
+		(size 45.72 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3d5e6349-9b57-4f3d-adb1-46bcc69fbb65")
+		(property "Sheetname" "12VBuck"
+			(at 130.81 36.1184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "12VBuck.kicad_sch"
+			(at 130.81 62.3066 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GND" bidirectional
+			(at 161.29 62.23 270)
+			(uuid "6db7985f-9633-4d0d-81e3-844ddf2e88f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "V_in_12V" input
+			(at 130.81 48.26 180)
+			(uuid "f3c82ec3-3631-4426-b327-daf388f00f68")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "V_out_5V" output
+			(at 176.53 48.26 0)
+			(uuid "f5b40127-578b-4171-954b-845699488dbf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
+					(page "18")
 				)
 			)
 		)
@@ -3969,82 +4067,6 @@
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
 					(page "15")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 124.46 31.75)
-		(size 59.69 22.86)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "cdc38143-6c01-474d-8a8e-ff8bf18b44d0")
-		(property "Sheetname" "5VBuck"
-			(at 124.46 31.0384 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "5VBuck.kicad_sch"
-			(at 124.46 54.5596 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "GND" input
-			(at 157.48 54.61 270)
-			(uuid "fedebd80-1c54-4ebe-ab2e-ff620178756a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "V_in_24V" input
-			(at 124.46 48.26 180)
-			(uuid "4a4068e3-7bae-4882-b22b-182680947294")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "V_out_5V" output
-			(at 184.15 49.53 0)
-			(uuid "41949928-a191-42e1-91ba-61504bfc49bd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d"
-					(page "7")
 				)
 			)
 		)

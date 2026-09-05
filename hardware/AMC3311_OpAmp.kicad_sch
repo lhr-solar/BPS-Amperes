@@ -901,7 +901,6 @@
 				)
 			)
 			(embedded_fonts no)
-			(embedded_files)
 		)
 	)
 	(rectangle
@@ -1655,7 +1654,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0022ca08-022a-4d1d-b029-e84d63eaec67")
-		(property "Reference" "TP36"
+		(property "Reference" "TP35"
 			(at 121.92 61.4679 0)
 			(hide yes)
 			(show_name no)
@@ -1717,11 +1716,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "TP36")
+					(reference "TP35")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "TP38")
+					(reference "TP37")
 					(unit 1)
 				)
 			)
@@ -1738,7 +1737,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0472772e-e1fe-4e52-859a-ec88d59b39cc")
-		(property "Reference" "R78"
+		(property "Reference" "R76"
 			(at 86.36 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1791,6 +1790,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 86.36 113.03 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8de6feea-dd3e-4613-96ad-3e579844d3b4")
 		)
@@ -1800,11 +1810,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R78")
+					(reference "R76")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R84")
+					(reference "R82")
 					(unit 1)
 				)
 			)
@@ -1917,7 +1927,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17611c1b-cd5e-4df7-87ba-829424a833a5")
-		(property "Reference" "R76"
+		(property "Reference" "R74"
 			(at 67.31 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1970,6 +1980,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 67.31 105.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dc50fe33-3160-4c49-b061-e4f3e5eae1c6")
 		)
@@ -1979,11 +2000,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R76")
+					(reference "R74")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R82")
+					(reference "R80")
 					(unit 1)
 				)
 			)
@@ -2096,7 +2117,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34c8c77b-50ca-44a8-ba2e-62d68cf06271")
-		(property "Reference" "C86"
+		(property "Reference" "C82"
 			(at 165.354 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2149,6 +2170,17 @@
 				)
 			)
 		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 170.18 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0cab9f7d-763d-40a7-91d7-7b666e5e4299")
 		)
@@ -2158,11 +2190,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "C86")
+					(reference "C82")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "C89")
+					(reference "C85")
 					(unit 1)
 				)
 			)
@@ -2179,7 +2211,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "455f917d-289f-4289-9ff0-2ef1d279973d")
-		(property "Reference" "C84"
+		(property "Reference" "C80"
 			(at 85.09 87.122 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2232,6 +2264,17 @@
 				)
 			)
 		)
+		(property "P/N" "UMK107B7102MAHT"
+			(at 85.09 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d0ab9875-864d-4a7d-8cab-83cbadc9ef46")
 		)
@@ -2241,11 +2284,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "C84")
+					(reference "C80")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "C87")
+					(reference "C83")
 					(unit 1)
 				)
 			)
@@ -2263,7 +2306,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4aa92a32-510b-4378-ac43-bd580c9b6183")
-		(property "Reference" "U13"
+		(property "Reference" "U12"
 			(at 181.61 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2356,11 +2399,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "U13")
+					(reference "U12")
 					(unit 3)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "U14")
+					(reference "U13")
 					(unit 3)
 				)
 			)
@@ -2377,7 +2420,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "58b71e11-7b8c-4a6d-ba6d-b40bc62821d0")
-		(property "Reference" "R75"
+		(property "Reference" "R73"
 			(at 67.31 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2430,6 +2473,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 67.31 100.33 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f716092a-7436-4477-8624-ec1e1186f325")
 		)
@@ -2439,11 +2493,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R75")
+					(reference "R73")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R81")
+					(reference "R79")
 					(unit 1)
 				)
 			)
@@ -2461,7 +2515,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b5d5516-aa09-486c-b33a-6bc567102790")
-		(property "Reference" "U13"
+		(property "Reference" "U12"
 			(at 83.82 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2552,11 +2606,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "U13")
+					(reference "U12")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "U14")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -2573,7 +2627,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a9c0b13-dffa-4ad4-b82d-7f73b6915444")
-		(property "Reference" "C85"
+		(property "Reference" "C81"
 			(at 86.36 126.492 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2626,6 +2680,17 @@
 				)
 			)
 		)
+		(property "P/N" "UMK107B7102MAHT"
+			(at 86.36 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "615a5062-56ee-4524-9a0d-3760106c529b")
 		)
@@ -2635,11 +2700,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "C85")
+					(reference "C81")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "C88")
+					(reference "C84")
 					(unit 1)
 				)
 			)
@@ -2656,7 +2721,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6ad6a59f-d5a8-4df6-9056-f346b2376ca2")
-		(property "Reference" "R73"
+		(property "Reference" "R71"
 			(at 66.04 63.5 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2709,6 +2774,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 66.04 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a3c75aea-1fc9-4a38-88f3-52aa7514a644")
 		)
@@ -2718,11 +2794,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R73")
+					(reference "R71")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R79")
+					(reference "R77")
 					(unit 1)
 				)
 			)
@@ -2739,7 +2815,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7d95a122-53a1-4590-b472-3df6399a8b0f")
-		(property "Reference" "R77"
+		(property "Reference" "R75"
 			(at 85.09 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2792,6 +2868,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 85.09 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b45845de-ab07-4740-9401-87b9984c5959")
 		)
@@ -2801,11 +2888,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R77")
+					(reference "R75")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R83")
+					(reference "R81")
 					(unit 1)
 				)
 			)
@@ -2918,7 +3005,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c7f6ccfa-65d6-4db1-8837-cdd38e7f6ed0")
-		(property "Reference" "R74"
+		(property "Reference" "R72"
 			(at 66.04 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2971,6 +3058,17 @@
 				)
 			)
 		)
+		(property "P/N" "CRCW060310K0FKEI "
+			(at 66.04 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e0d6078e-2174-4fe5-8eb6-f7c49b75cd9c")
 		)
@@ -2980,11 +3078,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "R74")
+					(reference "R72")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "R80")
+					(reference "R78")
 					(unit 1)
 				)
 			)
@@ -3001,7 +3099,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce753d7e-9c84-4546-922d-33127d8d63f3")
-		(property "Reference" "TP35"
+		(property "Reference" "TP34"
 			(at 116.84 98.2979 0)
 			(hide yes)
 			(show_name no)
@@ -3063,11 +3161,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "TP35")
+					(reference "TP34")
 					(unit 1)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "TP37")
+					(reference "TP36")
 					(unit 1)
 				)
 			)
@@ -3085,7 +3183,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dac9c01f-b3ca-4c71-b2f1-246a3fcbd5bc")
-		(property "Reference" "U13"
+		(property "Reference" "U12"
 			(at 85.09 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3176,11 +3274,11 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/9068f688-485f-416c-9cd2-e445ef73f243"
-					(reference "U13")
+					(reference "U12")
 					(unit 2)
 				)
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a/a79c140a-76cc-4bbb-b1f3-7013b136bd70"
-					(reference "U14")
+					(reference "U13")
 					(unit 2)
 				)
 			)

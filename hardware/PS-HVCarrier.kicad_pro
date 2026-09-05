@@ -555,19 +555,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -579,7 +579,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -670,7 +670,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-6,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-16,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
+    "used_designators": "F1,#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-6,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-16,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -697,10 +697,6 @@
     [
       "e4eeb78c-a673-4aa0-9da6-938ecb9aa669",
       "HV- V Sense"
-    ],
-    [
-      "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
-      "5VBuck"
     ],
     [
       "525eebd7-cd9b-471b-950d-358e3ce0c5f6",
@@ -741,6 +737,10 @@
     [
       "a79c140a-76cc-4bbb-b1f3-7013b136bd70",
       "OpAmp1"
+    ],
+    [
+      "3d5e6349-9b57-4f3d-adb1-46bcc69fbb65",
+      "12VBuck"
     ]
   ],
   "text_variables": {},

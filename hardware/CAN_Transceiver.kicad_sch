@@ -2774,6 +2774,17 @@
 				)
 			)
 		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 189.23 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d45923c7-b65b-4734-a48d-dbef5b6b8376")
 		)

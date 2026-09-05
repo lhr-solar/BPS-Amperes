@@ -22525,7 +22525,7 @@
 				)
 			)
 		)
-		(property "P/N" "MSASU168SB7224KTNB25"
+		(property "P/N" "EMK107SD103KA-T"
 			(at 60.96 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -22629,7 +22629,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI"
+		(property "P/N" "CRCW060310K0FKEI "
 			(at 43.18 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -22736,7 +22736,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI"
+		(property "P/N" "CRCW060310K0FKEI "
 			(at 128.27 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -23618,7 +23618,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI"
+		(property "P/N" "CRCW060310K0FKEI "
 			(at 116.84 87.63 0)
 			(hide yes)
 			(show_name no)

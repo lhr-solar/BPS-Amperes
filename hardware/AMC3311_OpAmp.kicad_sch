@@ -904,6 +904,90 @@
 			(embedded_files)
 		)
 	)
+	(rectangle
+		(start 12.7 155.956)
+		(end 89.535 197.485)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "3d92dacb-63fd-4491-a4c4-a1fb835afc3c")
+	)
+	(rectangle
+		(start 91.567 155.956)
+		(end 174.625 196.85)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "dddfcba0-2cf2-43cb-8b0e-c6f1beefb5ee")
+	)
+	(text "1% Resistor Divider Worst Case"
+		(exclude_from_sim no)
+		(at 107.95 158.115 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "307a968b-abae-4d03-8c21-06a3baf58686")
+	)
+	(text "Voltage Error @ 140V for 1% tolerance\nDivider error: +-2% and +-2.8V difference"
+		(exclude_from_sim no)
+		(at 133.35 184.785 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "41c8eb6b-4653-4914-af4a-e000318e433a")
+	)
+	(text "Ratio = V_AMC3311_MAX / V_HV_MAX = 2.0V/140V = 0.014286V/V\n\nOp_amp_gain = 1.0\n\nV_Out_Diff = = Vin_HV * Ratio * Op_amp_gain = Vin_HV * 0.014286 * 1\n\nV_ADC = V_Out_Diff * Op_amp_gain"
+		(exclude_from_sim no)
+		(at 52.07 169.545 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "71c80ffa-d722-47d9-9561-3521a1ed90a4")
+	)
+	(text "AMC3311 ADC Output Calc"
+		(exclude_from_sim no)
+		(at 26.67 158.115 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "92e2878e-a013-450c-adc6-452b1fa1734a")
+	)
+	(text "+-1% Tolerance\nNominal: 1.5M + 20k divider, ratio of 0.013158\n140 * 0.013158 = 1.8421\n\nHighest reading: 1,485,000 (min) + 20,200 (max), ratio of 0.013419\n140* 0.013419 = 1.8787 (+1.99%)\n\nLowest reading: 1,515,000 (max) + 19,800 (min), ratio of 0.012900\n140 * 0.012900 = 1.8060 (-1.96%)"
+		(exclude_from_sim no)
+		(at 134.62 170.815 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "db231279-09eb-48e1-9328-6504e5dffe25")
+	)
+	(text "Vin_HV = Motor_ADC = Precharge_ADC\n\n0V = 0V\n35V = 0.5V\n70V = 1V\n105V = 1.5V\n140V = 2.0V"
+		(exclude_from_sim no)
+		(at 52.07 187.325 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "dbe18577-e7f2-4a61-8352-60bf53dd3a56")
+	)
 	(junction
 		(at 119.38 66.04)
 		(diameter 0)

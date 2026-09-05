@@ -2426,7 +2426,7 @@
 		)
 		(uuid "211eae25-22c9-4982-ba1e-fba496dcd5b1")
 	)
-	(hierarchical_label "+24V_Ext"
+	(hierarchical_label "+12V_Ext"
 		(shape input)
 		(at 31.75 48.26 180)
 		(effects
@@ -2514,7 +2514,7 @@
 		)
 		(uuid "b59a2095-4747-44c9-8f6c-6fe46870e306")
 	)
-	(hierarchical_label "+24V"
+	(hierarchical_label "+12V"
 		(shape output)
 		(at 115.57 44.45 90)
 		(effects

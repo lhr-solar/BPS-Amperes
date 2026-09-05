@@ -2163,6 +2163,17 @@
 				)
 			)
 		)
+		(property "P/N" "RNCF0805BTE500K"
+			(at 45.72 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b6f5db03-759d-4362-afc9-b03132d5a9b7")
 		)
@@ -2348,6 +2359,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 63.5 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "P/N" "RNCF0805BTE500K"
+			(at 63.5 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3040,7 +3062,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 71.628 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -3063,6 +3085,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 69.85 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "P/N" "CR0603-FX-2002ELF "
 			(at 69.85 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -3508,6 +3541,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 54.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "P/N" "RNCF0805BTE500K"
+			(at 54.61 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

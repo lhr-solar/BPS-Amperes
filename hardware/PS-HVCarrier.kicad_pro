@@ -754,6 +754,24 @@
           "label": "PN",
           "name": "PN",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MAXIMUM_PACKAGE_HEIGHT",
+          "name": "MAXIMUM_PACKAGE_HEIGHT",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "STANDARD",
+          "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PARTREV",
+          "name": "PARTREV",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -820,7 +838,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG1-8,Y1-2,#PWR1-52,D1-33,IC1-6,J1-14,L1-2,Reset1,FB1-4,C1-109,SW1-3,U1-15,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
+    "used_designators": "Q1-2,S1,JP1-5,TP_3.3V1,R1-99,TP_1,TP1-45,U1-16,FB1-4,C1-109,SW1-3,Reset1,L1-2,J1-14,IC1-6,D1-33,#PWR1-52,Y1-2,#FLG1-8",
     "variants": []
   },
   "sheets": [
@@ -845,6 +863,10 @@
       "IMD_CAN_Transceiver"
     ],
     [
+      "e4eeb78c-a673-4aa0-9da6-938ecb9aa669",
+      "HV- Voltage Sense"
+    ],
+    [
       "cdc38143-6c01-474d-8a8e-ff8bf18b44d0",
       "5VBuck"
     ],
@@ -861,8 +883,8 @@
       "Current_Sense"
     ],
     [
-      "75ffbad4-11c2-4c48-b4e9-5987716b7b4c",
-      "Motor_Precharge+ Voltage Sense"
+      "37364f3b-40a4-4457-87c5-7b5b860406dd",
+      "Motor Precharge- Voltage Sense"
     ],
     [
       "058f727f-48a9-481a-84d8-b39cdbc2591c",
@@ -873,12 +895,20 @@
       "Voltage_Sense"
     ],
     [
-      "f5850dee-f508-4102-acbc-4e3b9fd85122",
-      "HV- Voltage Sense"
+      "54840e85-0cf7-4130-9891-f9fe2f02e074",
+      "Motor Precharge+ Voltage Sense"
     ],
     [
-      "9912c899-43b0-4472-ae21-1c88529879fd",
-      "Motor_Precharge- Voltage Sense"
+      "b66ae0b0-03e3-4dd0-8364-435fb922b758",
+      "Power_Mux"
+    ],
+    [
+      "9068f688-485f-416c-9cd2-e445ef73f243",
+      "OpAmp"
+    ],
+    [
+      "a79c140a-76cc-4bbb-b1f3-7013b136bd70",
+      "OpAmp1"
     ]
   ],
   "text_variables": {},

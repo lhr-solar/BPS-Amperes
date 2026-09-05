@@ -5,93 +5,9 @@
 	(uuid "029d3239-d0f4-471f-825a-1c65a675738c")
 	(paper "A4")
 	(lib_symbols)
-	(rectangle
-		(start 92.837 155.321)
-		(end 175.895 196.215)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "1fdce6f4-ea7a-48ec-a913-de865f167a7e")
-	)
-	(rectangle
-		(start 13.97 155.321)
-		(end 90.805 196.85)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "cc606eb0-eddf-4fc8-b79e-be9ef70b5cd2")
-	)
-	(text "Ratio = V_AMC3311_MAX / V_HV_MAX = 2.0V/140V = 0.014286V/V\n\nOp_amp_gain = 1.0\n\nV_Out_Diff = = Vin_HV * Ratio * Op_amp_gain = Vin_HV * 0.014286 * 1\n\nV_ADC = V_Out_Diff * Op_amp_gain"
-		(exclude_from_sim no)
-		(at 52.832 168.275 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "47edfd3b-ed38-40dc-8c23-2eaa6f900384")
-	)
-	(text "1% Resistor Divider Worst Case"
-		(exclude_from_sim no)
-		(at 109.22 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7e86c33e-500b-4321-a2b6-cee517e4fd11")
-	)
-	(text "AMC3311 ADC Output Calc"
-		(exclude_from_sim no)
-		(at 27.94 157.353 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "8f9bde6b-6a1a-4099-ae11-216d2c5e30e4")
-	)
-	(text "Voltage Error @ 140V for 1% tolerance\nDivider error: +-2% and +-2.8V difference"
-		(exclude_from_sim no)
-		(at 134.366 184.658 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bb8fe7fa-c7f3-4ee5-85a0-1f59682ebb22")
-	)
-	(text "+-1% Tolerance\nNominal: 1.5M + 20k divider, ratio of 0.013158\n140 * 0.013158 = 1.8421\n\nHighest reading: 1,485,000 (min) + 20,200 (max), ratio of 0.013419\n140* 0.013419 = 1.8787 (+1.99%)\n\nLowest reading: 1,515,000 (max) + 19,800 (min), ratio of 0.012900\n140 * 0.012900 = 1.8060 (-1.96%)"
-		(exclude_from_sim no)
-		(at 135.382 170.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d417ce02-c19a-4492-bd02-83e0e0268bee")
-	)
-	(text "Vin_HV = Motor_ADC = Precharge_ADC\n\n0V = 0V\n35V = 0.5V\n70V = 1V\n105V = 1.5V\n140V = 2.0V"
-		(exclude_from_sim no)
-		(at 53.848 186.436 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f47482e8-4f40-4f7b-9b85-b4eda83ad616")
-	)
 	(wire
 		(pts
-			(xy 204.47 113.03) (xy 199.39 113.03)
+			(xy 137.16 96.52) (xy 134.62 96.52)
 		)
 		(stroke
 			(width 0)
@@ -101,7 +17,37 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 45.72) (xy 199.39 45.72)
+			(xy 59.69 111.76) (xy 59.69 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "106c79d3-c8b4-4d21-9cc7-7151c0e770f8")
+	)
+	(wire
+		(pts
+			(xy 179.07 64.77) (xy 190.5 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e5b9431-81df-47ec-98be-31d4228da8fd")
+	)
+	(wire
+		(pts
+			(xy 72.39 60.96) (xy 85.09 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22118eff-a097-403d-b639-a27089711955")
+	)
+	(wire
+		(pts
+			(xy 137.16 55.88) (xy 134.62 55.88)
 		)
 		(stroke
 			(width 0)
@@ -111,7 +57,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 24.13) (xy 74.93 27.94)
+			(xy 59.69 45.72) (xy 59.69 49.53)
 		)
 		(stroke
 			(width 0)
@@ -121,17 +67,17 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 121.92) (xy 199.39 121.92)
+			(xy 179.07 121.92) (xy 191.77 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a1ac5aa-2d50-492d-9132-c5ca138cdbd6")
+		(uuid "4bae809f-5286-48ea-9ad7-996a47d90116")
 	)
 	(wire
 		(pts
-			(xy 38.1 54.61) (xy 45.72 54.61)
+			(xy 33.02 64.77) (xy 38.1 64.77)
 		)
 		(stroke
 			(width 0)
@@ -141,7 +87,37 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 90.17) (xy 85.09 93.98)
+			(xy 134.62 60.96) (xy 147.32 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ae3264e-cd1b-4ab5-ad86-87098c42020f")
+	)
+	(wire
+		(pts
+			(xy 151.13 106.68) (xy 134.62 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6273e12d-48db-4a92-ba32-d9c0ead67935")
+	)
+	(wire
+		(pts
+			(xy 72.39 66.04) (xy 85.09 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "637b4c35-e378-48ca-a8d5-21fc16783618")
+	)
+	(wire
+		(pts
+			(xy 59.69 86.36) (xy 59.69 90.17)
 		)
 		(stroke
 			(width 0)
@@ -151,7 +127,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 54.61) (xy 140.97 54.61)
+			(xy 99.06 64.77) (xy 100.33 64.77)
 		)
 		(stroke
 			(width 0)
@@ -161,7 +137,87 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 91.44) (xy 181.61 95.25)
+			(xy 220.98 49.53) (xy 223.52 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "709b359f-cb33-4065-b591-a325a4f823da")
+	)
+	(wire
+		(pts
+			(xy 111.76 71.12) (xy 111.76 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71fd1478-9ca9-47e2-a22b-8bd99b6ca80e")
+	)
+	(wire
+		(pts
+			(xy 72.39 106.68) (xy 86.36 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "736c6402-2a75-4b4c-8d0f-a49c0513054a")
+	)
+	(wire
+		(pts
+			(xy 151.13 101.6) (xy 134.62 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74099b5e-0aee-487c-b64e-fb8c555871fc")
+	)
+	(wire
+		(pts
+			(xy 226.06 119.38) (xy 222.25 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8006c309-fe06-465b-95fc-f0e318c4e642")
+	)
+	(wire
+		(pts
+			(xy 179.07 104.14) (xy 191.77 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "818ab582-751f-480d-b422-a5b49af49f71")
+	)
+	(wire
+		(pts
+			(xy 120.65 71.12) (xy 120.65 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "844df9c9-f3a5-4758-a5a6-39f27ade3af0")
+	)
+	(wire
+		(pts
+			(xy 86.36 101.6) (xy 72.39 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "898abd77-282a-42ee-8762-8c4be058b603")
+	)
+	(wire
+		(pts
+			(xy 121.92 86.36) (xy 121.92 90.17)
 		)
 		(stroke
 			(width 0)
@@ -171,17 +227,37 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 120.65) (xy 104.14 120.65)
+			(xy 50.8 111.76) (xy 50.8 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93bd6e3b-d324-4ace-97a1-8d55f984ee13")
+		(uuid "948a9d03-d90e-4de2-a5ca-906005d1fa0b")
 	)
 	(wire
 		(pts
-			(xy 170.18 24.13) (xy 170.18 27.94)
+			(xy 179.07 59.69) (xy 190.5 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c320aa8-b878-4942-b713-ddd13ee42464")
+	)
+	(wire
+		(pts
+			(xy 179.07 109.22) (xy 191.77 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0e1b876-1968-45c4-a4fe-30fa05f73bee")
+	)
+	(wire
+		(pts
+			(xy 121.92 44.45) (xy 121.92 48.26)
 		)
 		(stroke
 			(width 0)
@@ -191,7 +267,17 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 45.72) (xy 104.14 45.72)
+			(xy 208.28 36.83) (xy 208.28 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b438de5b-94fe-4f8b-988f-507d50b5da41")
+	)
+	(wire
+		(pts
+			(xy 74.93 55.88) (xy 72.39 55.88)
 		)
 		(stroke
 			(width 0)
@@ -201,7 +287,17 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 125.73) (xy 140.97 125.73)
+			(xy 179.07 116.84) (xy 191.77 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b581d173-849b-4ff5-977d-b089e2dadfcf")
+	)
+	(wire
+		(pts
+			(xy 99.06 105.41) (xy 100.33 105.41)
 		)
 		(stroke
 			(width 0)
@@ -211,7 +307,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 54.61) (xy 104.14 54.61)
+			(xy 223.52 62.23) (xy 220.98 62.23)
 		)
 		(stroke
 			(width 0)
@@ -221,7 +317,27 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 54.61) (xy 199.39 54.61)
+			(xy 209.55 133.35) (xy 209.55 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb565857-c6f7-4a37-8805-b487698d8b61")
+	)
+	(wire
+		(pts
+			(xy 113.03 111.76) (xy 113.03 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ced55d1c-7113-4804-b2af-bed637447bc1")
+	)
+	(wire
+		(pts
+			(xy 226.06 106.68) (xy 222.25 106.68)
 		)
 		(stroke
 			(width 0)
@@ -231,7 +347,47 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 120.65) (xy 45.72 120.65)
+			(xy 134.62 66.04) (xy 147.32 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d908b88c-4398-4369-9d93-74a351575b9d")
+	)
+	(wire
+		(pts
+			(xy 121.92 111.76) (xy 121.92 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d93b6ea9-6fa1-4bb9-be3b-af7925121f4d")
+	)
+	(wire
+		(pts
+			(xy 209.55 93.98) (xy 209.55 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6ea61ac-e3a1-4a28-ab7e-470fe264411c")
+	)
+	(wire
+		(pts
+			(xy 208.28 76.2) (xy 208.28 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edced1da-3e36-4c50-a034-bb3c0805a756")
+	)
+	(wire
+		(pts
+			(xy 35.56 105.41) (xy 38.1 105.41)
 		)
 		(stroke
 			(width 0)
@@ -241,7 +397,27 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 111.76) (xy 104.14 111.76)
+			(xy 179.07 52.07) (xy 190.5 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efda9642-0db2-4f5a-b006-46928d816c08")
+	)
+	(wire
+		(pts
+			(xy 59.69 71.12) (xy 59.69 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f14b94d0-339e-4a05-808e-a21a7cfb8038")
+	)
+	(wire
+		(pts
+			(xy 74.93 96.52) (xy 72.39 96.52)
 		)
 		(stroke
 			(width 0)
@@ -249,9 +425,211 @@
 		)
 		(uuid "f24d8a13-2425-433d-98f3-4b48b934540c")
 	)
+	(wire
+		(pts
+			(xy 179.07 46.99) (xy 190.5 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f61a5952-64bd-4cb5-82ad-aa070136dc8f")
+	)
+	(wire
+		(pts
+			(xy 50.8 71.12) (xy 50.8 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc9a871d-0891-4401-878e-3f40e5fda464")
+	)
+	(label "Motor+_P"
+		(at 179.07 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2302725b-e8d5-4b04-a7a0-1bdf3cfac5b4")
+	)
+	(label "HV+_N"
+		(at 85.09 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "262f1cd0-06ee-40d8-b65c-624c6676620c")
+	)
+	(label "HV-_P"
+		(at 147.32 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "416d5651-21d6-4bca-851f-1f0fbfb04bd8")
+	)
+	(label "Motor+_P"
+		(at 86.36 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "427f4ea4-b49f-4b14-8d9f-0247ee7c5118")
+	)
+	(label "Motor+_P"
+		(at 179.07 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4ae24fee-ccbd-4e41-9f48-edb61f8253a7")
+	)
+	(label "HV+_P"
+		(at 179.07 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53be8103-7658-4ce5-b065-9a9803e6a96d")
+	)
+	(label "Motor+_P"
+		(at 86.36 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5c26cdbb-df46-45cf-8372-85f2bc1ab417")
+	)
+	(label "Motor-_P"
+		(at 179.07 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a380afa4-b9c6-4c0c-86c7-76400ac5a005")
+	)
+	(label "Motor-_P"
+		(at 151.13 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a4033237-8fa9-4606-9096-784ab581f1ed")
+	)
+	(label "HV+_N"
+		(at 179.07 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce49a033-6a5b-4d7f-9f8f-009c32cb88ba")
+	)
+	(label "HV-_N"
+		(at 179.07 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0ba793d-b0bf-4f93-b439-589e0061531f")
+	)
+	(label "HV-_N"
+		(at 147.32 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d3db2463-1388-4e32-b837-8bc6b5e60933")
+	)
+	(label "Motor-_P"
+		(at 151.13 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dace1a6c-b2f7-4bd0-979c-d519b9480903")
+	)
+	(label "Motor-_P"
+		(at 179.07 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd1d5dfd-7f95-414b-926b-903288186259")
+	)
+	(label "HV-_P"
+		(at 179.07 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1339e65-f8d0-4b7a-a0ea-c672ed85afa9")
+	)
+	(label "HV+_P"
+		(at 85.09 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f74110aa-570b-4a44-b1c8-d0f0be66fc70")
+	)
+	(hierarchical_label "HV GND"
+		(shape input)
+		(at 111.76 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "10872c22-2dc6-4a6c-9f5e-fb86e9bd5845")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 120.65 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "139455c9-49f3-4047-86e4-f713f5fdf300")
+	)
 	(hierarchical_label "MOTOR-_DIAG"
 		(shape output)
-		(at 204.47 113.03 0)
+		(at 137.16 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -262,7 +640,7 @@
 	)
 	(hierarchical_label "HV-"
 		(shape input)
-		(at 133.35 54.61 180)
+		(at 99.06 64.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -273,7 +651,7 @@
 	)
 	(hierarchical_label "HV+_DIAG"
 		(shape output)
-		(at 107.95 45.72 0)
+		(at 74.93 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -282,9 +660,9 @@
 		)
 		(uuid "20598b07-f088-4171-be2a-e98114e2c540")
 	)
-	(hierarchical_label "Motor_Precharge+"
+	(hierarchical_label "Motor+"
 		(shape input)
-		(at 35.56 120.65 180)
+		(at 35.56 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -295,7 +673,7 @@
 	)
 	(hierarchical_label "MOTOR+_ADC"
 		(shape output)
-		(at 110.49 120.65 0)
+		(at 223.52 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -304,9 +682,31 @@
 		)
 		(uuid "36578ddf-24bd-41fc-8c38-fd82f22017fb")
 	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 121.92 111.76 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "40e77550-8d5d-475e-ac2d-a474649fec82")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 209.55 133.35 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4cf1dc97-b3dd-44ed-b329-4f6b1f799cfe")
+	)
 	(hierarchical_label "+3v3"
 		(shape input)
-		(at 170.18 24.13 90)
+		(at 121.92 44.45 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -315,9 +715,20 @@
 		)
 		(uuid "556ed4f3-343e-49a4-bff7-a76682a78a9c")
 	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 59.69 111.76 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5d48b36c-d034-43ea-af3f-4e487aee0a79")
+	)
 	(hierarchical_label "HV+"
 		(shape input)
-		(at 38.1 54.61 180)
+		(at 33.02 64.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -328,7 +739,7 @@
 	)
 	(hierarchical_label "+3v3"
 		(shape input)
-		(at 181.61 91.44 90)
+		(at 121.92 86.36 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -337,9 +748,53 @@
 		)
 		(uuid "687329e1-8327-44de-a547-cb484537e136")
 	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 59.69 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "761eb61e-3750-4898-9a0a-699074ff2136")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 208.28 76.2 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "78938890-f83b-4e7d-93c2-ff465add9cbe")
+	)
+	(hierarchical_label "+3v3"
+		(shape input)
+		(at 208.28 36.83 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7f255fd9-fc75-456d-b94c-3c9bb8d260bc")
+	)
+	(hierarchical_label "HV GND"
+		(shape input)
+		(at 113.03 111.76 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8b5c697d-8ce3-4606-8e28-e4ce021a8e44")
+	)
 	(hierarchical_label "HV-_DIAG"
 		(shape output)
-		(at 204.47 45.72 0)
+		(at 137.16 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -348,9 +803,9 @@
 		)
 		(uuid "93e572c8-08d9-4755-aadd-40e599bf57f9")
 	)
-	(hierarchical_label "Motor_Precharge-"
+	(hierarchical_label "Motor-"
 		(shape input)
-		(at 137.16 125.73 180)
+		(at 99.06 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -361,7 +816,7 @@
 	)
 	(hierarchical_label "HV+_ADC"
 		(shape output)
-		(at 107.95 54.61 0)
+		(at 223.52 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -370,9 +825,20 @@
 		)
 		(uuid "a78273d1-42c6-479d-acb1-cadc26fa1eda")
 	)
+	(hierarchical_label "HV GND"
+		(shape input)
+		(at 50.8 111.76 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8f91460-49dc-4da4-b3cf-7a4ebd839836")
+	)
 	(hierarchical_label "MOTOR+_DIAG"
 		(shape output)
-		(at 110.49 111.76 0)
+		(at 74.93 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -383,7 +849,7 @@
 	)
 	(hierarchical_label "+3v3"
 		(shape input)
-		(at 85.09 90.17 90)
+		(at 59.69 86.36 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -394,7 +860,7 @@
 	)
 	(hierarchical_label "MOTOR-_ADC"
 		(shape output)
-		(at 204.47 121.92 0)
+		(at 226.06 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -405,7 +871,29 @@
 	)
 	(hierarchical_label "+3v3"
 		(shape input)
-		(at 74.93 24.13 90)
+		(at 209.55 93.98 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c95fc403-b51e-4797-9675-99891388e058")
+	)
+	(hierarchical_label "HV GND"
+		(shape input)
+		(at 50.8 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d2e59a50-d326-4422-ba50-de85fbb62d22")
+	)
+	(hierarchical_label "+3v3"
+		(shape input)
+		(at 59.69 45.72 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -416,7 +904,7 @@
 	)
 	(hierarchical_label "HV-_ADC"
 		(shape output)
-		(at 204.47 54.61 0)
+		(at 226.06 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -426,8 +914,8 @@
 		(uuid "dc741d86-e017-4afd-8dda-45902552c5e9")
 	)
 	(sheet
-		(at 45.72 27.94)
-		(size 58.42 48.26)
+		(at 38.1 49.53)
+		(size 34.29 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -442,7 +930,7 @@
 		)
 		(uuid "058f727f-48a9-481a-84d8-b39cdbc2591c")
 		(property "Sheetname" "HV+ Voltage Sense"
-			(at 45.72 27.2284 0)
+			(at 38.1 48.8184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -453,7 +941,8 @@
 			)
 		)
 		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
-			(at 45.72 76.7846 0)
+			(at 38.1 71.0696 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -464,7 +953,7 @@
 			)
 		)
 		(pin "+3v3" input
-			(at 74.93 27.94 90)
+			(at 59.69 49.53 90)
 			(uuid "c475b02d-9fea-4011-886e-51404924f96c")
 			(effects
 				(font
@@ -474,7 +963,7 @@
 			)
 		)
 		(pin "DIAG Pin" output
-			(at 104.14 45.72 0)
+			(at 72.39 55.88 0)
 			(uuid "4c25168e-c39e-429c-8387-8091d747b044")
 			(effects
 				(font
@@ -484,7 +973,7 @@
 			)
 		)
 		(pin "Input" input
-			(at 45.72 54.61 180)
+			(at 38.1 64.77 180)
 			(uuid "74a07a3f-cae3-42b3-9db9-17021949d2f1")
 			(effects
 				(font
@@ -493,9 +982,39 @@
 				(justify left)
 			)
 		)
-		(pin "OUT_ADC" output
-			(at 104.14 54.61 0)
-			(uuid "a6e0d145-3896-4955-baec-1eb0fcea55b1")
+		(pin "GND" input
+			(at 59.69 69.85 270)
+			(uuid "bb780bd7-56e9-4f6f-ae63-dea953c3b411")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HV GND" input
+			(at 50.8 69.85 270)
+			(uuid "1c9728ed-dcf8-43e1-939d-a032167eb8f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_N" output
+			(at 72.39 66.04 0)
+			(uuid "5a5852d4-bcfb-4f26-b252-af9da375b370")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_P" output
+			(at 72.39 60.96 0)
+			(uuid "555b3d1a-5c0b-4dd6-a3ac-d03a67ee3c56")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -512,8 +1031,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 93.98)
-		(size 58.42 48.26)
+		(at 100.33 90.17)
+		(size 34.29 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -526,9 +1045,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "75ffbad4-11c2-4c48-b4e9-5987716b7b4c")
-		(property "Sheetname" "Motor_Precharge+ Voltage Sense"
-			(at 45.72 93.2684 0)
+		(uuid "37364f3b-40a4-4457-87c5-7b5b860406dd")
+		(property "Sheetname" "Motor Precharge- Voltage Sense"
+			(at 100.33 89.4584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -539,7 +1058,8 @@
 			)
 		)
 		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
-			(at 45.72 142.8246 0)
+			(at 100.33 111.0746 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -550,8 +1070,8 @@
 			)
 		)
 		(pin "+3v3" input
-			(at 85.09 93.98 90)
-			(uuid "78b51559-2a34-432d-94f2-ee7eb97f2ac6")
+			(at 121.92 90.17 90)
+			(uuid "33589449-521b-4746-b190-6b23cde95fe4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -560,8 +1080,8 @@
 			)
 		)
 		(pin "DIAG Pin" output
-			(at 104.14 111.76 0)
-			(uuid "e21b0bd4-0a32-4ab6-8e6f-ad87db51c506")
+			(at 134.62 96.52 0)
+			(uuid "69da7165-33c0-49f0-95ea-295acb5dfbd3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -570,8 +1090,8 @@
 			)
 		)
 		(pin "Input" input
-			(at 45.72 120.65 180)
-			(uuid "19ff673f-a0ec-4088-8e4f-5628be445193")
+			(at 100.33 105.41 180)
+			(uuid "74662770-0211-46f8-a9b3-e0348a0de923")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -579,9 +1099,39 @@
 				(justify left)
 			)
 		)
-		(pin "OUT_ADC" output
-			(at 104.14 120.65 0)
-			(uuid "4d9bd978-92ba-4b3c-bc76-3de5f98ab676")
+		(pin "GND" input
+			(at 121.92 110.49 270)
+			(uuid "f7c44f3d-501b-480e-9fdb-8a99c885b1cb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HV GND" input
+			(at 113.03 110.49 270)
+			(uuid "bc7856e2-6db9-4a81-845c-47c66de37782")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_N" output
+			(at 134.62 106.68 0)
+			(uuid "d205505c-6ca0-4437-afe4-a818f71e05ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_P" output
+			(at 134.62 101.6 0)
+			(uuid "6544b2a4-36e2-4b11-ba85-3cff6971c5d5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -598,8 +1148,8 @@
 		)
 	)
 	(sheet
-		(at 140.97 95.25)
-		(size 58.42 48.26)
+		(at 38.1 90.17)
+		(size 34.29 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -612,9 +1162,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "9912c899-43b0-4472-ae21-1c88529879fd")
-		(property "Sheetname" "Motor_Precharge- Voltage Sense"
-			(at 140.97 94.5384 0)
+		(uuid "54840e85-0cf7-4130-9891-f9fe2f02e074")
+		(property "Sheetname" "Motor Precharge+ Voltage Sense"
+			(at 38.1 89.4584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -625,7 +1175,8 @@
 			)
 		)
 		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
-			(at 140.97 144.0946 0)
+			(at 38.1 111.0746 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -636,8 +1187,8 @@
 			)
 		)
 		(pin "+3v3" input
-			(at 181.61 95.25 90)
-			(uuid "4da779f0-f3c0-4d46-af49-0d27b55b1c3c")
+			(at 59.69 90.17 90)
+			(uuid "62362b0e-b8ff-40b4-b5f7-f9e4877eac6d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -646,8 +1197,8 @@
 			)
 		)
 		(pin "DIAG Pin" output
-			(at 199.39 113.03 0)
-			(uuid "e88feff0-4bc2-48ec-9869-334d138e53fa")
+			(at 72.39 96.52 0)
+			(uuid "e8cd5ffa-8e85-459b-a83f-a3d01f38c96d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -656,8 +1207,8 @@
 			)
 		)
 		(pin "Input" input
-			(at 140.97 125.73 180)
-			(uuid "b71b3214-3ad9-4922-9389-f9adaf509262")
+			(at 38.1 105.41 180)
+			(uuid "4e07e888-2d73-4048-917e-73e0d03380d7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -665,85 +1216,9 @@
 				(justify left)
 			)
 		)
-		(pin "OUT_ADC" output
-			(at 199.39 121.92 0)
-			(uuid "6ef3a3d9-6013-4370-8847-4fbe7f00c13d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a"
-					(page "15")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 140.97 27.94)
-		(size 58.42 48.26)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "f5850dee-f508-4102-acbc-4e3b9fd85122")
-		(property "Sheetname" "HV- Voltage Sense"
-			(at 140.97 27.2284 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
-			(at 140.97 76.7846 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "+3v3" input
-			(at 170.18 27.94 90)
-			(uuid "cf68210b-a5a8-4ca9-9bd5-35a8eecfe4fa")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "DIAG Pin" output
-			(at 199.39 45.72 0)
-			(uuid "8d1a007f-9442-4d91-a15c-b84a082037b8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Input" input
-			(at 140.97 54.61 180)
-			(uuid "bd2fc321-44f8-48f0-95e0-25e2a496b419")
+		(pin "GND" input
+			(at 59.69 110.49 270)
+			(uuid "0f8f5706-8d6b-4ca8-aac4-b7dca069bda4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -751,9 +1226,29 @@
 				(justify left)
 			)
 		)
-		(pin "OUT_ADC" output
-			(at 199.39 54.61 0)
-			(uuid "0818c5d5-8ae7-4fee-b8d0-363143a7a69c")
+		(pin "HV GND" input
+			(at 50.8 110.49 270)
+			(uuid "459ab3e9-3580-4121-9131-ab7ab7fbdfb2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_N" output
+			(at 72.39 106.68 0)
+			(uuid "94752bfa-c7e8-47e2-bbf8-14d0d000b5d0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_P" output
+			(at 72.39 101.6 0)
+			(uuid "9c276b94-7a77-45de-aaeb-d76fab318b4d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -765,6 +1260,375 @@
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a"
 					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 190.5 39.37)
+		(size 30.48 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9068f688-485f-416c-9cd2-e445ef73f243")
+		(property "Sheetname" "OpAmp"
+			(at 190.5 38.6584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AMC3311_OpAmp.kicad_sch"
+			(at 190.5 72.9746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3v3" input
+			(at 208.28 39.37 90)
+			(uuid "963f35ce-2339-456f-bcea-d4a05f3960fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" input
+			(at 208.28 72.39 270)
+			(uuid "fd5859b5-4e64-4ac1-b150-f4abbe0d7afe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_N_1" input
+			(at 190.5 52.07 180)
+			(uuid "4b2a0b45-784e-4e19-94ef-9433b9e13e80")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_N_2" input
+			(at 190.5 64.77 180)
+			(uuid "7da3f76e-6372-485b-a03d-d28dac8ea169")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_P_1" input
+			(at 190.5 46.99 180)
+			(uuid "f5d12f84-170a-4fb6-872f-5960a659ae11")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_P_2" input
+			(at 190.5 59.69 180)
+			(uuid "1513e130-593c-438b-b6d1-0ac58201af29")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_ADC1" output
+			(at 220.98 49.53 0)
+			(uuid "8c94ba8f-14ce-4174-a560-1e66833a2b97")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_ADC2" output
+			(at 220.98 62.23 0)
+			(uuid "171592bf-c616-473d-b680-20fe4387a2b8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 191.77 96.52)
+		(size 30.48 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a79c140a-76cc-4bbb-b1f3-7013b136bd70")
+		(property "Sheetname" "OpAmp1"
+			(at 191.77 95.8084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AMC3311_OpAmp.kicad_sch"
+			(at 191.77 130.1246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3v3" input
+			(at 209.55 96.52 90)
+			(uuid "addb1f00-04c5-4f46-9c35-afe2886a613b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" input
+			(at 209.55 129.54 270)
+			(uuid "eb94cb30-e88d-4f50-95ae-83d699d8060b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_N_1" input
+			(at 191.77 109.22 180)
+			(uuid "0da3ec99-cbd8-439b-8870-d6273cc59812")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_N_2" input
+			(at 191.77 121.92 180)
+			(uuid "e733d9fb-0ef6-4cf9-b7ad-c0995548b975")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_P_1" input
+			(at 191.77 104.14 180)
+			(uuid "06b5a0f8-520e-4cda-bedb-28ba2e025eb0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Input_P_2" input
+			(at 191.77 116.84 180)
+			(uuid "4e33397f-b555-4108-aa8b-f604011ce78f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_ADC1" output
+			(at 222.25 106.68 0)
+			(uuid "e75c93c1-5071-4f4e-b180-f2111ba0ceca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_ADC2" output
+			(at 222.25 119.38 0)
+			(uuid "b81b9cc5-0f9b-437f-9397-811d4846e7a2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 48.26)
+		(size 34.29 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e4eeb78c-a673-4aa0-9da6-938ecb9aa669")
+		(property "Sheetname" "HV- Voltage Sense"
+			(at 100.33 47.5484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AMC3311_Sense.kicad_sch"
+			(at 100.33 69.7996 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3v3" input
+			(at 121.92 48.26 90)
+			(uuid "0c116230-411b-4b9a-9d13-4cb172d29914")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DIAG Pin" output
+			(at 134.62 55.88 0)
+			(uuid "04afebbf-96f5-4d31-b695-13abbca9e2b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Input" input
+			(at 100.33 64.77 180)
+			(uuid "1cc7a361-24e4-44e9-90b0-62229f6c277b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" input
+			(at 120.65 69.85 270)
+			(uuid "9bd0e82e-9713-4fc9-be04-ce00164ede85")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "HV GND" input
+			(at 111.76 69.85 270)
+			(uuid "198506e3-208e-4a28-b85f-76e30e959aa9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT_N" output
+			(at 134.62 66.04 0)
+			(uuid "1a3828d5-a165-4c9d-9897-b2e300d9f805")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT_P" output
+			(at 134.62 60.96 0)
+			(uuid "d9dda57b-1b5e-459a-ae88-36c6054a6aba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/83ab5b0b-4732-42c0-82fe-e74f4113c82a"
+					(page "6")
 				)
 			)
 		)

@@ -1,0 +1,11 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "AMC3311QDWERQ1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/AMC3311QDWERQ1/2026-08-02_06-15-44.kicad_sym") (options "") (descr ""))
+	(lib (name "OPA333AIDBVRG4") (type "KiCad") (uri "${KIPRJMOD}/External Parts/OPA333AIDBVRG4/2026-08-25_06-31-36.kicad_sym") (options "") (descr ""))
+	(lib (name "TLV9002QDRQ1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/TLV9002QDRQ1/TLV9002QDRQ1.kicad_sym") (options "") (descr ""))
+	(lib (name "lhrs_connectors") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_connectors.kicad_sym") (options "") (descr ""))
+	(lib (name "lhrs_ics") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_ics.kicad_sym") (options "") (descr ""))
+	(lib (name "lhrs_misc") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_misc.kicad_sym") (options "") (descr ""))
+	(lib (name "lhrs_power") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_power.kicad_sym") (options "") (descr ""))
+	(lib (name "lhrs_special") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_special.kicad_sym") (options "") (descr ""))
+)

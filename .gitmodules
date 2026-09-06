@@ -1,6 +1,6 @@
 [submodule "firmware/Embedded-Sharepoint"]
 	path = firmware/Embedded-Sharepoint
 	url = https://github.com/lhr-solar/Embedded-Sharepoint.git
-[submodule "hardware/KiCAD-Sharepoint"]
-	path = hardware/KiCAD-Sharepoint
+[submodule "Hardware/HV_Carrier/KiCAD-Sharepoint"]
+	path = Hardware/HV_Carrier/KiCAD-Sharepoint
 	url = https://github.com/lhr-solar/KiCAD-Sharepoint.git

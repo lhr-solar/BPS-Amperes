@@ -729,7 +729,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG1-8,D1-33,#PWR1-52,Y1-2,F1,U1-16,SW1-3,C1-109,FB1-4,IC1-6,J1-14,L1-2,Reset1,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
+    "used_designators": "#FLG1-8,D1-33,#PWR1-52,Y1-2,F1,U1-16,SW1-3,FB1-4,C1-109,IC1-6,J1-14,L1-2,Reset1,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -738,7 +738,7 @@
       "PS-HVCarrier"
     ],
     [
-      "90a25a21-5b5d-49e9-8593-0616cc5fc62a",
+      "a9f750a4-45cf-4955-a6ce-4c6da60ba943",
       "PowerProtection"
     ],
     [

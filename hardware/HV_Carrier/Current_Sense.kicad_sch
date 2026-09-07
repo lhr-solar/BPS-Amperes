@@ -53145,7 +53145,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 77.47 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -53236,7 +53236,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 171.45 46.99 90)
 			(hide yes)
 			(show_name no)
@@ -53273,7 +53273,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1513f070-6e5f-4f35-b9b5-62102d85a60a")
-		(property "Reference" "C48"
+		(property "Reference" "C50"
 			(at 233.934 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53346,7 +53346,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C48")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -53641,7 +53641,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "29408c22-0acc-42f2-801b-8c6dc18cac8e")
-		(property "Reference" "C42"
+		(property "Reference" "C44"
 			(at 53.848 35.052 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53716,7 +53716,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C42")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -53834,7 +53834,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3acecc0d-72ff-4e28-a35e-d7260121be3a")
-		(property "Reference" "C41"
+		(property "Reference" "C43"
 			(at 54.356 24.384 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53889,7 +53889,7 @@
 				)
 			)
 		)
-		(property "P/N" "MAJCH168BB7104KTEA01"
+		(property "P/N" "MLASH168SB7104KTNA01"
 			(at 52.07 30.48 90)
 			(hide yes)
 			(show_name no)
@@ -53909,7 +53909,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C41")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -53927,7 +53927,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4438cd4c-ec68-4189-a295-3f8e3354f835")
-		(property "Reference" "TP15"
+		(property "Reference" "TP12"
 			(at 59.69 80.5179 0)
 			(hide yes)
 			(show_name no)
@@ -53989,7 +53989,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP15")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -54007,7 +54007,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "47f163e0-fdd1-4ef6-90e2-5b1bbb9e40c6")
-		(property "Reference" "U7"
+		(property "Reference" "U6"
 			(at 193.802 44.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54098,7 +54098,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U7")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -54116,7 +54116,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "540a1068-e2bb-42d8-bb12-e41b6e7c0daf")
-		(property "Reference" "C43"
+		(property "Reference" "C45"
 			(at 101.854 35.306 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54171,7 +54171,7 @@
 				)
 			)
 		)
-		(property "P/N" "EMK107SD103KA-T"
+		(property "P/N" "MSASH168SB5103KTNA01"
 			(at 104.14 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -54191,7 +54191,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C43")
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -54209,7 +54209,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "54be466e-2666-4040-bffa-ea29ebd64471")
-		(property "Reference" "TP14"
+		(property "Reference" "TP11"
 			(at 59.69 56.3879 0)
 			(hide yes)
 			(show_name no)
@@ -54271,7 +54271,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP14")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -54289,7 +54289,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a3d105b-59e7-4f4e-8122-a828bd3d6731")
-		(property "Reference" "C47"
+		(property "Reference" "C49"
 			(at 189.23 28.956 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54342,7 +54342,7 @@
 				)
 			)
 		)
-		(property "P/N" "UMK107B7102MAHT"
+		(property "P/N" "MLASU063SB7102KFNA01"
 			(at 189.23 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -54362,7 +54362,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C47")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -54525,7 +54525,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 171.45 54.61 90)
 			(hide yes)
 			(show_name no)
@@ -54844,7 +54844,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a01a198d-baa4-4ede-bfe4-ffc8c89439ce")
-		(property "Reference" "C46"
+		(property "Reference" "C48"
 			(at 180.34 60.198 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54899,7 +54899,7 @@
 				)
 			)
 		)
-		(property "P/N" "MAJCH168BB7104KTEA01"
+		(property "P/N" "MLASH168SB7104KTNA01"
 			(at 176.53 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -54919,7 +54919,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C46")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -54938,7 +54938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a81966cd-eb61-451c-a5d8-800d8cd86ba2")
-		(property "Reference" "U7"
+		(property "Reference" "U6"
 			(at 214.63 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55029,7 +55029,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U7")
+					(reference "U6")
 					(unit 2)
 				)
 			)
@@ -55141,7 +55141,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ac684a57-d23a-4c99-9874-606666e61057")
-		(property "Reference" "TP13"
+		(property "Reference" "TP10"
 			(at 59.69 28.4479 0)
 			(hide yes)
 			(show_name no)
@@ -55203,7 +55203,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP13")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -55311,7 +55311,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b13dab3b-ba53-4f1f-b479-dee7de5d6d63")
-		(property "Reference" "TP16"
+		(property "Reference" "TP13"
 			(at 179.07 29.7179 0)
 			(hide yes)
 			(show_name no)
@@ -55373,7 +55373,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP16")
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -55587,7 +55587,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd9912ab-b543-4716-8935-5e559f271204")
-		(property "Reference" "TP17"
+		(property "Reference" "TP14"
 			(at 179.07 50.0379 0)
 			(hide yes)
 			(show_name no)
@@ -55649,7 +55649,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP17")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -55720,7 +55720,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 189.23 40.64 90)
 			(hide yes)
 			(show_name no)
@@ -55758,7 +55758,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0dbfe95-0f40-4cdd-8a68-0139840435d8")
-		(property "Reference" "C45"
+		(property "Reference" "C47"
 			(at 162.052 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -55813,7 +55813,7 @@
 				)
 			)
 		)
-		(property "P/N" "MAJCH168BB7104KTEA01"
+		(property "P/N" "MLASH168SB7104KTNA01"
 			(at 165.1 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -55833,7 +55833,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C45")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -56048,7 +56048,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e11f7749-336c-4b9e-9d29-5f3f97dd8439")
-		(property "Reference" "C44"
+		(property "Reference" "C46"
 			(at 101.854 63.246 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56103,7 +56103,7 @@
 				)
 			)
 		)
-		(property "P/N" "EMK107SD103KA-T"
+		(property "P/N" "MSASH168SB5103KTNA01"
 			(at 104.14 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -56123,7 +56123,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "C44")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -56141,7 +56141,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea5b7dc8-c932-407a-bbe0-e9c643f8692e")
-		(property "Reference" "U7"
+		(property "Reference" "U6"
 			(at 247.65 79.248 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -56234,7 +56234,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "U7")
+					(reference "U6")
 					(unit 3)
 				)
 			)
@@ -56496,7 +56496,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 77.47 85.09 90)
 			(hide yes)
 			(show_name no)
@@ -56533,7 +56533,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f10ec30c-b6a2-40ba-a60e-eda7faa71393")
-		(property "Reference" "TP18"
+		(property "Reference" "TP15"
 			(at 247.65 48.7679 0)
 			(hide yes)
 			(show_name no)
@@ -56595,7 +56595,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/c64f1e33-0c51-411c-bbbf-0af7b620c655"
-					(reference "TP18")
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -56758,7 +56758,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 77.47 33.02 90)
 			(hide yes)
 			(show_name no)

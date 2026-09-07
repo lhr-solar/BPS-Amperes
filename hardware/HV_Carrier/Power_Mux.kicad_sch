@@ -20558,7 +20558,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "01ead70c-0165-4879-828f-f34459038239")
-		(property "Reference" "C79"
+		(property "Reference" "C81"
 			(at 91.8972 57.2516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20633,7 +20633,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C79")
+					(reference "C81")
 					(unit 1)
 				)
 			)
@@ -20709,7 +20709,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI "
+		(property "P/N" "CRCW060310K0FKEI"
 			(at 76.2 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -20752,7 +20752,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34e6f2ae-d271-4a6d-9148-a06a796ccc05")
-		(property "Reference" "C76"
+		(property "Reference" "C78"
 			(at 24.5872 44.5516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20827,7 +20827,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C76")
+					(reference "C78")
 					(unit 1)
 				)
 			)
@@ -20851,7 +20851,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3ce6dec3-7d5f-41b7-9c67-55154f92e6c4")
-		(property "Reference" "U11"
+		(property "Reference" "U10"
 			(at 60.96 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20905,54 +20905,6 @@
 				)
 			)
 		)
-		(property "PARTREV" "A"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "STANDARD" "IPC-7351B"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "0.6mm"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Texas Instruments"
-			(at 60.96 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
 		(property "P/N" "TPS2117DRLR"
 			(at 60.96 49.53 0)
 			(show_name no)
@@ -20990,7 +20942,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "U11")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -21097,7 +21049,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b11a1149-af1e-4d2e-b9ef-9558fb40c6e9")
-		(property "Reference" "C78"
+		(property "Reference" "C80"
 			(at 43.6372 67.4116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21172,7 +21124,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C78")
+					(reference "C80")
 					(unit 1)
 				)
 			)
@@ -21285,7 +21237,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fffce44d-6a2f-431a-a7e0-1c503bf34ef7")
-		(property "Reference" "C77"
+		(property "Reference" "C79"
 			(at 38.5572 44.5516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21360,7 +21312,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/b66ae0b0-03e3-4dd0-8364-435fb922b758"
-					(reference "C77")
+					(reference "C79")
 					(unit 1)
 				)
 			)

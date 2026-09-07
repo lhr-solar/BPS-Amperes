@@ -663,6 +663,84 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PARTREV",
+          "name": "PARTREV",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "STANDARD",
+          "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MANUFACTURER",
+          "name": "MANUFACTURER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MAXIMUM_PACKAGE_HEIGHT",
+          "name": "MAXIMUM_PACKAGE_HEIGHT",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -729,7 +807,7 @@
         "uuid": "2365a867-6254-4a7c-9718-f325e0bbac5c"
       }
     ],
-    "used_designators": "#FLG1-8,D1-33,#PWR1-52,Y1-2,F1,U1-16,SW1-3,FB1-4,C1-109,IC1-6,J1-14,L1-2,Reset1,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
+    "used_designators": "#FLG1-8,D1-33,#PWR1-52,Y1-2,F1,U1-16,SW1-3,C1-109,FB1-4,IC1-6,J1-14,L1-2,Reset1,TP1-45,TP_1,R1-99,TP_3.3V1,JP1-5,S1,Q1-2",
     "variants": []
   },
   "sheets": [
@@ -756,6 +834,10 @@
     [
       "e4eeb78c-a673-4aa0-9da6-938ecb9aa669",
       "HV- V Sense"
+    ],
+    [
+      "8593a8aa-aca1-45d6-a860-d31cc8e9fd10",
+      "USB-C Connector"
     ],
     [
       "525eebd7-cd9b-471b-950d-358e3ce0c5f6",

@@ -352,161 +352,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ECE319H:C"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "ECE319K:C_Axial_200mil"
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "lhrs_power:LM74502HDDFR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5301,7 +5146,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0080b75d-17e1-44a9-a149-150b85562bd3")
-		(property "Reference" "C6"
+		(property "Reference" "C7"
 			(at 125.984 89.154 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5356,6 +5201,17 @@
 				)
 			)
 		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 129.54 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6ba7675f-70e1-4383-b79d-d0a5bbe78a63")
 		)
@@ -5365,7 +5221,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -5388,7 +5244,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03fbb6c3-15d6-4535-82c3-c84cadec759c")
-		(property "Reference" "D1"
+		(property "Reference" "D6"
 			(at 40.64 82.296 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5452,7 +5308,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "D1")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -5543,17 +5399,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "963-MSASU168SB7224KT"
-			(at 54.61 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C344195"
 			(at 54.61 81.28 0)
 			(hide yes)
@@ -5587,6 +5432,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 60.96 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b3d3b99-7f89-4881-a280-471d2eacc6a3")
+		(property "Reference" "C4"
+			(at 64.77 62.2299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10n"
+			(at 64.77 64.7699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 61.9252 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 60.96 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "P/N" "MSASH168SB5103KTNA01"
+			(at 60.96 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cdd35fcf-bc6c-4ef8-a15a-e54edfc155ce")
+		)
+		(pin "2"
+			(uuid "f09e4c75-b652-477d-8465-8a18e1453ee2")
+		)
+		(instances
+			(project "PS-HVCarrier"
+				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "lhrs_power:SMBJ15CA")
 		(at 26.67 50.8 90)
 		(unit 1)
@@ -5597,7 +5535,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "199aa610-9666-48a9-b1cc-4d7400331b7d")
-		(property "Reference" "D2"
+		(property "Reference" "D5"
 			(at 22.606 49.276 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5683,7 +5621,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "D2")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -5707,7 +5645,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c45fc8a-bcc4-4313-aeca-374a3cb5e0de")
-		(property "Reference" "R1"
+		(property "Reference" "R7"
 			(at 45.72 60.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5773,17 +5711,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "71-CRCW060310K0FKEI"
-			(at 43.18 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C25804"
 			(at 43.18 62.23 0)
 			(hide yes)
@@ -5804,7 +5731,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R1")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -5827,7 +5754,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "30175d18-769c-4cf5-98fe-c1abd5d1092e")
-		(property "Reference" "R6"
+		(property "Reference" "R12"
 			(at 137.668 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5911,7 +5838,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R6")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -6043,7 +5970,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5f8c95be-4bec-4715-b67b-6a9afc6a3131")
-		(property "Reference" "R3"
+		(property "Reference" "R8"
 			(at 67.31 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6107,17 +6034,6 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "594-MCT06030C2003FP5"
-			(at 67.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "LCSC P/N" "C844927"
 			(at 67.31 57.15 0)
 			(hide yes)
@@ -6138,7 +6054,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R3")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6161,7 +6077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "695f9767-116e-48fc-b456-831abf151e72")
-		(property "Reference" "C7"
+		(property "Reference" "C6"
 			(at 107.188 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6216,6 +6132,17 @@
 				)
 			)
 		)
+		(property "P/N" "MLASH168SB7104KTNA01"
+			(at 110.49 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e2966b97-a24f-4d20-92a4-c931fbb1b711")
 		)
@@ -6225,7 +6152,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "C7")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -6301,66 +6228,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Height" "1.1"
-			(at 87.63 472.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "595-LM74502DDFR"
-			(at 87.63 572.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM74502HDDFR?qs=t7xnP681wgWDbfat8Yg%252B%2Fg%3D%3D"
-			(at 87.63 672.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 87.63 772.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "LM74502DDFR"
-			(at 87.63 872.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
 			)
 		)
 		(property "P/N" "LM74502DDFR"
@@ -6488,39 +6355,6 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 73.025 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 74.93 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 71.12 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "PSMN012-100YSFX"
 			(at 55.88 46.99 0)
 			(hide yes)
@@ -6568,115 +6402,6 @@
 			(project "PowerProtection"
 				(path "/a968d2b9-0c0e-491c-a5a4-aacd8448ff64"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ECE319H:C")
-		(at 60.96 63.5 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9b1ddc4f-24aa-46be-8d1e-e07bf585137f")
-		(property "Reference" "C4"
-			(at 54.864 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 54.61 64.262 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 61.9252 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C57112"
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC P/N" "MSASH168SB5103KTNA01"
-			(at 60.96 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "816aa9b1-27e4-4872-93e3-95afb7ebca4b")
-		)
-		(pin "2"
-			(uuid "309f94e3-54a5-4810-bdad-3dd52cc5ab36")
-		)
-		(instances
-			(project "PS-HVCarrier"
-				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-			(project "PowerProtection"
-				(path "/a968d2b9-0c0e-491c-a5a4-aacd8448ff64"
-					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -6856,39 +6581,6 @@
 				)
 			)
 		)
-		(property "Sim.Device" "NMOS"
-			(at 76.835 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 74.93 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 78.74 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "P/N" "PSMN012-100YSFX"
 			(at 93.98 46.99 0)
 			(hide yes)
@@ -6952,7 +6644,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be94d869-90f2-4669-bef8-7f9b9e85a653")
-		(property "Reference" "R5"
+		(property "Reference" "R10"
 			(at 118.618 90.424 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7005,7 +6697,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI"
+		(property "P/N" "CRCW06037K32FKEA "
 			(at 120.65 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -7016,7 +6708,7 @@
 				)
 			)
 		)
-		(property "LCSC P/N" "C25804"
+		(property "LCSC P/N" "C843967"
 			(at 120.65 90.17 90)
 			(hide yes)
 			(show_name no)
@@ -7036,7 +6728,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R5")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -7169,7 +6861,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dc50b215-6e88-4055-b18d-dec3d913aa62")
-		(property "Reference" "R4"
+		(property "Reference" "R9"
 			(at 118.11 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7224,7 +6916,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW0603221KFKEA"
+		(property "P/N" "CRCW0603100KFKED"
 			(at 115.57 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7235,7 +6927,7 @@
 				)
 			)
 		)
-		(property "LCSC P/N" "C2090661"
+		(property "LCSC P/N" "C844916"
 			(at 115.57 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7255,7 +6947,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R4")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -7278,7 +6970,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f07653c5-8d88-4702-88df-582da9d44e81")
-		(property "Reference" "R7"
+		(property "Reference" "R11"
 			(at 137.16 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7331,7 +7023,7 @@
 				)
 			)
 		)
-		(property "P/N" "CRCW060310K0FKEI"
+		(property "P/N" "CRCW0603100KFKED"
 			(at 134.62 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7342,7 +7034,7 @@
 				)
 			)
 		)
-		(property "LCSC P/N" "C25804"
+		(property "LCSC P/N" "C844916"
 			(at 134.62 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7362,7 +7054,7 @@
 		(instances
 			(project "PS-HVCarrier"
 				(path "/2365a867-6254-4a7c-9718-f325e0bbac5c/904fa10a-747c-46cf-90d1-33d76069dc5d/a9f750a4-45cf-4955-a6ce-4c6da60ba943"
-					(reference "R7")
+					(reference "R11")
 					(unit 1)
 				)
 			)

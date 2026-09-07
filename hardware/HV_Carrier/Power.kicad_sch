@@ -130,6 +130,18 @@
 		)
 	)
 	(rectangle
+		(start 19.05 77.724)
+		(end 162.56 140.462)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "0b8a9b3f-6d1c-4b54-b5c1-257e267eb4ad")
+	)
+	(rectangle
 		(start 19.05 18.415)
 		(end 274.32 73.025)
 		(stroke
@@ -140,6 +152,18 @@
 			(type none)
 		)
 		(uuid "7f9b5fa7-fe1f-4aa2-af0f-5efd33d08d53")
+	)
+	(text "Data"
+		(exclude_from_sim no)
+		(at 24.638 81.534 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "6461fbdc-0873-48a6-8085-4f5393bb7dbc")
 	)
 	(text "Power"
 		(exclude_from_sim no)
@@ -161,7 +185,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 115.57) (xy 81.28 115.57)
+			(xy 78.74 120.65) (xy 83.82 120.65)
 		)
 		(stroke
 			(width 0)
@@ -221,7 +245,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 106.68) (xy 81.28 106.68)
+			(xy 78.74 111.76) (xy 83.82 111.76)
 		)
 		(stroke
 			(width 0)
@@ -231,7 +255,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 110.49) (xy 87.63 110.49)
+			(xy 78.74 115.57) (xy 90.17 115.57)
 		)
 		(stroke
 			(width 0)
@@ -271,7 +295,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 129.54) (xy 59.69 127)
+			(xy 62.23 134.62) (xy 62.23 132.08)
 		)
 		(stroke
 			(width 0)
@@ -291,7 +315,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 111.76) (xy 101.6 111.76)
+			(xy 113.03 116.84) (xy 104.14 116.84)
 		)
 		(stroke
 			(width 0)
@@ -311,7 +335,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 104.14) (xy 110.49 104.14)
+			(xy 104.14 109.22) (xy 113.03 109.22)
 		)
 		(stroke
 			(width 0)
@@ -321,7 +345,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 120.65) (xy 81.28 120.65)
+			(xy 78.74 125.73) (xy 83.82 125.73)
 		)
 		(stroke
 			(width 0)
@@ -331,7 +355,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 106.68) (xy 153.67 106.68)
+			(xy 146.05 111.76) (xy 156.21 111.76)
 		)
 		(stroke
 			(width 0)
@@ -341,7 +365,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 110.49) (xy 101.6 111.76)
+			(xy 104.14 115.57) (xy 104.14 116.84)
 		)
 		(stroke
 			(width 0)
@@ -351,7 +375,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 99.06) (xy 110.49 99.06)
+			(xy 78.74 104.14) (xy 113.03 104.14)
 		)
 		(stroke
 			(width 0)
@@ -361,7 +385,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 129.54) (xy 138.43 127)
+			(xy 140.97 134.62) (xy 140.97 132.08)
 		)
 		(stroke
 			(width 0)
@@ -380,7 +404,7 @@
 		(uuid "edb54ba1-8725-40b8-80a2-747f4d070911")
 	)
 	(label "Buck_5V"
-		(at 101.6 104.14 0)
+		(at 104.14 109.22 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -401,7 +425,7 @@
 	)
 	(hierarchical_label "USB_DP"
 		(shape bidirectional)
-		(at 81.28 120.65 0)
+		(at 83.82 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -434,7 +458,7 @@
 	)
 	(hierarchical_label "USB_DM"
 		(shape bidirectional)
-		(at 81.28 115.57 0)
+		(at 83.82 120.65 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -478,7 +502,7 @@
 	)
 	(hierarchical_label "+5V"
 		(shape output)
-		(at 153.67 106.68 0)
+		(at 156.21 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -500,7 +524,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape input)
-		(at 59.69 129.54 270)
+		(at 62.23 134.62 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -511,7 +535,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape input)
-		(at 138.43 129.54 270)
+		(at 140.97 134.62 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -533,7 +557,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 87.63 110.49 0)
+		(at 90.17 115.57 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -544,7 +568,7 @@
 		(dnp no)
 		(uuid "06dd1efa-a6c7-4d7d-9b92-2eb9bf9d1648")
 		(property "Reference" "TP8"
-			(at 85.09 105.9179 0)
+			(at 87.63 110.9979 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -556,7 +580,7 @@
 			)
 		)
 		(property "Value" "CC2"
-			(at 82.804 109.728 0)
+			(at 85.344 114.808 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -567,7 +591,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 82.55 110.49 0)
+			(at 85.09 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -578,7 +602,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 82.55 110.49 0)
+			(at 85.09 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -589,7 +613,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 87.63 110.49 0)
+			(at 90.17 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -613,7 +637,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 101.6 110.49 0)
+		(at 104.14 115.57 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -624,7 +648,7 @@
 		(dnp no)
 		(uuid "7bc748aa-cbf0-44b1-ad07-adc120d8872a")
 		(property "Reference" "TP9"
-			(at 99.06 105.9179 0)
+			(at 101.6 110.9979 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -636,7 +660,7 @@
 			)
 		)
 		(property "Value" "PR_TP"
-			(at 101.854 109.728 0)
+			(at 104.394 114.808 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -647,7 +671,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 96.52 110.49 0)
+			(at 99.06 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -658,7 +682,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 110.49 0)
+			(at 99.06 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -669,7 +693,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 101.6 110.49 0)
+			(at 104.14 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -693,7 +717,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 81.28 106.68 0)
+		(at 83.82 111.76 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -704,7 +728,7 @@
 		(dnp no)
 		(uuid "f2c05370-d386-44a4-a6f0-e529faef64ca")
 		(property "Reference" "TP7"
-			(at 78.74 102.1079 0)
+			(at 81.28 107.1879 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -716,7 +740,7 @@
 			)
 		)
 		(property "Value" "CC1"
-			(at 81.534 105.918 0)
+			(at 84.074 110.998 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -727,7 +751,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D3.0mm_Drill1.5mm"
-			(at 76.2 106.68 0)
+			(at 78.74 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -738,7 +762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 106.68 0)
+			(at 78.74 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -749,7 +773,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 81.28 106.68 0)
+			(at 83.82 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -848,7 +872,7 @@
 		)
 	)
 	(sheet
-		(at 21.59 82.55)
+		(at 24.13 87.63)
 		(size 54.61 44.45)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -864,7 +888,7 @@
 		)
 		(uuid "8593a8aa-aca1-45d6-a860-d31cc8e9fd10")
 		(property "Sheetname" "USB-C Connector"
-			(at 21.59 81.8384 0)
+			(at 24.13 86.9184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -875,7 +899,7 @@
 			)
 		)
 		(property "Sheetfile" "USB-C Connector.kicad_sch"
-			(at 21.59 127.5846 0)
+			(at 24.13 132.6646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -886,7 +910,7 @@
 			)
 		)
 		(property "Author" "Shuopu Wang"
-			(at 0 0.254 0)
+			(at 2.54 5.334 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -897,7 +921,7 @@
 			)
 		)
 		(property "Date Modified" "9/5/2026"
-			(at 0 0.254 0)
+			(at 2.54 5.334 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -908,7 +932,7 @@
 			)
 		)
 		(pin "CC1" bidirectional
-			(at 76.2 106.68 0)
+			(at 78.74 111.76 0)
 			(uuid "e12e2633-cbe0-4cb7-ad40-1cf36fa4c203")
 			(effects
 				(font
@@ -918,7 +942,7 @@
 			)
 		)
 		(pin "CC2" bidirectional
-			(at 76.2 110.49 0)
+			(at 78.74 115.57 0)
 			(uuid "a6741d3b-a9f2-4465-933a-bbbb031a41ee")
 			(effects
 				(font
@@ -928,7 +952,7 @@
 			)
 		)
 		(pin "GND" input
-			(at 59.69 127 270)
+			(at 62.23 132.08 270)
 			(uuid "bd2280fc-33d2-401c-af02-bc57490ec315")
 			(effects
 				(font
@@ -938,7 +962,7 @@
 			)
 		)
 		(pin "USB_5V" output
-			(at 76.2 99.06 0)
+			(at 78.74 104.14 0)
 			(uuid "ded18159-797e-443b-9f0f-90083ea9fbce")
 			(effects
 				(font
@@ -948,7 +972,7 @@
 			)
 		)
 		(pin "USB_DM" bidirectional
-			(at 76.2 115.57 0)
+			(at 78.74 120.65 0)
 			(uuid "5f161dba-105a-4ca8-8566-fd9c69616a7d")
 			(effects
 				(font
@@ -958,7 +982,7 @@
 			)
 		)
 		(pin "USB_DP" bidirectional
-			(at 76.2 120.65 0)
+			(at 78.74 125.73 0)
 			(uuid "e36ba121-0c08-4d7b-b561-b442a736a01f")
 			(effects
 				(font
@@ -1052,7 +1076,7 @@
 		)
 	)
 	(sheet
-		(at 110.49 86.36)
+		(at 113.03 91.44)
 		(size 33.02 40.64)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1068,7 +1092,7 @@
 		)
 		(uuid "b66ae0b0-03e3-4dd0-8364-435fb922b758")
 		(property "Sheetname" "Power_Mux"
-			(at 110.49 85.6484 0)
+			(at 113.03 90.7284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1079,7 +1103,7 @@
 			)
 		)
 		(property "Sheetfile" "Power_Mux.kicad_sch"
-			(at 110.49 127.5846 0)
+			(at 113.03 132.6646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1090,7 +1114,7 @@
 			)
 		)
 		(pin "MUX_OUT" output
-			(at 143.51 106.68 0)
+			(at 146.05 111.76 0)
 			(uuid "9e4a59cc-02b9-4ed5-b942-21e37593e82f")
 			(effects
 				(font
@@ -1100,7 +1124,7 @@
 			)
 		)
 		(pin "MX_GND" input
-			(at 138.43 127 270)
+			(at 140.97 132.08 270)
 			(uuid "a0e5e81c-df3d-4dd0-87ea-58a00c67c0f0")
 			(effects
 				(font
@@ -1110,7 +1134,7 @@
 			)
 		)
 		(pin "PR1" input
-			(at 110.49 111.76 180)
+			(at 113.03 116.84 180)
 			(uuid "53cd8a05-8d39-40a2-baf8-141c0c2bc7d5")
 			(effects
 				(font
@@ -1120,7 +1144,7 @@
 			)
 		)
 		(pin "VIN_1" input
-			(at 110.49 99.06 180)
+			(at 113.03 104.14 180)
 			(uuid "e865776b-b9ea-465f-abfd-bf2694f69c51")
 			(effects
 				(font
@@ -1130,7 +1154,7 @@
 			)
 		)
 		(pin "VIN_2" input
-			(at 110.49 104.14 180)
+			(at 113.03 109.22 180)
 			(uuid "56a781ba-16f7-4e44-8c9b-a9e6c2e39282")
 			(effects
 				(font

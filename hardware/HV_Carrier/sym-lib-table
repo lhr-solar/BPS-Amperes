@@ -8,4 +8,5 @@
 	(lib (name "lhrs_misc") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_misc.kicad_sym") (options "") (descr ""))
 	(lib (name "lhrs_power") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_power.kicad_sym") (options "") (descr ""))
 	(lib (name "lhrs_special") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/lhrs_special.kicad_sym") (options "") (descr ""))
+	(lib (name "OS102011MS2QN1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/OS102011MS2QN1/OS102011MS2QN1.kicad_sym") (options "") (descr ""))
 )

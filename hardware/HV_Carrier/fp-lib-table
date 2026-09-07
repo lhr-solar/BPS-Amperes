@@ -8,4 +8,5 @@
 	(lib (name "LHRS_Special") (type "KiCad") (uri "${KIPRJMOD}/KiCAD-Sharepoint/LHRS_Special.pretty") (options "") (descr ""))
 	(lib (name "AMC3311QDWERQ1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/AMC3311QDWERQ1/footprints.pretty") (options "") (descr ""))
 	(lib (name "1053091108") (type "KiCad") (uri "${KIPRJMOD}/External Parts/1053091108/footprints.pretty") (options "") (descr ""))
+	(lib (name "OS102011MS2QN1") (type "KiCad") (uri "${KIPRJMOD}/External Parts/OS102011MS2QN1") (options "") (descr ""))
 )

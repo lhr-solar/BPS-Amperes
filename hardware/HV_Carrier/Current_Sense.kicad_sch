@@ -58384,7 +58384,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Connectors:Molex_Nano-Fit_105309-xx02_1x02_P2.50mm_Vertical"
 			(at 186.69 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -58545,7 +58545,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 221.742 128.27 90)
 			(hide yes)
 			(show_name no)
@@ -58720,7 +58720,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LHRS_Connectors:Molex_Nano-Fit_105309-xx02_1x02_P2.50mm_Vertical"
 			(at 186.69 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -60932,7 +60932,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 221.742 114.3 90)
 			(hide yes)
 			(show_name no)
